@@ -1,0 +1,63 @@
+{
+  "builder_name": "parquet",
+  "citation": "",
+  "config_name": "default",
+  "dataset_name": "yahoo_answers_topics",
+  "dataset_size": 509433082,
+  "description": "",
+  "download_checksums": {
+    "hf://datasets/mteb/yahoo_answers_topics@c4d89f9633025d50954ab98a4c2c2feb188f6279/data/train-00000-of-00001.parquet": {
+      "num_bytes": 319614306,
+      "checksum": null
+    },
+    "hf://datasets/mteb/yahoo_answers_topics@c4d89f9633025d50954ab98a4c2c2feb188f6279/data/test-00000-of-00001.parquet": {
+      "num_bytes": 13667729,
+      "checksum": null
+    }
+  },
+  "download_size": 333282035,
+  "features": {
+    "label": {
+      "names": [
+        "Society & Culture",
+        "Science & Mathematics",
+        "Health",
+        "Education & Reference",
+        "Computers & Internet",
+        "Sports",
+        "Business & Finance",
+        "Entertainment & Music",
+        "Family & Relationships",
+        "Politics & Government"
+      ],
+      "_type": "ClassLabel"
+    },
+    "text": {
+      "dtype": "string",
+      "_type": "Value"
+    }
+  },
+  "homepage": "",
+  "license": "",
+  "size_in_bytes": 842715117,
+  "splits": {
+    "train": {
+      "name": "train",
+      "num_bytes": 488528546,
+      "num_examples": 1286121,
+      "dataset_name": "yahoo_answers_topics"
+    },
+    "test": {
+      "name": "test",
+      "num_bytes": 20904536,
+      "num_examples": 54990,
+      "dataset_name": "yahoo_answers_topics"
+    }
+  },
+  "version": {
+    "version_str": "0.0.0",
+    "major": 0,
+    "minor": 0,
+    "patch": 0
+  }
+}

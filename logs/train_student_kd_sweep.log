@@ -1,0 +1,138 @@
+=== START ag_news / multi-calibrated-guided Thu Jul 16 15:45:16 UTC 2026 ===
+Mode: kd | teacher: multi-calibrated-guided | device: cuda
+Dataset: ag_news (4 classes) | labeled=40 unlabeled=5960 test=1200
+Training on 6000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6576.57it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.2232
+  epoch 2/3  loss 0.0544
+  epoch 3/3  loss 0.0270
+
+Test accuracy: 0.8825 | macro-F1: 0.8822
+Saved: outputs/student/ag_news_kd_multi-calibrated-guided_L10_s42.json
+=== END ag_news / multi-calibrated-guided Thu Jul 16 15:46:53 UTC 2026 (exit=0) ===
+=== START ag_news / multi-probmean-guided Thu Jul 16 15:46:53 UTC 2026 ===
+Mode: kd | teacher: multi-probmean-guided | device: cuda
+Dataset: ag_news (4 classes) | labeled=40 unlabeled=5960 test=1200
+Training on 6000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 7251.23it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.2781
+  epoch 2/3  loss 0.0846
+  epoch 3/3  loss 0.0406
+
+Test accuracy: 0.8642 | macro-F1: 0.8620
+Saved: outputs/student/ag_news_kd_multi-probmean-guided_L10_s42.json
+=== END ag_news / multi-probmean-guided Thu Jul 16 15:48:29 UTC 2026 (exit=0) ===
+=== START yahoo / multi-calibrated-guided Thu Jul 16 15:48:29 UTC 2026 ===
+Mode: kd | teacher: multi-calibrated-guided | device: cuda
+Dataset: yahoo (10 classes) | labeled=100 unlabeled=4900 test=1000
+Training on 5000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6940.83it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.6153
+  epoch 2/3  loss 0.2244
+  epoch 3/3  loss 0.1307
+
+Test accuracy: 0.6230 | macro-F1: 0.6222
+Saved: outputs/student/yahoo_kd_multi-calibrated-guided_L10_s42.json
+=== END yahoo / multi-calibrated-guided Thu Jul 16 15:50:45 UTC 2026 (exit=0) ===
+=== START yahoo / multi-probmean-guided Thu Jul 16 15:50:45 UTC 2026 ===
+Mode: kd | teacher: multi-probmean-guided | device: cuda
+Dataset: yahoo (10 classes) | labeled=100 unlabeled=4900 test=1000
+Training on 5000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6843.82it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.8090
+  epoch 2/3  loss 0.3122
+  epoch 3/3  loss 0.1845
+
+Test accuracy: 0.6070 | macro-F1: 0.6121
+Saved: outputs/student/yahoo_kd_multi-probmean-guided_L10_s42.json
+=== END yahoo / multi-probmean-guided Thu Jul 16 15:53:02 UTC 2026 (exit=0) ===
+=== START amazon / multi-calibrated-guided Thu Jul 16 15:53:02 UTC 2026 ===
+Mode: kd | teacher: multi-calibrated-guided | device: cuda
+Dataset: amazon (5 classes) | labeled=50 unlabeled=2450 test=500
+Training on 2500 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 5833.23it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.4962
+  epoch 2/3  loss 0.1875
+  epoch 3/3  loss 0.0882
+
+Test accuracy: 0.5540 | macro-F1: 0.5563
+Saved: outputs/student/amazon_kd_multi-calibrated-guided_L10_s42.json
+=== END amazon / multi-calibrated-guided Thu Jul 16 15:54:12 UTC 2026 (exit=0) ===
+=== START amazon / multi-probmean-guided Thu Jul 16 15:54:12 UTC 2026 ===
+Mode: kd | teacher: multi-probmean-guided | device: cuda
+Dataset: amazon (5 classes) | labeled=50 unlabeled=2450 test=500
+Training on 2500 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6992.56it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.7598
+  epoch 2/3  loss 0.3082
+  epoch 3/3  loss 0.1476
+
+Test accuracy: 0.5700 | macro-F1: 0.5567
+Saved: outputs/student/amazon_kd_multi-probmean-guided_L10_s42.json
+=== END amazon / multi-probmean-guided Thu Jul 16 15:55:23 UTC 2026 (exit=0) ===

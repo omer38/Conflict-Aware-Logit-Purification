@@ -1,0 +1,60 @@
+{
+  "protocol": "prompt-inclusive-supervised-cv-v1",
+  "dataset": "amazon3",
+  "labels_per_class": 10,
+  "seed": 123,
+  "learning_rate": 2e-05,
+  "fold": 4,
+  "n_splits": 5,
+  "run_seed": 12304,
+  "selection_split": "labelled training pool only",
+  "selection_metric": "macro_f1",
+  "train_indices": [
+    499,
+    498,
+    26,
+    7,
+    126,
+    449,
+    91,
+    292,
+    999,
+    998,
+    512,
+    904,
+    635,
+    925,
+    633,
+    888,
+    1499,
+    1498,
+    1216,
+    1415,
+    1072,
+    1397,
+    1365,
+    1458
+  ],
+  "validation_indices": [
+    109,
+    335,
+    754,
+    940,
+    1115,
+    1309
+  ],
+  "checkpoints": {
+    "2": {
+      "accuracy": 0.0,
+      "macro_f1": 0.0
+    },
+    "3": {
+      "accuracy": 0.3333333333333333,
+      "macro_f1": 0.16666666666666666
+    },
+    "5": {
+      "accuracy": 0.3333333333333333,
+      "macro_f1": 0.27777777777777773
+    }
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "builder_name": "csv",
+  "citation": "",
+  "config_name": "default",
+  "dataset_name": "amazon_review_full",
+  "dataset_size": 1660267006,
+  "description": "",
+  "download_checksums": {
+    "hf://datasets/vgaraujov/amazon_review_full@e9f7145ac04ffc10faf5001207fbb05b5b8be543/train.csv": {
+      "num_bytes": 1335735602,
+      "checksum": null
+    },
+    "hf://datasets/vgaraujov/amazon_review_full@e9f7145ac04ffc10faf5001207fbb05b5b8be543/test.csv": {
+      "num_bytes": 289679990,
+      "checksum": null
+    }
+  },
+  "download_size": 1625415592,
+  "features": {
+    "text": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "label": {
+      "dtype": "int64",
+      "_type": "Value"
+    }
+  },
+  "homepage": "",
+  "license": "",
+  "size_in_bytes": 3285682598,
+  "splits": {
+    "train": {
+      "name": "train",
+      "num_bytes": 1364391493,
+      "num_examples": 3000000,
+      "shard_lengths": [
+        1090000,
+        1110000,
+        800000
+      ],
+      "dataset_name": "amazon_review_full"
+    },
+    "test": {
+      "name": "test",
+      "num_bytes": 295875513,
+      "num_examples": 650000,
+      "dataset_name": "amazon_review_full"
+    }
+  },
+  "version": {
+    "version_str": "0.0.0",
+    "major": 0,
+    "minor": 0,
+    "patch": 0
+  }
+}

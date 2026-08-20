@@ -1,0 +1,469 @@
+=== RUN dataset=ag_news teacher=multi-router-linear-guided seed=42 2026-08-02T23:23:49Z ===
+Mode: kd | teacher: multi-router-linear-guided | device: cuda
+Dataset: ag_news (4 classes) | declared_labeled=40 prompt_demos/class=2 CE/class=7 router_cal/class=3 unlabeled=5960 test=7600
+Saved LOOCV table (6 configs): outputs/router/ag_news_L10_s42_prompt-inclusive-v1_loocv.json
+Selected linear router via LOOCV: weight_decay=0.0, loocv_accuracy=0.8333
+Safety gate: mean_cal=0.8333, entropy_cal=0.8333, use_router=False
+Training on 6000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 8202.60it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.4031
+  epoch 2/3  loss 0.1056
+  epoch 3/3  loss 0.0600
+
+Test accuracy: 0.8658 | macro-F1: 0.8638
+Saved: outputs/student/router_declared_3seed_v1/ag_news_kd_multi-router-linear-guided_L10_s42_prompt-inclusive-v1.json
+=== END dataset=ag_news teacher=multi-router-linear-guided seed=42 exit=0 2026-08-02T23:27:14Z ===
+=== RUN dataset=ag_news teacher=multi-router-linear-guided seed=123 2026-08-02T23:27:14Z ===
+Mode: kd | teacher: multi-router-linear-guided | device: cuda
+Dataset: ag_news (4 classes) | declared_labeled=40 prompt_demos/class=2 CE/class=7 router_cal/class=3 unlabeled=5960 test=7600
+Saved LOOCV table (6 configs): outputs/router/ag_news_L10_s123_prompt-inclusive-v1_loocv.json
+Selected linear router via LOOCV: weight_decay=0.0, loocv_accuracy=0.7500
+Safety gate: mean_cal=0.7500, entropy_cal=0.7500, use_router=False
+Training on 6000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 8332.49it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.4432
+  epoch 2/3  loss 0.1140
+  epoch 3/3  loss 0.0580
+
+Test accuracy: 0.8536 | macro-F1: 0.8510
+Saved: outputs/student/router_declared_3seed_v1/ag_news_kd_multi-router-linear-guided_L10_s123_prompt-inclusive-v1.json
+=== END dataset=ag_news teacher=multi-router-linear-guided seed=123 exit=0 2026-08-02T23:30:42Z ===
+=== RUN dataset=ag_news teacher=multi-router-linear-guided seed=456 2026-08-02T23:30:42Z ===
+Mode: kd | teacher: multi-router-linear-guided | device: cuda
+Dataset: ag_news (4 classes) | declared_labeled=40 prompt_demos/class=2 CE/class=7 router_cal/class=3 unlabeled=5960 test=7600
+Saved LOOCV table (6 configs): outputs/router/ag_news_L10_s456_prompt-inclusive-v1_loocv.json
+Selected linear router via LOOCV: weight_decay=0.0, loocv_accuracy=0.8333
+Safety gate: mean_cal=0.8333, entropy_cal=0.8333, use_router=False
+Training on 6000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 8689.81it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.3957
+  epoch 2/3  loss 0.1328
+  epoch 3/3  loss 0.0582
+
+Test accuracy: 0.8709 | macro-F1: 0.8693
+Saved: outputs/student/router_declared_3seed_v1/ag_news_kd_multi-router-linear-guided_L10_s456_prompt-inclusive-v1.json
+=== END dataset=ag_news teacher=multi-router-linear-guided seed=456 exit=0 2026-08-02T23:34:03Z ===
+=== RUN dataset=ag_news teacher=multi-router-mlp-guided seed=42 2026-08-02T23:34:03Z ===
+Mode: kd | teacher: multi-router-mlp-guided | device: cuda
+Dataset: ag_news (4 classes) | declared_labeled=40 prompt_demos/class=2 CE/class=7 router_cal/class=3 unlabeled=5960 test=7600
+Saved LOOCV table (6 configs): outputs/router/ag_news_L10_s42_prompt-inclusive-v1_loocv.json
+Selected mlp router via LOOCV: weight_decay=0.0, loocv_accuracy=0.9167
+Safety gate: mean_cal=0.8333, entropy_cal=0.8333, use_router=True
+Training on 6000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 8609.93it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.4184
+  epoch 2/3  loss 0.1679
+  epoch 3/3  loss 0.1121
+
+Test accuracy: 0.8504 | macro-F1: 0.8486
+Saved: outputs/student/router_declared_3seed_v1/ag_news_kd_multi-router-mlp-guided_L10_s42_prompt-inclusive-v1.json
+=== END dataset=ag_news teacher=multi-router-mlp-guided seed=42 exit=0 2026-08-02T23:37:24Z ===
+=== RUN dataset=ag_news teacher=multi-router-mlp-guided seed=123 2026-08-02T23:37:24Z ===
+Mode: kd | teacher: multi-router-mlp-guided | device: cuda
+Dataset: ag_news (4 classes) | declared_labeled=40 prompt_demos/class=2 CE/class=7 router_cal/class=3 unlabeled=5960 test=7600
+Saved LOOCV table (6 configs): outputs/router/ag_news_L10_s123_prompt-inclusive-v1_loocv.json
+Selected mlp router via LOOCV: weight_decay=0.0, loocv_accuracy=0.7500
+Safety gate: mean_cal=0.7500, entropy_cal=0.7500, use_router=False
+Training on 6000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 8247.67it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.4432
+  epoch 2/3  loss 0.1139
+  epoch 3/3  loss 0.0584
+
+Test accuracy: 0.8545 | macro-F1: 0.8520
+Saved: outputs/student/router_declared_3seed_v1/ag_news_kd_multi-router-mlp-guided_L10_s123_prompt-inclusive-v1.json
+=== END dataset=ag_news teacher=multi-router-mlp-guided seed=123 exit=0 2026-08-02T23:40:47Z ===
+=== RUN dataset=ag_news teacher=multi-router-mlp-guided seed=456 2026-08-02T23:40:47Z ===
+Mode: kd | teacher: multi-router-mlp-guided | device: cuda
+Dataset: ag_news (4 classes) | declared_labeled=40 prompt_demos/class=2 CE/class=7 router_cal/class=3 unlabeled=5960 test=7600
+Saved LOOCV table (6 configs): outputs/router/ag_news_L10_s456_prompt-inclusive-v1_loocv.json
+Selected mlp router via LOOCV: weight_decay=0.0, loocv_accuracy=0.8333
+Safety gate: mean_cal=0.8333, entropy_cal=0.8333, use_router=False
+Training on 6000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 5768.40it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.3957
+  epoch 2/3  loss 0.1322
+  epoch 3/3  loss 0.0617
+
+Test accuracy: 0.8801 | macro-F1: 0.8791
+Saved: outputs/student/router_declared_3seed_v1/ag_news_kd_multi-router-mlp-guided_L10_s456_prompt-inclusive-v1.json
+=== END dataset=ag_news teacher=multi-router-mlp-guided seed=456 exit=0 2026-08-02T23:44:04Z ===
+=== RUN dataset=yahoo teacher=multi-router-linear-guided seed=42 2026-08-02T23:44:04Z ===
+Mode: kd | teacher: multi-router-linear-guided | device: cuda
+Dataset: yahoo (10 classes) | declared_labeled=100 prompt_demos/class=2 CE/class=7 router_cal/class=3 unlabeled=4900 test=10000
+Saved LOOCV table (6 configs): outputs/router/yahoo_L10_s42_prompt-inclusive-v1_loocv.json
+Selected linear router via LOOCV: weight_decay=0.1, loocv_accuracy=0.5667
+Safety gate: mean_cal=0.5667, entropy_cal=0.5667, use_router=False
+Training on 5000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6350.90it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 1.8180
+  epoch 2/3  loss 0.7559
+  epoch 3/3  loss 0.4358
+
+Test accuracy: 0.5956 | macro-F1: 0.6042
+Saved: outputs/student/router_declared_3seed_v1/yahoo_kd_multi-router-linear-guided_L10_s42_prompt-inclusive-v1.json
+=== END dataset=yahoo teacher=multi-router-linear-guided seed=42 exit=0 2026-08-02T23:52:43Z ===
+=== RUN dataset=yahoo teacher=multi-router-linear-guided seed=123 2026-08-02T23:52:43Z ===
+Mode: kd | teacher: multi-router-linear-guided | device: cuda
+Dataset: yahoo (10 classes) | declared_labeled=100 prompt_demos/class=2 CE/class=7 router_cal/class=3 unlabeled=4900 test=10000
+Saved LOOCV table (6 configs): outputs/router/yahoo_L10_s123_prompt-inclusive-v1_loocv.json
+Selected linear router via LOOCV: weight_decay=0.0, loocv_accuracy=0.7667
+Safety gate: mean_cal=0.7667, entropy_cal=0.7667, use_router=False
+Training on 5000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6652.97it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 1.8726
+  epoch 2/3  loss 0.7249
+  epoch 3/3  loss 0.3332
+
+Test accuracy: 0.6101 | macro-F1: 0.6129
+Saved: outputs/student/router_declared_3seed_v1/yahoo_kd_multi-router-linear-guided_L10_s123_prompt-inclusive-v1.json
+=== END dataset=yahoo teacher=multi-router-linear-guided seed=123 exit=0 2026-08-03T00:01:35Z ===
+=== RUN dataset=yahoo teacher=multi-router-linear-guided seed=456 2026-08-03T00:01:35Z ===
+Mode: kd | teacher: multi-router-linear-guided | device: cuda
+Dataset: yahoo (10 classes) | declared_labeled=100 prompt_demos/class=2 CE/class=7 router_cal/class=3 unlabeled=4900 test=10000
+Saved LOOCV table (6 configs): outputs/router/yahoo_L10_s456_prompt-inclusive-v1_loocv.json
+Selected linear router via LOOCV: weight_decay=0.1, loocv_accuracy=0.6333
+Safety gate: mean_cal=0.6000, entropy_cal=0.6000, use_router=True
+Training on 5000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 12829.79it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 1.1085
+  epoch 2/3  loss 0.4501
+  epoch 3/3  loss 0.2175
+
+Test accuracy: 0.5964 | macro-F1: 0.6069
+Saved: outputs/student/router_declared_3seed_v1/yahoo_kd_multi-router-linear-guided_L10_s456_prompt-inclusive-v1.json
+=== END dataset=yahoo teacher=multi-router-linear-guided seed=456 exit=0 2026-08-03T00:10:16Z ===
+=== RUN dataset=yahoo teacher=multi-router-mlp-guided seed=42 2026-08-03T00:10:16Z ===
+Mode: kd | teacher: multi-router-mlp-guided | device: cuda
+Dataset: yahoo (10 classes) | declared_labeled=100 prompt_demos/class=2 CE/class=7 router_cal/class=3 unlabeled=4900 test=10000
+Saved LOOCV table (6 configs): outputs/router/yahoo_L10_s42_prompt-inclusive-v1_loocv.json
+Selected mlp router via LOOCV: weight_decay=0.01, loocv_accuracy=0.5667
+Safety gate: mean_cal=0.5667, entropy_cal=0.5667, use_router=False
+Training on 5000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 7427.70it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 1.8023
+  epoch 2/3  loss 0.7458
+  epoch 3/3  loss 0.4157
+
+Test accuracy: 0.5994 | macro-F1: 0.6070
+Saved: outputs/student/router_declared_3seed_v1/yahoo_kd_multi-router-mlp-guided_L10_s42_prompt-inclusive-v1.json
+=== END dataset=yahoo teacher=multi-router-mlp-guided seed=42 exit=0 2026-08-03T00:18:55Z ===
+=== RUN dataset=yahoo teacher=multi-router-mlp-guided seed=123 2026-08-03T00:18:55Z ===
+Mode: kd | teacher: multi-router-mlp-guided | device: cuda
+Dataset: yahoo (10 classes) | declared_labeled=100 prompt_demos/class=2 CE/class=7 router_cal/class=3 unlabeled=4900 test=10000
+Saved LOOCV table (6 configs): outputs/router/yahoo_L10_s123_prompt-inclusive-v1_loocv.json
+Selected mlp router via LOOCV: weight_decay=0.0, loocv_accuracy=0.7667
+Safety gate: mean_cal=0.7667, entropy_cal=0.7667, use_router=False
+Training on 5000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 5304.95it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 1.8545
+  epoch 2/3  loss 0.7660
+  epoch 3/3  loss 0.3716
+
+Test accuracy: 0.6081 | macro-F1: 0.6086
+Saved: outputs/student/router_declared_3seed_v1/yahoo_kd_multi-router-mlp-guided_L10_s123_prompt-inclusive-v1.json
+=== END dataset=yahoo teacher=multi-router-mlp-guided seed=123 exit=0 2026-08-03T00:27:35Z ===
+=== RUN dataset=yahoo teacher=multi-router-mlp-guided seed=456 2026-08-03T00:27:35Z ===
+Mode: kd | teacher: multi-router-mlp-guided | device: cuda
+Dataset: yahoo (10 classes) | declared_labeled=100 prompt_demos/class=2 CE/class=7 router_cal/class=3 unlabeled=4900 test=10000
+Saved LOOCV table (6 configs): outputs/router/yahoo_L10_s456_prompt-inclusive-v1_loocv.json
+Selected mlp router via LOOCV: weight_decay=0.1, loocv_accuracy=0.6333
+Safety gate: mean_cal=0.6000, entropy_cal=0.6000, use_router=True
+Training on 5000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 8947.01it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 1.1422
+  epoch 2/3  loss 0.3829
+  epoch 3/3  loss 0.2322
+
+Test accuracy: 0.5941 | macro-F1: 0.5918
+Saved: outputs/student/router_declared_3seed_v1/yahoo_kd_multi-router-mlp-guided_L10_s456_prompt-inclusive-v1.json
+=== END dataset=yahoo teacher=multi-router-mlp-guided seed=456 exit=0 2026-08-03T00:36:19Z ===
+=== RUN dataset=amazon teacher=multi-router-linear-guided seed=42 2026-08-03T00:36:19Z ===
+Mode: kd | teacher: multi-router-linear-guided | device: cuda
+Dataset: amazon (5 classes) | declared_labeled=50 prompt_demos/class=2 CE/class=7 router_cal/class=3 unlabeled=2450 test=10000
+Saved LOOCV table (6 configs): outputs/router/amazon_L10_s42_prompt-inclusive-v1_loocv.json
+Selected linear router via LOOCV: weight_decay=0.1, loocv_accuracy=0.7333
+Safety gate: mean_cal=0.7333, entropy_cal=0.7333, use_router=False
+Training on 2500 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 8778.48it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 1.8088
+  epoch 2/3  loss 0.7874
+  epoch 3/3  loss 0.3931
+
+Test accuracy: 0.5769 | macro-F1: 0.5596
+Saved: outputs/student/router_declared_3seed_v1/amazon_kd_multi-router-linear-guided_L10_s42_prompt-inclusive-v1.json
+=== END dataset=amazon teacher=multi-router-linear-guided seed=42 exit=0 2026-08-03T00:40:09Z ===
+=== RUN dataset=amazon teacher=multi-router-linear-guided seed=123 2026-08-03T00:40:09Z ===
+Mode: kd | teacher: multi-router-linear-guided | device: cuda
+Dataset: amazon (5 classes) | declared_labeled=50 prompt_demos/class=2 CE/class=7 router_cal/class=3 unlabeled=2450 test=10000
+Saved LOOCV table (6 configs): outputs/router/amazon_L10_s123_prompt-inclusive-v1_loocv.json
+Selected linear router via LOOCV: weight_decay=0.1, loocv_accuracy=0.6000
+Safety gate: mean_cal=0.6000, entropy_cal=0.6000, use_router=False
+Training on 2500 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 7728.19it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 1.7835
+  epoch 2/3  loss 0.7753
+  epoch 3/3  loss 0.3189
+
+Test accuracy: 0.5903 | macro-F1: 0.5846
+Saved: outputs/student/router_declared_3seed_v1/amazon_kd_multi-router-linear-guided_L10_s123_prompt-inclusive-v1.json
+=== END dataset=amazon teacher=multi-router-linear-guided seed=123 exit=0 2026-08-03T00:43:56Z ===
+=== RUN dataset=amazon teacher=multi-router-linear-guided seed=456 2026-08-03T00:43:56Z ===
+Mode: kd | teacher: multi-router-linear-guided | device: cuda
+Dataset: amazon (5 classes) | declared_labeled=50 prompt_demos/class=2 CE/class=7 router_cal/class=3 unlabeled=2450 test=10000
+Saved LOOCV table (6 configs): outputs/router/amazon_L10_s456_prompt-inclusive-v1_loocv.json
+Selected linear router via LOOCV: weight_decay=0.0, loocv_accuracy=0.6667
+Safety gate: mean_cal=0.6667, entropy_cal=0.6667, use_router=False
+Training on 2500 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 10089.06it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 1.8262
+  epoch 2/3  loss 0.7066
+  epoch 3/3  loss 0.3624
+
+Test accuracy: 0.5867 | macro-F1: 0.5736
+Saved: outputs/student/router_declared_3seed_v1/amazon_kd_multi-router-linear-guided_L10_s456_prompt-inclusive-v1.json
+=== END dataset=amazon teacher=multi-router-linear-guided seed=456 exit=0 2026-08-03T00:47:43Z ===
+=== RUN dataset=amazon teacher=multi-router-mlp-guided seed=42 2026-08-03T00:47:43Z ===
+Mode: kd | teacher: multi-router-mlp-guided | device: cuda
+Dataset: amazon (5 classes) | declared_labeled=50 prompt_demos/class=2 CE/class=7 router_cal/class=3 unlabeled=2450 test=10000
+Saved LOOCV table (6 configs): outputs/router/amazon_L10_s42_prompt-inclusive-v1_loocv.json
+Selected mlp router via LOOCV: weight_decay=0.0, loocv_accuracy=0.7333
+Safety gate: mean_cal=0.7333, entropy_cal=0.7333, use_router=False
+Training on 2500 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 10310.07it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 1.8385
+  epoch 2/3  loss 0.8171
+  epoch 3/3  loss 0.3800
+
+Test accuracy: 0.5698 | macro-F1: 0.5510
+Saved: outputs/student/router_declared_3seed_v1/amazon_kd_multi-router-mlp-guided_L10_s42_prompt-inclusive-v1.json
+=== END dataset=amazon teacher=multi-router-mlp-guided seed=42 exit=0 2026-08-03T00:51:31Z ===
+=== RUN dataset=amazon teacher=multi-router-mlp-guided seed=123 2026-08-03T00:51:31Z ===
+Mode: kd | teacher: multi-router-mlp-guided | device: cuda
+Dataset: amazon (5 classes) | declared_labeled=50 prompt_demos/class=2 CE/class=7 router_cal/class=3 unlabeled=2450 test=10000
+Saved LOOCV table (6 configs): outputs/router/amazon_L10_s123_prompt-inclusive-v1_loocv.json
+Selected mlp router via LOOCV: weight_decay=0.0, loocv_accuracy=0.5333
+Safety gate: mean_cal=0.6000, entropy_cal=0.6000, use_router=False
+Training on 2500 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 8056.06it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 1.7813
+  epoch 2/3  loss 0.7949
+  epoch 3/3  loss 0.3854
+
+Test accuracy: 0.5908 | macro-F1: 0.5806
+Saved: outputs/student/router_declared_3seed_v1/amazon_kd_multi-router-mlp-guided_L10_s123_prompt-inclusive-v1.json
+=== END dataset=amazon teacher=multi-router-mlp-guided seed=123 exit=0 2026-08-03T00:55:23Z ===
+=== RUN dataset=amazon teacher=multi-router-mlp-guided seed=456 2026-08-03T00:55:23Z ===
+Mode: kd | teacher: multi-router-mlp-guided | device: cuda
+Dataset: amazon (5 classes) | declared_labeled=50 prompt_demos/class=2 CE/class=7 router_cal/class=3 unlabeled=2450 test=10000
+Saved LOOCV table (6 configs): outputs/router/amazon_L10_s456_prompt-inclusive-v1_loocv.json
+Selected mlp router via LOOCV: weight_decay=0.01, loocv_accuracy=0.6667
+Safety gate: mean_cal=0.6667, entropy_cal=0.6667, use_router=False
+Training on 2500 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 8829.98it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 1.7596
+  epoch 2/3  loss 0.7005
+  epoch 3/3  loss 0.3698
+
+Test accuracy: 0.5812 | macro-F1: 0.5688
+Saved: outputs/student/router_declared_3seed_v1/amazon_kd_multi-router-mlp-guided_L10_s456_prompt-inclusive-v1.json
+=== END dataset=amazon teacher=multi-router-mlp-guided seed=456 exit=0 2026-08-03T00:59:07Z ===
+ALL_RUNS_DONE

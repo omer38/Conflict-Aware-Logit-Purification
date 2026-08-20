@@ -1,0 +1,9 @@
+{
+  "teacher": "qwen3.5-27b",
+  "dataset": "ag_news",
+  "n_samples_reported": 6000,
+  "accuracy": 0.8885,
+  "floor_fraction": 0.0,
+  "report_csv": "outputs/reports/qwen3.5-27b_ag_news.csv",
+  "generated_at": "2026-06-12T10:04:36.974474+00:00"
+}

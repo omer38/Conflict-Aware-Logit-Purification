@@ -1,0 +1,9 @@
+[project]
+name = "vllm-server"
+version = "0.1.0"
+description = "Local vLLM inference server for gemma4-26b-vllm teacher"
+requires-python = ">=3.12,<3.14"
+dependencies = [
+    "vllm>=0.23.0",
+    "huggingface-hub>=0.36.0",
+]

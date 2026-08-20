@@ -1,0 +1,2825 @@
+==== GPU Phase 2+3 started 2026-07-26T21:14:32Z ====
+HOST=25245fbb3358 HEAD=dd393f8 PWD=/root/MSc-Dissertation
+NVIDIA L40S, 570.124.06, 46068 MiB
+torch 2.13.0+cu126 cuda 12.6 device NVIDIA L40S
+
+==== PHASE 2 START 2026-07-26T21:14:35Z ====
+[2026-07-26T21:14:35Z] === prompt_inclusive_baselines_3seed_v1 runner begin ===
+[2026-07-26T21:14:35Z] START dataset=ag_news method=gemma teacher=gemma4-26b-vllm-guided L=10 seed=42
+Mode: kd | teacher: gemma4-26b-vllm-guided | device: cuda
+Dataset: ag_news (4 classes) | declared_labeled=40 prompt_demos/class=2 CE/class=10 router_cal/class=0 unlabeled=5960 test=7600
+Training on 6000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 4934.01it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.4925
+  epoch 2/3  loss 0.1601
+  epoch 3/3  loss 0.0776
+
+Test accuracy: 0.8526 | macro-F1: 0.8498
+Saved: outputs/student/prompt_inclusive_baselines_3seed_v1/ag_news_kd_gemma4-26b-vllm-guided_L10_s42_prompt-inclusive-v1.json
+[2026-07-26T21:16:30Z] OK dataset=ag_news method=gemma L=10 seed=42 status=0 start=2026-07-26T21:14:35Z end=2026-07-26T21:16:29Z
+[2026-07-26T21:16:30Z] START dataset=ag_news method=mistral teacher=mistral-small-24b-vllm-guided L=10 seed=42
+Mode: kd | teacher: mistral-small-24b-vllm-guided | device: cuda
+Dataset: ag_news (4 classes) | declared_labeled=40 prompt_demos/class=2 CE/class=10 router_cal/class=0 unlabeled=5960 test=7600
+Training on 6000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 7040.03it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.2783
+  epoch 2/3  loss 0.1023
+  epoch 3/3  loss 0.0549
+
+Test accuracy: 0.8657 | macro-F1: 0.8647
+Saved: outputs/student/prompt_inclusive_baselines_3seed_v1/ag_news_kd_mistral-small-24b-vllm-guided_L10_s42_prompt-inclusive-v1.json
+[2026-07-26T21:18:15Z] OK dataset=ag_news method=mistral L=10 seed=42 status=0 start=2026-07-26T21:16:30Z end=2026-07-26T21:18:14Z
+[2026-07-26T21:18:15Z] START dataset=ag_news method=entropy teacher=multi-entropy-guided L=10 seed=42
+Mode: kd | teacher: multi-entropy-guided | device: cuda
+Dataset: ag_news (4 classes) | declared_labeled=40 prompt_demos/class=2 CE/class=10 router_cal/class=0 unlabeled=5960 test=7600
+Training on 6000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6532.51it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.4065
+  epoch 2/3  loss 0.1296
+  epoch 3/3  loss 0.0639
+
+Test accuracy: 0.8576 | macro-F1: 0.8551
+Saved: outputs/student/prompt_inclusive_baselines_3seed_v1/ag_news_kd_multi-entropy-guided_L10_s42_prompt-inclusive-v1.json
+[2026-07-26T21:19:59Z] OK dataset=ag_news method=entropy L=10 seed=42 status=0 start=2026-07-26T21:18:15Z end=2026-07-26T21:19:59Z
+[2026-07-26T21:20:00Z] START dataset=ag_news method=gemma teacher=gemma4-26b-vllm-guided L=10 seed=123
+Mode: kd | teacher: gemma4-26b-vllm-guided | device: cuda
+Dataset: ag_news (4 classes) | declared_labeled=40 prompt_demos/class=2 CE/class=10 router_cal/class=0 unlabeled=5960 test=7600
+Training on 6000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6385.24it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.5923
+  epoch 2/3  loss 0.2055
+  epoch 3/3  loss 0.0861
+
+Test accuracy: 0.8462 | macro-F1: 0.8424
+Saved: outputs/student/prompt_inclusive_baselines_3seed_v1/ag_news_kd_gemma4-26b-vllm-guided_L10_s123_prompt-inclusive-v1.json
+[2026-07-26T21:21:46Z] OK dataset=ag_news method=gemma L=10 seed=123 status=0 start=2026-07-26T21:20:00Z end=2026-07-26T21:21:46Z
+[2026-07-26T21:21:46Z] START dataset=ag_news method=mistral teacher=mistral-small-24b-vllm-guided L=10 seed=123
+Mode: kd | teacher: mistral-small-24b-vllm-guided | device: cuda
+Dataset: ag_news (4 classes) | declared_labeled=40 prompt_demos/class=2 CE/class=10 router_cal/class=0 unlabeled=5960 test=7600
+Training on 6000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6178.32it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.3034
+  epoch 2/3  loss 0.0999
+  epoch 3/3  loss 0.0541
+
+Test accuracy: 0.8599 | macro-F1: 0.8580
+Saved: outputs/student/prompt_inclusive_baselines_3seed_v1/ag_news_kd_mistral-small-24b-vllm-guided_L10_s123_prompt-inclusive-v1.json
+[2026-07-26T21:23:29Z] OK dataset=ag_news method=mistral L=10 seed=123 status=0 start=2026-07-26T21:21:46Z end=2026-07-26T21:23:29Z
+[2026-07-26T21:23:29Z] START dataset=ag_news method=entropy teacher=multi-entropy-guided L=10 seed=123
+Mode: kd | teacher: multi-entropy-guided | device: cuda
+Dataset: ag_news (4 classes) | declared_labeled=40 prompt_demos/class=2 CE/class=10 router_cal/class=0 unlabeled=5960 test=7600
+Training on 6000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6177.58it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.5135
+  epoch 2/3  loss 0.1501
+  epoch 3/3  loss 0.0601
+
+Test accuracy: 0.8543 | macro-F1: 0.8514
+Saved: outputs/student/prompt_inclusive_baselines_3seed_v1/ag_news_kd_multi-entropy-guided_L10_s123_prompt-inclusive-v1.json
+[2026-07-26T21:25:14Z] OK dataset=ag_news method=entropy L=10 seed=123 status=0 start=2026-07-26T21:23:29Z end=2026-07-26T21:25:14Z
+[2026-07-26T21:25:14Z] START dataset=ag_news method=gemma teacher=gemma4-26b-vllm-guided L=10 seed=456
+Mode: kd | teacher: gemma4-26b-vllm-guided | device: cuda
+Dataset: ag_news (4 classes) | declared_labeled=40 prompt_demos/class=2 CE/class=10 router_cal/class=0 unlabeled=5960 test=7600
+Training on 6000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6147.75it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.5323
+  epoch 2/3  loss 0.1638
+  epoch 3/3  loss 0.0842
+
+Test accuracy: 0.8451 | macro-F1: 0.8407
+Saved: outputs/student/prompt_inclusive_baselines_3seed_v1/ag_news_kd_gemma4-26b-vllm-guided_L10_s456_prompt-inclusive-v1.json
+[2026-07-26T21:26:58Z] OK dataset=ag_news method=gemma L=10 seed=456 status=0 start=2026-07-26T21:25:14Z end=2026-07-26T21:26:58Z
+[2026-07-26T21:26:59Z] START dataset=ag_news method=mistral teacher=mistral-small-24b-vllm-guided L=10 seed=456
+Mode: kd | teacher: mistral-small-24b-vllm-guided | device: cuda
+Dataset: ag_news (4 classes) | declared_labeled=40 prompt_demos/class=2 CE/class=10 router_cal/class=0 unlabeled=5960 test=7600
+Training on 6000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6480.63it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.2986
+  epoch 2/3  loss 0.1062
+  epoch 3/3  loss 0.0608
+
+Test accuracy: 0.8670 | macro-F1: 0.8659
+Saved: outputs/student/prompt_inclusive_baselines_3seed_v1/ag_news_kd_mistral-small-24b-vllm-guided_L10_s456_prompt-inclusive-v1.json
+[2026-07-26T21:28:44Z] OK dataset=ag_news method=mistral L=10 seed=456 status=0 start=2026-07-26T21:26:59Z end=2026-07-26T21:28:44Z
+[2026-07-26T21:28:44Z] START dataset=ag_news method=entropy teacher=multi-entropy-guided L=10 seed=456
+Mode: kd | teacher: multi-entropy-guided | device: cuda
+Dataset: ag_news (4 classes) | declared_labeled=40 prompt_demos/class=2 CE/class=10 router_cal/class=0 unlabeled=5960 test=7600
+Training on 6000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 5736.43it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.4367
+  epoch 2/3  loss 0.1266
+  epoch 3/3  loss 0.0675
+
+Test accuracy: 0.8620 | macro-F1: 0.8594
+Saved: outputs/student/prompt_inclusive_baselines_3seed_v1/ag_news_kd_multi-entropy-guided_L10_s456_prompt-inclusive-v1.json
+[2026-07-26T21:30:30Z] OK dataset=ag_news method=entropy L=10 seed=456 status=0 start=2026-07-26T21:28:44Z end=2026-07-26T21:30:30Z
+[2026-07-26T21:30:30Z] START dataset=yahoo method=gemma teacher=gemma4-26b-vllm-guided L=10 seed=42
+Mode: kd | teacher: gemma4-26b-vllm-guided | device: cuda
+Dataset: yahoo (10 classes) | declared_labeled=100 prompt_demos/class=2 CE/class=10 router_cal/class=0 unlabeled=4900 test=10000
+Training on 5000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6474.45it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 2.1039
+  epoch 2/3  loss 0.9026
+  epoch 3/3  loss 0.4273
+
+Test accuracy: 0.6048 | macro-F1: 0.6068
+Saved: outputs/student/prompt_inclusive_baselines_3seed_v1/yahoo_kd_gemma4-26b-vllm-guided_L10_s42_prompt-inclusive-v1.json
+[2026-07-26T21:33:13Z] OK dataset=yahoo method=gemma L=10 seed=42 status=0 start=2026-07-26T21:30:30Z end=2026-07-26T21:33:13Z
+[2026-07-26T21:33:13Z] START dataset=yahoo method=mistral teacher=mistral-small-24b-vllm-guided L=10 seed=42
+Mode: kd | teacher: mistral-small-24b-vllm-guided | device: cuda
+Dataset: yahoo (10 classes) | declared_labeled=100 prompt_demos/class=2 CE/class=10 router_cal/class=0 unlabeled=4900 test=10000
+Training on 5000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 7190.81it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.7817
+  epoch 2/3  loss 0.3613
+  epoch 3/3  loss 0.1987
+
+Test accuracy: 0.5958 | macro-F1: 0.5919
+Saved: outputs/student/prompt_inclusive_baselines_3seed_v1/yahoo_kd_mistral-small-24b-vllm-guided_L10_s42_prompt-inclusive-v1.json
+[2026-07-26T21:35:55Z] OK dataset=yahoo method=mistral L=10 seed=42 status=0 start=2026-07-26T21:33:13Z end=2026-07-26T21:35:55Z
+[2026-07-26T21:35:55Z] START dataset=yahoo method=entropy teacher=multi-entropy-guided L=10 seed=42
+Mode: kd | teacher: multi-entropy-guided | device: cuda
+Dataset: yahoo (10 classes) | declared_labeled=100 prompt_demos/class=2 CE/class=10 router_cal/class=0 unlabeled=4900 test=10000
+Training on 5000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6004.48it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 1.8877
+  epoch 2/3  loss 0.7725
+  epoch 3/3  loss 0.3694
+
+Test accuracy: 0.6107 | macro-F1: 0.6143
+Saved: outputs/student/prompt_inclusive_baselines_3seed_v1/yahoo_kd_multi-entropy-guided_L10_s42_prompt-inclusive-v1.json
+[2026-07-26T21:38:38Z] OK dataset=yahoo method=entropy L=10 seed=42 status=0 start=2026-07-26T21:35:55Z end=2026-07-26T21:38:37Z
+[2026-07-26T21:38:38Z] START dataset=yahoo method=gemma teacher=gemma4-26b-vllm-guided L=10 seed=123
+Mode: kd | teacher: gemma4-26b-vllm-guided | device: cuda
+Dataset: yahoo (10 classes) | declared_labeled=100 prompt_demos/class=2 CE/class=10 router_cal/class=0 unlabeled=4900 test=10000
+Training on 5000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6449.57it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 2.1108
+  epoch 2/3  loss 0.9100
+  epoch 3/3  loss 0.4757
+
+Test accuracy: 0.6040 | macro-F1: 0.6099
+Saved: outputs/student/prompt_inclusive_baselines_3seed_v1/yahoo_kd_gemma4-26b-vllm-guided_L10_s123_prompt-inclusive-v1.json
+[2026-07-26T21:41:19Z] OK dataset=yahoo method=gemma L=10 seed=123 status=0 start=2026-07-26T21:38:38Z end=2026-07-26T21:41:19Z
+[2026-07-26T21:41:19Z] START dataset=yahoo method=mistral teacher=mistral-small-24b-vllm-guided L=10 seed=123
+Mode: kd | teacher: mistral-small-24b-vllm-guided | device: cuda
+Dataset: yahoo (10 classes) | declared_labeled=100 prompt_demos/class=2 CE/class=10 router_cal/class=0 unlabeled=4900 test=10000
+Training on 5000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6777.55it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.7516
+  epoch 2/3  loss 0.3610
+  epoch 3/3  loss 0.2087
+
+Test accuracy: 0.6025 | macro-F1: 0.6017
+Saved: outputs/student/prompt_inclusive_baselines_3seed_v1/yahoo_kd_mistral-small-24b-vllm-guided_L10_s123_prompt-inclusive-v1.json
+[2026-07-26T21:44:02Z] OK dataset=yahoo method=mistral L=10 seed=123 status=0 start=2026-07-26T21:41:19Z end=2026-07-26T21:44:02Z
+[2026-07-26T21:44:02Z] START dataset=yahoo method=entropy teacher=multi-entropy-guided L=10 seed=123
+Mode: kd | teacher: multi-entropy-guided | device: cuda
+Dataset: yahoo (10 classes) | declared_labeled=100 prompt_demos/class=2 CE/class=10 router_cal/class=0 unlabeled=4900 test=10000
+Training on 5000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6374.39it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 1.8917
+  epoch 2/3  loss 0.7776
+  epoch 3/3  loss 0.4626
+
+Test accuracy: 0.6107 | macro-F1: 0.6135
+Saved: outputs/student/prompt_inclusive_baselines_3seed_v1/yahoo_kd_multi-entropy-guided_L10_s123_prompt-inclusive-v1.json
+[2026-07-26T21:46:45Z] OK dataset=yahoo method=entropy L=10 seed=123 status=0 start=2026-07-26T21:44:02Z end=2026-07-26T21:46:45Z
+[2026-07-26T21:46:45Z] START dataset=yahoo method=gemma teacher=gemma4-26b-vllm-guided L=10 seed=456
+Mode: kd | teacher: gemma4-26b-vllm-guided | device: cuda
+Dataset: yahoo (10 classes) | declared_labeled=100 prompt_demos/class=2 CE/class=10 router_cal/class=0 unlabeled=4900 test=10000
+Training on 5000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 5721.25it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 2.1765
+  epoch 2/3  loss 0.9044
+  epoch 3/3  loss 0.5226
+
+Test accuracy: 0.6002 | macro-F1: 0.6028
+Saved: outputs/student/prompt_inclusive_baselines_3seed_v1/yahoo_kd_gemma4-26b-vllm-guided_L10_s456_prompt-inclusive-v1.json
+[2026-07-26T21:49:28Z] OK dataset=yahoo method=gemma L=10 seed=456 status=0 start=2026-07-26T21:46:45Z end=2026-07-26T21:49:27Z
+[2026-07-26T21:49:28Z] START dataset=yahoo method=mistral teacher=mistral-small-24b-vllm-guided L=10 seed=456
+Mode: kd | teacher: mistral-small-24b-vllm-guided | device: cuda
+Dataset: yahoo (10 classes) | declared_labeled=100 prompt_demos/class=2 CE/class=10 router_cal/class=0 unlabeled=4900 test=10000
+Training on 5000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 5663.98it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.8561
+  epoch 2/3  loss 0.3608
+  epoch 3/3  loss 0.2104
+
+Test accuracy: 0.5951 | macro-F1: 0.5903
+Saved: outputs/student/prompt_inclusive_baselines_3seed_v1/yahoo_kd_mistral-small-24b-vllm-guided_L10_s456_prompt-inclusive-v1.json
+[2026-07-26T21:52:10Z] OK dataset=yahoo method=mistral L=10 seed=456 status=0 start=2026-07-26T21:49:28Z end=2026-07-26T21:52:10Z
+[2026-07-26T21:52:10Z] START dataset=yahoo method=entropy teacher=multi-entropy-guided L=10 seed=456
+Mode: kd | teacher: multi-entropy-guided | device: cuda
+Dataset: yahoo (10 classes) | declared_labeled=100 prompt_demos/class=2 CE/class=10 router_cal/class=0 unlabeled=4900 test=10000
+Training on 5000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 7483.74it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 2.0833
+  epoch 2/3  loss 0.9173
+  epoch 3/3  loss 0.5183
+
+Test accuracy: 0.5921 | macro-F1: 0.5972
+Saved: outputs/student/prompt_inclusive_baselines_3seed_v1/yahoo_kd_multi-entropy-guided_L10_s456_prompt-inclusive-v1.json
+[2026-07-26T21:54:53Z] OK dataset=yahoo method=entropy L=10 seed=456 status=0 start=2026-07-26T21:52:10Z end=2026-07-26T21:54:53Z
+[2026-07-26T21:54:53Z] START dataset=amazon method=gemma teacher=gemma4-26b-vllm-guided L=10 seed=42
+Mode: kd | teacher: gemma4-26b-vllm-guided | device: cuda
+Dataset: amazon (5 classes) | declared_labeled=50 prompt_demos/class=2 CE/class=10 router_cal/class=0 unlabeled=2450 test=10000
+Training on 2500 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 5993.50it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 2.2530
+  epoch 2/3  loss 1.1143
+  epoch 3/3  loss 0.5435
+
+Test accuracy: 0.5638 | macro-F1: 0.5402
+Saved: outputs/student/prompt_inclusive_baselines_3seed_v1/amazon_kd_gemma4-26b-vllm-guided_L10_s42_prompt-inclusive-v1.json
+[2026-07-26T21:56:29Z] OK dataset=amazon method=gemma L=10 seed=42 status=0 start=2026-07-26T21:54:53Z end=2026-07-26T21:56:29Z
+[2026-07-26T21:56:30Z] START dataset=amazon method=mistral teacher=mistral-small-24b-vllm-guided L=10 seed=42
+Mode: kd | teacher: mistral-small-24b-vllm-guided | device: cuda
+Dataset: amazon (5 classes) | declared_labeled=50 prompt_demos/class=2 CE/class=10 router_cal/class=0 unlabeled=2450 test=10000
+Training on 2500 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 5920.90it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.7528
+  epoch 2/3  loss 0.3044
+  epoch 3/3  loss 0.1541
+
+Test accuracy: 0.4935 | macro-F1: 0.4238
+Saved: outputs/student/prompt_inclusive_baselines_3seed_v1/amazon_kd_mistral-small-24b-vllm-guided_L10_s42_prompt-inclusive-v1.json
+[2026-07-26T21:58:05Z] OK dataset=amazon method=mistral L=10 seed=42 status=0 start=2026-07-26T21:56:30Z end=2026-07-26T21:58:05Z
+[2026-07-26T21:58:05Z] START dataset=amazon method=entropy teacher=multi-entropy-guided L=10 seed=42
+Mode: kd | teacher: multi-entropy-guided | device: cuda
+Dataset: amazon (5 classes) | declared_labeled=50 prompt_demos/class=2 CE/class=10 router_cal/class=0 unlabeled=2450 test=10000
+Training on 2500 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 5713.11it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 1.9649
+  epoch 2/3  loss 0.8649
+  epoch 3/3  loss 0.4151
+
+Test accuracy: 0.5797 | macro-F1: 0.5624
+Saved: outputs/student/prompt_inclusive_baselines_3seed_v1/amazon_kd_multi-entropy-guided_L10_s42_prompt-inclusive-v1.json
+[2026-07-26T21:59:42Z] OK dataset=amazon method=entropy L=10 seed=42 status=0 start=2026-07-26T21:58:05Z end=2026-07-26T21:59:42Z
+[2026-07-26T21:59:42Z] START dataset=amazon method=gemma teacher=gemma4-26b-vllm-guided L=10 seed=123
+Mode: kd | teacher: gemma4-26b-vllm-guided | device: cuda
+Dataset: amazon (5 classes) | declared_labeled=50 prompt_demos/class=2 CE/class=10 router_cal/class=0 unlabeled=2450 test=10000
+Training on 2500 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 5828.46it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 2.3526
+  epoch 2/3  loss 1.0623
+  epoch 3/3  loss 0.5561
+
+Test accuracy: 0.5786 | macro-F1: 0.5655
+Saved: outputs/student/prompt_inclusive_baselines_3seed_v1/amazon_kd_gemma4-26b-vllm-guided_L10_s123_prompt-inclusive-v1.json
+[2026-07-26T22:01:20Z] OK dataset=amazon method=gemma L=10 seed=123 status=0 start=2026-07-26T21:59:42Z end=2026-07-26T22:01:19Z
+[2026-07-26T22:01:20Z] START dataset=amazon method=mistral teacher=mistral-small-24b-vllm-guided L=10 seed=123
+Mode: kd | teacher: mistral-small-24b-vllm-guided | device: cuda
+Dataset: amazon (5 classes) | declared_labeled=50 prompt_demos/class=2 CE/class=10 router_cal/class=0 unlabeled=2450 test=10000
+Training on 2500 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6325.06it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.8222
+  epoch 2/3  loss 0.3037
+  epoch 3/3  loss 0.1475
+
+Test accuracy: 0.5485 | macro-F1: 0.5255
+Saved: outputs/student/prompt_inclusive_baselines_3seed_v1/amazon_kd_mistral-small-24b-vllm-guided_L10_s123_prompt-inclusive-v1.json
+[2026-07-26T22:02:56Z] OK dataset=amazon method=mistral L=10 seed=123 status=0 start=2026-07-26T22:01:20Z end=2026-07-26T22:02:56Z
+[2026-07-26T22:02:56Z] START dataset=amazon method=entropy teacher=multi-entropy-guided L=10 seed=123
+Mode: kd | teacher: multi-entropy-guided | device: cuda
+Dataset: amazon (5 classes) | declared_labeled=50 prompt_demos/class=2 CE/class=10 router_cal/class=0 unlabeled=2450 test=10000
+Training on 2500 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 7132.46it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 1.9931
+  epoch 2/3  loss 0.8417
+  epoch 3/3  loss 0.4035
+
+Test accuracy: 0.5880 | macro-F1: 0.5845
+Saved: outputs/student/prompt_inclusive_baselines_3seed_v1/amazon_kd_multi-entropy-guided_L10_s123_prompt-inclusive-v1.json
+[2026-07-26T22:04:33Z] OK dataset=amazon method=entropy L=10 seed=123 status=0 start=2026-07-26T22:02:56Z end=2026-07-26T22:04:33Z
+[2026-07-26T22:04:33Z] START dataset=amazon method=gemma teacher=gemma4-26b-vllm-guided L=10 seed=456
+Mode: kd | teacher: gemma4-26b-vllm-guided | device: cuda
+Dataset: amazon (5 classes) | declared_labeled=50 prompt_demos/class=2 CE/class=10 router_cal/class=0 unlabeled=2450 test=10000
+Training on 2500 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 3962.75it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 2.2646
+  epoch 2/3  loss 1.1944
+  epoch 3/3  loss 0.6578
+
+Test accuracy: 0.5722 | macro-F1: 0.5619
+Saved: outputs/student/prompt_inclusive_baselines_3seed_v1/amazon_kd_gemma4-26b-vllm-guided_L10_s456_prompt-inclusive-v1.json
+[2026-07-26T22:06:09Z] OK dataset=amazon method=gemma L=10 seed=456 status=0 start=2026-07-26T22:04:33Z end=2026-07-26T22:06:08Z
+[2026-07-26T22:06:09Z] START dataset=amazon method=mistral teacher=mistral-small-24b-vllm-guided L=10 seed=456
+Mode: kd | teacher: mistral-small-24b-vllm-guided | device: cuda
+Dataset: amazon (5 classes) | declared_labeled=50 prompt_demos/class=2 CE/class=10 router_cal/class=0 unlabeled=2450 test=10000
+Training on 2500 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6556.46it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.8026
+  epoch 2/3  loss 0.3251
+  epoch 3/3  loss 0.1817
+
+Test accuracy: 0.5302 | macro-F1: 0.4844
+Saved: outputs/student/prompt_inclusive_baselines_3seed_v1/amazon_kd_mistral-small-24b-vllm-guided_L10_s456_prompt-inclusive-v1.json
+[2026-07-26T22:07:44Z] OK dataset=amazon method=mistral L=10 seed=456 status=0 start=2026-07-26T22:06:09Z end=2026-07-26T22:07:44Z
+[2026-07-26T22:07:44Z] START dataset=amazon method=entropy teacher=multi-entropy-guided L=10 seed=456
+Mode: kd | teacher: multi-entropy-guided | device: cuda
+Dataset: amazon (5 classes) | declared_labeled=50 prompt_demos/class=2 CE/class=10 router_cal/class=0 unlabeled=2450 test=10000
+Training on 2500 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6179.12it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 1.9838
+  epoch 2/3  loss 0.8929
+  epoch 3/3  loss 0.4556
+
+Test accuracy: 0.5871 | macro-F1: 0.5798
+Saved: outputs/student/prompt_inclusive_baselines_3seed_v1/amazon_kd_multi-entropy-guided_L10_s456_prompt-inclusive-v1.json
+[2026-07-26T22:09:20Z] OK dataset=amazon method=entropy L=10 seed=456 status=0 start=2026-07-26T22:07:44Z end=2026-07-26T22:09:20Z
+[2026-07-26T22:09:20Z] START dataset=amazon3 method=gemma teacher=gemma4-26b-vllm-guided L=10 seed=42
+Mode: kd | teacher: gemma4-26b-vllm-guided | device: cuda
+Dataset: amazon3 (3 classes) | declared_labeled=30 prompt_demos/class=2 CE/class=10 router_cal/class=0 unlabeled=1470 test=6000
+Training on 1500 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6651.34it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 1.5286
+  epoch 2/3  loss 0.6185
+  epoch 3/3  loss 0.4402
+
+Test accuracy: 0.6617 | macro-F1: 0.6158
+Saved: outputs/student/prompt_inclusive_baselines_3seed_v1/amazon3_kd_gemma4-26b-vllm-guided_L10_s42_prompt-inclusive-v1.json
+[2026-07-26T22:10:21Z] OK dataset=amazon3 method=gemma L=10 seed=42 status=0 start=2026-07-26T22:09:20Z end=2026-07-26T22:10:21Z
+[2026-07-26T22:10:21Z] START dataset=amazon3 method=mistral teacher=mistral-small-24b-vllm-guided L=10 seed=42
+Mode: kd | teacher: mistral-small-24b-vllm-guided | device: cuda
+Dataset: amazon3 (3 classes) | declared_labeled=30 prompt_demos/class=2 CE/class=10 router_cal/class=0 unlabeled=1470 test=6000
+Training on 1500 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 7274.44it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.5569
+  epoch 2/3  loss 0.1878
+  epoch 3/3  loss 0.0940
+
+Test accuracy: 0.6793 | macro-F1: 0.6426
+Saved: outputs/student/prompt_inclusive_baselines_3seed_v1/amazon3_kd_mistral-small-24b-vllm-guided_L10_s42_prompt-inclusive-v1.json
+[2026-07-26T22:11:23Z] OK dataset=amazon3 method=mistral L=10 seed=42 status=0 start=2026-07-26T22:10:21Z end=2026-07-26T22:11:22Z
+[2026-07-26T22:11:23Z] START dataset=amazon3 method=entropy teacher=multi-entropy-guided L=10 seed=42
+Mode: kd | teacher: multi-entropy-guided | device: cuda
+Dataset: amazon3 (3 classes) | declared_labeled=30 prompt_demos/class=2 CE/class=10 router_cal/class=0 unlabeled=1470 test=6000
+Training on 1500 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6545.63it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 1.3595
+  epoch 2/3  loss 0.5101
+  epoch 3/3  loss 0.3032
+
+Test accuracy: 0.6903 | macro-F1: 0.6480
+Saved: outputs/student/prompt_inclusive_baselines_3seed_v1/amazon3_kd_multi-entropy-guided_L10_s42_prompt-inclusive-v1.json
+[2026-07-26T22:12:24Z] OK dataset=amazon3 method=entropy L=10 seed=42 status=0 start=2026-07-26T22:11:23Z end=2026-07-26T22:12:24Z
+[2026-07-26T22:12:24Z] START dataset=amazon3 method=gemma teacher=gemma4-26b-vllm-guided L=10 seed=123
+Mode: kd | teacher: gemma4-26b-vllm-guided | device: cuda
+Dataset: amazon3 (3 classes) | declared_labeled=30 prompt_demos/class=2 CE/class=10 router_cal/class=0 unlabeled=1470 test=6000
+Training on 1500 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6306.81it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 1.6794
+  epoch 2/3  loss 0.7386
+  epoch 3/3  loss 0.4001
+
+Test accuracy: 0.7050 | macro-F1: 0.6718
+Saved: outputs/student/prompt_inclusive_baselines_3seed_v1/amazon3_kd_gemma4-26b-vllm-guided_L10_s123_prompt-inclusive-v1.json
+[2026-07-26T22:13:26Z] OK dataset=amazon3 method=gemma L=10 seed=123 status=0 start=2026-07-26T22:12:24Z end=2026-07-26T22:13:26Z
+[2026-07-26T22:13:26Z] START dataset=amazon3 method=mistral teacher=mistral-small-24b-vllm-guided L=10 seed=123
+Mode: kd | teacher: mistral-small-24b-vllm-guided | device: cuda
+Dataset: amazon3 (3 classes) | declared_labeled=30 prompt_demos/class=2 CE/class=10 router_cal/class=0 unlabeled=1470 test=6000
+Training on 1500 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6985.54it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.5922
+  epoch 2/3  loss 0.1811
+  epoch 3/3  loss 0.0954
+
+Test accuracy: 0.6732 | macro-F1: 0.6165
+Saved: outputs/student/prompt_inclusive_baselines_3seed_v1/amazon3_kd_mistral-small-24b-vllm-guided_L10_s123_prompt-inclusive-v1.json
+[2026-07-26T22:14:28Z] OK dataset=amazon3 method=mistral L=10 seed=123 status=0 start=2026-07-26T22:13:26Z end=2026-07-26T22:14:28Z
+[2026-07-26T22:14:28Z] START dataset=amazon3 method=entropy teacher=multi-entropy-guided L=10 seed=123
+Mode: kd | teacher: multi-entropy-guided | device: cuda
+Dataset: amazon3 (3 classes) | declared_labeled=30 prompt_demos/class=2 CE/class=10 router_cal/class=0 unlabeled=1470 test=6000
+Training on 1500 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 5924.10it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 1.4778
+  epoch 2/3  loss 0.5802
+  epoch 3/3  loss 0.2558
+
+Test accuracy: 0.6980 | macro-F1: 0.6629
+Saved: outputs/student/prompt_inclusive_baselines_3seed_v1/amazon3_kd_multi-entropy-guided_L10_s123_prompt-inclusive-v1.json
+[2026-07-26T22:15:29Z] OK dataset=amazon3 method=entropy L=10 seed=123 status=0 start=2026-07-26T22:14:28Z end=2026-07-26T22:15:29Z
+[2026-07-26T22:15:29Z] START dataset=amazon3 method=gemma teacher=gemma4-26b-vllm-guided L=10 seed=456
+Mode: kd | teacher: gemma4-26b-vllm-guided | device: cuda
+Dataset: amazon3 (3 classes) | declared_labeled=30 prompt_demos/class=2 CE/class=10 router_cal/class=0 unlabeled=1470 test=6000
+Training on 1500 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 7137.01it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 1.8222
+  epoch 2/3  loss 0.7477
+  epoch 3/3  loss 0.3294
+
+Test accuracy: 0.7162 | macro-F1: 0.6934
+Saved: outputs/student/prompt_inclusive_baselines_3seed_v1/amazon3_kd_gemma4-26b-vllm-guided_L10_s456_prompt-inclusive-v1.json
+[2026-07-26T22:16:31Z] OK dataset=amazon3 method=gemma L=10 seed=456 status=0 start=2026-07-26T22:15:29Z end=2026-07-26T22:16:31Z
+[2026-07-26T22:16:31Z] START dataset=amazon3 method=mistral teacher=mistral-small-24b-vllm-guided L=10 seed=456
+Mode: kd | teacher: mistral-small-24b-vllm-guided | device: cuda
+Dataset: amazon3 (3 classes) | declared_labeled=30 prompt_demos/class=2 CE/class=10 router_cal/class=0 unlabeled=1470 test=6000
+Training on 1500 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 28728.11it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.5533
+  epoch 2/3  loss 0.1833
+  epoch 3/3  loss 0.0953
+
+Test accuracy: 0.6867 | macro-F1: 0.6514
+Saved: outputs/student/prompt_inclusive_baselines_3seed_v1/amazon3_kd_mistral-small-24b-vllm-guided_L10_s456_prompt-inclusive-v1.json
+[2026-07-26T22:17:33Z] OK dataset=amazon3 method=mistral L=10 seed=456 status=0 start=2026-07-26T22:16:31Z end=2026-07-26T22:17:32Z
+[2026-07-26T22:17:33Z] START dataset=amazon3 method=entropy teacher=multi-entropy-guided L=10 seed=456
+Mode: kd | teacher: multi-entropy-guided | device: cuda
+Dataset: amazon3 (3 classes) | declared_labeled=30 prompt_demos/class=2 CE/class=10 router_cal/class=0 unlabeled=1470 test=6000
+Training on 1500 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6338.13it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 1.5003
+  epoch 2/3  loss 0.5422
+  epoch 3/3  loss 0.2574
+
+Test accuracy: 0.7228 | macro-F1: 0.7060
+Saved: outputs/student/prompt_inclusive_baselines_3seed_v1/amazon3_kd_multi-entropy-guided_L10_s456_prompt-inclusive-v1.json
+[2026-07-26T22:18:34Z] OK dataset=amazon3 method=entropy L=10 seed=456 status=0 start=2026-07-26T22:17:33Z end=2026-07-26T22:18:34Z
+[2026-07-26T22:18:34Z] START dataset=ag_news method=gemma teacher=gemma4-26b-vllm-guided L=50 seed=42
+Mode: kd | teacher: gemma4-26b-vllm-guided | device: cuda
+Dataset: ag_news (4 classes) | declared_labeled=200 prompt_demos/class=2 CE/class=50 router_cal/class=0 unlabeled=5800 test=7600
+Training on 6000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6696.71it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.6526
+  epoch 2/3  loss 0.2479
+  epoch 3/3  loss 0.1328
+
+Test accuracy: 0.8522 | macro-F1: 0.8492
+Saved: outputs/student/prompt_inclusive_baselines_3seed_v1/ag_news_kd_gemma4-26b-vllm-guided_L50_s42_prompt-inclusive-v1.json
+[2026-07-26T22:20:21Z] OK dataset=ag_news method=gemma L=50 seed=42 status=0 start=2026-07-26T22:18:34Z end=2026-07-26T22:20:21Z
+[2026-07-26T22:20:21Z] START dataset=ag_news method=mistral teacher=mistral-small-24b-vllm-guided L=50 seed=42
+Mode: kd | teacher: mistral-small-24b-vllm-guided | device: cuda
+Dataset: ag_news (4 classes) | declared_labeled=200 prompt_demos/class=2 CE/class=50 router_cal/class=0 unlabeled=5800 test=7600
+Training on 6000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 5139.99it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.3983
+  epoch 2/3  loss 0.1294
+  epoch 3/3  loss 0.0778
+
+Test accuracy: 0.8689 | macro-F1: 0.8677
+Saved: outputs/student/prompt_inclusive_baselines_3seed_v1/ag_news_kd_mistral-small-24b-vllm-guided_L50_s42_prompt-inclusive-v1.json
+[2026-07-26T22:22:07Z] OK dataset=ag_news method=mistral L=50 seed=42 status=0 start=2026-07-26T22:20:21Z end=2026-07-26T22:22:07Z
+[2026-07-26T22:22:07Z] START dataset=ag_news method=entropy teacher=multi-entropy-guided L=50 seed=42
+Mode: kd | teacher: multi-entropy-guided | device: cuda
+Dataset: ag_news (4 classes) | declared_labeled=200 prompt_demos/class=2 CE/class=50 router_cal/class=0 unlabeled=5800 test=7600
+Training on 6000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6168.63it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.5440
+  epoch 2/3  loss 0.1769
+  epoch 3/3  loss 0.0914
+
+Test accuracy: 0.8645 | macro-F1: 0.8624
+Saved: outputs/student/prompt_inclusive_baselines_3seed_v1/ag_news_kd_multi-entropy-guided_L50_s42_prompt-inclusive-v1.json
+[2026-07-26T22:23:53Z] OK dataset=ag_news method=entropy L=50 seed=42 status=0 start=2026-07-26T22:22:07Z end=2026-07-26T22:23:53Z
+[2026-07-26T22:23:53Z] START dataset=ag_news method=gemma teacher=gemma4-26b-vllm-guided L=50 seed=123
+Mode: kd | teacher: gemma4-26b-vllm-guided | device: cuda
+Dataset: ag_news (4 classes) | declared_labeled=200 prompt_demos/class=2 CE/class=50 router_cal/class=0 unlabeled=5800 test=7600
+Training on 6000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6665.87it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.7689
+  epoch 2/3  loss 0.3198
+  epoch 3/3  loss 0.1366
+
+Test accuracy: 0.8317 | macro-F1: 0.8245
+Saved: outputs/student/prompt_inclusive_baselines_3seed_v1/ag_news_kd_gemma4-26b-vllm-guided_L50_s123_prompt-inclusive-v1.json
+[2026-07-26T22:25:40Z] OK dataset=ag_news method=gemma L=50 seed=123 status=0 start=2026-07-26T22:23:53Z end=2026-07-26T22:25:40Z
+[2026-07-26T22:25:40Z] START dataset=ag_news method=mistral teacher=mistral-small-24b-vllm-guided L=50 seed=123
+Mode: kd | teacher: mistral-small-24b-vllm-guided | device: cuda
+Dataset: ag_news (4 classes) | declared_labeled=200 prompt_demos/class=2 CE/class=50 router_cal/class=0 unlabeled=5800 test=7600
+Training on 6000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 5989.98it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.4486
+  epoch 2/3  loss 0.1603
+  epoch 3/3  loss 0.0836
+
+Test accuracy: 0.8600 | macro-F1: 0.8585
+Saved: outputs/student/prompt_inclusive_baselines_3seed_v1/ag_news_kd_mistral-small-24b-vllm-guided_L50_s123_prompt-inclusive-v1.json
+[2026-07-26T22:27:26Z] OK dataset=ag_news method=mistral L=50 seed=123 status=0 start=2026-07-26T22:25:40Z end=2026-07-26T22:27:26Z
+[2026-07-26T22:27:26Z] START dataset=ag_news method=entropy teacher=multi-entropy-guided L=50 seed=123
+Mode: kd | teacher: multi-entropy-guided | device: cuda
+Dataset: ag_news (4 classes) | declared_labeled=200 prompt_demos/class=2 CE/class=50 router_cal/class=0 unlabeled=5800 test=7600
+Training on 6000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6798.79it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.6877
+  epoch 2/3  loss 0.2624
+  epoch 3/3  loss 0.1025
+
+Test accuracy: 0.8583 | macro-F1: 0.8555
+Saved: outputs/student/prompt_inclusive_baselines_3seed_v1/ag_news_kd_multi-entropy-guided_L50_s123_prompt-inclusive-v1.json
+[2026-07-26T22:29:11Z] OK dataset=ag_news method=entropy L=50 seed=123 status=0 start=2026-07-26T22:27:26Z end=2026-07-26T22:29:11Z
+[2026-07-26T22:29:11Z] START dataset=ag_news method=gemma teacher=gemma4-26b-vllm-guided L=50 seed=456
+Mode: kd | teacher: gemma4-26b-vllm-guided | device: cuda
+Dataset: ag_news (4 classes) | declared_labeled=200 prompt_demos/class=2 CE/class=50 router_cal/class=0 unlabeled=5800 test=7600
+Training on 6000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6065.26it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.6280
+  epoch 2/3  loss 0.2732
+  epoch 3/3  loss 0.1373
+
+Test accuracy: 0.8766 | macro-F1: 0.8760
+Saved: outputs/student/prompt_inclusive_baselines_3seed_v1/ag_news_kd_gemma4-26b-vllm-guided_L50_s456_prompt-inclusive-v1.json
+[2026-07-26T22:30:56Z] OK dataset=ag_news method=gemma L=50 seed=456 status=0 start=2026-07-26T22:29:11Z end=2026-07-26T22:30:56Z
+[2026-07-26T22:30:56Z] START dataset=ag_news method=mistral teacher=mistral-small-24b-vllm-guided L=50 seed=456
+Mode: kd | teacher: mistral-small-24b-vllm-guided | device: cuda
+Dataset: ag_news (4 classes) | declared_labeled=200 prompt_demos/class=2 CE/class=50 router_cal/class=0 unlabeled=5800 test=7600
+Training on 6000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6978.70it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.3787
+  epoch 2/3  loss 0.1475
+  epoch 3/3  loss 0.0780
+
+Test accuracy: 0.8684 | macro-F1: 0.8673
+Saved: outputs/student/prompt_inclusive_baselines_3seed_v1/ag_news_kd_mistral-small-24b-vllm-guided_L50_s456_prompt-inclusive-v1.json
+[2026-07-26T22:32:42Z] OK dataset=ag_news method=mistral L=50 seed=456 status=0 start=2026-07-26T22:30:56Z end=2026-07-26T22:32:42Z
+[2026-07-26T22:32:42Z] START dataset=ag_news method=entropy teacher=multi-entropy-guided L=50 seed=456
+Mode: kd | teacher: multi-entropy-guided | device: cuda
+Dataset: ag_news (4 classes) | declared_labeled=200 prompt_demos/class=2 CE/class=50 router_cal/class=0 unlabeled=5800 test=7600
+Training on 6000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6780.12it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.5361
+  epoch 2/3  loss 0.2298
+  epoch 3/3  loss 0.1053
+
+Test accuracy: 0.8724 | macro-F1: 0.8712
+Saved: outputs/student/prompt_inclusive_baselines_3seed_v1/ag_news_kd_multi-entropy-guided_L50_s456_prompt-inclusive-v1.json
+[2026-07-26T22:34:31Z] OK dataset=ag_news method=entropy L=50 seed=456 status=0 start=2026-07-26T22:32:42Z end=2026-07-26T22:34:31Z
+[2026-07-26T22:34:31Z] START dataset=yahoo method=gemma teacher=gemma4-26b-vllm-guided L=50 seed=42
+Mode: kd | teacher: gemma4-26b-vllm-guided | device: cuda
+Dataset: yahoo (10 classes) | declared_labeled=500 prompt_demos/class=2 CE/class=50 router_cal/class=0 unlabeled=4500 test=10000
+Training on 5000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 7059.11it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 2.6753
+  epoch 2/3  loss 1.4542
+  epoch 3/3  loss 0.9138
+
+Test accuracy: 0.6132 | macro-F1: 0.6126
+Saved: outputs/student/prompt_inclusive_baselines_3seed_v1/yahoo_kd_gemma4-26b-vllm-guided_L50_s42_prompt-inclusive-v1.json
+[2026-07-26T22:37:13Z] OK dataset=yahoo method=gemma L=50 seed=42 status=0 start=2026-07-26T22:34:31Z end=2026-07-26T22:37:13Z
+[2026-07-26T22:37:14Z] START dataset=yahoo method=mistral teacher=mistral-small-24b-vllm-guided L=50 seed=42
+Mode: kd | teacher: mistral-small-24b-vllm-guided | device: cuda
+Dataset: yahoo (10 classes) | declared_labeled=500 prompt_demos/class=2 CE/class=50 router_cal/class=0 unlabeled=4500 test=10000
+Training on 5000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6235.45it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 1.2525
+  epoch 2/3  loss 0.6693
+  epoch 3/3  loss 0.4553
+
+Test accuracy: 0.6121 | macro-F1: 0.6050
+Saved: outputs/student/prompt_inclusive_baselines_3seed_v1/yahoo_kd_mistral-small-24b-vllm-guided_L50_s42_prompt-inclusive-v1.json
+[2026-07-26T22:39:56Z] OK dataset=yahoo method=mistral L=50 seed=42 status=0 start=2026-07-26T22:37:14Z end=2026-07-26T22:39:56Z
+[2026-07-26T22:39:56Z] START dataset=yahoo method=entropy teacher=multi-entropy-guided L=50 seed=42
+Mode: kd | teacher: multi-entropy-guided | device: cuda
+Dataset: yahoo (10 classes) | declared_labeled=500 prompt_demos/class=2 CE/class=50 router_cal/class=0 unlabeled=4500 test=10000
+Training on 5000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6649.94it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 2.4200
+  epoch 2/3  loss 1.2405
+  epoch 3/3  loss 0.7582
+
+Test accuracy: 0.6077 | macro-F1: 0.6092
+Saved: outputs/student/prompt_inclusive_baselines_3seed_v1/yahoo_kd_multi-entropy-guided_L50_s42_prompt-inclusive-v1.json
+[2026-07-26T22:42:38Z] OK dataset=yahoo method=entropy L=50 seed=42 status=0 start=2026-07-26T22:39:56Z end=2026-07-26T22:42:38Z
+[2026-07-26T22:42:39Z] START dataset=yahoo method=gemma teacher=gemma4-26b-vllm-guided L=50 seed=123
+Mode: kd | teacher: gemma4-26b-vllm-guided | device: cuda
+Dataset: yahoo (10 classes) | declared_labeled=500 prompt_demos/class=2 CE/class=50 router_cal/class=0 unlabeled=4500 test=10000
+Training on 5000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6300.68it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 2.8089
+  epoch 2/3  loss 1.3747
+  epoch 3/3  loss 0.8239
+
+Test accuracy: 0.5853 | macro-F1: 0.5839
+Saved: outputs/student/prompt_inclusive_baselines_3seed_v1/yahoo_kd_gemma4-26b-vllm-guided_L50_s123_prompt-inclusive-v1.json
+[2026-07-26T22:45:22Z] OK dataset=yahoo method=gemma L=50 seed=123 status=0 start=2026-07-26T22:42:39Z end=2026-07-26T22:45:22Z
+[2026-07-26T22:45:22Z] START dataset=yahoo method=mistral teacher=mistral-small-24b-vllm-guided L=50 seed=123
+Mode: kd | teacher: mistral-small-24b-vllm-guided | device: cuda
+Dataset: yahoo (10 classes) | declared_labeled=500 prompt_demos/class=2 CE/class=50 router_cal/class=0 unlabeled=4500 test=10000
+Training on 5000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 7119.02it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 1.3020
+  epoch 2/3  loss 0.6314
+  epoch 3/3  loss 0.3987
+
+Test accuracy: 0.5935 | macro-F1: 0.5906
+Saved: outputs/student/prompt_inclusive_baselines_3seed_v1/yahoo_kd_mistral-small-24b-vllm-guided_L50_s123_prompt-inclusive-v1.json
+[2026-07-26T22:48:05Z] OK dataset=yahoo method=mistral L=50 seed=123 status=0 start=2026-07-26T22:45:22Z end=2026-07-26T22:48:04Z
+[2026-07-26T22:48:05Z] START dataset=yahoo method=entropy teacher=multi-entropy-guided L=50 seed=123
+Mode: kd | teacher: multi-entropy-guided | device: cuda
+Dataset: yahoo (10 classes) | declared_labeled=500 prompt_demos/class=2 CE/class=50 router_cal/class=0 unlabeled=4500 test=10000
+Training on 5000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 5209.79it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 2.5840
+  epoch 2/3  loss 1.2198
+  epoch 3/3  loss 0.8009
+
+Test accuracy: 0.5947 | macro-F1: 0.5978
+Saved: outputs/student/prompt_inclusive_baselines_3seed_v1/yahoo_kd_multi-entropy-guided_L50_s123_prompt-inclusive-v1.json
+[2026-07-26T22:50:47Z] OK dataset=yahoo method=entropy L=50 seed=123 status=0 start=2026-07-26T22:48:05Z end=2026-07-26T22:50:47Z
+[2026-07-26T22:50:47Z] START dataset=yahoo method=gemma teacher=gemma4-26b-vllm-guided L=50 seed=456
+Mode: kd | teacher: gemma4-26b-vllm-guided | device: cuda
+Dataset: yahoo (10 classes) | declared_labeled=500 prompt_demos/class=2 CE/class=50 router_cal/class=0 unlabeled=4500 test=10000
+Training on 5000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 5857.00it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 2.9113
+  epoch 2/3  loss 1.6408
+  epoch 3/3  loss 1.0518
+
+Test accuracy: 0.5896 | macro-F1: 0.5981
+Saved: outputs/student/prompt_inclusive_baselines_3seed_v1/yahoo_kd_gemma4-26b-vllm-guided_L50_s456_prompt-inclusive-v1.json
+[2026-07-26T22:53:31Z] OK dataset=yahoo method=gemma L=50 seed=456 status=0 start=2026-07-26T22:50:47Z end=2026-07-26T22:53:31Z
+[2026-07-26T22:53:31Z] START dataset=yahoo method=mistral teacher=mistral-small-24b-vllm-guided L=50 seed=456
+Mode: kd | teacher: mistral-small-24b-vllm-guided | device: cuda
+Dataset: yahoo (10 classes) | declared_labeled=500 prompt_demos/class=2 CE/class=50 router_cal/class=0 unlabeled=4500 test=10000
+Training on 5000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6153.26it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 1.3133
+  epoch 2/3  loss 0.7319
+  epoch 3/3  loss 0.4501
+
+Test accuracy: 0.6013 | macro-F1: 0.5958
+Saved: outputs/student/prompt_inclusive_baselines_3seed_v1/yahoo_kd_mistral-small-24b-vllm-guided_L50_s456_prompt-inclusive-v1.json
+[2026-07-26T22:56:15Z] OK dataset=yahoo method=mistral L=50 seed=456 status=0 start=2026-07-26T22:53:31Z end=2026-07-26T22:56:14Z
+[2026-07-26T22:56:15Z] START dataset=yahoo method=entropy teacher=multi-entropy-guided L=50 seed=456
+Mode: kd | teacher: multi-entropy-guided | device: cuda
+Dataset: yahoo (10 classes) | declared_labeled=500 prompt_demos/class=2 CE/class=50 router_cal/class=0 unlabeled=4500 test=10000
+Training on 5000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6191.39it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 2.6074
+  epoch 2/3  loss 1.4319
+  epoch 3/3  loss 0.8370
+
+Test accuracy: 0.5995 | macro-F1: 0.6066
+Saved: outputs/student/prompt_inclusive_baselines_3seed_v1/yahoo_kd_multi-entropy-guided_L50_s456_prompt-inclusive-v1.json
+[2026-07-26T22:58:59Z] OK dataset=yahoo method=entropy L=50 seed=456 status=0 start=2026-07-26T22:56:15Z end=2026-07-26T22:58:59Z
+[2026-07-26T22:58:59Z] START dataset=amazon method=gemma teacher=gemma4-26b-vllm-guided L=50 seed=42
+Mode: kd | teacher: gemma4-26b-vllm-guided | device: cuda
+Dataset: amazon (5 classes) | declared_labeled=250 prompt_demos/class=2 CE/class=50 router_cal/class=0 unlabeled=2250 test=10000
+Training on 2500 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 5705.79it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 2.7109
+  epoch 2/3  loss 1.5276
+  epoch 3/3  loss 0.8929
+
+Test accuracy: 0.5476 | macro-F1: 0.5330
+Saved: outputs/student/prompt_inclusive_baselines_3seed_v1/amazon_kd_gemma4-26b-vllm-guided_L50_s42_prompt-inclusive-v1.json
+[2026-07-26T23:00:36Z] OK dataset=amazon method=gemma L=50 seed=42 status=0 start=2026-07-26T22:58:59Z end=2026-07-26T23:00:35Z
+[2026-07-26T23:00:36Z] START dataset=amazon method=mistral teacher=mistral-small-24b-vllm-guided L=50 seed=42
+Mode: kd | teacher: mistral-small-24b-vllm-guided | device: cuda
+Dataset: amazon (5 classes) | declared_labeled=250 prompt_demos/class=2 CE/class=50 router_cal/class=0 unlabeled=2250 test=10000
+Training on 2500 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6430.08it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 1.1887
+  epoch 2/3  loss 0.5795
+  epoch 3/3  loss 0.3356
+
+Test accuracy: 0.5412 | macro-F1: 0.5154
+Saved: outputs/student/prompt_inclusive_baselines_3seed_v1/amazon_kd_mistral-small-24b-vllm-guided_L50_s42_prompt-inclusive-v1.json
+[2026-07-26T23:02:13Z] OK dataset=amazon method=mistral L=50 seed=42 status=0 start=2026-07-26T23:00:36Z end=2026-07-26T23:02:13Z
+[2026-07-26T23:02:13Z] START dataset=amazon method=entropy teacher=multi-entropy-guided L=50 seed=42
+Mode: kd | teacher: multi-entropy-guided | device: cuda
+Dataset: amazon (5 classes) | declared_labeled=250 prompt_demos/class=2 CE/class=50 router_cal/class=0 unlabeled=2250 test=10000
+Training on 2500 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 5982.12it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 2.4106
+  epoch 2/3  loss 1.2362
+  epoch 3/3  loss 0.6786
+
+Test accuracy: 0.5620 | macro-F1: 0.5491
+Saved: outputs/student/prompt_inclusive_baselines_3seed_v1/amazon_kd_multi-entropy-guided_L50_s42_prompt-inclusive-v1.json
+[2026-07-26T23:03:50Z] OK dataset=amazon method=entropy L=50 seed=42 status=0 start=2026-07-26T23:02:13Z end=2026-07-26T23:03:50Z
+[2026-07-26T23:03:50Z] START dataset=amazon method=gemma teacher=gemma4-26b-vllm-guided L=50 seed=123
+Mode: kd | teacher: gemma4-26b-vllm-guided | device: cuda
+Dataset: amazon (5 classes) | declared_labeled=250 prompt_demos/class=2 CE/class=50 router_cal/class=0 unlabeled=2250 test=10000
+Training on 2500 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6280.21it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 3.2006
+  epoch 2/3  loss 1.6508
+  epoch 3/3  loss 0.9671
+
+Test accuracy: 0.5615 | macro-F1: 0.5476
+Saved: outputs/student/prompt_inclusive_baselines_3seed_v1/amazon_kd_gemma4-26b-vllm-guided_L50_s123_prompt-inclusive-v1.json
+[2026-07-26T23:05:26Z] OK dataset=amazon method=gemma L=50 seed=123 status=0 start=2026-07-26T23:03:50Z end=2026-07-26T23:05:26Z
+[2026-07-26T23:05:26Z] START dataset=amazon method=mistral teacher=mistral-small-24b-vllm-guided L=50 seed=123
+Mode: kd | teacher: mistral-small-24b-vllm-guided | device: cuda
+Dataset: amazon (5 classes) | declared_labeled=250 prompt_demos/class=2 CE/class=50 router_cal/class=0 unlabeled=2250 test=10000
+Training on 2500 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 5573.66it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 1.4621
+  epoch 2/3  loss 0.7351
+  epoch 3/3  loss 0.3685
+
+Test accuracy: 0.5401 | macro-F1: 0.5252
+Saved: outputs/student/prompt_inclusive_baselines_3seed_v1/amazon_kd_mistral-small-24b-vllm-guided_L50_s123_prompt-inclusive-v1.json
+[2026-07-26T23:07:02Z] OK dataset=amazon method=mistral L=50 seed=123 status=0 start=2026-07-26T23:05:26Z end=2026-07-26T23:07:02Z
+[2026-07-26T23:07:02Z] START dataset=amazon method=entropy teacher=multi-entropy-guided L=50 seed=123
+Mode: kd | teacher: multi-entropy-guided | device: cuda
+Dataset: amazon (5 classes) | declared_labeled=250 prompt_demos/class=2 CE/class=50 router_cal/class=0 unlabeled=2250 test=10000
+Training on 2500 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 5873.83it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 2.8880
+  epoch 2/3  loss 1.5670
+  epoch 3/3  loss 0.8481
+
+Test accuracy: 0.5740 | macro-F1: 0.5660
+Saved: outputs/student/prompt_inclusive_baselines_3seed_v1/amazon_kd_multi-entropy-guided_L50_s123_prompt-inclusive-v1.json
+[2026-07-26T23:08:38Z] OK dataset=amazon method=entropy L=50 seed=123 status=0 start=2026-07-26T23:07:02Z end=2026-07-26T23:08:38Z
+[2026-07-26T23:08:39Z] START dataset=amazon method=gemma teacher=gemma4-26b-vllm-guided L=50 seed=456
+Mode: kd | teacher: gemma4-26b-vllm-guided | device: cuda
+Dataset: amazon (5 classes) | declared_labeled=250 prompt_demos/class=2 CE/class=50 router_cal/class=0 unlabeled=2250 test=10000
+Training on 2500 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6080.39it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 3.0625
+  epoch 2/3  loss 1.7098
+  epoch 3/3  loss 1.1373
+
+Test accuracy: 0.5651 | macro-F1: 0.5477
+Saved: outputs/student/prompt_inclusive_baselines_3seed_v1/amazon_kd_gemma4-26b-vllm-guided_L50_s456_prompt-inclusive-v1.json
+[2026-07-26T23:10:14Z] OK dataset=amazon method=gemma L=50 seed=456 status=0 start=2026-07-26T23:08:39Z end=2026-07-26T23:10:14Z
+[2026-07-26T23:10:14Z] START dataset=amazon method=mistral teacher=mistral-small-24b-vllm-guided L=50 seed=456
+Mode: kd | teacher: mistral-small-24b-vllm-guided | device: cuda
+Dataset: amazon (5 classes) | declared_labeled=250 prompt_demos/class=2 CE/class=50 router_cal/class=0 unlabeled=2250 test=10000
+Training on 2500 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6666.18it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 1.2091
+  epoch 2/3  loss 0.5967
+  epoch 3/3  loss 0.3829
+
+Test accuracy: 0.5306 | macro-F1: 0.4926
+Saved: outputs/student/prompt_inclusive_baselines_3seed_v1/amazon_kd_mistral-small-24b-vllm-guided_L50_s456_prompt-inclusive-v1.json
+[2026-07-26T23:11:50Z] OK dataset=amazon method=mistral L=50 seed=456 status=0 start=2026-07-26T23:10:14Z end=2026-07-26T23:11:50Z
+[2026-07-26T23:11:50Z] START dataset=amazon method=entropy teacher=multi-entropy-guided L=50 seed=456
+Mode: kd | teacher: multi-entropy-guided | device: cuda
+Dataset: amazon (5 classes) | declared_labeled=250 prompt_demos/class=2 CE/class=50 router_cal/class=0 unlabeled=2250 test=10000
+Training on 2500 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6397.13it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 2.6662
+  epoch 2/3  loss 1.5088
+  epoch 3/3  loss 1.0022
+
+Test accuracy: 0.5499 | macro-F1: 0.5219
+Saved: outputs/student/prompt_inclusive_baselines_3seed_v1/amazon_kd_multi-entropy-guided_L50_s456_prompt-inclusive-v1.json
+[2026-07-26T23:13:26Z] OK dataset=amazon method=entropy L=50 seed=456 status=0 start=2026-07-26T23:11:50Z end=2026-07-26T23:13:26Z
+[2026-07-26T23:13:26Z] START dataset=amazon3 method=gemma teacher=gemma4-26b-vllm-guided L=50 seed=42
+Mode: kd | teacher: gemma4-26b-vllm-guided | device: cuda
+Dataset: amazon3 (3 classes) | declared_labeled=150 prompt_demos/class=2 CE/class=50 router_cal/class=0 unlabeled=1350 test=6000
+Training on 1500 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6460.96it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 1.9712
+  epoch 2/3  loss 1.0308
+  epoch 3/3  loss 0.5018
+
+Test accuracy: 0.7145 | macro-F1: 0.6900
+Saved: outputs/student/prompt_inclusive_baselines_3seed_v1/amazon3_kd_gemma4-26b-vllm-guided_L50_s42_prompt-inclusive-v1.json
+[2026-07-26T23:14:28Z] OK dataset=amazon3 method=gemma L=50 seed=42 status=0 start=2026-07-26T23:13:26Z end=2026-07-26T23:14:28Z
+[2026-07-26T23:14:28Z] START dataset=amazon3 method=mistral teacher=mistral-small-24b-vllm-guided L=50 seed=42
+Mode: kd | teacher: mistral-small-24b-vllm-guided | device: cuda
+Dataset: amazon3 (3 classes) | declared_labeled=150 prompt_demos/class=2 CE/class=50 router_cal/class=0 unlabeled=1350 test=6000
+Training on 1500 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6298.73it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.8869
+  epoch 2/3  loss 0.3832
+  epoch 3/3  loss 0.1799
+
+Test accuracy: 0.7258 | macro-F1: 0.7144
+Saved: outputs/student/prompt_inclusive_baselines_3seed_v1/amazon3_kd_mistral-small-24b-vllm-guided_L50_s42_prompt-inclusive-v1.json
+[2026-07-26T23:15:29Z] OK dataset=amazon3 method=mistral L=50 seed=42 status=0 start=2026-07-26T23:14:28Z end=2026-07-26T23:15:29Z
+[2026-07-26T23:15:29Z] START dataset=amazon3 method=entropy teacher=multi-entropy-guided L=50 seed=42
+Mode: kd | teacher: multi-entropy-guided | device: cuda
+Dataset: amazon3 (3 classes) | declared_labeled=150 prompt_demos/class=2 CE/class=50 router_cal/class=0 unlabeled=1350 test=6000
+Training on 1500 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 5810.29it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 1.6974
+  epoch 2/3  loss 0.8106
+  epoch 3/3  loss 0.3864
+
+Test accuracy: 0.7342 | macro-F1: 0.7235
+Saved: outputs/student/prompt_inclusive_baselines_3seed_v1/amazon3_kd_multi-entropy-guided_L50_s42_prompt-inclusive-v1.json
+[2026-07-26T23:16:31Z] OK dataset=amazon3 method=entropy L=50 seed=42 status=0 start=2026-07-26T23:15:29Z end=2026-07-26T23:16:30Z
+[2026-07-26T23:16:31Z] START dataset=amazon3 method=gemma teacher=gemma4-26b-vllm-guided L=50 seed=123
+Mode: kd | teacher: gemma4-26b-vllm-guided | device: cuda
+Dataset: amazon3 (3 classes) | declared_labeled=150 prompt_demos/class=2 CE/class=50 router_cal/class=0 unlabeled=1350 test=6000
+Training on 1500 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6152.33it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 2.4030
+  epoch 2/3  loss 2.0954
+  epoch 3/3  loss 1.2256
+
+Test accuracy: 0.6922 | macro-F1: 0.6753
+Saved: outputs/student/prompt_inclusive_baselines_3seed_v1/amazon3_kd_gemma4-26b-vllm-guided_L50_s123_prompt-inclusive-v1.json
+[2026-07-26T23:17:31Z] OK dataset=amazon3 method=gemma L=50 seed=123 status=0 start=2026-07-26T23:16:31Z end=2026-07-26T23:17:31Z
+[2026-07-26T23:17:32Z] START dataset=amazon3 method=mistral teacher=mistral-small-24b-vllm-guided L=50 seed=123
+Mode: kd | teacher: mistral-small-24b-vllm-guided | device: cuda
+Dataset: amazon3 (3 classes) | declared_labeled=150 prompt_demos/class=2 CE/class=50 router_cal/class=0 unlabeled=1350 test=6000
+Training on 1500 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6359.82it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.9501
+  epoch 2/3  loss 0.5011
+  epoch 3/3  loss 0.2291
+
+Test accuracy: 0.7215 | macro-F1: 0.7135
+Saved: outputs/student/prompt_inclusive_baselines_3seed_v1/amazon3_kd_mistral-small-24b-vllm-guided_L50_s123_prompt-inclusive-v1.json
+[2026-07-26T23:18:33Z] OK dataset=amazon3 method=mistral L=50 seed=123 status=0 start=2026-07-26T23:17:32Z end=2026-07-26T23:18:33Z
+[2026-07-26T23:18:33Z] START dataset=amazon3 method=entropy teacher=multi-entropy-guided L=50 seed=123
+Mode: kd | teacher: multi-entropy-guided | device: cuda
+Dataset: amazon3 (3 classes) | declared_labeled=150 prompt_demos/class=2 CE/class=50 router_cal/class=0 unlabeled=1350 test=6000
+Training on 1500 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6162.96it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 1.8294
+  epoch 2/3  loss 0.8809
+  epoch 3/3  loss 0.4579
+
+Test accuracy: 0.7242 | macro-F1: 0.7095
+Saved: outputs/student/prompt_inclusive_baselines_3seed_v1/amazon3_kd_multi-entropy-guided_L50_s123_prompt-inclusive-v1.json
+[2026-07-26T23:19:34Z] OK dataset=amazon3 method=entropy L=50 seed=123 status=0 start=2026-07-26T23:18:33Z end=2026-07-26T23:19:34Z
+[2026-07-26T23:19:34Z] START dataset=amazon3 method=gemma teacher=gemma4-26b-vllm-guided L=50 seed=456
+Mode: kd | teacher: gemma4-26b-vllm-guided | device: cuda
+Dataset: amazon3 (3 classes) | declared_labeled=150 prompt_demos/class=2 CE/class=50 router_cal/class=0 unlabeled=1350 test=6000
+Training on 1500 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6680.31it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 2.2189
+  epoch 2/3  loss 1.2086
+  epoch 3/3  loss 0.7174
+
+Test accuracy: 0.6575 | macro-F1: 0.6294
+Saved: outputs/student/prompt_inclusive_baselines_3seed_v1/amazon3_kd_gemma4-26b-vllm-guided_L50_s456_prompt-inclusive-v1.json
+[2026-07-26T23:20:36Z] OK dataset=amazon3 method=gemma L=50 seed=456 status=0 start=2026-07-26T23:19:34Z end=2026-07-26T23:20:36Z
+[2026-07-26T23:20:36Z] START dataset=amazon3 method=mistral teacher=mistral-small-24b-vllm-guided L=50 seed=456
+Mode: kd | teacher: mistral-small-24b-vllm-guided | device: cuda
+Dataset: amazon3 (3 classes) | declared_labeled=150 prompt_demos/class=2 CE/class=50 router_cal/class=0 unlabeled=1350 test=6000
+Training on 1500 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6293.24it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.9971
+  epoch 2/3  loss 0.4915
+  epoch 3/3  loss 0.2430
+
+Test accuracy: 0.7233 | macro-F1: 0.7112
+Saved: outputs/student/prompt_inclusive_baselines_3seed_v1/amazon3_kd_mistral-small-24b-vllm-guided_L50_s456_prompt-inclusive-v1.json
+[2026-07-26T23:21:38Z] OK dataset=amazon3 method=mistral L=50 seed=456 status=0 start=2026-07-26T23:20:36Z end=2026-07-26T23:21:38Z
+[2026-07-26T23:21:38Z] START dataset=amazon3 method=entropy teacher=multi-entropy-guided L=50 seed=456
+Mode: kd | teacher: multi-entropy-guided | device: cuda
+Dataset: amazon3 (3 classes) | declared_labeled=150 prompt_demos/class=2 CE/class=50 router_cal/class=0 unlabeled=1350 test=6000
+Training on 1500 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6592.84it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 1.9926
+  epoch 2/3  loss 0.9875
+  epoch 3/3  loss 0.5558
+
+Test accuracy: 0.7128 | macro-F1: 0.7045
+Saved: outputs/student/prompt_inclusive_baselines_3seed_v1/amazon3_kd_multi-entropy-guided_L50_s456_prompt-inclusive-v1.json
+[2026-07-26T23:22:39Z] OK dataset=amazon3 method=entropy L=50 seed=456 status=0 start=2026-07-26T23:21:38Z end=2026-07-26T23:22:39Z
+[2026-07-26T23:22:39Z] === runner end failures=0 started=72 skipped=0 ===
+All 72 prompt-inclusive baseline cells are complete under outputs/student/prompt_inclusive_baselines_3seed_v1.
+==== PHASE 2 OK in 7684s 2026-07-26T23:22:39Z ====
+
+==== PHASE 3 START 2026-07-26T23:22:39Z ====
+[2026-07-26T23:22:39Z] === rq2_matched_q2_3seed_v1 runner begin ===
+[2026-07-26T23:22:39Z] START dataset=ag_news teacher=multi-cascade-guided L=10 seed=42
+Mode: kd | teacher: multi-cascade-guided | device: cuda
+Dataset: ag_news (4 classes) | declared_labeled=40 prompt_demos/class=2 CE/class=10 router_cal/class=0 unlabeled=5960 test=7600
+Cascade realised queries/sample: 2.000
+Training on 6000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6675.00it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.2168
+  epoch 2/3  loss 0.0591
+  epoch 3/3  loss 0.0345
+
+Test accuracy: 0.8864 | macro-F1: 0.8863
+Saved: outputs/student/rq2_matched_q2_3seed_v1/ag_news_kd_multi-cascade-guided_q2_L10_s42_prompt-inclusive-v1.json
+[2026-07-26T23:24:24Z] OK dataset=ag_news teacher=multi-cascade-guided L=10 seed=42 status=0 start=2026-07-26T23:22:39Z end=2026-07-26T23:24:24Z
+[2026-07-26T23:24:24Z] START dataset=ag_news teacher=multi-uniform-budget-guided L=10 seed=42
+Mode: kd | teacher: multi-uniform-budget-guided | device: cuda
+Dataset: ag_news (4 classes) | declared_labeled=40 prompt_demos/class=2 CE/class=10 router_cal/class=0 unlabeled=5960 test=7600
+Uniform-budget realised queries/sample: 2.000 (selected=3000, allocation_seed=42)
+Training on 6000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6068.81it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.2194
+  epoch 2/3  loss 0.0665
+  epoch 3/3  loss 0.0358
+
+Test accuracy: 0.8872 | macro-F1: 0.8871
+Saved: outputs/student/rq2_matched_q2_3seed_v1/ag_news_kd_multi-uniform-budget-guided_q2_L10_s42_a42_prompt-inclusive-v1.json
+[2026-07-26T23:26:10Z] OK dataset=ag_news teacher=multi-uniform-budget-guided L=10 seed=42 status=0 start=2026-07-26T23:24:24Z end=2026-07-26T23:26:10Z
+[2026-07-26T23:26:10Z] START dataset=ag_news teacher=multi-cascade-guided L=10 seed=123
+Mode: kd | teacher: multi-cascade-guided | device: cuda
+Dataset: ag_news (4 classes) | declared_labeled=40 prompt_demos/class=2 CE/class=10 router_cal/class=0 unlabeled=5960 test=7600
+Cascade realised queries/sample: 2.000
+Training on 6000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 7514.89it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.2426
+  epoch 2/3  loss 0.0712
+  epoch 3/3  loss 0.0333
+
+Test accuracy: 0.8805 | macro-F1: 0.8802
+Saved: outputs/student/rq2_matched_q2_3seed_v1/ag_news_kd_multi-cascade-guided_q2_L10_s123_prompt-inclusive-v1.json
+[2026-07-26T23:27:57Z] OK dataset=ag_news teacher=multi-cascade-guided L=10 seed=123 status=0 start=2026-07-26T23:26:10Z end=2026-07-26T23:27:57Z
+[2026-07-26T23:27:57Z] START dataset=ag_news teacher=multi-uniform-budget-guided L=10 seed=123
+Mode: kd | teacher: multi-uniform-budget-guided | device: cuda
+Dataset: ag_news (4 classes) | declared_labeled=40 prompt_demos/class=2 CE/class=10 router_cal/class=0 unlabeled=5960 test=7600
+Uniform-budget realised queries/sample: 2.000 (selected=3000, allocation_seed=123)
+Training on 6000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6353.24it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.2371
+  epoch 2/3  loss 0.0666
+  epoch 3/3  loss 0.0369
+
+Test accuracy: 0.8850 | macro-F1: 0.8846
+Saved: outputs/student/rq2_matched_q2_3seed_v1/ag_news_kd_multi-uniform-budget-guided_q2_L10_s123_a123_prompt-inclusive-v1.json
+[2026-07-26T23:29:43Z] OK dataset=ag_news teacher=multi-uniform-budget-guided L=10 seed=123 status=0 start=2026-07-26T23:27:57Z end=2026-07-26T23:29:43Z
+[2026-07-26T23:29:43Z] START dataset=ag_news teacher=multi-cascade-guided L=10 seed=456
+Mode: kd | teacher: multi-cascade-guided | device: cuda
+Dataset: ag_news (4 classes) | declared_labeled=40 prompt_demos/class=2 CE/class=10 router_cal/class=0 unlabeled=5960 test=7600
+Cascade realised queries/sample: 2.000
+Training on 6000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 5662.30it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.2109
+  epoch 2/3  loss 0.0545
+  epoch 3/3  loss 0.0334
+
+Test accuracy: 0.8843 | macro-F1: 0.8842
+Saved: outputs/student/rq2_matched_q2_3seed_v1/ag_news_kd_multi-cascade-guided_q2_L10_s456_prompt-inclusive-v1.json
+[2026-07-26T23:31:29Z] OK dataset=ag_news teacher=multi-cascade-guided L=10 seed=456 status=0 start=2026-07-26T23:29:43Z end=2026-07-26T23:31:29Z
+[2026-07-26T23:31:29Z] START dataset=ag_news teacher=multi-uniform-budget-guided L=10 seed=456
+Mode: kd | teacher: multi-uniform-budget-guided | device: cuda
+Dataset: ag_news (4 classes) | declared_labeled=40 prompt_demos/class=2 CE/class=10 router_cal/class=0 unlabeled=5960 test=7600
+Uniform-budget realised queries/sample: 2.000 (selected=3000, allocation_seed=456)
+Training on 6000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6252.68it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.2100
+  epoch 2/3  loss 0.0612
+  epoch 3/3  loss 0.0381
+
+Test accuracy: 0.8874 | macro-F1: 0.8871
+Saved: outputs/student/rq2_matched_q2_3seed_v1/ag_news_kd_multi-uniform-budget-guided_q2_L10_s456_a456_prompt-inclusive-v1.json
+[2026-07-26T23:33:15Z] OK dataset=ag_news teacher=multi-uniform-budget-guided L=10 seed=456 status=0 start=2026-07-26T23:31:29Z end=2026-07-26T23:33:15Z
+[2026-07-26T23:33:15Z] START dataset=yahoo teacher=multi-cascade-guided L=10 seed=42
+Mode: kd | teacher: multi-cascade-guided | device: cuda
+Dataset: yahoo (10 classes) | declared_labeled=100 prompt_demos/class=2 CE/class=10 router_cal/class=0 unlabeled=4900 test=10000
+Cascade realised queries/sample: 2.000
+Training on 5000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6480.71it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.7056
+  epoch 2/3  loss 0.2976
+  epoch 3/3  loss 0.1597
+
+Test accuracy: 0.6206 | macro-F1: 0.6186
+Saved: outputs/student/rq2_matched_q2_3seed_v1/yahoo_kd_multi-cascade-guided_q2_L10_s42_prompt-inclusive-v1.json
+[2026-07-26T23:35:57Z] OK dataset=yahoo teacher=multi-cascade-guided L=10 seed=42 status=0 start=2026-07-26T23:33:15Z end=2026-07-26T23:35:57Z
+[2026-07-26T23:35:57Z] START dataset=yahoo teacher=multi-uniform-budget-guided L=10 seed=42
+Mode: kd | teacher: multi-uniform-budget-guided | device: cuda
+Dataset: yahoo (10 classes) | declared_labeled=100 prompt_demos/class=2 CE/class=10 router_cal/class=0 unlabeled=4900 test=10000
+Uniform-budget realised queries/sample: 2.000 (selected=2500, allocation_seed=42)
+Training on 5000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6999.00it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.7126
+  epoch 2/3  loss 0.2977
+  epoch 3/3  loss 0.1709
+
+Test accuracy: 0.6143 | macro-F1: 0.6135
+Saved: outputs/student/rq2_matched_q2_3seed_v1/yahoo_kd_multi-uniform-budget-guided_q2_L10_s42_a42_prompt-inclusive-v1.json
+[2026-07-26T23:38:41Z] OK dataset=yahoo teacher=multi-uniform-budget-guided L=10 seed=42 status=0 start=2026-07-26T23:35:57Z end=2026-07-26T23:38:41Z
+[2026-07-26T23:38:41Z] START dataset=yahoo teacher=multi-cascade-guided L=10 seed=123
+Mode: kd | teacher: multi-cascade-guided | device: cuda
+Dataset: yahoo (10 classes) | declared_labeled=100 prompt_demos/class=2 CE/class=10 router_cal/class=0 unlabeled=4900 test=10000
+Cascade realised queries/sample: 2.000
+Training on 5000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6136.77it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.6661
+  epoch 2/3  loss 0.2836
+  epoch 3/3  loss 0.1681
+
+Test accuracy: 0.6095 | macro-F1: 0.6101
+Saved: outputs/student/rq2_matched_q2_3seed_v1/yahoo_kd_multi-cascade-guided_q2_L10_s123_prompt-inclusive-v1.json
+[2026-07-26T23:41:24Z] OK dataset=yahoo teacher=multi-cascade-guided L=10 seed=123 status=0 start=2026-07-26T23:38:41Z end=2026-07-26T23:41:24Z
+[2026-07-26T23:41:24Z] START dataset=yahoo teacher=multi-uniform-budget-guided L=10 seed=123
+Mode: kd | teacher: multi-uniform-budget-guided | device: cuda
+Dataset: yahoo (10 classes) | declared_labeled=100 prompt_demos/class=2 CE/class=10 router_cal/class=0 unlabeled=4900 test=10000
+Uniform-budget realised queries/sample: 2.000 (selected=2500, allocation_seed=123)
+Training on 5000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6885.54it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.6768
+  epoch 2/3  loss 0.2926
+  epoch 3/3  loss 0.1822
+
+Test accuracy: 0.6056 | macro-F1: 0.6059
+Saved: outputs/student/rq2_matched_q2_3seed_v1/yahoo_kd_multi-uniform-budget-guided_q2_L10_s123_a123_prompt-inclusive-v1.json
+[2026-07-26T23:44:09Z] OK dataset=yahoo teacher=multi-uniform-budget-guided L=10 seed=123 status=0 start=2026-07-26T23:41:24Z end=2026-07-26T23:44:09Z
+[2026-07-26T23:44:09Z] START dataset=yahoo teacher=multi-cascade-guided L=10 seed=456
+Mode: kd | teacher: multi-cascade-guided | device: cuda
+Dataset: yahoo (10 classes) | declared_labeled=100 prompt_demos/class=2 CE/class=10 router_cal/class=0 unlabeled=4900 test=10000
+Cascade realised queries/sample: 2.000
+Training on 5000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6117.95it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.7501
+  epoch 2/3  loss 0.2846
+  epoch 3/3  loss 0.1764
+
+Test accuracy: 0.6106 | macro-F1: 0.6060
+Saved: outputs/student/rq2_matched_q2_3seed_v1/yahoo_kd_multi-cascade-guided_q2_L10_s456_prompt-inclusive-v1.json
+[2026-07-26T23:46:52Z] OK dataset=yahoo teacher=multi-cascade-guided L=10 seed=456 status=0 start=2026-07-26T23:44:09Z end=2026-07-26T23:46:52Z
+[2026-07-26T23:46:52Z] START dataset=yahoo teacher=multi-uniform-budget-guided L=10 seed=456
+Mode: kd | teacher: multi-uniform-budget-guided | device: cuda
+Dataset: yahoo (10 classes) | declared_labeled=100 prompt_demos/class=2 CE/class=10 router_cal/class=0 unlabeled=4900 test=10000
+Uniform-budget realised queries/sample: 2.000 (selected=2500, allocation_seed=456)
+Training on 5000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6432.26it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.7550
+  epoch 2/3  loss 0.3317
+  epoch 3/3  loss 0.2021
+
+Test accuracy: 0.6064 | macro-F1: 0.6035
+Saved: outputs/student/rq2_matched_q2_3seed_v1/yahoo_kd_multi-uniform-budget-guided_q2_L10_s456_a456_prompt-inclusive-v1.json
+[2026-07-26T23:49:34Z] OK dataset=yahoo teacher=multi-uniform-budget-guided L=10 seed=456 status=0 start=2026-07-26T23:46:52Z end=2026-07-26T23:49:34Z
+[2026-07-26T23:49:34Z] START dataset=amazon teacher=multi-cascade-guided L=10 seed=42
+Mode: kd | teacher: multi-cascade-guided | device: cuda
+Dataset: amazon (5 classes) | declared_labeled=50 prompt_demos/class=2 CE/class=10 router_cal/class=0 unlabeled=2450 test=10000
+Cascade realised queries/sample: 2.000
+Training on 2500 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6243.78it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.6632
+  epoch 2/3  loss 0.2553
+  epoch 3/3  loss 0.1306
+
+Test accuracy: 0.5776 | macro-F1: 0.5778
+Saved: outputs/student/rq2_matched_q2_3seed_v1/amazon_kd_multi-cascade-guided_q2_L10_s42_prompt-inclusive-v1.json
+[2026-07-26T23:51:10Z] OK dataset=amazon teacher=multi-cascade-guided L=10 seed=42 status=0 start=2026-07-26T23:49:34Z end=2026-07-26T23:51:10Z
+[2026-07-26T23:51:11Z] START dataset=amazon teacher=multi-uniform-budget-guided L=10 seed=42
+Mode: kd | teacher: multi-uniform-budget-guided | device: cuda
+Dataset: amazon (5 classes) | declared_labeled=50 prompt_demos/class=2 CE/class=10 router_cal/class=0 unlabeled=2450 test=10000
+Uniform-budget realised queries/sample: 2.000 (selected=1250, allocation_seed=42)
+Training on 2500 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 5849.26it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.6450
+  epoch 2/3  loss 0.2510
+  epoch 3/3  loss 0.1219
+
+Test accuracy: 0.5806 | macro-F1: 0.5762
+Saved: outputs/student/rq2_matched_q2_3seed_v1/amazon_kd_multi-uniform-budget-guided_q2_L10_s42_a42_prompt-inclusive-v1.json
+[2026-07-26T23:52:47Z] OK dataset=amazon teacher=multi-uniform-budget-guided L=10 seed=42 status=0 start=2026-07-26T23:51:11Z end=2026-07-26T23:52:47Z
+[2026-07-26T23:52:48Z] START dataset=amazon teacher=multi-cascade-guided L=10 seed=123
+Mode: kd | teacher: multi-cascade-guided | device: cuda
+Dataset: amazon (5 classes) | declared_labeled=50 prompt_demos/class=2 CE/class=10 router_cal/class=0 unlabeled=2450 test=10000
+Cascade realised queries/sample: 2.000
+Training on 2500 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 5257.91it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.7606
+  epoch 2/3  loss 0.3278
+  epoch 3/3  loss 0.1679
+
+Test accuracy: 0.5837 | macro-F1: 0.5856
+Saved: outputs/student/rq2_matched_q2_3seed_v1/amazon_kd_multi-cascade-guided_q2_L10_s123_prompt-inclusive-v1.json
+[2026-07-26T23:54:24Z] OK dataset=amazon teacher=multi-cascade-guided L=10 seed=123 status=0 start=2026-07-26T23:52:48Z end=2026-07-26T23:54:24Z
+[2026-07-26T23:54:24Z] START dataset=amazon teacher=multi-uniform-budget-guided L=10 seed=123
+Mode: kd | teacher: multi-uniform-budget-guided | device: cuda
+Dataset: amazon (5 classes) | declared_labeled=50 prompt_demos/class=2 CE/class=10 router_cal/class=0 unlabeled=2450 test=10000
+Uniform-budget realised queries/sample: 2.000 (selected=1250, allocation_seed=123)
+Training on 2500 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 5448.55it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.7077
+  epoch 2/3  loss 0.2731
+  epoch 3/3  loss 0.1282
+
+Test accuracy: 0.5849 | macro-F1: 0.5863
+Saved: outputs/student/rq2_matched_q2_3seed_v1/amazon_kd_multi-uniform-budget-guided_q2_L10_s123_a123_prompt-inclusive-v1.json
+[2026-07-26T23:56:01Z] OK dataset=amazon teacher=multi-uniform-budget-guided L=10 seed=123 status=0 start=2026-07-26T23:54:24Z end=2026-07-26T23:56:01Z
+[2026-07-26T23:56:01Z] START dataset=amazon teacher=multi-cascade-guided L=10 seed=456
+Mode: kd | teacher: multi-cascade-guided | device: cuda
+Dataset: amazon (5 classes) | declared_labeled=50 prompt_demos/class=2 CE/class=10 router_cal/class=0 unlabeled=2450 test=10000
+Cascade realised queries/sample: 2.000
+Training on 2500 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6069.58it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.6885
+  epoch 2/3  loss 0.2648
+  epoch 3/3  loss 0.1431
+
+Test accuracy: 0.5847 | macro-F1: 0.5869
+Saved: outputs/student/rq2_matched_q2_3seed_v1/amazon_kd_multi-cascade-guided_q2_L10_s456_prompt-inclusive-v1.json
+[2026-07-26T23:57:38Z] OK dataset=amazon teacher=multi-cascade-guided L=10 seed=456 status=0 start=2026-07-26T23:56:01Z end=2026-07-26T23:57:38Z
+[2026-07-26T23:57:38Z] START dataset=amazon teacher=multi-uniform-budget-guided L=10 seed=456
+Mode: kd | teacher: multi-uniform-budget-guided | device: cuda
+Dataset: amazon (5 classes) | declared_labeled=50 prompt_demos/class=2 CE/class=10 router_cal/class=0 unlabeled=2450 test=10000
+Uniform-budget realised queries/sample: 2.000 (selected=1250, allocation_seed=456)
+Training on 2500 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 5811.59it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.6670
+  epoch 2/3  loss 0.2394
+  epoch 3/3  loss 0.1329
+
+Test accuracy: 0.5889 | macro-F1: 0.5882
+Saved: outputs/student/rq2_matched_q2_3seed_v1/amazon_kd_multi-uniform-budget-guided_q2_L10_s456_a456_prompt-inclusive-v1.json
+[2026-07-26T23:59:15Z] OK dataset=amazon teacher=multi-uniform-budget-guided L=10 seed=456 status=0 start=2026-07-26T23:57:38Z end=2026-07-26T23:59:15Z
+[2026-07-26T23:59:15Z] START dataset=amazon3 teacher=multi-cascade-guided L=10 seed=42
+Mode: kd | teacher: multi-cascade-guided | device: cuda
+Dataset: amazon3 (3 classes) | declared_labeled=30 prompt_demos/class=2 CE/class=10 router_cal/class=0 unlabeled=1470 test=6000
+Cascade realised queries/sample: 2.000
+Training on 1500 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6758.75it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.5109
+  epoch 2/3  loss 0.1733
+  epoch 3/3  loss 0.0800
+
+Test accuracy: 0.7385 | macro-F1: 0.7387
+Saved: outputs/student/rq2_matched_q2_3seed_v1/amazon3_kd_multi-cascade-guided_q2_L10_s42_prompt-inclusive-v1.json
+[2026-07-27T00:00:16Z] OK dataset=amazon3 teacher=multi-cascade-guided L=10 seed=42 status=0 start=2026-07-26T23:59:15Z end=2026-07-27T00:00:16Z
+[2026-07-27T00:00:16Z] START dataset=amazon3 teacher=multi-uniform-budget-guided L=10 seed=42
+Mode: kd | teacher: multi-uniform-budget-guided | device: cuda
+Dataset: amazon3 (3 classes) | declared_labeled=30 prompt_demos/class=2 CE/class=10 router_cal/class=0 unlabeled=1470 test=6000
+Uniform-budget realised queries/sample: 2.000 (selected=750, allocation_seed=42)
+Training on 1500 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 5869.00it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.4999
+  epoch 2/3  loss 0.1668
+  epoch 3/3  loss 0.0801
+
+Test accuracy: 0.7385 | macro-F1: 0.7339
+Saved: outputs/student/rq2_matched_q2_3seed_v1/amazon3_kd_multi-uniform-budget-guided_q2_L10_s42_a42_prompt-inclusive-v1.json
+[2026-07-27T00:01:18Z] OK dataset=amazon3 teacher=multi-uniform-budget-guided L=10 seed=42 status=0 start=2026-07-27T00:00:16Z end=2026-07-27T00:01:18Z
+[2026-07-27T00:01:18Z] START dataset=amazon3 teacher=multi-cascade-guided L=10 seed=123
+Mode: kd | teacher: multi-cascade-guided | device: cuda
+Dataset: amazon3 (3 classes) | declared_labeled=30 prompt_demos/class=2 CE/class=10 router_cal/class=0 unlabeled=1470 test=6000
+Cascade realised queries/sample: 2.000
+Training on 1500 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 5932.23it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.5353
+  epoch 2/3  loss 0.1661
+  epoch 3/3  loss 0.0803
+
+Test accuracy: 0.7312 | macro-F1: 0.7234
+Saved: outputs/student/rq2_matched_q2_3seed_v1/amazon3_kd_multi-cascade-guided_q2_L10_s123_prompt-inclusive-v1.json
+[2026-07-27T00:02:20Z] OK dataset=amazon3 teacher=multi-cascade-guided L=10 seed=123 status=0 start=2026-07-27T00:01:18Z end=2026-07-27T00:02:20Z
+[2026-07-27T00:02:20Z] START dataset=amazon3 teacher=multi-uniform-budget-guided L=10 seed=123
+Mode: kd | teacher: multi-uniform-budget-guided | device: cuda
+Dataset: amazon3 (3 classes) | declared_labeled=30 prompt_demos/class=2 CE/class=10 router_cal/class=0 unlabeled=1470 test=6000
+Uniform-budget realised queries/sample: 2.000 (selected=750, allocation_seed=123)
+Training on 1500 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6779.56it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.4874
+  epoch 2/3  loss 0.1405
+  epoch 3/3  loss 0.0755
+
+Test accuracy: 0.7280 | macro-F1: 0.7156
+Saved: outputs/student/rq2_matched_q2_3seed_v1/amazon3_kd_multi-uniform-budget-guided_q2_L10_s123_a123_prompt-inclusive-v1.json
+[2026-07-27T00:03:21Z] OK dataset=amazon3 teacher=multi-uniform-budget-guided L=10 seed=123 status=0 start=2026-07-27T00:02:20Z end=2026-07-27T00:03:20Z
+[2026-07-27T00:03:21Z] START dataset=amazon3 teacher=multi-cascade-guided L=10 seed=456
+Mode: kd | teacher: multi-cascade-guided | device: cuda
+Dataset: amazon3 (3 classes) | declared_labeled=30 prompt_demos/class=2 CE/class=10 router_cal/class=0 unlabeled=1470 test=6000
+Cascade realised queries/sample: 2.000
+Training on 1500 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 5915.62it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.5085
+  epoch 2/3  loss 0.1479
+  epoch 3/3  loss 0.0690
+
+Test accuracy: 0.7342 | macro-F1: 0.7351
+Saved: outputs/student/rq2_matched_q2_3seed_v1/amazon3_kd_multi-cascade-guided_q2_L10_s456_prompt-inclusive-v1.json
+[2026-07-27T00:04:22Z] OK dataset=amazon3 teacher=multi-cascade-guided L=10 seed=456 status=0 start=2026-07-27T00:03:21Z end=2026-07-27T00:04:22Z
+[2026-07-27T00:04:22Z] START dataset=amazon3 teacher=multi-uniform-budget-guided L=10 seed=456
+Mode: kd | teacher: multi-uniform-budget-guided | device: cuda
+Dataset: amazon3 (3 classes) | declared_labeled=30 prompt_demos/class=2 CE/class=10 router_cal/class=0 unlabeled=1470 test=6000
+Uniform-budget realised queries/sample: 2.000 (selected=750, allocation_seed=456)
+Training on 1500 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 5881.22it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.5541
+  epoch 2/3  loss 0.1627
+  epoch 3/3  loss 0.0767
+
+Test accuracy: 0.7398 | macro-F1: 0.7406
+Saved: outputs/student/rq2_matched_q2_3seed_v1/amazon3_kd_multi-uniform-budget-guided_q2_L10_s456_a456_prompt-inclusive-v1.json
+[2026-07-27T00:05:24Z] OK dataset=amazon3 teacher=multi-uniform-budget-guided L=10 seed=456 status=0 start=2026-07-27T00:04:22Z end=2026-07-27T00:05:24Z
+[2026-07-27T00:05:24Z] START dataset=ag_news teacher=multi-cascade-guided L=50 seed=42
+Mode: kd | teacher: multi-cascade-guided | device: cuda
+Dataset: ag_news (4 classes) | declared_labeled=200 prompt_demos/class=2 CE/class=50 router_cal/class=0 unlabeled=5800 test=7600
+Cascade realised queries/sample: 2.000
+Training on 6000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6311.41it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.3123
+  epoch 2/3  loss 0.0934
+  epoch 3/3  loss 0.0506
+
+Test accuracy: 0.8845 | macro-F1: 0.8843
+Saved: outputs/student/rq2_matched_q2_3seed_v1/ag_news_kd_multi-cascade-guided_q2_L50_s42_prompt-inclusive-v1.json
+[2026-07-27T00:07:11Z] OK dataset=ag_news teacher=multi-cascade-guided L=50 seed=42 status=0 start=2026-07-27T00:05:24Z end=2026-07-27T00:07:11Z
+[2026-07-27T00:07:11Z] START dataset=ag_news teacher=multi-uniform-budget-guided L=50 seed=42
+Mode: kd | teacher: multi-uniform-budget-guided | device: cuda
+Dataset: ag_news (4 classes) | declared_labeled=200 prompt_demos/class=2 CE/class=50 router_cal/class=0 unlabeled=5800 test=7600
+Uniform-budget realised queries/sample: 2.000 (selected=3000, allocation_seed=42)
+Training on 6000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6578.39it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.3132
+  epoch 2/3  loss 0.0973
+  epoch 3/3  loss 0.0532
+
+Test accuracy: 0.8846 | macro-F1: 0.8844
+Saved: outputs/student/rq2_matched_q2_3seed_v1/ag_news_kd_multi-uniform-budget-guided_q2_L50_s42_a42_prompt-inclusive-v1.json
+[2026-07-27T00:08:57Z] OK dataset=ag_news teacher=multi-uniform-budget-guided L=50 seed=42 status=0 start=2026-07-27T00:07:11Z end=2026-07-27T00:08:57Z
+[2026-07-27T00:08:57Z] START dataset=ag_news teacher=multi-cascade-guided L=50 seed=123
+Mode: kd | teacher: multi-cascade-guided | device: cuda
+Dataset: ag_news (4 classes) | declared_labeled=200 prompt_demos/class=2 CE/class=50 router_cal/class=0 unlabeled=5800 test=7600
+Cascade realised queries/sample: 2.000
+Training on 6000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 5579.66it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.3726
+  epoch 2/3  loss 0.1399
+  epoch 3/3  loss 0.0748
+
+Test accuracy: 0.8809 | macro-F1: 0.8804
+Saved: outputs/student/rq2_matched_q2_3seed_v1/ag_news_kd_multi-cascade-guided_q2_L50_s123_prompt-inclusive-v1.json
+[2026-07-27T00:10:45Z] OK dataset=ag_news teacher=multi-cascade-guided L=50 seed=123 status=0 start=2026-07-27T00:08:57Z end=2026-07-27T00:10:45Z
+[2026-07-27T00:10:45Z] START dataset=ag_news teacher=multi-uniform-budget-guided L=50 seed=123
+Mode: kd | teacher: multi-uniform-budget-guided | device: cuda
+Dataset: ag_news (4 classes) | declared_labeled=200 prompt_demos/class=2 CE/class=50 router_cal/class=0 unlabeled=5800 test=7600
+Uniform-budget realised queries/sample: 2.000 (selected=3000, allocation_seed=123)
+Training on 6000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 5100.73it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.3641
+  epoch 2/3  loss 0.1373
+  epoch 3/3  loss 0.0746
+
+Test accuracy: 0.8825 | macro-F1: 0.8823
+Saved: outputs/student/rq2_matched_q2_3seed_v1/ag_news_kd_multi-uniform-budget-guided_q2_L50_s123_a123_prompt-inclusive-v1.json
+[2026-07-27T00:12:32Z] OK dataset=ag_news teacher=multi-uniform-budget-guided L=50 seed=123 status=0 start=2026-07-27T00:10:45Z end=2026-07-27T00:12:32Z
+[2026-07-27T00:12:33Z] START dataset=ag_news teacher=multi-cascade-guided L=50 seed=456
+Mode: kd | teacher: multi-cascade-guided | device: cuda
+Dataset: ag_news (4 classes) | declared_labeled=200 prompt_demos/class=2 CE/class=50 router_cal/class=0 unlabeled=5800 test=7600
+Cascade realised queries/sample: 2.000
+Training on 6000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6746.20it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.3010
+  epoch 2/3  loss 0.1074
+  epoch 3/3  loss 0.0572
+
+Test accuracy: 0.8874 | macro-F1: 0.8872
+Saved: outputs/student/rq2_matched_q2_3seed_v1/ag_news_kd_multi-cascade-guided_q2_L50_s456_prompt-inclusive-v1.json
+[2026-07-27T00:14:18Z] OK dataset=ag_news teacher=multi-cascade-guided L=50 seed=456 status=0 start=2026-07-27T00:12:33Z end=2026-07-27T00:14:18Z
+[2026-07-27T00:14:18Z] START dataset=ag_news teacher=multi-uniform-budget-guided L=50 seed=456
+Mode: kd | teacher: multi-uniform-budget-guided | device: cuda
+Dataset: ag_news (4 classes) | declared_labeled=200 prompt_demos/class=2 CE/class=50 router_cal/class=0 unlabeled=5800 test=7600
+Uniform-budget realised queries/sample: 2.000 (selected=3000, allocation_seed=456)
+Training on 6000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6500.20it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.2919
+  epoch 2/3  loss 0.1175
+  epoch 3/3  loss 0.0703
+
+Test accuracy: 0.8866 | macro-F1: 0.8864
+Saved: outputs/student/rq2_matched_q2_3seed_v1/ag_news_kd_multi-uniform-budget-guided_q2_L50_s456_a456_prompt-inclusive-v1.json
+[2026-07-27T00:16:04Z] OK dataset=ag_news teacher=multi-uniform-budget-guided L=50 seed=456 status=0 start=2026-07-27T00:14:18Z end=2026-07-27T00:16:04Z
+[2026-07-27T00:16:04Z] START dataset=yahoo teacher=multi-cascade-guided L=50 seed=42
+Mode: kd | teacher: multi-cascade-guided | device: cuda
+Dataset: yahoo (10 classes) | declared_labeled=500 prompt_demos/class=2 CE/class=50 router_cal/class=0 unlabeled=4500 test=10000
+Cascade realised queries/sample: 2.000
+Training on 5000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 5960.25it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 1.1390
+  epoch 2/3  loss 0.5275
+  epoch 3/3  loss 0.3152
+
+Test accuracy: 0.6060 | macro-F1: 0.6039
+Saved: outputs/student/rq2_matched_q2_3seed_v1/yahoo_kd_multi-cascade-guided_q2_L50_s42_prompt-inclusive-v1.json
+[2026-07-27T00:18:47Z] OK dataset=yahoo teacher=multi-cascade-guided L=50 seed=42 status=0 start=2026-07-27T00:16:04Z end=2026-07-27T00:18:47Z
+[2026-07-27T00:18:47Z] START dataset=yahoo teacher=multi-uniform-budget-guided L=50 seed=42
+Mode: kd | teacher: multi-uniform-budget-guided | device: cuda
+Dataset: yahoo (10 classes) | declared_labeled=500 prompt_demos/class=2 CE/class=50 router_cal/class=0 unlabeled=4500 test=10000
+Uniform-budget realised queries/sample: 2.000 (selected=2500, allocation_seed=42)
+Training on 5000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6043.15it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 1.1349
+  epoch 2/3  loss 0.5633
+  epoch 3/3  loss 0.3610
+
+Test accuracy: 0.6016 | macro-F1: 0.5988
+Saved: outputs/student/rq2_matched_q2_3seed_v1/yahoo_kd_multi-uniform-budget-guided_q2_L50_s42_a42_prompt-inclusive-v1.json
+[2026-07-27T00:21:30Z] OK dataset=yahoo teacher=multi-uniform-budget-guided L=50 seed=42 status=0 start=2026-07-27T00:18:47Z end=2026-07-27T00:21:30Z
+[2026-07-27T00:21:30Z] START dataset=yahoo teacher=multi-cascade-guided L=50 seed=123
+Mode: kd | teacher: multi-cascade-guided | device: cuda
+Dataset: yahoo (10 classes) | declared_labeled=500 prompt_demos/class=2 CE/class=50 router_cal/class=0 unlabeled=4500 test=10000
+Cascade realised queries/sample: 2.000
+Training on 5000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 5829.53it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 1.2288
+  epoch 2/3  loss 0.6074
+  epoch 3/3  loss 0.3677
+
+Test accuracy: 0.5990 | macro-F1: 0.6035
+Saved: outputs/student/rq2_matched_q2_3seed_v1/yahoo_kd_multi-cascade-guided_q2_L50_s123_prompt-inclusive-v1.json
+[2026-07-27T00:24:14Z] OK dataset=yahoo teacher=multi-cascade-guided L=50 seed=123 status=0 start=2026-07-27T00:21:30Z end=2026-07-27T00:24:14Z
+[2026-07-27T00:24:14Z] START dataset=yahoo teacher=multi-uniform-budget-guided L=50 seed=123
+Mode: kd | teacher: multi-uniform-budget-guided | device: cuda
+Dataset: yahoo (10 classes) | declared_labeled=500 prompt_demos/class=2 CE/class=50 router_cal/class=0 unlabeled=4500 test=10000
+Uniform-budget realised queries/sample: 2.000 (selected=2500, allocation_seed=123)
+Training on 5000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 5996.78it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 1.2215
+  epoch 2/3  loss 0.6041
+  epoch 3/3  loss 0.3720
+
+Test accuracy: 0.6041 | macro-F1: 0.6028
+Saved: outputs/student/rq2_matched_q2_3seed_v1/yahoo_kd_multi-uniform-budget-guided_q2_L50_s123_a123_prompt-inclusive-v1.json
+[2026-07-27T00:26:58Z] OK dataset=yahoo teacher=multi-uniform-budget-guided L=50 seed=123 status=0 start=2026-07-27T00:24:14Z end=2026-07-27T00:26:57Z
+[2026-07-27T00:26:58Z] START dataset=yahoo teacher=multi-cascade-guided L=50 seed=456
+Mode: kd | teacher: multi-cascade-guided | device: cuda
+Dataset: yahoo (10 classes) | declared_labeled=500 prompt_demos/class=2 CE/class=50 router_cal/class=0 unlabeled=4500 test=10000
+Cascade realised queries/sample: 2.000
+Training on 5000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 5731.54it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 1.2183
+  epoch 2/3  loss 0.6116
+  epoch 3/3  loss 0.3610
+
+Test accuracy: 0.5996 | macro-F1: 0.5990
+Saved: outputs/student/rq2_matched_q2_3seed_v1/yahoo_kd_multi-cascade-guided_q2_L50_s456_prompt-inclusive-v1.json
+[2026-07-27T00:29:40Z] OK dataset=yahoo teacher=multi-cascade-guided L=50 seed=456 status=0 start=2026-07-27T00:26:58Z end=2026-07-27T00:29:40Z
+[2026-07-27T00:29:40Z] START dataset=yahoo teacher=multi-uniform-budget-guided L=50 seed=456
+Mode: kd | teacher: multi-uniform-budget-guided | device: cuda
+Dataset: yahoo (10 classes) | declared_labeled=500 prompt_demos/class=2 CE/class=50 router_cal/class=0 unlabeled=4500 test=10000
+Uniform-budget realised queries/sample: 2.000 (selected=2500, allocation_seed=456)
+Training on 5000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6065.06it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 1.2240
+  epoch 2/3  loss 0.6265
+  epoch 3/3  loss 0.3510
+
+Test accuracy: 0.6068 | macro-F1: 0.6056
+Saved: outputs/student/rq2_matched_q2_3seed_v1/yahoo_kd_multi-uniform-budget-guided_q2_L50_s456_a456_prompt-inclusive-v1.json
+[2026-07-27T00:32:24Z] OK dataset=yahoo teacher=multi-uniform-budget-guided L=50 seed=456 status=0 start=2026-07-27T00:29:40Z end=2026-07-27T00:32:24Z
+[2026-07-27T00:32:24Z] START dataset=amazon teacher=multi-cascade-guided L=50 seed=42
+Mode: kd | teacher: multi-cascade-guided | device: cuda
+Dataset: amazon (5 classes) | declared_labeled=250 prompt_demos/class=2 CE/class=50 router_cal/class=0 unlabeled=2250 test=10000
+Cascade realised queries/sample: 2.000
+Training on 2500 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 5989.16it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 1.1683
+  epoch 2/3  loss 0.7245
+  epoch 3/3  loss 0.3957
+
+Test accuracy: 0.5237 | macro-F1: 0.5215
+Saved: outputs/student/rq2_matched_q2_3seed_v1/amazon_kd_multi-cascade-guided_q2_L50_s42_prompt-inclusive-v1.json
+[2026-07-27T00:34:00Z] OK dataset=amazon teacher=multi-cascade-guided L=50 seed=42 status=0 start=2026-07-27T00:32:24Z end=2026-07-27T00:34:00Z
+[2026-07-27T00:34:00Z] START dataset=amazon teacher=multi-uniform-budget-guided L=50 seed=42
+Mode: kd | teacher: multi-uniform-budget-guided | device: cuda
+Dataset: amazon (5 classes) | declared_labeled=250 prompt_demos/class=2 CE/class=50 router_cal/class=0 unlabeled=2250 test=10000
+Uniform-budget realised queries/sample: 2.000 (selected=1250, allocation_seed=42)
+Training on 2500 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6310.71it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 1.0760
+  epoch 2/3  loss 0.5692
+  epoch 3/3  loss 0.3082
+
+Test accuracy: 0.5336 | macro-F1: 0.5348
+Saved: outputs/student/rq2_matched_q2_3seed_v1/amazon_kd_multi-uniform-budget-guided_q2_L50_s42_a42_prompt-inclusive-v1.json
+[2026-07-27T00:35:36Z] OK dataset=amazon teacher=multi-uniform-budget-guided L=50 seed=42 status=0 start=2026-07-27T00:34:00Z end=2026-07-27T00:35:36Z
+[2026-07-27T00:35:36Z] START dataset=amazon teacher=multi-cascade-guided L=50 seed=123
+Mode: kd | teacher: multi-cascade-guided | device: cuda
+Dataset: amazon (5 classes) | declared_labeled=250 prompt_demos/class=2 CE/class=50 router_cal/class=0 unlabeled=2250 test=10000
+Cascade realised queries/sample: 2.000
+Training on 2500 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6720.37it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 1.2390
+  epoch 2/3  loss 0.7076
+  epoch 3/3  loss 0.3602
+
+Test accuracy: 0.5271 | macro-F1: 0.5222
+Saved: outputs/student/rq2_matched_q2_3seed_v1/amazon_kd_multi-cascade-guided_q2_L50_s123_prompt-inclusive-v1.json
+[2026-07-27T00:37:13Z] OK dataset=amazon teacher=multi-cascade-guided L=50 seed=123 status=0 start=2026-07-27T00:35:36Z end=2026-07-27T00:37:13Z
+[2026-07-27T00:37:13Z] START dataset=amazon teacher=multi-uniform-budget-guided L=50 seed=123
+Mode: kd | teacher: multi-uniform-budget-guided | device: cuda
+Dataset: amazon (5 classes) | declared_labeled=250 prompt_demos/class=2 CE/class=50 router_cal/class=0 unlabeled=2250 test=10000
+Uniform-budget realised queries/sample: 2.000 (selected=1250, allocation_seed=123)
+Training on 2500 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 5918.93it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 1.2667
+  epoch 2/3  loss 0.6937
+  epoch 3/3  loss 0.3218
+
+Test accuracy: 0.5449 | macro-F1: 0.5452
+Saved: outputs/student/rq2_matched_q2_3seed_v1/amazon_kd_multi-uniform-budget-guided_q2_L50_s123_a123_prompt-inclusive-v1.json
+[2026-07-27T00:38:49Z] OK dataset=amazon teacher=multi-uniform-budget-guided L=50 seed=123 status=0 start=2026-07-27T00:37:13Z end=2026-07-27T00:38:49Z
+[2026-07-27T00:38:49Z] START dataset=amazon teacher=multi-cascade-guided L=50 seed=456
+Mode: kd | teacher: multi-cascade-guided | device: cuda
+Dataset: amazon (5 classes) | declared_labeled=250 prompt_demos/class=2 CE/class=50 router_cal/class=0 unlabeled=2250 test=10000
+Cascade realised queries/sample: 2.000
+Training on 2500 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 5967.35it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 1.1184
+  epoch 2/3  loss 0.6027
+  epoch 3/3  loss 0.3691
+
+Test accuracy: 0.5622 | macro-F1: 0.5529
+Saved: outputs/student/rq2_matched_q2_3seed_v1/amazon_kd_multi-cascade-guided_q2_L50_s456_prompt-inclusive-v1.json
+[2026-07-27T00:40:25Z] OK dataset=amazon teacher=multi-cascade-guided L=50 seed=456 status=0 start=2026-07-27T00:38:49Z end=2026-07-27T00:40:25Z
+[2026-07-27T00:40:25Z] START dataset=amazon teacher=multi-uniform-budget-guided L=50 seed=456
+Mode: kd | teacher: multi-uniform-budget-guided | device: cuda
+Dataset: amazon (5 classes) | declared_labeled=250 prompt_demos/class=2 CE/class=50 router_cal/class=0 unlabeled=2250 test=10000
+Uniform-budget realised queries/sample: 2.000 (selected=1250, allocation_seed=456)
+Training on 2500 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 9230.48it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 1.0760
+  epoch 2/3  loss 0.5651
+  epoch 3/3  loss 0.3467
+
+Test accuracy: 0.5732 | macro-F1: 0.5662
+Saved: outputs/student/rq2_matched_q2_3seed_v1/amazon_kd_multi-uniform-budget-guided_q2_L50_s456_a456_prompt-inclusive-v1.json
+[2026-07-27T00:42:02Z] OK dataset=amazon teacher=multi-uniform-budget-guided L=50 seed=456 status=0 start=2026-07-27T00:40:25Z end=2026-07-27T00:42:01Z
+[2026-07-27T00:42:02Z] START dataset=amazon3 teacher=multi-cascade-guided L=50 seed=42
+Mode: kd | teacher: multi-cascade-guided | device: cuda
+Dataset: amazon3 (3 classes) | declared_labeled=150 prompt_demos/class=2 CE/class=50 router_cal/class=0 unlabeled=1350 test=6000
+Cascade realised queries/sample: 2.000
+Training on 1500 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 4858.98it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.8060
+  epoch 2/3  loss 0.3379
+  epoch 3/3  loss 0.1505
+
+Test accuracy: 0.7408 | macro-F1: 0.7402
+Saved: outputs/student/rq2_matched_q2_3seed_v1/amazon3_kd_multi-cascade-guided_q2_L50_s42_prompt-inclusive-v1.json
+[2026-07-27T00:43:03Z] OK dataset=amazon3 teacher=multi-cascade-guided L=50 seed=42 status=0 start=2026-07-27T00:42:02Z end=2026-07-27T00:43:03Z
+[2026-07-27T00:43:03Z] START dataset=amazon3 teacher=multi-uniform-budget-guided L=50 seed=42
+Mode: kd | teacher: multi-uniform-budget-guided | device: cuda
+Dataset: amazon3 (3 classes) | declared_labeled=150 prompt_demos/class=2 CE/class=50 router_cal/class=0 unlabeled=1350 test=6000
+Uniform-budget realised queries/sample: 2.000 (selected=750, allocation_seed=42)
+Training on 1500 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6582.87it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.8728
+  epoch 2/3  loss 0.3851
+  epoch 3/3  loss 0.1708
+
+Test accuracy: 0.7352 | macro-F1: 0.7342
+Saved: outputs/student/rq2_matched_q2_3seed_v1/amazon3_kd_multi-uniform-budget-guided_q2_L50_s42_a42_prompt-inclusive-v1.json
+[2026-07-27T00:44:05Z] OK dataset=amazon3 teacher=multi-uniform-budget-guided L=50 seed=42 status=0 start=2026-07-27T00:43:03Z end=2026-07-27T00:44:04Z
+[2026-07-27T00:44:05Z] START dataset=amazon3 teacher=multi-cascade-guided L=50 seed=123
+Mode: kd | teacher: multi-cascade-guided | device: cuda
+Dataset: amazon3 (3 classes) | declared_labeled=150 prompt_demos/class=2 CE/class=50 router_cal/class=0 unlabeled=1350 test=6000
+Cascade realised queries/sample: 2.000
+Training on 1500 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 5762.98it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.8521
+  epoch 2/3  loss 0.4183
+  epoch 3/3  loss 0.2010
+
+Test accuracy: 0.7312 | macro-F1: 0.7347
+Saved: outputs/student/rq2_matched_q2_3seed_v1/amazon3_kd_multi-cascade-guided_q2_L50_s123_prompt-inclusive-v1.json
+[2026-07-27T00:45:07Z] OK dataset=amazon3 teacher=multi-cascade-guided L=50 seed=123 status=0 start=2026-07-27T00:44:05Z end=2026-07-27T00:45:06Z
+[2026-07-27T00:45:07Z] START dataset=amazon3 teacher=multi-uniform-budget-guided L=50 seed=123
+Mode: kd | teacher: multi-uniform-budget-guided | device: cuda
+Dataset: amazon3 (3 classes) | declared_labeled=150 prompt_demos/class=2 CE/class=50 router_cal/class=0 unlabeled=1350 test=6000
+Uniform-budget realised queries/sample: 2.000 (selected=750, allocation_seed=123)
+Training on 1500 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 5952.10it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.9254
+  epoch 2/3  loss 0.5398
+  epoch 3/3  loss 0.2527
+
+Test accuracy: 0.7375 | macro-F1: 0.7385
+Saved: outputs/student/rq2_matched_q2_3seed_v1/amazon3_kd_multi-uniform-budget-guided_q2_L50_s123_a123_prompt-inclusive-v1.json
+[2026-07-27T00:46:08Z] OK dataset=amazon3 teacher=multi-uniform-budget-guided L=50 seed=123 status=0 start=2026-07-27T00:45:07Z end=2026-07-27T00:46:08Z
+[2026-07-27T00:46:08Z] START dataset=amazon3 teacher=multi-cascade-guided L=50 seed=456
+Mode: kd | teacher: multi-cascade-guided | device: cuda
+Dataset: amazon3 (3 classes) | declared_labeled=150 prompt_demos/class=2 CE/class=50 router_cal/class=0 unlabeled=1350 test=6000
+Cascade realised queries/sample: 2.000
+Training on 1500 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6431.68it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.8929
+  epoch 2/3  loss 0.3966
+  epoch 3/3  loss 0.1854
+
+Test accuracy: 0.6792 | macro-F1: 0.6758
+Saved: outputs/student/rq2_matched_q2_3seed_v1/amazon3_kd_multi-cascade-guided_q2_L50_s456_prompt-inclusive-v1.json
+[2026-07-27T00:47:09Z] OK dataset=amazon3 teacher=multi-cascade-guided L=50 seed=456 status=0 start=2026-07-27T00:46:08Z end=2026-07-27T00:47:09Z
+[2026-07-27T00:47:09Z] START dataset=amazon3 teacher=multi-uniform-budget-guided L=50 seed=456
+Mode: kd | teacher: multi-uniform-budget-guided | device: cuda
+Dataset: amazon3 (3 classes) | declared_labeled=150 prompt_demos/class=2 CE/class=50 router_cal/class=0 unlabeled=1350 test=6000
+Uniform-budget realised queries/sample: 2.000 (selected=750, allocation_seed=456)
+Training on 1500 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 5781.08it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.8758
+  epoch 2/3  loss 0.3761
+  epoch 3/3  loss 0.1875
+
+Test accuracy: 0.7055 | macro-F1: 0.7059
+Saved: outputs/student/rq2_matched_q2_3seed_v1/amazon3_kd_multi-uniform-budget-guided_q2_L50_s456_a456_prompt-inclusive-v1.json
+[2026-07-27T00:48:11Z] OK dataset=amazon3 teacher=multi-uniform-budget-guided L=50 seed=456 status=0 start=2026-07-27T00:47:09Z end=2026-07-27T00:48:11Z
+[2026-07-27T00:48:11Z] === runner end failures=0 started=48 skipped=0 ===
+All 48 RQ2 q/N=2.0 cells are complete under outputs/student/rq2_matched_q2_3seed_v1.
+==== PHASE 3 OK in 5132s 2026-07-27T00:48:11Z ====
+==== ALL DONE 2026-07-27T00:48:11Z ====

@@ -1,0 +1,626 @@
+{
+  "ag_news_L10": {
+    "dataset": "ag_news",
+    "labels_per_class": 10,
+    "selected": {
+      "learning_rate": 5e-05,
+      "epochs": 5,
+      "mean_macro_f1": 0.6029365079365081,
+      "mean_accuracy": 0.6416666666666667,
+      "n_fold_scores": 15
+    },
+    "candidates": [
+      {
+        "learning_rate": 1e-05,
+        "epochs": 2,
+        "mean_macro_f1": 0.22825396825396826,
+        "mean_accuracy": 0.2833333333333333,
+        "n_fold_scores": 15
+      },
+      {
+        "learning_rate": 1e-05,
+        "epochs": 3,
+        "mean_macro_f1": 0.2951587301587301,
+        "mean_accuracy": 0.35,
+        "n_fold_scores": 15
+      },
+      {
+        "learning_rate": 1e-05,
+        "epochs": 5,
+        "mean_macro_f1": 0.3713492063492064,
+        "mean_accuracy": 0.44166666666666665,
+        "n_fold_scores": 15
+      },
+      {
+        "learning_rate": 2e-05,
+        "epochs": 2,
+        "mean_macro_f1": 0.31150793650793646,
+        "mean_accuracy": 0.38333333333333336,
+        "n_fold_scores": 15
+      },
+      {
+        "learning_rate": 2e-05,
+        "epochs": 3,
+        "mean_macro_f1": 0.38246031746031744,
+        "mean_accuracy": 0.45,
+        "n_fold_scores": 15
+      },
+      {
+        "learning_rate": 2e-05,
+        "epochs": 5,
+        "mean_macro_f1": 0.5545238095238095,
+        "mean_accuracy": 0.5833333333333334,
+        "n_fold_scores": 15
+      },
+      {
+        "learning_rate": 5e-05,
+        "epochs": 2,
+        "mean_macro_f1": 0.4084391534391534,
+        "mean_accuracy": 0.4666666666666667,
+        "n_fold_scores": 15
+      },
+      {
+        "learning_rate": 5e-05,
+        "epochs": 3,
+        "mean_macro_f1": 0.5005555555555554,
+        "mean_accuracy": 0.5416666666666666,
+        "n_fold_scores": 15
+      },
+      {
+        "learning_rate": 5e-05,
+        "epochs": 5,
+        "mean_macro_f1": 0.6029365079365081,
+        "mean_accuracy": 0.6416666666666667,
+        "n_fold_scores": 15
+      }
+    ],
+    "selection_rule": "highest mean macro-F1 across 5 folds and seeds 42/123/456; ties broken by mean accuracy, then proximity to fixed config",
+    "test_metrics_used_for_selection": false
+  },
+  "ag_news_L50": {
+    "dataset": "ag_news",
+    "labels_per_class": 50,
+    "selected": {
+      "learning_rate": 5e-05,
+      "epochs": 5,
+      "mean_macro_f1": 0.8434045266166009,
+      "mean_accuracy": 0.8450000000000001,
+      "n_fold_scores": 15
+    },
+    "candidates": [
+      {
+        "learning_rate": 1e-05,
+        "epochs": 2,
+        "mean_macro_f1": 0.6623129977389636,
+        "mean_accuracy": 0.6749999999999999,
+        "n_fold_scores": 15
+      },
+      {
+        "learning_rate": 1e-05,
+        "epochs": 3,
+        "mean_macro_f1": 0.7774257012399762,
+        "mean_accuracy": 0.7783333333333332,
+        "n_fold_scores": 15
+      },
+      {
+        "learning_rate": 1e-05,
+        "epochs": 5,
+        "mean_macro_f1": 0.8281835906125853,
+        "mean_accuracy": 0.83,
+        "n_fold_scores": 15
+      },
+      {
+        "learning_rate": 2e-05,
+        "epochs": 2,
+        "mean_macro_f1": 0.7887948515193096,
+        "mean_accuracy": 0.7916666666666666,
+        "n_fold_scores": 15
+      },
+      {
+        "learning_rate": 2e-05,
+        "epochs": 3,
+        "mean_macro_f1": 0.8217491303434904,
+        "mean_accuracy": 0.8233333333333334,
+        "n_fold_scores": 15
+      },
+      {
+        "learning_rate": 2e-05,
+        "epochs": 5,
+        "mean_macro_f1": 0.8390591688215864,
+        "mean_accuracy": 0.8416666666666667,
+        "n_fold_scores": 15
+      },
+      {
+        "learning_rate": 5e-05,
+        "epochs": 2,
+        "mean_macro_f1": 0.8099069163488332,
+        "mean_accuracy": 0.8166666666666667,
+        "n_fold_scores": 15
+      },
+      {
+        "learning_rate": 5e-05,
+        "epochs": 3,
+        "mean_macro_f1": 0.8248956395839893,
+        "mean_accuracy": 0.8266666666666665,
+        "n_fold_scores": 15
+      },
+      {
+        "learning_rate": 5e-05,
+        "epochs": 5,
+        "mean_macro_f1": 0.8434045266166009,
+        "mean_accuracy": 0.8450000000000001,
+        "n_fold_scores": 15
+      }
+    ],
+    "selection_rule": "highest mean macro-F1 across 5 folds and seeds 42/123/456; ties broken by mean accuracy, then proximity to fixed config",
+    "test_metrics_used_for_selection": false
+  },
+  "yahoo_L10": {
+    "dataset": "yahoo",
+    "labels_per_class": 10,
+    "selected": {
+      "learning_rate": 5e-05,
+      "epochs": 5,
+      "mean_macro_f1": 0.3143174603174603,
+      "mean_accuracy": 0.35,
+      "n_fold_scores": 15
+    },
+    "candidates": [
+      {
+        "learning_rate": 1e-05,
+        "epochs": 2,
+        "mean_macro_f1": 0.1185079365079365,
+        "mean_accuracy": 0.15,
+        "n_fold_scores": 15
+      },
+      {
+        "learning_rate": 1e-05,
+        "epochs": 3,
+        "mean_macro_f1": 0.1423915343915344,
+        "mean_accuracy": 0.17666666666666672,
+        "n_fold_scores": 15
+      },
+      {
+        "learning_rate": 1e-05,
+        "epochs": 5,
+        "mean_macro_f1": 0.18116931216931217,
+        "mean_accuracy": 0.22333333333333333,
+        "n_fold_scores": 15
+      },
+      {
+        "learning_rate": 2e-05,
+        "epochs": 2,
+        "mean_macro_f1": 0.1710846560846561,
+        "mean_accuracy": 0.19666666666666668,
+        "n_fold_scores": 15
+      },
+      {
+        "learning_rate": 2e-05,
+        "epochs": 3,
+        "mean_macro_f1": 0.19904761904761903,
+        "mean_accuracy": 0.22999999999999998,
+        "n_fold_scores": 15
+      },
+      {
+        "learning_rate": 2e-05,
+        "epochs": 5,
+        "mean_macro_f1": 0.25226455026455025,
+        "mean_accuracy": 0.29,
+        "n_fold_scores": 15
+      },
+      {
+        "learning_rate": 5e-05,
+        "epochs": 2,
+        "mean_macro_f1": 0.20346031746031748,
+        "mean_accuracy": 0.23666666666666666,
+        "n_fold_scores": 15
+      },
+      {
+        "learning_rate": 5e-05,
+        "epochs": 3,
+        "mean_macro_f1": 0.2706878306878307,
+        "mean_accuracy": 0.29333333333333333,
+        "n_fold_scores": 15
+      },
+      {
+        "learning_rate": 5e-05,
+        "epochs": 5,
+        "mean_macro_f1": 0.3143174603174603,
+        "mean_accuracy": 0.35,
+        "n_fold_scores": 15
+      }
+    ],
+    "selection_rule": "highest mean macro-F1 across 5 folds and seeds 42/123/456; ties broken by mean accuracy, then proximity to fixed config",
+    "test_metrics_used_for_selection": false
+  },
+  "yahoo_L50": {
+    "dataset": "yahoo",
+    "labels_per_class": 50,
+    "selected": {
+      "learning_rate": 5e-05,
+      "epochs": 5,
+      "mean_macro_f1": 0.5647888800400865,
+      "mean_accuracy": 0.5660000000000001,
+      "n_fold_scores": 15
+    },
+    "candidates": [
+      {
+        "learning_rate": 1e-05,
+        "epochs": 2,
+        "mean_macro_f1": 0.2883350492357402,
+        "mean_accuracy": 0.3066666666666667,
+        "n_fold_scores": 15
+      },
+      {
+        "learning_rate": 1e-05,
+        "epochs": 3,
+        "mean_macro_f1": 0.39953658685101723,
+        "mean_accuracy": 0.4086666666666668,
+        "n_fold_scores": 15
+      },
+      {
+        "learning_rate": 1e-05,
+        "epochs": 5,
+        "mean_macro_f1": 0.4855161739891423,
+        "mean_accuracy": 0.4893333333333333,
+        "n_fold_scores": 15
+      },
+      {
+        "learning_rate": 2e-05,
+        "epochs": 2,
+        "mean_macro_f1": 0.4235299610926673,
+        "mean_accuracy": 0.43533333333333335,
+        "n_fold_scores": 15
+      },
+      {
+        "learning_rate": 2e-05,
+        "epochs": 3,
+        "mean_macro_f1": 0.49210629283423374,
+        "mean_accuracy": 0.49466666666666664,
+        "n_fold_scores": 15
+      },
+      {
+        "learning_rate": 2e-05,
+        "epochs": 5,
+        "mean_macro_f1": 0.526267810182386,
+        "mean_accuracy": 0.528,
+        "n_fold_scores": 15
+      },
+      {
+        "learning_rate": 5e-05,
+        "epochs": 2,
+        "mean_macro_f1": 0.486018037608851,
+        "mean_accuracy": 0.49800000000000005,
+        "n_fold_scores": 15
+      },
+      {
+        "learning_rate": 5e-05,
+        "epochs": 3,
+        "mean_macro_f1": 0.529316173209762,
+        "mean_accuracy": 0.53,
+        "n_fold_scores": 15
+      },
+      {
+        "learning_rate": 5e-05,
+        "epochs": 5,
+        "mean_macro_f1": 0.5647888800400865,
+        "mean_accuracy": 0.5660000000000001,
+        "n_fold_scores": 15
+      }
+    ],
+    "selection_rule": "highest mean macro-F1 across 5 folds and seeds 42/123/456; ties broken by mean accuracy, then proximity to fixed config",
+    "test_metrics_used_for_selection": false
+  },
+  "amazon_L10": {
+    "dataset": "amazon",
+    "labels_per_class": 10,
+    "selected": {
+      "learning_rate": 2e-05,
+      "epochs": 5,
+      "mean_macro_f1": 0.22808465608465614,
+      "mean_accuracy": 0.27999999999999997,
+      "n_fold_scores": 15
+    },
+    "candidates": [
+      {
+        "learning_rate": 1e-05,
+        "epochs": 2,
+        "mean_macro_f1": 0.18402116402116406,
+        "mean_accuracy": 0.22000000000000003,
+        "n_fold_scores": 15
+      },
+      {
+        "learning_rate": 1e-05,
+        "epochs": 3,
+        "mean_macro_f1": 0.16605483405483407,
+        "mean_accuracy": 0.21333333333333335,
+        "n_fold_scores": 15
+      },
+      {
+        "learning_rate": 1e-05,
+        "epochs": 5,
+        "mean_macro_f1": 0.20561904761904765,
+        "mean_accuracy": 0.2466666666666667,
+        "n_fold_scores": 15
+      },
+      {
+        "learning_rate": 2e-05,
+        "epochs": 2,
+        "mean_macro_f1": 0.16331409331409333,
+        "mean_accuracy": 0.21333333333333335,
+        "n_fold_scores": 15
+      },
+      {
+        "learning_rate": 2e-05,
+        "epochs": 3,
+        "mean_macro_f1": 0.1932178932178932,
+        "mean_accuracy": 0.23333333333333336,
+        "n_fold_scores": 15
+      },
+      {
+        "learning_rate": 2e-05,
+        "epochs": 5,
+        "mean_macro_f1": 0.22808465608465614,
+        "mean_accuracy": 0.27999999999999997,
+        "n_fold_scores": 15
+      },
+      {
+        "learning_rate": 5e-05,
+        "epochs": 2,
+        "mean_macro_f1": 0.1335045695045695,
+        "mean_accuracy": 0.21333333333333332,
+        "n_fold_scores": 15
+      },
+      {
+        "learning_rate": 5e-05,
+        "epochs": 3,
+        "mean_macro_f1": 0.14764021164021163,
+        "mean_accuracy": 0.19333333333333333,
+        "n_fold_scores": 15
+      },
+      {
+        "learning_rate": 5e-05,
+        "epochs": 5,
+        "mean_macro_f1": 0.21171428571428574,
+        "mean_accuracy": 0.2533333333333333,
+        "n_fold_scores": 15
+      }
+    ],
+    "selection_rule": "highest mean macro-F1 across 5 folds and seeds 42/123/456; ties broken by mean accuracy, then proximity to fixed config",
+    "test_metrics_used_for_selection": false
+  },
+  "amazon_L50": {
+    "dataset": "amazon",
+    "labels_per_class": 50,
+    "selected": {
+      "learning_rate": 5e-05,
+      "epochs": 5,
+      "mean_macro_f1": 0.342584899930342,
+      "mean_accuracy": 0.3653333333333333,
+      "n_fold_scores": 15
+    },
+    "candidates": [
+      {
+        "learning_rate": 1e-05,
+        "epochs": 2,
+        "mean_macro_f1": 0.20599476732570537,
+        "mean_accuracy": 0.22533333333333333,
+        "n_fold_scores": 15
+      },
+      {
+        "learning_rate": 1e-05,
+        "epochs": 3,
+        "mean_macro_f1": 0.24364668754231483,
+        "mean_accuracy": 0.26,
+        "n_fold_scores": 15
+      },
+      {
+        "learning_rate": 1e-05,
+        "epochs": 5,
+        "mean_macro_f1": 0.27832434904911024,
+        "mean_accuracy": 0.28933333333333333,
+        "n_fold_scores": 15
+      },
+      {
+        "learning_rate": 2e-05,
+        "epochs": 2,
+        "mean_macro_f1": 0.2453218734282266,
+        "mean_accuracy": 0.27599999999999997,
+        "n_fold_scores": 15
+      },
+      {
+        "learning_rate": 2e-05,
+        "epochs": 3,
+        "mean_macro_f1": 0.266951496944087,
+        "mean_accuracy": 0.28800000000000003,
+        "n_fold_scores": 15
+      },
+      {
+        "learning_rate": 2e-05,
+        "epochs": 5,
+        "mean_macro_f1": 0.3022342904729452,
+        "mean_accuracy": 0.32933333333333337,
+        "n_fold_scores": 15
+      },
+      {
+        "learning_rate": 5e-05,
+        "epochs": 2,
+        "mean_macro_f1": 0.21779381197090997,
+        "mean_accuracy": 0.272,
+        "n_fold_scores": 15
+      },
+      {
+        "learning_rate": 5e-05,
+        "epochs": 3,
+        "mean_macro_f1": 0.2872272385216014,
+        "mean_accuracy": 0.3186666666666666,
+        "n_fold_scores": 15
+      },
+      {
+        "learning_rate": 5e-05,
+        "epochs": 5,
+        "mean_macro_f1": 0.342584899930342,
+        "mean_accuracy": 0.3653333333333333,
+        "n_fold_scores": 15
+      }
+    ],
+    "selection_rule": "highest mean macro-F1 across 5 folds and seeds 42/123/456; ties broken by mean accuracy, then proximity to fixed config",
+    "test_metrics_used_for_selection": false
+  },
+  "amazon3_L10": {
+    "dataset": "amazon3",
+    "labels_per_class": 10,
+    "selected": {
+      "learning_rate": 5e-05,
+      "epochs": 5,
+      "mean_macro_f1": 0.36243386243386244,
+      "mean_accuracy": 0.42222222222222217,
+      "n_fold_scores": 15
+    },
+    "candidates": [
+      {
+        "learning_rate": 1e-05,
+        "epochs": 2,
+        "mean_macro_f1": 0.2830687830687831,
+        "mean_accuracy": 0.3555555555555555,
+        "n_fold_scores": 15
+      },
+      {
+        "learning_rate": 1e-05,
+        "epochs": 3,
+        "mean_macro_f1": 0.2474074074074074,
+        "mean_accuracy": 0.31111111111111106,
+        "n_fold_scores": 15
+      },
+      {
+        "learning_rate": 1e-05,
+        "epochs": 5,
+        "mean_macro_f1": 0.2932275132275132,
+        "mean_accuracy": 0.35555555555555546,
+        "n_fold_scores": 15
+      },
+      {
+        "learning_rate": 2e-05,
+        "epochs": 2,
+        "mean_macro_f1": 0.2422222222222222,
+        "mean_accuracy": 0.3222222222222222,
+        "n_fold_scores": 15
+      },
+      {
+        "learning_rate": 2e-05,
+        "epochs": 3,
+        "mean_macro_f1": 0.306031746031746,
+        "mean_accuracy": 0.3777777777777778,
+        "n_fold_scores": 15
+      },
+      {
+        "learning_rate": 2e-05,
+        "epochs": 5,
+        "mean_macro_f1": 0.28380952380952373,
+        "mean_accuracy": 0.34444444444444444,
+        "n_fold_scores": 15
+      },
+      {
+        "learning_rate": 5e-05,
+        "epochs": 2,
+        "mean_macro_f1": 0.3244444444444445,
+        "mean_accuracy": 0.42222222222222217,
+        "n_fold_scores": 15
+      },
+      {
+        "learning_rate": 5e-05,
+        "epochs": 3,
+        "mean_macro_f1": 0.24338624338624332,
+        "mean_accuracy": 0.3333333333333333,
+        "n_fold_scores": 15
+      },
+      {
+        "learning_rate": 5e-05,
+        "epochs": 5,
+        "mean_macro_f1": 0.36243386243386244,
+        "mean_accuracy": 0.42222222222222217,
+        "n_fold_scores": 15
+      }
+    ],
+    "selection_rule": "highest mean macro-F1 across 5 folds and seeds 42/123/456; ties broken by mean accuracy, then proximity to fixed config",
+    "test_metrics_used_for_selection": false
+  },
+  "amazon3_L50": {
+    "dataset": "amazon3",
+    "labels_per_class": 50,
+    "selected": {
+      "learning_rate": 5e-05,
+      "epochs": 5,
+      "mean_macro_f1": 0.5065838519645233,
+      "mean_accuracy": 0.531111111111111,
+      "n_fold_scores": 15
+    },
+    "candidates": [
+      {
+        "learning_rate": 1e-05,
+        "epochs": 2,
+        "mean_macro_f1": 0.358982229169078,
+        "mean_accuracy": 0.3977777777777778,
+        "n_fold_scores": 15
+      },
+      {
+        "learning_rate": 1e-05,
+        "epochs": 3,
+        "mean_macro_f1": 0.40029298828450954,
+        "mean_accuracy": 0.42,
+        "n_fold_scores": 15
+      },
+      {
+        "learning_rate": 1e-05,
+        "epochs": 5,
+        "mean_macro_f1": 0.45136050518300264,
+        "mean_accuracy": 0.4622222222222223,
+        "n_fold_scores": 15
+      },
+      {
+        "learning_rate": 2e-05,
+        "epochs": 2,
+        "mean_macro_f1": 0.3686067550276395,
+        "mean_accuracy": 0.42,
+        "n_fold_scores": 15
+      },
+      {
+        "learning_rate": 2e-05,
+        "epochs": 3,
+        "mean_macro_f1": 0.42294133850824805,
+        "mean_accuracy": 0.45333333333333337,
+        "n_fold_scores": 15
+      },
+      {
+        "learning_rate": 2e-05,
+        "epochs": 5,
+        "mean_macro_f1": 0.45741864181686226,
+        "mean_accuracy": 0.49111111111111116,
+        "n_fold_scores": 15
+      },
+      {
+        "learning_rate": 5e-05,
+        "epochs": 2,
+        "mean_macro_f1": 0.38855738256543254,
+        "mean_accuracy": 0.44222222222222224,
+        "n_fold_scores": 15
+      },
+      {
+        "learning_rate": 5e-05,
+        "epochs": 3,
+        "mean_macro_f1": 0.4485862387267538,
+        "mean_accuracy": 0.4866666666666666,
+        "n_fold_scores": 15
+      },
+      {
+        "learning_rate": 5e-05,
+        "epochs": 5,
+        "mean_macro_f1": 0.5065838519645233,
+        "mean_accuracy": 0.531111111111111,
+        "n_fold_scores": 15
+      }
+    ],
+    "selection_rule": "highest mean macro-F1 across 5 folds and seeds 42/123/456; ties broken by mean accuracy, then proximity to fixed config",
+    "test_metrics_used_for_selection": false
+  }
+}

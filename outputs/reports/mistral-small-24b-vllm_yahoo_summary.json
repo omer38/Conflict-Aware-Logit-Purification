@@ -1,0 +1,9 @@
+{
+  "teacher": "mistral-small-24b-vllm",
+  "dataset": "yahoo",
+  "n_samples_reported": 5000,
+  "accuracy": 0.6324,
+  "floor_fraction": 0.0,
+  "report_csv": "outputs/reports/mistral-small-24b-vllm_yahoo.csv",
+  "generated_at": "2026-06-18T17:18:45.075299+00:00"
+}

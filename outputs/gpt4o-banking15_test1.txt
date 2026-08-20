@@ -1,0 +1,195 @@
+(conflict-aware-logit-purification) omertugrul@MacBook-Pro-5327 MSc-Dissertation % python tests/demo_extraction_banking15.py
+Dataset: Banking15  |  15 intent classes
+Teacher: gpt-4o
+Note: top_logprobs=20, so all 15 classes can appear in any response.
+
+======================================================================
+SAMPLE 0
+  Text       : "Last Saturday, I was charged extra for the exchange rate on my payment. Is something wrong..."
+  True label : 12 = card_payment_wrong_exchange_rate
+  LLM said   : "12"
+
+  RAW top-20 tokens the LLM returned (its view of the whole vocab):
+         token   logprob     prob   kept?
+          '12'    -0.001   99.93%   KEEP -> class 12 (card_payment_wrong_exchange_rate)
+          '13'    -7.329    0.07%   KEEP -> class 13 (extra_charge_on_statement)
+          '11'   -10.594    0.00%   KEEP -> class 11 (card_payment_not_recognised)
+          '14'   -11.204    0.00%   KEEP -> class 14 (wrong_exchange_rate_for_cash_withdrawal)
+           '0'   -13.594    0.00%   KEEP -> class 0 (card_payment_fee_charged)
+           '1'   -15.079    0.00%   KEEP -> class 1 (direct_debit_payment_not_recognised)
+          '10'   -15.266    0.00%   KEEP -> class 10 (request_refund)
+           '2'   -15.798    0.00%   KEEP -> class 2 (balance_not_updated_after_cheque_or_cash_deposit)
+           ' '   -16.157    0.00%   skip (not a class index)
+           '3'   -18.344    0.00%   KEEP -> class 3 (wrong_amount_of_cash_received)
+           '['   -18.469    0.00%   skip (not a class index)
+           '('   -18.657    0.00%   skip (not a class index)
+          '15'   -18.727    0.00%   skip (not a class index)
+           '9'   -18.829    0.00%   KEEP -> class 9 (transfer_not_received_by_recipient)
+           '-'   -19.298    0.00%   skip (not a class index)
+           '"'   -19.673    0.00%   skip (not a class index)
+           '4'   -19.704    0.00%   KEEP -> class 4 (cash_withdrawal_charge)
+           '5'   -19.790    0.00%   KEEP -> class 5 (transaction_charged_twice)
+          '１２'   -19.790    0.00%   skip (not a class index)
+          '16'   -19.891    0.00%   skip (not a class index)
+
+  CLEAN output: 12 classes observed in top-k (3/15 at LOGPROB_FLOOR -- not seen by the model):
+    class  name                                   logit      prob
+       12  card_payment_wrong_exchange_rate      -0.001    99.93%
+       13  extra_charge_on_statement             -7.329     0.07%
+       11  card_payment_not_recognised          -10.594     0.00%
+       14  wrong_exchange_rate_for_cash_withdrawal  -11.204     0.00%
+        0  card_payment_fee_charged             -13.594     0.00%
+        1  direct_debit_payment_not_recognised  -15.079     0.00%
+       10  request_refund                       -15.266     0.00%
+        2  balance_not_updated_after_cheque_or_cash_deposit  -15.798     0.00%
+        3  wrong_amount_of_cash_received        -18.344     0.00%
+        9  transfer_not_received_by_recipient   -18.829     0.00%
+        4  cash_withdrawal_charge               -19.704     0.00%
+        5  transaction_charged_twice            -19.790     0.00%
+
+  Prediction : class 12 = card_payment_wrong_exchange_rate  (correct)
+----------------------------------------------------------------------
+
+SAMPLE 1
+  Text       : "Hi, I am disappointed to see such a bad exchange rate and hope you can assist me. Would yo..."
+  True label : 12 = card_payment_wrong_exchange_rate
+  LLM said   : "12"
+
+  RAW top-20 tokens the LLM returned (its view of the whole vocab):
+         token   logprob     prob   kept?
+          '12'    -0.057   94.47%   KEEP -> class 12 (card_payment_wrong_exchange_rate)
+          '14'    -2.901    5.50%   KEEP -> class 14 (wrong_exchange_rate_for_cash_withdrawal)
+          '13'    -8.369    0.02%   KEEP -> class 13 (extra_charge_on_statement)
+          '11'    -9.791    0.01%   KEEP -> class 11 (card_payment_not_recognised)
+          '10'   -12.260    0.00%   KEEP -> class 10 (request_refund)
+           '1'   -13.619    0.00%   KEEP -> class 1 (direct_debit_payment_not_recognised)
+           '0'   -14.432    0.00%   KEEP -> class 0 (card_payment_fee_charged)
+           '2'   -15.166    0.00%   KEEP -> class 2 (balance_not_updated_after_cheque_or_cash_deposit)
+           '4'   -15.315    0.00%   KEEP -> class 4 (cash_withdrawal_charge)
+           '3'   -15.549    0.00%   KEEP -> class 3 (wrong_amount_of_cash_received)
+           '-'   -15.916    0.00%   skip (not a class index)
+           ' '   -15.932    0.00%   skip (not a class index)
+           '9'   -16.065    0.00%   KEEP -> class 9 (transfer_not_received_by_recipient)
+          '15'   -16.190    0.00%   skip (not a class index)
+           '6'   -16.330    0.00%   KEEP -> class 6 (declined_cash_withdrawal)
+           '('   -16.674    0.00%   skip (not a class index)
+           '['   -16.940    0.00%   skip (not a class index)
+           '7'   -16.955    0.00%   KEEP -> class 7 (transfer_fee_charged)
+           '8'   -17.190    0.00%   KEEP -> class 8 (balance_not_updated_after_bank_transfer)
+           '5'   -17.205    0.00%   KEEP -> class 5 (transaction_charged_twice)
+
+  CLEAN output: 15 classes observed in top-k (0/15 at LOGPROB_FLOOR -- not seen by the model):
+    class  name                                   logit      prob
+       12  card_payment_wrong_exchange_rate      -0.057    94.47%
+       14  wrong_exchange_rate_for_cash_withdrawal   -2.901     5.50%
+       13  extra_charge_on_statement             -8.369     0.02%
+       11  card_payment_not_recognised           -9.791     0.01%
+       10  request_refund                       -12.260     0.00%
+        1  direct_debit_payment_not_recognised  -13.619     0.00%
+        0  card_payment_fee_charged             -14.432     0.00%
+        2  balance_not_updated_after_cheque_or_cash_deposit  -15.166     0.00%
+        4  cash_withdrawal_charge               -15.315     0.00%
+        3  wrong_amount_of_cash_received        -15.549     0.00%
+        9  transfer_not_received_by_recipient   -16.065     0.00%
+        6  declined_cash_withdrawal             -16.330     0.00%
+        7  transfer_fee_charged                 -16.955     0.00%
+        8  balance_not_updated_after_bank_transfer  -17.190     0.00%
+        5  transaction_charged_twice            -17.205     0.00%
+
+  Prediction : class 12 = card_payment_wrong_exchange_rate  (correct)
+----------------------------------------------------------------------
+
+SAMPLE 2
+  Text       : "I think the currency exchange that's been applied is wrong."
+  True label : 12 = card_payment_wrong_exchange_rate
+  LLM said   : "12"
+
+  RAW top-20 tokens the LLM returned (its view of the whole vocab):
+         token   logprob     prob   kept?
+          '12'    -0.075   92.75%   KEEP -> class 12 (card_payment_wrong_exchange_rate)
+          '14'    -2.638    7.15%   KEEP -> class 14 (wrong_exchange_rate_for_cash_withdrawal)
+          '11'    -7.216    0.07%   KEEP -> class 11 (card_payment_not_recognised)
+          '13'    -8.497    0.02%   KEEP -> class 13 (extra_charge_on_statement)
+           '1'   -13.419    0.00%   KEEP -> class 1 (direct_debit_payment_not_recognised)
+          '10'   -13.825    0.00%   KEEP -> class 10 (request_refund)
+           ' '   -14.880    0.00%   skip (not a class index)
+           '2'   -14.911    0.00%   KEEP -> class 2 (balance_not_updated_after_cheque_or_cash_deposit)
+           '3'   -15.622    0.00%   KEEP -> class 3 (wrong_amount_of_cash_received)
+           '0'   -15.763    0.00%   KEEP -> class 0 (card_payment_fee_charged)
+           '4'   -15.802    0.00%   KEEP -> class 4 (cash_withdrawal_charge)
+           '6'   -16.239    0.00%   KEEP -> class 6 (declined_cash_withdrawal)
+           '9'   -16.427    0.00%   KEEP -> class 9 (transfer_not_received_by_recipient)
+          '15'   -16.466    0.00%   skip (not a class index)
+           '-'   -17.278    0.00%   skip (not a class index)
+           '['   -17.411    0.00%   skip (not a class index)
+           '7'   -17.560    0.00%   KEEP -> class 7 (transfer_fee_charged)
+           '('   -17.638    0.00%   skip (not a class index)
+           '5'   -17.935    0.00%   KEEP -> class 5 (transaction_charged_twice)
+           '8'   -17.997    0.00%   KEEP -> class 8 (balance_not_updated_after_bank_transfer)
+
+  CLEAN output: 15 classes observed in top-k (0/15 at LOGPROB_FLOOR -- not seen by the model):
+    class  name                                   logit      prob
+       12  card_payment_wrong_exchange_rate      -0.075    92.75%
+       14  wrong_exchange_rate_for_cash_withdrawal   -2.638     7.15%
+       11  card_payment_not_recognised           -7.216     0.07%
+       13  extra_charge_on_statement             -8.497     0.02%
+        1  direct_debit_payment_not_recognised  -13.419     0.00%
+       10  request_refund                       -13.825     0.00%
+        2  balance_not_updated_after_cheque_or_cash_deposit  -14.911     0.00%
+        3  wrong_amount_of_cash_received        -15.622     0.00%
+        0  card_payment_fee_charged             -15.763     0.00%
+        4  cash_withdrawal_charge               -15.802     0.00%
+        6  declined_cash_withdrawal             -16.239     0.00%
+        9  transfer_not_received_by_recipient   -16.427     0.00%
+        7  transfer_fee_charged                 -17.560     0.00%
+        5  transaction_charged_twice            -17.935     0.00%
+        8  balance_not_updated_after_bank_transfer  -17.997     0.00%
+
+  Prediction : class 12 = card_payment_wrong_exchange_rate  (correct)
+----------------------------------------------------------------------
+
+SAMPLE 3
+  Text       : "The exchange rate I was charged for a purchase was not right."
+  True label : 12 = card_payment_wrong_exchange_rate
+  LLM said   : "12"
+
+  RAW top-20 tokens the LLM returned (its view of the whole vocab):
+         token   logprob     prob   kept?
+          '12'    -0.001   99.95%   KEEP -> class 12 (card_payment_wrong_exchange_rate)
+          '11'    -7.579    0.05%   KEEP -> class 11 (card_payment_not_recognised)
+          '13'   -13.188    0.00%   KEEP -> class 13 (extra_charge_on_statement)
+           '0'   -15.829    0.00%   KEEP -> class 0 (card_payment_fee_charged)
+           '1'   -15.844    0.00%   KEEP -> class 1 (direct_debit_payment_not_recognised)
+          '14'   -16.047    0.00%   KEEP -> class 14 (wrong_exchange_rate_for_cash_withdrawal)
+          '10'   -16.907    0.00%   KEEP -> class 10 (request_refund)
+           ' '   -16.954    0.00%   skip (not a class index)
+           '2'   -17.219    0.00%   KEEP -> class 2 (balance_not_updated_after_cheque_or_cash_deposit)
+           '['   -20.008    0.00%   skip (not a class index)
+           '('   -20.032    0.00%   skip (not a class index)
+           '9'   -20.040    0.00%   KEEP -> class 9 (transfer_not_received_by_recipient)
+          '15'   -20.047    0.00%   skip (not a class index)
+          '１２'   -20.196    0.00%   skip (not a class index)
+           '-'   -20.821    0.00%   skip (not a class index)
+           '3'   -20.954    0.00%   KEEP -> class 3 (wrong_amount_of_cash_received)
+           '"'   -21.008    0.00%   skip (not a class index)
+          '16'   -21.321    0.00%   skip (not a class index)
+          '十二'   -21.469    0.00%   skip (not a class index)
+         '012'   -21.485    0.00%   skip (not a class index)
+
+  CLEAN output: 10 classes observed in top-k (5/15 at LOGPROB_FLOOR -- not seen by the model):
+    class  name                                   logit      prob
+       12  card_payment_wrong_exchange_rate      -0.001    99.95%
+       11  card_payment_not_recognised           -7.579     0.05%
+       13  extra_charge_on_statement            -13.188     0.00%
+        0  card_payment_fee_charged             -15.829     0.00%
+        1  direct_debit_payment_not_recognised  -15.844     0.00%
+       14  wrong_exchange_rate_for_cash_withdrawal  -16.047     0.00%
+       10  request_refund                       -16.907     0.00%
+        2  balance_not_updated_after_cheque_or_cash_deposit  -17.219     0.00%
+        9  transfer_not_received_by_recipient   -20.040     0.00%
+        3  wrong_amount_of_cash_received        -20.954     0.00%
+
+  Prediction : class 12 = card_payment_wrong_exchange_rate  (correct)
+----------------------------------------------------------------------
+
+(conflict-aware-logit-purification) omertugrul@MacBook-Pro-5327 MSc-Dissertation % 

@@ -1,0 +1,146 @@
+[2026-07-26T21:14:35Z] === prompt_inclusive_baselines_3seed_v1 runner begin ===
+[2026-07-26T21:14:35Z] START dataset=ag_news method=gemma teacher=gemma4-26b-vllm-guided L=10 seed=42
+[2026-07-26T21:16:30Z] OK dataset=ag_news method=gemma L=10 seed=42 status=0 start=2026-07-26T21:14:35Z end=2026-07-26T21:16:29Z
+[2026-07-26T21:16:30Z] START dataset=ag_news method=mistral teacher=mistral-small-24b-vllm-guided L=10 seed=42
+[2026-07-26T21:18:15Z] OK dataset=ag_news method=mistral L=10 seed=42 status=0 start=2026-07-26T21:16:30Z end=2026-07-26T21:18:14Z
+[2026-07-26T21:18:15Z] START dataset=ag_news method=entropy teacher=multi-entropy-guided L=10 seed=42
+[2026-07-26T21:19:59Z] OK dataset=ag_news method=entropy L=10 seed=42 status=0 start=2026-07-26T21:18:15Z end=2026-07-26T21:19:59Z
+[2026-07-26T21:20:00Z] START dataset=ag_news method=gemma teacher=gemma4-26b-vllm-guided L=10 seed=123
+[2026-07-26T21:21:46Z] OK dataset=ag_news method=gemma L=10 seed=123 status=0 start=2026-07-26T21:20:00Z end=2026-07-26T21:21:46Z
+[2026-07-26T21:21:46Z] START dataset=ag_news method=mistral teacher=mistral-small-24b-vllm-guided L=10 seed=123
+[2026-07-26T21:23:29Z] OK dataset=ag_news method=mistral L=10 seed=123 status=0 start=2026-07-26T21:21:46Z end=2026-07-26T21:23:29Z
+[2026-07-26T21:23:29Z] START dataset=ag_news method=entropy teacher=multi-entropy-guided L=10 seed=123
+[2026-07-26T21:25:14Z] OK dataset=ag_news method=entropy L=10 seed=123 status=0 start=2026-07-26T21:23:29Z end=2026-07-26T21:25:14Z
+[2026-07-26T21:25:14Z] START dataset=ag_news method=gemma teacher=gemma4-26b-vllm-guided L=10 seed=456
+[2026-07-26T21:26:58Z] OK dataset=ag_news method=gemma L=10 seed=456 status=0 start=2026-07-26T21:25:14Z end=2026-07-26T21:26:58Z
+[2026-07-26T21:26:59Z] START dataset=ag_news method=mistral teacher=mistral-small-24b-vllm-guided L=10 seed=456
+[2026-07-26T21:28:44Z] OK dataset=ag_news method=mistral L=10 seed=456 status=0 start=2026-07-26T21:26:59Z end=2026-07-26T21:28:44Z
+[2026-07-26T21:28:44Z] START dataset=ag_news method=entropy teacher=multi-entropy-guided L=10 seed=456
+[2026-07-26T21:30:30Z] OK dataset=ag_news method=entropy L=10 seed=456 status=0 start=2026-07-26T21:28:44Z end=2026-07-26T21:30:30Z
+[2026-07-26T21:30:30Z] START dataset=yahoo method=gemma teacher=gemma4-26b-vllm-guided L=10 seed=42
+[2026-07-26T21:33:13Z] OK dataset=yahoo method=gemma L=10 seed=42 status=0 start=2026-07-26T21:30:30Z end=2026-07-26T21:33:13Z
+[2026-07-26T21:33:13Z] START dataset=yahoo method=mistral teacher=mistral-small-24b-vllm-guided L=10 seed=42
+[2026-07-26T21:35:55Z] OK dataset=yahoo method=mistral L=10 seed=42 status=0 start=2026-07-26T21:33:13Z end=2026-07-26T21:35:55Z
+[2026-07-26T21:35:55Z] START dataset=yahoo method=entropy teacher=multi-entropy-guided L=10 seed=42
+[2026-07-26T21:38:38Z] OK dataset=yahoo method=entropy L=10 seed=42 status=0 start=2026-07-26T21:35:55Z end=2026-07-26T21:38:37Z
+[2026-07-26T21:38:38Z] START dataset=yahoo method=gemma teacher=gemma4-26b-vllm-guided L=10 seed=123
+[2026-07-26T21:41:19Z] OK dataset=yahoo method=gemma L=10 seed=123 status=0 start=2026-07-26T21:38:38Z end=2026-07-26T21:41:19Z
+[2026-07-26T21:41:19Z] START dataset=yahoo method=mistral teacher=mistral-small-24b-vllm-guided L=10 seed=123
+[2026-07-26T21:44:02Z] OK dataset=yahoo method=mistral L=10 seed=123 status=0 start=2026-07-26T21:41:19Z end=2026-07-26T21:44:02Z
+[2026-07-26T21:44:02Z] START dataset=yahoo method=entropy teacher=multi-entropy-guided L=10 seed=123
+[2026-07-26T21:46:45Z] OK dataset=yahoo method=entropy L=10 seed=123 status=0 start=2026-07-26T21:44:02Z end=2026-07-26T21:46:45Z
+[2026-07-26T21:46:45Z] START dataset=yahoo method=gemma teacher=gemma4-26b-vllm-guided L=10 seed=456
+[2026-07-26T21:49:28Z] OK dataset=yahoo method=gemma L=10 seed=456 status=0 start=2026-07-26T21:46:45Z end=2026-07-26T21:49:27Z
+[2026-07-26T21:49:28Z] START dataset=yahoo method=mistral teacher=mistral-small-24b-vllm-guided L=10 seed=456
+[2026-07-26T21:52:10Z] OK dataset=yahoo method=mistral L=10 seed=456 status=0 start=2026-07-26T21:49:28Z end=2026-07-26T21:52:10Z
+[2026-07-26T21:52:10Z] START dataset=yahoo method=entropy teacher=multi-entropy-guided L=10 seed=456
+[2026-07-26T21:54:53Z] OK dataset=yahoo method=entropy L=10 seed=456 status=0 start=2026-07-26T21:52:10Z end=2026-07-26T21:54:53Z
+[2026-07-26T21:54:53Z] START dataset=amazon method=gemma teacher=gemma4-26b-vllm-guided L=10 seed=42
+[2026-07-26T21:56:29Z] OK dataset=amazon method=gemma L=10 seed=42 status=0 start=2026-07-26T21:54:53Z end=2026-07-26T21:56:29Z
+[2026-07-26T21:56:30Z] START dataset=amazon method=mistral teacher=mistral-small-24b-vllm-guided L=10 seed=42
+[2026-07-26T21:58:05Z] OK dataset=amazon method=mistral L=10 seed=42 status=0 start=2026-07-26T21:56:30Z end=2026-07-26T21:58:05Z
+[2026-07-26T21:58:05Z] START dataset=amazon method=entropy teacher=multi-entropy-guided L=10 seed=42
+[2026-07-26T21:59:42Z] OK dataset=amazon method=entropy L=10 seed=42 status=0 start=2026-07-26T21:58:05Z end=2026-07-26T21:59:42Z
+[2026-07-26T21:59:42Z] START dataset=amazon method=gemma teacher=gemma4-26b-vllm-guided L=10 seed=123
+[2026-07-26T22:01:20Z] OK dataset=amazon method=gemma L=10 seed=123 status=0 start=2026-07-26T21:59:42Z end=2026-07-26T22:01:19Z
+[2026-07-26T22:01:20Z] START dataset=amazon method=mistral teacher=mistral-small-24b-vllm-guided L=10 seed=123
+[2026-07-26T22:02:56Z] OK dataset=amazon method=mistral L=10 seed=123 status=0 start=2026-07-26T22:01:20Z end=2026-07-26T22:02:56Z
+[2026-07-26T22:02:56Z] START dataset=amazon method=entropy teacher=multi-entropy-guided L=10 seed=123
+[2026-07-26T22:04:33Z] OK dataset=amazon method=entropy L=10 seed=123 status=0 start=2026-07-26T22:02:56Z end=2026-07-26T22:04:33Z
+[2026-07-26T22:04:33Z] START dataset=amazon method=gemma teacher=gemma4-26b-vllm-guided L=10 seed=456
+[2026-07-26T22:06:09Z] OK dataset=amazon method=gemma L=10 seed=456 status=0 start=2026-07-26T22:04:33Z end=2026-07-26T22:06:08Z
+[2026-07-26T22:06:09Z] START dataset=amazon method=mistral teacher=mistral-small-24b-vllm-guided L=10 seed=456
+[2026-07-26T22:07:44Z] OK dataset=amazon method=mistral L=10 seed=456 status=0 start=2026-07-26T22:06:09Z end=2026-07-26T22:07:44Z
+[2026-07-26T22:07:44Z] START dataset=amazon method=entropy teacher=multi-entropy-guided L=10 seed=456
+[2026-07-26T22:09:20Z] OK dataset=amazon method=entropy L=10 seed=456 status=0 start=2026-07-26T22:07:44Z end=2026-07-26T22:09:20Z
+[2026-07-26T22:09:20Z] START dataset=amazon3 method=gemma teacher=gemma4-26b-vllm-guided L=10 seed=42
+[2026-07-26T22:10:21Z] OK dataset=amazon3 method=gemma L=10 seed=42 status=0 start=2026-07-26T22:09:20Z end=2026-07-26T22:10:21Z
+[2026-07-26T22:10:21Z] START dataset=amazon3 method=mistral teacher=mistral-small-24b-vllm-guided L=10 seed=42
+[2026-07-26T22:11:23Z] OK dataset=amazon3 method=mistral L=10 seed=42 status=0 start=2026-07-26T22:10:21Z end=2026-07-26T22:11:22Z
+[2026-07-26T22:11:23Z] START dataset=amazon3 method=entropy teacher=multi-entropy-guided L=10 seed=42
+[2026-07-26T22:12:24Z] OK dataset=amazon3 method=entropy L=10 seed=42 status=0 start=2026-07-26T22:11:23Z end=2026-07-26T22:12:24Z
+[2026-07-26T22:12:24Z] START dataset=amazon3 method=gemma teacher=gemma4-26b-vllm-guided L=10 seed=123
+[2026-07-26T22:13:26Z] OK dataset=amazon3 method=gemma L=10 seed=123 status=0 start=2026-07-26T22:12:24Z end=2026-07-26T22:13:26Z
+[2026-07-26T22:13:26Z] START dataset=amazon3 method=mistral teacher=mistral-small-24b-vllm-guided L=10 seed=123
+[2026-07-26T22:14:28Z] OK dataset=amazon3 method=mistral L=10 seed=123 status=0 start=2026-07-26T22:13:26Z end=2026-07-26T22:14:28Z
+[2026-07-26T22:14:28Z] START dataset=amazon3 method=entropy teacher=multi-entropy-guided L=10 seed=123
+[2026-07-26T22:15:29Z] OK dataset=amazon3 method=entropy L=10 seed=123 status=0 start=2026-07-26T22:14:28Z end=2026-07-26T22:15:29Z
+[2026-07-26T22:15:29Z] START dataset=amazon3 method=gemma teacher=gemma4-26b-vllm-guided L=10 seed=456
+[2026-07-26T22:16:31Z] OK dataset=amazon3 method=gemma L=10 seed=456 status=0 start=2026-07-26T22:15:29Z end=2026-07-26T22:16:31Z
+[2026-07-26T22:16:31Z] START dataset=amazon3 method=mistral teacher=mistral-small-24b-vllm-guided L=10 seed=456
+[2026-07-26T22:17:33Z] OK dataset=amazon3 method=mistral L=10 seed=456 status=0 start=2026-07-26T22:16:31Z end=2026-07-26T22:17:32Z
+[2026-07-26T22:17:33Z] START dataset=amazon3 method=entropy teacher=multi-entropy-guided L=10 seed=456
+[2026-07-26T22:18:34Z] OK dataset=amazon3 method=entropy L=10 seed=456 status=0 start=2026-07-26T22:17:33Z end=2026-07-26T22:18:34Z
+[2026-07-26T22:18:34Z] START dataset=ag_news method=gemma teacher=gemma4-26b-vllm-guided L=50 seed=42
+[2026-07-26T22:20:21Z] OK dataset=ag_news method=gemma L=50 seed=42 status=0 start=2026-07-26T22:18:34Z end=2026-07-26T22:20:21Z
+[2026-07-26T22:20:21Z] START dataset=ag_news method=mistral teacher=mistral-small-24b-vllm-guided L=50 seed=42
+[2026-07-26T22:22:07Z] OK dataset=ag_news method=mistral L=50 seed=42 status=0 start=2026-07-26T22:20:21Z end=2026-07-26T22:22:07Z
+[2026-07-26T22:22:07Z] START dataset=ag_news method=entropy teacher=multi-entropy-guided L=50 seed=42
+[2026-07-26T22:23:53Z] OK dataset=ag_news method=entropy L=50 seed=42 status=0 start=2026-07-26T22:22:07Z end=2026-07-26T22:23:53Z
+[2026-07-26T22:23:53Z] START dataset=ag_news method=gemma teacher=gemma4-26b-vllm-guided L=50 seed=123
+[2026-07-26T22:25:40Z] OK dataset=ag_news method=gemma L=50 seed=123 status=0 start=2026-07-26T22:23:53Z end=2026-07-26T22:25:40Z
+[2026-07-26T22:25:40Z] START dataset=ag_news method=mistral teacher=mistral-small-24b-vllm-guided L=50 seed=123
+[2026-07-26T22:27:26Z] OK dataset=ag_news method=mistral L=50 seed=123 status=0 start=2026-07-26T22:25:40Z end=2026-07-26T22:27:26Z
+[2026-07-26T22:27:26Z] START dataset=ag_news method=entropy teacher=multi-entropy-guided L=50 seed=123
+[2026-07-26T22:29:11Z] OK dataset=ag_news method=entropy L=50 seed=123 status=0 start=2026-07-26T22:27:26Z end=2026-07-26T22:29:11Z
+[2026-07-26T22:29:11Z] START dataset=ag_news method=gemma teacher=gemma4-26b-vllm-guided L=50 seed=456
+[2026-07-26T22:30:56Z] OK dataset=ag_news method=gemma L=50 seed=456 status=0 start=2026-07-26T22:29:11Z end=2026-07-26T22:30:56Z
+[2026-07-26T22:30:56Z] START dataset=ag_news method=mistral teacher=mistral-small-24b-vllm-guided L=50 seed=456
+[2026-07-26T22:32:42Z] OK dataset=ag_news method=mistral L=50 seed=456 status=0 start=2026-07-26T22:30:56Z end=2026-07-26T22:32:42Z
+[2026-07-26T22:32:42Z] START dataset=ag_news method=entropy teacher=multi-entropy-guided L=50 seed=456
+[2026-07-26T22:34:31Z] OK dataset=ag_news method=entropy L=50 seed=456 status=0 start=2026-07-26T22:32:42Z end=2026-07-26T22:34:31Z
+[2026-07-26T22:34:31Z] START dataset=yahoo method=gemma teacher=gemma4-26b-vllm-guided L=50 seed=42
+[2026-07-26T22:37:13Z] OK dataset=yahoo method=gemma L=50 seed=42 status=0 start=2026-07-26T22:34:31Z end=2026-07-26T22:37:13Z
+[2026-07-26T22:37:14Z] START dataset=yahoo method=mistral teacher=mistral-small-24b-vllm-guided L=50 seed=42
+[2026-07-26T22:39:56Z] OK dataset=yahoo method=mistral L=50 seed=42 status=0 start=2026-07-26T22:37:14Z end=2026-07-26T22:39:56Z
+[2026-07-26T22:39:56Z] START dataset=yahoo method=entropy teacher=multi-entropy-guided L=50 seed=42
+[2026-07-26T22:42:38Z] OK dataset=yahoo method=entropy L=50 seed=42 status=0 start=2026-07-26T22:39:56Z end=2026-07-26T22:42:38Z
+[2026-07-26T22:42:39Z] START dataset=yahoo method=gemma teacher=gemma4-26b-vllm-guided L=50 seed=123
+[2026-07-26T22:45:22Z] OK dataset=yahoo method=gemma L=50 seed=123 status=0 start=2026-07-26T22:42:39Z end=2026-07-26T22:45:22Z
+[2026-07-26T22:45:22Z] START dataset=yahoo method=mistral teacher=mistral-small-24b-vllm-guided L=50 seed=123
+[2026-07-26T22:48:05Z] OK dataset=yahoo method=mistral L=50 seed=123 status=0 start=2026-07-26T22:45:22Z end=2026-07-26T22:48:04Z
+[2026-07-26T22:48:05Z] START dataset=yahoo method=entropy teacher=multi-entropy-guided L=50 seed=123
+[2026-07-26T22:50:47Z] OK dataset=yahoo method=entropy L=50 seed=123 status=0 start=2026-07-26T22:48:05Z end=2026-07-26T22:50:47Z
+[2026-07-26T22:50:47Z] START dataset=yahoo method=gemma teacher=gemma4-26b-vllm-guided L=50 seed=456
+[2026-07-26T22:53:31Z] OK dataset=yahoo method=gemma L=50 seed=456 status=0 start=2026-07-26T22:50:47Z end=2026-07-26T22:53:31Z
+[2026-07-26T22:53:31Z] START dataset=yahoo method=mistral teacher=mistral-small-24b-vllm-guided L=50 seed=456
+[2026-07-26T22:56:15Z] OK dataset=yahoo method=mistral L=50 seed=456 status=0 start=2026-07-26T22:53:31Z end=2026-07-26T22:56:14Z
+[2026-07-26T22:56:15Z] START dataset=yahoo method=entropy teacher=multi-entropy-guided L=50 seed=456
+[2026-07-26T22:58:59Z] OK dataset=yahoo method=entropy L=50 seed=456 status=0 start=2026-07-26T22:56:15Z end=2026-07-26T22:58:59Z
+[2026-07-26T22:58:59Z] START dataset=amazon method=gemma teacher=gemma4-26b-vllm-guided L=50 seed=42
+[2026-07-26T23:00:36Z] OK dataset=amazon method=gemma L=50 seed=42 status=0 start=2026-07-26T22:58:59Z end=2026-07-26T23:00:35Z
+[2026-07-26T23:00:36Z] START dataset=amazon method=mistral teacher=mistral-small-24b-vllm-guided L=50 seed=42
+[2026-07-26T23:02:13Z] OK dataset=amazon method=mistral L=50 seed=42 status=0 start=2026-07-26T23:00:36Z end=2026-07-26T23:02:13Z
+[2026-07-26T23:02:13Z] START dataset=amazon method=entropy teacher=multi-entropy-guided L=50 seed=42
+[2026-07-26T23:03:50Z] OK dataset=amazon method=entropy L=50 seed=42 status=0 start=2026-07-26T23:02:13Z end=2026-07-26T23:03:50Z
+[2026-07-26T23:03:50Z] START dataset=amazon method=gemma teacher=gemma4-26b-vllm-guided L=50 seed=123
+[2026-07-26T23:05:26Z] OK dataset=amazon method=gemma L=50 seed=123 status=0 start=2026-07-26T23:03:50Z end=2026-07-26T23:05:26Z
+[2026-07-26T23:05:26Z] START dataset=amazon method=mistral teacher=mistral-small-24b-vllm-guided L=50 seed=123
+[2026-07-26T23:07:02Z] OK dataset=amazon method=mistral L=50 seed=123 status=0 start=2026-07-26T23:05:26Z end=2026-07-26T23:07:02Z
+[2026-07-26T23:07:02Z] START dataset=amazon method=entropy teacher=multi-entropy-guided L=50 seed=123
+[2026-07-26T23:08:38Z] OK dataset=amazon method=entropy L=50 seed=123 status=0 start=2026-07-26T23:07:02Z end=2026-07-26T23:08:38Z
+[2026-07-26T23:08:39Z] START dataset=amazon method=gemma teacher=gemma4-26b-vllm-guided L=50 seed=456
+[2026-07-26T23:10:14Z] OK dataset=amazon method=gemma L=50 seed=456 status=0 start=2026-07-26T23:08:39Z end=2026-07-26T23:10:14Z
+[2026-07-26T23:10:14Z] START dataset=amazon method=mistral teacher=mistral-small-24b-vllm-guided L=50 seed=456
+[2026-07-26T23:11:50Z] OK dataset=amazon method=mistral L=50 seed=456 status=0 start=2026-07-26T23:10:14Z end=2026-07-26T23:11:50Z
+[2026-07-26T23:11:50Z] START dataset=amazon method=entropy teacher=multi-entropy-guided L=50 seed=456
+[2026-07-26T23:13:26Z] OK dataset=amazon method=entropy L=50 seed=456 status=0 start=2026-07-26T23:11:50Z end=2026-07-26T23:13:26Z
+[2026-07-26T23:13:26Z] START dataset=amazon3 method=gemma teacher=gemma4-26b-vllm-guided L=50 seed=42
+[2026-07-26T23:14:28Z] OK dataset=amazon3 method=gemma L=50 seed=42 status=0 start=2026-07-26T23:13:26Z end=2026-07-26T23:14:28Z
+[2026-07-26T23:14:28Z] START dataset=amazon3 method=mistral teacher=mistral-small-24b-vllm-guided L=50 seed=42
+[2026-07-26T23:15:29Z] OK dataset=amazon3 method=mistral L=50 seed=42 status=0 start=2026-07-26T23:14:28Z end=2026-07-26T23:15:29Z
+[2026-07-26T23:15:29Z] START dataset=amazon3 method=entropy teacher=multi-entropy-guided L=50 seed=42
+[2026-07-26T23:16:31Z] OK dataset=amazon3 method=entropy L=50 seed=42 status=0 start=2026-07-26T23:15:29Z end=2026-07-26T23:16:30Z
+[2026-07-26T23:16:31Z] START dataset=amazon3 method=gemma teacher=gemma4-26b-vllm-guided L=50 seed=123
+[2026-07-26T23:17:31Z] OK dataset=amazon3 method=gemma L=50 seed=123 status=0 start=2026-07-26T23:16:31Z end=2026-07-26T23:17:31Z
+[2026-07-26T23:17:32Z] START dataset=amazon3 method=mistral teacher=mistral-small-24b-vllm-guided L=50 seed=123
+[2026-07-26T23:18:33Z] OK dataset=amazon3 method=mistral L=50 seed=123 status=0 start=2026-07-26T23:17:32Z end=2026-07-26T23:18:33Z
+[2026-07-26T23:18:33Z] START dataset=amazon3 method=entropy teacher=multi-entropy-guided L=50 seed=123
+[2026-07-26T23:19:34Z] OK dataset=amazon3 method=entropy L=50 seed=123 status=0 start=2026-07-26T23:18:33Z end=2026-07-26T23:19:34Z
+[2026-07-26T23:19:34Z] START dataset=amazon3 method=gemma teacher=gemma4-26b-vllm-guided L=50 seed=456
+[2026-07-26T23:20:36Z] OK dataset=amazon3 method=gemma L=50 seed=456 status=0 start=2026-07-26T23:19:34Z end=2026-07-26T23:20:36Z
+[2026-07-26T23:20:36Z] START dataset=amazon3 method=mistral teacher=mistral-small-24b-vllm-guided L=50 seed=456
+[2026-07-26T23:21:38Z] OK dataset=amazon3 method=mistral L=50 seed=456 status=0 start=2026-07-26T23:20:36Z end=2026-07-26T23:21:38Z
+[2026-07-26T23:21:38Z] START dataset=amazon3 method=entropy teacher=multi-entropy-guided L=50 seed=456
+[2026-07-26T23:22:39Z] OK dataset=amazon3 method=entropy L=50 seed=456 status=0 start=2026-07-26T23:21:38Z end=2026-07-26T23:22:39Z
+[2026-07-26T23:22:39Z] === runner end failures=0 started=72 skipped=0 ===

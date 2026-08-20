@@ -1,0 +1,56 @@
+[
+  {
+    "router_type": "linear",
+    "n": 30,
+    "mean_loss": 1.3667692092557748,
+    "accuracy": 0.6333333333333333,
+    "weight_decay": 0.0,
+    "dropout": 0.3,
+    "seed": 42
+  },
+  {
+    "router_type": "linear",
+    "n": 30,
+    "mean_loss": 1.3156630051632723,
+    "accuracy": 0.6666666666666666,
+    "weight_decay": 0.01,
+    "dropout": 0.3,
+    "seed": 42
+  },
+  {
+    "router_type": "linear",
+    "n": 30,
+    "mean_loss": 1.2654624673227468,
+    "accuracy": 0.7,
+    "weight_decay": 0.1,
+    "dropout": 0.3,
+    "seed": 42
+  },
+  {
+    "router_type": "mlp",
+    "n": 30,
+    "mean_loss": 1.5858431768875259,
+    "accuracy": 0.7333333333333333,
+    "weight_decay": 0.0,
+    "dropout": 0.3,
+    "seed": 42
+  },
+  {
+    "router_type": "mlp",
+    "n": 30,
+    "mean_loss": 1.3387954307099184,
+    "accuracy": 0.6666666666666666,
+    "weight_decay": 0.01,
+    "dropout": 0.3,
+    "seed": 42
+  },
+  {
+    "router_type": "mlp",
+    "n": 30,
+    "mean_loss": 1.2010712983707588,
+    "accuracy": 0.7333333333333333,
+    "weight_decay": 0.1,
+    "dropout": 0.3,
+    "seed": 42
+  }
+]

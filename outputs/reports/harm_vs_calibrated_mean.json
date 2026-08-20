@@ -1,0 +1,58 @@
+[
+  {
+    "dataset": "ag_news",
+    "n_samples": 6000,
+    "harm_rate_logit_mean": 0.04033333333333333,
+    "harm_rate_calibrated_mean": 0.027166666666666665,
+    "harm_rate_drop_pp": 1.3166666666666667,
+    "rescued_rate": 0.029333333333333333,
+    "newly_harmed_rate": 0.016166666666666666,
+    "auc_logit_mean": 0.976493805934141,
+    "auc_logit_mean_std": 0.001925339245038096,
+    "auc_calibrated_mean": 0.9498882108947792,
+    "auc_calibrated_mean_std": 0.005915791416350672,
+    "auc_oof_n_splits": 5
+  },
+  {
+    "dataset": "yahoo",
+    "n_samples": 5000,
+    "harm_rate_logit_mean": 0.067,
+    "harm_rate_calibrated_mean": 0.0642,
+    "harm_rate_drop_pp": 0.2800000000000011,
+    "rescued_rate": 0.032,
+    "newly_harmed_rate": 0.0292,
+    "auc_logit_mean": 0.9262177856697221,
+    "auc_logit_mean_std": 0.018204836019115316,
+    "auc_calibrated_mean": 0.8868857873131771,
+    "auc_calibrated_mean_std": 0.006715229960343457,
+    "auc_oof_n_splits": 5
+  },
+  {
+    "dataset": "amazon",
+    "n_samples": 2500,
+    "harm_rate_logit_mean": 0.1364,
+    "harm_rate_calibrated_mean": 0.1364,
+    "harm_rate_drop_pp": 0.0,
+    "rescued_rate": 0.0512,
+    "newly_harmed_rate": 0.0512,
+    "auc_logit_mean": 0.8430774652604018,
+    "auc_logit_mean_std": 0.023568277632325243,
+    "auc_calibrated_mean": 0.8070367610795621,
+    "auc_calibrated_mean_std": 0.01891318222709406,
+    "auc_oof_n_splits": 5
+  },
+  {
+    "dataset": "amazon3",
+    "n_samples": 1500,
+    "harm_rate_logit_mean": 0.09866666666666667,
+    "harm_rate_calibrated_mean": 0.07666666666666666,
+    "harm_rate_drop_pp": 2.2000000000000006,
+    "rescued_rate": 0.07533333333333334,
+    "newly_harmed_rate": 0.05333333333333334,
+    "auc_logit_mean": 0.9552247843551231,
+    "auc_logit_mean_std": 0.014048990161920854,
+    "auc_calibrated_mean": 0.8892795479516561,
+    "auc_calibrated_mean_std": 0.02568261797610981,
+    "auc_oof_n_splits": 5
+  }
+]

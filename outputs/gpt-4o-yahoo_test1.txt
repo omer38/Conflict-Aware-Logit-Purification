@@ -1,0 +1,178 @@
+(conflict-aware-logit-purification) omertugrul@MacBook-Pro-5327 MSc-Dissertation % python tests/demo_extraction_yahoo.py
+Dataset: Yahoo Answers Topics  |  10 topic classes
+Teacher: gpt-4o
+Note: top_logprobs=20, so all 10 classes can appear in any response.
+
+======================================================================
+SAMPLE 0 (train index 0)
+  Text       : "I never knew chat rooms were dependent on sound.  Since I don't have sound in my computer,..."
+  True label : 0 = Society & Culture
+  LLM said   : "4"
+
+  RAW top-20 tokens the LLM returned (its view of the whole vocab):
+         token   logprob     prob   kept?
+           '4'    -0.633   53.12%   KEEP -> class 4 (Computers & Internet)
+           '8'    -0.758   46.88%   KEEP -> class 8 (Family & Relationships)
+           '9'   -10.180    0.00%   KEEP -> class 9 (Politics & Government)
+           '0'   -10.226    0.00%   KEEP -> class 0 (Society & Culture)
+           '6'   -12.617    0.00%   KEEP -> class 6 (Business & Finance)
+           '3'   -13.305    0.00%   KEEP -> class 3 (Education & Reference)
+           '1'   -15.117    0.00%   KEEP -> class 1 (Science & Mathematics)
+           '2'   -15.883    0.00%   KEEP -> class 2 (Health)
+        'None'   -16.742    0.00%   skip (not a class index)
+           '7'   -17.336    0.00%   KEEP -> class 7 (Entertainment & Music)
+    'Category'   -17.773    0.00%   skip (not a class index)
+           '-'   -17.851    0.00%   skip (not a class index)
+           '<'   -18.062    0.00%   skip (not a class index)
+      'Family'   -18.203    0.00%   skip (not a class index)
+           ' '   -18.344    0.00%   skip (not a class index)
+           '5'   -18.437    0.00%   KEEP -> class 5 (Sports)
+           '('   -18.492    0.00%   skip (not a class index)
+      'Social'   -18.601    0.00%   skip (not a class index)
+           '৪'   -18.680    0.00%   skip (not a class index)
+          '04'   -18.906    0.00%   skip (not a class index)
+
+  CLEAN output: 10 classes observed in top-k (0/10 at LOGPROB_FLOOR -- not seen by the model):
+    class  name                                        logit      prob
+        4  Computers & Internet                       -0.633    53.12%
+        8  Family & Relationships                     -0.758    46.88%
+        9  Politics & Government                     -10.180     0.00%
+        0  Society & Culture                         -10.226     0.00%
+        6  Business & Finance                        -12.617     0.00%
+        3  Education & Reference                     -13.305     0.00%
+        1  Science & Mathematics                     -15.117     0.00%
+        2  Health                                    -15.883     0.00%
+        7  Entertainment & Music                     -17.336     0.00%
+        5  Sports                                    -18.437     0.00%
+
+  Prediction : class 4 = Computers & Internet  (WRONG)
+----------------------------------------------------------------------
+
+SAMPLE 1 (train index 1)
+  Text       : "Sometimes people are just plain rude and think the world owes them something.  I guess dep..."
+  True label : 0 = Society & Culture
+  LLM said   : "8"
+
+  RAW top-20 tokens the LLM returned (its view of the whole vocab):
+         token   logprob     prob   kept?
+           '8'    -0.003   99.74%   KEEP -> class 8 (Family & Relationships)
+           '0'    -5.971    0.26%   KEEP -> class 0 (Society & Culture)
+           '9'   -19.331    0.00%   KEEP -> class 9 (Politics & Government)
+           '2'   -19.518    0.00%   KEEP -> class 2 (Health)
+         'Soc'   -20.456    0.00%   skip (not a class index)
+          '08'   -20.487    0.00%   skip (not a class index)
+           '6'   -20.768    0.00%   KEEP -> class 6 (Business & Finance)
+           '８'   -22.315    0.00%   skip (not a class index)
+           '<'   -22.893    0.00%   skip (not a class index)
+           '4'   -23.049    0.00%   KEEP -> class 4 (Computers & Internet)
+           '#'   -23.065    0.00%   skip (not a class index)
+        'None'   -23.128    0.00%   skip (not a class index)
+           '৮'   -23.299    0.00%   skip (not a class index)
+           '۸'   -23.471    0.00%   skip (not a class index)
+           '3'   -23.510    0.00%   KEEP -> class 3 (Education & Reference)
+           '"'   -23.674    0.00%   skip (not a class index)
+         '```'   -23.737    0.00%   skip (not a class index)
+          '\\'   -23.878    0.00%   skip (not a class index)
+        '\x08'   -23.893    0.00%   skip (not a class index)
+      'Social'   -23.940    0.00%   skip (not a class index)
+
+  CLEAN output: 7 classes observed in top-k (3/10 at LOGPROB_FLOOR -- not seen by the model):
+    class  name                                        logit      prob
+        8  Family & Relationships                     -0.003    99.74%
+        0  Society & Culture                          -5.971     0.26%
+        9  Politics & Government                     -19.331     0.00%
+        2  Health                                    -19.518     0.00%
+        6  Business & Finance                        -20.768     0.00%
+        4  Computers & Internet                      -23.049     0.00%
+        3  Education & Reference                     -23.510     0.00%
+
+  Prediction : class 8 = Family & Relationships  (WRONG)
+----------------------------------------------------------------------
+
+SAMPLE 2 (train index 2)
+  Text       : ""Shiawase" means happiness and "arigato" means thank you. "Wo" in general can be used to r..."
+  True label : 0 = Society & Culture
+  LLM said   : "0"
+
+  RAW top-20 tokens the LLM returned (its view of the whole vocab):
+         token   logprob     prob   kept?
+           '0'    -0.000   99.98%   KEEP -> class 0 (Society & Culture)
+           '3'    -8.797    0.02%   KEEP -> class 3 (Education & Reference)
+           '8'   -12.172    0.00%   KEEP -> class 8 (Family & Relationships)
+           '1'   -15.047    0.00%   KEEP -> class 1 (Science & Mathematics)
+           '7'   -16.360    0.00%   KEEP -> class 7 (Entertainment & Music)
+           '9'   -16.391    0.00%   KEEP -> class 9 (Politics & Government)
+           '6'   -17.563    0.00%   KEEP -> class 6 (Business & Finance)
+           '4'   -18.242    0.00%   KEEP -> class 4 (Computers & Internet)
+         'Soc'   -18.352    0.00%   skip (not a class index)
+           '2'   -18.719    0.00%   KEEP -> class 2 (Health)
+           '-'   -19.656    0.00%   skip (not a class index)
+          '10'   -20.695    0.00%   skip (not a class index)
+           ' '   -20.820    0.00%   skip (not a class index)
+           '5'   -21.078    0.00%   KEEP -> class 5 (Sports)
+           '('   -21.297    0.00%   skip (not a class index)
+           '"'   -21.414    0.00%   skip (not a class index)
+           'S'   -21.633    0.00%   skip (not a class index)
+           '['   -21.797    0.00%   skip (not a class index)
+           '*'   -21.875    0.00%   skip (not a class index)
+           '#'   -21.906    0.00%   skip (not a class index)
+
+  CLEAN output: 10 classes observed in top-k (0/10 at LOGPROB_FLOOR -- not seen by the model):
+    class  name                                        logit      prob
+        0  Society & Culture                          -0.000    99.98%
+        3  Education & Reference                      -8.797     0.02%
+        8  Family & Relationships                    -12.172     0.00%
+        1  Science & Mathematics                     -15.047     0.00%
+        7  Entertainment & Music                     -16.360     0.00%
+        9  Politics & Government                     -16.391     0.00%
+        6  Business & Finance                        -17.563     0.00%
+        4  Computers & Internet                      -18.242     0.00%
+        2  Health                                    -18.719     0.00%
+        5  Sports                                    -21.078     0.00%
+
+  Prediction : class 0 = Society & Culture  (correct)
+----------------------------------------------------------------------
+
+SAMPLE 3 (train index 3)
+  Text       : "Tell her you're trying to find your roots."
+  True label : 0 = Society & Culture
+  LLM said   : "0"
+
+  RAW top-20 tokens the LLM returned (its view of the whole vocab):
+         token   logprob     prob   kept?
+           '0'    -0.590   55.45%   KEEP -> class 0 (Society & Culture)
+           '8'    -0.808   44.55%   KEEP -> class 8 (Family & Relationships)
+           '1'   -13.496    0.00%   KEEP -> class 1 (Science & Mathematics)
+           '2'   -13.652    0.00%   KEEP -> class 2 (Health)
+           '9'   -14.105    0.00%   KEEP -> class 9 (Politics & Government)
+           '6'   -14.824    0.00%   KEEP -> class 6 (Business & Finance)
+           '3'   -15.699    0.00%   KEEP -> class 3 (Education & Reference)
+           '7'   -15.887    0.00%   KEEP -> class 7 (Entertainment & Music)
+           '4'   -17.480    0.00%   KEEP -> class 4 (Computers & Internet)
+         'Soc'   -18.191    0.00%   skip (not a class index)
+           '-'   -19.113    0.00%   skip (not a class index)
+           ' '   -19.129    0.00%   skip (not a class index)
+           '('   -19.480    0.00%   skip (not a class index)
+          '08'   -20.074    0.00%   skip (not a class index)
+           '5'   -20.090    0.00%   KEEP -> class 5 (Sports)
+           '"'   -20.324    0.00%   skip (not a class index)
+        'None'   -20.652    0.00%   skip (not a class index)
+           '['   -20.738    0.00%   skip (not a class index)
+           'S'   -20.832    0.00%   skip (not a class index)
+           '*'   -20.926    0.00%   skip (not a class index)
+
+  CLEAN output: 10 classes observed in top-k (0/10 at LOGPROB_FLOOR -- not seen by the model):
+    class  name                                        logit      prob
+        0  Society & Culture                          -0.590    55.45%
+        8  Family & Relationships                     -0.808    44.55%
+        1  Science & Mathematics                     -13.496     0.00%
+        2  Health                                    -13.652     0.00%
+        9  Politics & Government                     -14.105     0.00%
+        6  Business & Finance                        -14.824     0.00%
+        3  Education & Reference                     -15.699     0.00%
+        7  Entertainment & Music                     -15.887     0.00%
+        4  Computers & Internet                      -17.480     0.00%
+        5  Sports                                    -20.090     0.00%
+
+  Prediction : class 0 = Society & Culture  (correct)
+----------------------------------------------------------------------

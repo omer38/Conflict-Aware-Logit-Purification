@@ -1,0 +1,39 @@
+{
+  "source": "grouped from data/amazon (balanced Amazon Review Full, 5 classes)",
+  "artifact_version": "large-test-v1",
+  "group_map": {
+    "1-2 stars": "negative",
+    "3 stars": "neutral",
+    "4-5 stars": "positive"
+  },
+  "num_classes": 3,
+  "label_names": [
+    "negative (1-2 stars)",
+    "neutral (3 stars)",
+    "positive (4-5 stars)"
+  ],
+  "seed": 42,
+  "train_per_class": 500,
+  "test_per_class": 2000,
+  "train_size": 1500,
+  "test_size": 6000,
+  "train_identity": {
+    "size": 1500,
+    "class_counts": [
+      500,
+      500,
+      500
+    ],
+    "sha256": "177e6b3384f9bbed0d4a9cd259de326d147d8f157e5be743ab4186ad45eff3e9"
+  },
+  "test_identity": {
+    "size": 6000,
+    "class_counts": [
+      2000,
+      2000,
+      2000
+    ],
+    "sha256": "788b69a842a95b34d0de304e3c2aa40a4cdefc4e3e261cf9c484314e03028e71"
+  },
+  "note": "Robustness/secondary dataset; Amazon-5 remains the primary reported task."
+}

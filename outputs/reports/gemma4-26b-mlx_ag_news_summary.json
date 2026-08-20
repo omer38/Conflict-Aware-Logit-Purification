@@ -1,0 +1,9 @@
+{
+  "teacher": "gemma4-26b-mlx",
+  "dataset": "ag_news",
+  "n_samples_reported": 6000,
+  "accuracy": 0.8373333333333334,
+  "floor_fraction": 0.308,
+  "report_csv": "outputs/reports/gemma4-26b-mlx_ag_news.csv",
+  "generated_at": "2026-06-11T22:03:43.899097+00:00"
+}

@@ -1,0 +1,70 @@
+{
+  "dataset": "yahoo",
+  "mode": "kd",
+  "teacher": "multi-router-linear-guided",
+  "labels_per_class": 10,
+  "seed": 42,
+  "cal_ratio": 0.3,
+  "config": {
+    "model_name": "answerdotai/ModernBERT-base",
+    "max_length": 128,
+    "lr": 2e-05,
+    "batch_size": 8,
+    "epochs": 3,
+    "temperature": 2.0,
+    "alpha": 0.5
+  },
+  "metrics": {
+    "accuracy": 0.599,
+    "macro_f1": 0.6095328847069036
+  },
+  "aggregation": "entropy_weighted_fallback",
+  "teachers": [
+    "qwen3.5-27b-vllm-guided",
+    "gemma4-26b-vllm-guided",
+    "mistral-small-24b-vllm-guided"
+  ],
+  "router_type": "linear",
+  "loocv_accuracy": 0.6666666666666666,
+  "router_version": "v2",
+  "router_used": false,
+  "fallback_to": "entropy",
+  "heuristic_cal_accuracies": {
+    "mean": 0.6666666666666666,
+    "entropy": 0.6666666666666666
+  },
+  "feature_groups_used": [
+    "aggregate",
+    "class_aware",
+    "teacher_specific"
+  ],
+  "phi_standardization": {
+    "mean": [
+      0.5557945370674133,
+      0.9500779509544373,
+      1.7580269575119019,
+      0.8275262713432312,
+      0.39818018674850464,
+      0.033601950854063034,
+      0.02232780121266842,
+      0.0031675647478550673,
+      0.08497648686170578,
+      0.19065314531326294,
+      0.12256515771150589
+    ],
+    "std": [
+      0.42252984642982483,
+      0.9853336811065674,
+      1.7964891195297241,
+      0.30957716703414917,
+      0.15680396556854248,
+      0.04986752197146416,
+      0.040790192782878876,
+      0.009457265958189964,
+      0.12504465878009796,
+      0.2254059910774231,
+      0.1747467964887619
+    ]
+  },
+  "selected_weight_decay": 0.0
+}

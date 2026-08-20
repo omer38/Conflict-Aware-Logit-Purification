@@ -1,0 +1,9 @@
+{
+  "teacher": "qwen3.5-27b-vllm-guided",
+  "dataset": "yahoo",
+  "n_samples_reported": 5000,
+  "accuracy": 0.649,
+  "floor_fraction": 0.0,
+  "report_csv": "outputs/reports/qwen3.5-27b-vllm-guided_yahoo.csv",
+  "generated_at": "2026-06-18T16:13:39.027686+00:00"
+}

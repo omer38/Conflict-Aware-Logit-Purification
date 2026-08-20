@@ -1,0 +1,128 @@
+[2026-08-04T17:05:42Z] === depth-matched random smoke test begin ===
+[2026-08-04T17:05:43Z] START q=1.4 dataset=ag_news L=10 seed=42
+[2026-08-04T17:07:20Z] INVALID q=1.4 dataset=ag_news L=10 seed=42 start=2026-08-04T17:05:43Z end=2026-08-04T17:07:19Z
+[2026-08-04T17:07:20Z] QUARANTINE invalid -> outputs/student/rq2_matched_q1p4_v1/_invalid_depth_matched_random/20260804T170720Z_ag_news_kd_multi-depth-matched-random-guided_q1p4_L10_s42_a42_prompt-inclusive-v1.json
+[2026-08-04T17:07:20Z] Smoke test failed; full grid not started.
+[2026-08-04T17:08:09Z] === depth-matched random smoke test begin ===
+[2026-08-04T17:08:10Z] START q=1.4 dataset=ag_news L=10 seed=42
+[2026-08-04T17:09:47Z] OK q=1.4 dataset=ag_news L=10 seed=42 status=0 start=2026-08-04T17:08:10Z end=2026-08-04T17:09:46Z
+[2026-08-04T17:09:47Z] === smoke test validated; full grid begin ===
+[2026-08-04T17:09:48Z] SKIP valid outputs/student/rq2_matched_q1p4_v1/ag_news_kd_multi-depth-matched-random-guided_q1p4_L10_s42_a42_prompt-inclusive-v1.json
+[2026-08-04T17:09:49Z] START q=1.4 dataset=ag_news L=10 seed=123
+[2026-08-04T17:11:28Z] OK q=1.4 dataset=ag_news L=10 seed=123 status=0 start=2026-08-04T17:09:49Z end=2026-08-04T17:11:27Z
+[2026-08-04T17:11:28Z] START q=1.4 dataset=ag_news L=10 seed=456
+[2026-08-04T17:13:08Z] OK q=1.4 dataset=ag_news L=10 seed=456 status=0 start=2026-08-04T17:11:28Z end=2026-08-04T17:13:07Z
+[2026-08-04T17:13:09Z] START q=1.4 dataset=ag_news L=50 seed=42
+[2026-08-04T17:14:47Z] OK q=1.4 dataset=ag_news L=50 seed=42 status=0 start=2026-08-04T17:13:09Z end=2026-08-04T17:14:46Z
+[2026-08-04T17:14:48Z] START q=1.4 dataset=ag_news L=50 seed=123
+[2026-08-04T17:16:28Z] OK q=1.4 dataset=ag_news L=50 seed=123 status=0 start=2026-08-04T17:14:48Z end=2026-08-04T17:16:27Z
+[2026-08-04T17:16:28Z] START q=1.4 dataset=ag_news L=50 seed=456
+[2026-08-04T17:18:08Z] OK q=1.4 dataset=ag_news L=50 seed=456 status=0 start=2026-08-04T17:16:28Z end=2026-08-04T17:18:07Z
+[2026-08-04T17:18:09Z] START q=1.4 dataset=yahoo L=10 seed=42
+[2026-08-04T17:20:46Z] OK q=1.4 dataset=yahoo L=10 seed=42 status=0 start=2026-08-04T17:18:09Z end=2026-08-04T17:20:45Z
+[2026-08-04T17:20:47Z] START q=1.4 dataset=yahoo L=10 seed=123
+[2026-08-04T17:23:24Z] OK q=1.4 dataset=yahoo L=10 seed=123 status=0 start=2026-08-04T17:20:47Z end=2026-08-04T17:23:23Z
+[2026-08-04T17:23:25Z] START q=1.4 dataset=yahoo L=10 seed=456
+[2026-08-04T17:24:58Z] === depth-matched random smoke test begin ===
+[2026-08-04T17:24:59Z] SKIP valid outputs/student/rq2_matched_q1p4_v1/ag_news_kd_multi-depth-matched-random-guided_q1p4_L10_s42_a42_prompt-inclusive-v1.json
+[2026-08-04T17:24:59Z] === smoke test validated; full grid begin ===
+[2026-08-04T17:25:00Z] SKIP valid outputs/student/rq2_matched_q1p4_v1/ag_news_kd_multi-depth-matched-random-guided_q1p4_L10_s42_a42_prompt-inclusive-v1.json
+[2026-08-04T17:25:01Z] SKIP valid outputs/student/rq2_matched_q1p4_v1/ag_news_kd_multi-depth-matched-random-guided_q1p4_L10_s123_a123_prompt-inclusive-v1.json
+[2026-08-04T17:25:02Z] SKIP valid outputs/student/rq2_matched_q1p4_v1/ag_news_kd_multi-depth-matched-random-guided_q1p4_L10_s456_a456_prompt-inclusive-v1.json
+[2026-08-04T17:25:03Z] SKIP valid outputs/student/rq2_matched_q1p4_v1/ag_news_kd_multi-depth-matched-random-guided_q1p4_L50_s42_a42_prompt-inclusive-v1.json
+[2026-08-04T17:25:04Z] SKIP valid outputs/student/rq2_matched_q1p4_v1/ag_news_kd_multi-depth-matched-random-guided_q1p4_L50_s123_a123_prompt-inclusive-v1.json
+[2026-08-04T17:25:05Z] SKIP valid outputs/student/rq2_matched_q1p4_v1/ag_news_kd_multi-depth-matched-random-guided_q1p4_L50_s456_a456_prompt-inclusive-v1.json
+[2026-08-04T17:25:06Z] SKIP valid outputs/student/rq2_matched_q1p4_v1/yahoo_kd_multi-depth-matched-random-guided_q1p4_L10_s42_a42_prompt-inclusive-v1.json
+[2026-08-04T17:25:07Z] SKIP valid outputs/student/rq2_matched_q1p4_v1/yahoo_kd_multi-depth-matched-random-guided_q1p4_L10_s123_a123_prompt-inclusive-v1.json
+[2026-08-04T17:25:08Z] START q=1.4 dataset=yahoo L=10 seed=456
+[2026-08-04T17:26:49Z] OK q=1.4 dataset=yahoo L=10 seed=456 status=0 start=2026-08-04T17:23:25Z end=2026-08-04T17:26:48Z
+[2026-08-04T17:26:50Z] START q=1.4 dataset=yahoo L=50 seed=42
+[2026-08-04T17:30:10Z] OK q=1.4 dataset=yahoo L=10 seed=456 status=0 start=2026-08-04T17:25:08Z end=2026-08-04T17:30:09Z
+[2026-08-04T17:30:11Z] START q=1.4 dataset=yahoo L=50 seed=42
+[2026-08-04T17:31:54Z] OK q=1.4 dataset=yahoo L=50 seed=42 status=0 start=2026-08-04T17:26:50Z end=2026-08-04T17:31:53Z
+[2026-08-04T17:31:55Z] START q=1.4 dataset=yahoo L=50 seed=123
+[2026-08-04T17:35:15Z] OK q=1.4 dataset=yahoo L=50 seed=42 status=0 start=2026-08-04T17:30:11Z end=2026-08-04T17:35:14Z
+[2026-08-04T17:35:15Z] START q=1.4 dataset=yahoo L=50 seed=123
+[2026-08-04T17:36:58Z] OK q=1.4 dataset=yahoo L=50 seed=123 status=0 start=2026-08-04T17:31:55Z end=2026-08-04T17:36:57Z
+[2026-08-04T17:36:59Z] START q=1.4 dataset=yahoo L=50 seed=456
+[2026-08-04T17:40:20Z] OK q=1.4 dataset=yahoo L=50 seed=123 status=0 start=2026-08-04T17:35:15Z end=2026-08-04T17:40:19Z
+[2026-08-04T17:40:21Z] START q=1.4 dataset=yahoo L=50 seed=456
+[2026-08-04T17:42:04Z] OK q=1.4 dataset=yahoo L=50 seed=456 status=0 start=2026-08-04T17:36:59Z end=2026-08-04T17:42:03Z
+[2026-08-04T17:42:05Z] START q=1.4 dataset=amazon L=10 seed=42
+[2026-08-04T17:45:04Z] OK q=1.4 dataset=amazon L=10 seed=42 status=0 start=2026-08-04T17:42:05Z end=2026-08-04T17:45:03Z
+[2026-08-04T17:45:04Z] START q=1.4 dataset=amazon L=10 seed=123
+[2026-08-04T17:45:19Z] OK q=1.4 dataset=yahoo L=50 seed=456 status=0 start=2026-08-04T17:40:21Z end=2026-08-04T17:45:18Z
+[2026-08-04T17:45:20Z] SKIP valid outputs/student/rq2_matched_q1p4_v1/amazon_kd_multi-depth-matched-random-guided_q1p4_L10_s42_a42_prompt-inclusive-v1.json
+[2026-08-04T17:45:21Z] START q=1.4 dataset=amazon L=10 seed=123
+[2026-08-04T17:47:55Z] OK q=1.4 dataset=amazon L=10 seed=123 status=0 start=2026-08-04T17:45:04Z end=2026-08-04T17:47:54Z
+[2026-08-04T17:47:55Z] START q=1.4 dataset=amazon L=10 seed=456
+[2026-08-04T17:48:13Z] OK q=1.4 dataset=amazon L=10 seed=123 status=0 start=2026-08-04T17:45:21Z end=2026-08-04T17:48:13Z
+[2026-08-04T17:48:14Z] START q=1.4 dataset=amazon L=10 seed=456
+[2026-08-04T17:50:44Z] OK q=1.4 dataset=amazon L=10 seed=456 status=0 start=2026-08-04T17:47:55Z end=2026-08-04T17:50:43Z
+[2026-08-04T17:50:45Z] START q=1.4 dataset=amazon L=50 seed=42
+[2026-08-04T17:51:07Z] OK q=1.4 dataset=amazon L=10 seed=456 status=0 start=2026-08-04T17:48:14Z end=2026-08-04T17:51:06Z
+[2026-08-04T17:51:08Z] START q=1.4 dataset=amazon L=50 seed=42
+[2026-08-04T17:53:37Z] OK q=1.4 dataset=amazon L=50 seed=42 status=0 start=2026-08-04T17:50:45Z end=2026-08-04T17:53:36Z
+[2026-08-04T17:53:38Z] START q=1.4 dataset=amazon L=50 seed=123
+[2026-08-04T17:53:55Z] OK q=1.4 dataset=amazon L=50 seed=42 status=0 start=2026-08-04T17:51:08Z end=2026-08-04T17:53:54Z
+[2026-08-04T17:53:56Z] START q=1.4 dataset=amazon L=50 seed=123
+[2026-08-04T17:56:30Z] OK q=1.4 dataset=amazon L=50 seed=123 status=0 start=2026-08-04T17:53:38Z end=2026-08-04T17:56:29Z
+[2026-08-04T17:56:30Z] START q=1.4 dataset=amazon L=50 seed=456
+[2026-08-04T17:56:51Z] OK q=1.4 dataset=amazon L=50 seed=123 status=0 start=2026-08-04T17:53:56Z end=2026-08-04T17:56:51Z
+[2026-08-04T17:56:52Z] START q=1.4 dataset=amazon L=50 seed=456
+[2026-08-04T17:59:22Z] OK q=1.4 dataset=amazon L=50 seed=456 status=0 start=2026-08-04T17:56:30Z end=2026-08-04T17:59:22Z
+[2026-08-04T17:59:23Z] START q=1.4 dataset=amazon3 L=10 seed=42
+[2026-08-04T17:59:44Z] OK q=1.4 dataset=amazon L=50 seed=456 status=0 start=2026-08-04T17:56:52Z end=2026-08-04T17:59:44Z
+[2026-08-04T17:59:45Z] START q=1.4 dataset=amazon3 L=10 seed=42
+[2026-08-04T18:01:03Z] OK q=1.4 dataset=amazon3 L=10 seed=42 status=0 start=2026-08-04T17:59:23Z end=2026-08-04T18:01:03Z
+[2026-08-04T18:01:04Z] START q=1.4 dataset=amazon3 L=10 seed=123
+[2026-08-04T18:01:30Z] OK q=1.4 dataset=amazon3 L=10 seed=42 status=0 start=2026-08-04T17:59:45Z end=2026-08-04T18:01:29Z
+[2026-08-04T18:01:31Z] START q=1.4 dataset=amazon3 L=10 seed=123
+[2026-08-04T18:02:47Z] OK q=1.4 dataset=amazon3 L=10 seed=123 status=0 start=2026-08-04T18:01:04Z end=2026-08-04T18:02:46Z
+[2026-08-04T18:02:48Z] START q=1.4 dataset=amazon3 L=10 seed=456
+[2026-08-04T18:03:14Z] OK q=1.4 dataset=amazon3 L=10 seed=123 status=0 start=2026-08-04T18:01:31Z end=2026-08-04T18:03:14Z
+[2026-08-04T18:03:15Z] START q=1.4 dataset=amazon3 L=10 seed=456
+[2026-08-04T18:04:31Z] OK q=1.4 dataset=amazon3 L=10 seed=456 status=0 start=2026-08-04T18:02:48Z end=2026-08-04T18:04:31Z
+[2026-08-04T18:04:32Z] START q=1.4 dataset=amazon3 L=50 seed=42
+[2026-08-04T18:04:58Z] OK q=1.4 dataset=amazon3 L=10 seed=456 status=0 start=2026-08-04T18:03:15Z end=2026-08-04T18:04:57Z
+[2026-08-04T18:04:59Z] START q=1.4 dataset=amazon3 L=50 seed=42
+[2026-08-04T18:06:14Z] OK q=1.4 dataset=amazon3 L=50 seed=42 status=0 start=2026-08-04T18:04:32Z end=2026-08-04T18:06:14Z
+[2026-08-04T18:06:15Z] START q=1.4 dataset=amazon3 L=50 seed=123
+[2026-08-04T18:06:42Z] OK q=1.4 dataset=amazon3 L=50 seed=42 status=0 start=2026-08-04T18:04:59Z end=2026-08-04T18:06:42Z
+[2026-08-04T18:06:43Z] START q=1.4 dataset=amazon3 L=50 seed=123
+[2026-08-04T18:07:58Z] OK q=1.4 dataset=amazon3 L=50 seed=123 status=0 start=2026-08-04T18:06:15Z end=2026-08-04T18:07:57Z
+[2026-08-04T18:07:58Z] START q=1.4 dataset=amazon3 L=50 seed=456
+[2026-08-04T18:08:26Z] OK q=1.4 dataset=amazon3 L=50 seed=123 status=0 start=2026-08-04T18:06:43Z end=2026-08-04T18:08:25Z
+[2026-08-04T18:08:27Z] START q=1.4 dataset=amazon3 L=50 seed=456
+[2026-08-04T18:09:41Z] OK q=1.4 dataset=amazon3 L=50 seed=456 status=0 start=2026-08-04T18:07:58Z end=2026-08-04T18:09:41Z
+[2026-08-04T18:10:09Z] OK q=1.4 dataset=amazon3 L=50 seed=456 status=0 start=2026-08-04T18:08:27Z end=2026-08-04T18:10:08Z
+[2026-08-04T18:42:29Z] === depth-matched random smoke test begin ===
+[2026-08-04T18:42:30Z] SKIP valid outputs/student/rq2_matched_q1p4_v1/ag_news_kd_multi-depth-matched-random-guided_q1p4_L10_s42_a42_prompt-inclusive-v1.json
+[2026-08-04T18:42:30Z] === smoke test validated; full grid begin ===
+[2026-08-04T18:42:31Z] SKIP valid outputs/student/rq2_matched_q1p4_v1/ag_news_kd_multi-depth-matched-random-guided_q1p4_L10_s42_a42_prompt-inclusive-v1.json
+[2026-08-04T18:42:32Z] SKIP valid outputs/student/rq2_matched_q1p4_v1/ag_news_kd_multi-depth-matched-random-guided_q1p4_L10_s123_a123_prompt-inclusive-v1.json
+[2026-08-04T18:42:33Z] SKIP valid outputs/student/rq2_matched_q1p4_v1/ag_news_kd_multi-depth-matched-random-guided_q1p4_L10_s456_a456_prompt-inclusive-v1.json
+[2026-08-04T18:42:34Z] SKIP valid outputs/student/rq2_matched_q1p4_v1/ag_news_kd_multi-depth-matched-random-guided_q1p4_L50_s42_a42_prompt-inclusive-v1.json
+[2026-08-04T18:42:35Z] SKIP valid outputs/student/rq2_matched_q1p4_v1/ag_news_kd_multi-depth-matched-random-guided_q1p4_L50_s123_a123_prompt-inclusive-v1.json
+[2026-08-04T18:42:36Z] SKIP valid outputs/student/rq2_matched_q1p4_v1/ag_news_kd_multi-depth-matched-random-guided_q1p4_L50_s456_a456_prompt-inclusive-v1.json
+[2026-08-04T18:42:38Z] SKIP valid outputs/student/rq2_matched_q1p4_v1/yahoo_kd_multi-depth-matched-random-guided_q1p4_L10_s42_a42_prompt-inclusive-v1.json
+[2026-08-04T18:42:39Z] SKIP valid outputs/student/rq2_matched_q1p4_v1/yahoo_kd_multi-depth-matched-random-guided_q1p4_L10_s123_a123_prompt-inclusive-v1.json
+[2026-08-04T18:42:40Z] SKIP valid outputs/student/rq2_matched_q1p4_v1/yahoo_kd_multi-depth-matched-random-guided_q1p4_L10_s456_a456_prompt-inclusive-v1.json
+[2026-08-04T18:42:41Z] SKIP valid outputs/student/rq2_matched_q1p4_v1/yahoo_kd_multi-depth-matched-random-guided_q1p4_L50_s42_a42_prompt-inclusive-v1.json
+[2026-08-04T18:42:42Z] SKIP valid outputs/student/rq2_matched_q1p4_v1/yahoo_kd_multi-depth-matched-random-guided_q1p4_L50_s123_a123_prompt-inclusive-v1.json
+[2026-08-04T18:42:43Z] SKIP valid outputs/student/rq2_matched_q1p4_v1/yahoo_kd_multi-depth-matched-random-guided_q1p4_L50_s456_a456_prompt-inclusive-v1.json
+[2026-08-04T18:42:44Z] SKIP valid outputs/student/rq2_matched_q1p4_v1/amazon_kd_multi-depth-matched-random-guided_q1p4_L10_s42_a42_prompt-inclusive-v1.json
+[2026-08-04T18:42:45Z] SKIP valid outputs/student/rq2_matched_q1p4_v1/amazon_kd_multi-depth-matched-random-guided_q1p4_L10_s123_a123_prompt-inclusive-v1.json
+[2026-08-04T18:42:46Z] SKIP valid outputs/student/rq2_matched_q1p4_v1/amazon_kd_multi-depth-matched-random-guided_q1p4_L10_s456_a456_prompt-inclusive-v1.json
+[2026-08-04T18:42:47Z] SKIP valid outputs/student/rq2_matched_q1p4_v1/amazon_kd_multi-depth-matched-random-guided_q1p4_L50_s42_a42_prompt-inclusive-v1.json
+[2026-08-04T18:42:47Z] SKIP valid outputs/student/rq2_matched_q1p4_v1/amazon_kd_multi-depth-matched-random-guided_q1p4_L50_s123_a123_prompt-inclusive-v1.json
+[2026-08-04T18:42:48Z] SKIP valid outputs/student/rq2_matched_q1p4_v1/amazon_kd_multi-depth-matched-random-guided_q1p4_L50_s456_a456_prompt-inclusive-v1.json
+[2026-08-04T18:42:49Z] SKIP valid outputs/student/rq2_matched_q1p4_v1/amazon3_kd_multi-depth-matched-random-guided_q1p4_L10_s42_a42_prompt-inclusive-v1.json
+[2026-08-04T18:42:50Z] SKIP valid outputs/student/rq2_matched_q1p4_v1/amazon3_kd_multi-depth-matched-random-guided_q1p4_L10_s123_a123_prompt-inclusive-v1.json
+[2026-08-04T18:42:50Z] SKIP valid outputs/student/rq2_matched_q1p4_v1/amazon3_kd_multi-depth-matched-random-guided_q1p4_L10_s456_a456_prompt-inclusive-v1.json
+[2026-08-04T18:42:51Z] SKIP valid outputs/student/rq2_matched_q1p4_v1/amazon3_kd_multi-depth-matched-random-guided_q1p4_L50_s42_a42_prompt-inclusive-v1.json
+[2026-08-04T18:42:52Z] SKIP valid outputs/student/rq2_matched_q1p4_v1/amazon3_kd_multi-depth-matched-random-guided_q1p4_L50_s123_a123_prompt-inclusive-v1.json
+[2026-08-04T18:42:53Z] SKIP valid outputs/student/rq2_matched_q1p4_v1/amazon3_kd_multi-depth-matched-random-guided_q1p4_L50_s456_a456_prompt-inclusive-v1.json
+[2026-08-04T19:47:59Z] === runner end failures=0 started=14 skipped=35 ===
+[2026-08-04T19:48:16Z] === runner end failures=0 started=48 skipped=1 ===
+[2026-08-04T19:48:17Z] === runner end failures=0 started=39 skipped=10 ===

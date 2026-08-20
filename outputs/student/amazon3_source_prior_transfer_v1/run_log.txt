@@ -1,0 +1,91 @@
+[2026-08-19T01:01:31Z] === preflight begin ===
+[2026-08-19T01:01:31Z] Preflight 1/4: running relevant tests
+.............................................................. [ 61%]
+.......................................                                  [100%]
+101 passed, 10 subtests passed in 84.49s (0:01:24)
+[2026-08-19T01:02:57Z] Preflight 2/4: no-teacher-query static check
+[2026-08-19T01:02:57Z]   no teacher-query code paths found in the new experiment modules
+[2026-08-19T01:02:57Z] Preflight 3/4: confirming output directory is new/isolated
+[2026-08-19T01:02:57Z]   pre-existing result files under outputs/student/amazon3_source_prior_transfer_v1: 0
+[2026-08-19T01:02:57Z] Preflight 4/4: running all 24 cells in --dry-run mode
+method                 L      seed   estimated_prior                  l1_error   cond     residual  
+scale_only             10     42     [0.4393176997950612, 0.13492840773557083, 0.42575389246936807] 0.1301     2.373    0.000000  
+uniform_prior          10     42     [0.4393176997950612, 0.13492840773557083, 0.42575389246936807] 0.1301     2.373    0.000000  
+estimated_prior_bbse   10     42     [0.4393176997950612, 0.13492840773557083, 0.42575389246936807] 0.1301     2.373    0.000000  
+oracle_prior           10     42     [0.4393176997950612, 0.13492840773557083, 0.42575389246936807] 0.1301     2.373    0.000000  
+scale_only             10     123    [0.5087705834569971, 1.0000000000361039e-06, 0.49122841654300287] 0.4000     5.629    0.025016  
+uniform_prior          10     123    [0.5087705834569971, 1.0000000000361039e-06, 0.49122841654300287] 0.4000     5.629    0.025016  
+estimated_prior_bbse   10     123    [0.5087705834569971, 1.0000000000361039e-06, 0.49122841654300287] 0.4000     5.629    0.025016  
+oracle_prior           10     123    [0.5087705834569971, 1.0000000000361039e-06, 0.49122841654300287] 0.4000     5.629    0.025016  
+scale_only             10     456    [0.40972303252298026, 0.13366359559342775, 0.456613371883592] 0.1327     2.861    0.000000  
+uniform_prior          10     456    [0.40972303252298026, 0.13366359559342775, 0.456613371883592] 0.1327     2.861    0.000000  
+estimated_prior_bbse   10     456    [0.40972303252298026, 0.13366359559342775, 0.456613371883592] 0.1327     2.861    0.000000  
+oracle_prior           10     456    [0.40972303252298026, 0.13366359559342775, 0.456613371883592] 0.1327     2.861    0.000000  
+scale_only             50     42     [0.4382673782804803, 0.06803998707226264, 0.49369263464725704] 0.2639     2.752    0.000000  
+uniform_prior          50     42     [0.4382673782804803, 0.06803998707226264, 0.49369263464725704] 0.2639     2.752    0.000000  
+estimated_prior_bbse   50     42     [0.4382673782804803, 0.06803998707226264, 0.49369263464725704] 0.2639     2.752    0.000000  
+oracle_prior           50     42     [0.4382673782804803, 0.06803998707226264, 0.49369263464725704] 0.2639     2.752    0.000000  
+scale_only             50     123    [0.40661921422428954, 0.18565708737511472, 0.4077236984005958] 0.0287     3.350    0.000000  
+uniform_prior          50     123    [0.40661921422428954, 0.18565708737511472, 0.4077236984005958] 0.0287     3.350    0.000000  
+estimated_prior_bbse   50     123    [0.40661921422428954, 0.18565708737511472, 0.4077236984005958] 0.0287     3.350    0.000000  
+oracle_prior           50     123    [0.40661921422428954, 0.18565708737511472, 0.4077236984005958] 0.0287     3.350    0.000000  
+scale_only             50     456    [0.3505415149349356, 0.24738246776563202, 0.4020760172994323] 0.0989     3.555    0.000000  
+uniform_prior          50     456    [0.3505415149349356, 0.24738246776563202, 0.4020760172994323] 0.0989     3.555    0.000000  
+estimated_prior_bbse   50     456    [0.3505415149349356, 0.24738246776563202, 0.4020760172994323] 0.0989     3.555    0.000000  
+oracle_prior           50     456    [0.3505415149349356, 0.24738246776563202, 0.4020760172994323] 0.0989     3.555    0.000000  
+[2026-08-19T01:05:30Z] === preflight OK: tests passed, no teacher-query paths, 24/24 dry-runs OK ===
+[2026-08-19T01:05:30Z] === amazon3_source_prior_transfer_v1 runner begin ===
+[2026-08-19T01:05:30Z] OUT_DIR=outputs/student/amazon3_source_prior_transfer_v1 expected_cells=24 (4 methods x 2 budgets x 3 seeds)
+[2026-08-19T01:05:30Z] START method=scale_only L=10 seed=42 start=2026-08-19T01:05:30Z
+[2026-08-19T01:07:18Z] OK method=scale_only L=10 seed=42 status=0 start=2026-08-19T01:05:30Z end=2026-08-19T01:07:11Z
+[2026-08-19T01:07:18Z] START method=uniform_prior L=10 seed=42 start=2026-08-19T01:07:18Z
+[2026-08-19T01:09:08Z] OK method=uniform_prior L=10 seed=42 status=0 start=2026-08-19T01:07:18Z end=2026-08-19T01:09:02Z
+[2026-08-19T01:09:08Z] START method=estimated_prior_bbse L=10 seed=42 start=2026-08-19T01:09:08Z
+[2026-08-19T01:10:58Z] OK method=estimated_prior_bbse L=10 seed=42 status=0 start=2026-08-19T01:09:08Z end=2026-08-19T01:10:51Z
+[2026-08-19T01:10:58Z] START method=oracle_prior L=10 seed=42 start=2026-08-19T01:10:58Z
+[2026-08-19T01:12:47Z] OK method=oracle_prior L=10 seed=42 status=0 start=2026-08-19T01:10:58Z end=2026-08-19T01:12:41Z
+[2026-08-19T01:12:47Z] START method=scale_only L=10 seed=123 start=2026-08-19T01:12:47Z
+[2026-08-19T01:14:36Z] OK method=scale_only L=10 seed=123 status=0 start=2026-08-19T01:12:47Z end=2026-08-19T01:14:30Z
+[2026-08-19T01:14:36Z] START method=uniform_prior L=10 seed=123 start=2026-08-19T01:14:36Z
+[2026-08-19T01:16:25Z] OK method=uniform_prior L=10 seed=123 status=0 start=2026-08-19T01:14:36Z end=2026-08-19T01:16:19Z
+[2026-08-19T01:16:25Z] START method=estimated_prior_bbse L=10 seed=123 start=2026-08-19T01:16:25Z
+[2026-08-19T01:18:14Z] OK method=estimated_prior_bbse L=10 seed=123 status=0 start=2026-08-19T01:16:25Z end=2026-08-19T01:18:08Z
+[2026-08-19T01:18:14Z] START method=oracle_prior L=10 seed=123 start=2026-08-19T01:18:14Z
+[2026-08-19T01:20:04Z] OK method=oracle_prior L=10 seed=123 status=0 start=2026-08-19T01:18:14Z end=2026-08-19T01:19:57Z
+[2026-08-19T01:20:04Z] START method=scale_only L=10 seed=456 start=2026-08-19T01:20:04Z
+[2026-08-19T01:21:52Z] OK method=scale_only L=10 seed=456 status=0 start=2026-08-19T01:20:04Z end=2026-08-19T01:21:47Z
+[2026-08-19T01:21:52Z] START method=uniform_prior L=10 seed=456 start=2026-08-19T01:21:52Z
+[2026-08-19T01:23:42Z] OK method=uniform_prior L=10 seed=456 status=0 start=2026-08-19T01:21:52Z end=2026-08-19T01:23:36Z
+[2026-08-19T01:23:42Z] START method=estimated_prior_bbse L=10 seed=456 start=2026-08-19T01:23:42Z
+[2026-08-19T01:25:31Z] OK method=estimated_prior_bbse L=10 seed=456 status=0 start=2026-08-19T01:23:42Z end=2026-08-19T01:25:25Z
+[2026-08-19T01:25:31Z] START method=oracle_prior L=10 seed=456 start=2026-08-19T01:25:31Z
+[2026-08-19T01:27:20Z] OK method=oracle_prior L=10 seed=456 status=0 start=2026-08-19T01:25:31Z end=2026-08-19T01:27:14Z
+[2026-08-19T01:27:20Z] START method=scale_only L=50 seed=42 start=2026-08-19T01:27:20Z
+[2026-08-19T01:29:09Z] OK method=scale_only L=50 seed=42 status=0 start=2026-08-19T01:27:20Z end=2026-08-19T01:29:03Z
+[2026-08-19T01:29:09Z] START method=uniform_prior L=50 seed=42 start=2026-08-19T01:29:09Z
+[2026-08-19T01:30:58Z] OK method=uniform_prior L=50 seed=42 status=0 start=2026-08-19T01:29:09Z end=2026-08-19T01:30:52Z
+[2026-08-19T01:30:58Z] START method=estimated_prior_bbse L=50 seed=42 start=2026-08-19T01:30:58Z
+[2026-08-19T01:32:47Z] OK method=estimated_prior_bbse L=50 seed=42 status=0 start=2026-08-19T01:30:58Z end=2026-08-19T01:32:41Z
+[2026-08-19T01:32:47Z] START method=oracle_prior L=50 seed=42 start=2026-08-19T01:32:47Z
+[2026-08-19T01:34:36Z] OK method=oracle_prior L=50 seed=42 status=0 start=2026-08-19T01:32:47Z end=2026-08-19T01:34:30Z
+[2026-08-19T01:34:36Z] START method=scale_only L=50 seed=123 start=2026-08-19T01:34:36Z
+[2026-08-19T01:36:25Z] OK method=scale_only L=50 seed=123 status=0 start=2026-08-19T01:34:36Z end=2026-08-19T01:36:20Z
+[2026-08-19T01:36:25Z] START method=uniform_prior L=50 seed=123 start=2026-08-19T01:36:25Z
+[2026-08-19T01:38:15Z] OK method=uniform_prior L=50 seed=123 status=0 start=2026-08-19T01:36:25Z end=2026-08-19T01:38:10Z
+[2026-08-19T01:38:15Z] START method=estimated_prior_bbse L=50 seed=123 start=2026-08-19T01:38:15Z
+[2026-08-19T01:40:05Z] OK method=estimated_prior_bbse L=50 seed=123 status=0 start=2026-08-19T01:38:15Z end=2026-08-19T01:39:59Z
+[2026-08-19T01:40:05Z] START method=oracle_prior L=50 seed=123 start=2026-08-19T01:40:05Z
+[2026-08-19T01:41:54Z] OK method=oracle_prior L=50 seed=123 status=0 start=2026-08-19T01:40:05Z end=2026-08-19T01:41:48Z
+[2026-08-19T01:41:54Z] START method=scale_only L=50 seed=456 start=2026-08-19T01:41:54Z
+[2026-08-19T01:43:43Z] OK method=scale_only L=50 seed=456 status=0 start=2026-08-19T01:41:54Z end=2026-08-19T01:43:37Z
+[2026-08-19T01:43:43Z] START method=uniform_prior L=50 seed=456 start=2026-08-19T01:43:43Z
+[2026-08-19T01:45:32Z] OK method=uniform_prior L=50 seed=456 status=0 start=2026-08-19T01:43:43Z end=2026-08-19T01:45:26Z
+[2026-08-19T01:45:33Z] START method=estimated_prior_bbse L=50 seed=456 start=2026-08-19T01:45:32Z
+[2026-08-19T01:47:21Z] OK method=estimated_prior_bbse L=50 seed=456 status=0 start=2026-08-19T01:45:32Z end=2026-08-19T01:47:15Z
+[2026-08-19T01:47:21Z] START method=oracle_prior L=50 seed=456 start=2026-08-19T01:47:21Z
+[2026-08-19T01:49:10Z] OK method=oracle_prior L=50 seed=456 status=0 start=2026-08-19T01:47:21Z end=2026-08-19T01:49:04Z
+[2026-08-19T01:49:10Z] === runner end started=24 skipped=0 completed=24 failures=0 ===
+[2026-08-19T01:49:10Z] overall_start=2026-08-19T01:05:30Z overall_end=2026-08-19T01:49:10Z
+[2026-08-19T01:49:10Z] All 24 cells complete and valid under outputs/student/amazon3_source_prior_transfer_v1. Running the aggregate analyser.
+Wrote outputs/reports/amazon3_source_prior_transfer_v1.json
+Wrote outputs/reports/amazon3_source_prior_transfer_v1.md

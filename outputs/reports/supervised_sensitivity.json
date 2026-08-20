@@ -1,0 +1,173 @@
+{
+  "protocol": "prompt-inclusive-supervised-cv-v1",
+  "selection_uses_test_metrics": false,
+  "seeds": [
+    42,
+    123,
+    456
+  ],
+  "rows": [
+    {
+      "dataset": "ag_news",
+      "display_name": "AG News",
+      "labels_per_class": 10,
+      "fixed_supervised": {
+        "mean": 0.650921052631579,
+        "sd": 0.057745471456073595
+      },
+      "cv_selected_supervised": {
+        "mean": 0.7200438596491229,
+        "sd": 0.018962591350589614
+      },
+      "selected_learning_rate": 5e-05,
+      "selected_epochs": 5,
+      "raw_qwen_kd": {
+        "mean": 0.8713596491228071,
+        "sd": 0.004899144403037085
+      },
+      "conclusion_survives": true
+    },
+    {
+      "dataset": "ag_news",
+      "display_name": "AG News",
+      "labels_per_class": 50,
+      "fixed_supervised": {
+        "mean": 0.8441666666666666,
+        "sd": 0.01295189622726375
+      },
+      "cv_selected_supervised": {
+        "mean": 0.851578947368421,
+        "sd": 0.016024565629092966
+      },
+      "selected_learning_rate": 5e-05,
+      "selected_epochs": 5,
+      "raw_qwen_kd": {
+        "mean": 0.8708333333333332,
+        "sd": 0.0009962997097895667
+      },
+      "conclusion_survives": true
+    },
+    {
+      "dataset": "yahoo",
+      "display_name": "Yahoo",
+      "labels_per_class": 10,
+      "fixed_supervised": {
+        "mean": 0.26763333333333333,
+        "sd": 0.026633124738440535
+      },
+      "cv_selected_supervised": {
+        "mean": 0.4082666666666667,
+        "sd": 0.045021365298415085
+      },
+      "selected_learning_rate": 5e-05,
+      "selected_epochs": 5,
+      "raw_qwen_kd": {
+        "mean": 0.5920333333333333,
+        "sd": 0.005685361319505845
+      },
+      "conclusion_survives": true
+    },
+    {
+      "dataset": "yahoo",
+      "display_name": "Yahoo",
+      "labels_per_class": 50,
+      "fixed_supervised": {
+        "mean": 0.5214,
+        "sd": 0.014116302632063382
+      },
+      "cv_selected_supervised": {
+        "mean": 0.5449999999999999,
+        "sd": 0.009880789442144792
+      },
+      "selected_learning_rate": 5e-05,
+      "selected_epochs": 5,
+      "raw_qwen_kd": {
+        "mean": 0.5870333333333334,
+        "sd": 0.014468010690254999
+      },
+      "conclusion_survives": true
+    },
+    {
+      "dataset": "amazon",
+      "display_name": "Amazon",
+      "labels_per_class": 10,
+      "fixed_supervised": {
+        "mean": 0.22003333333333333,
+        "sd": 0.011750035460939395
+      },
+      "cv_selected_supervised": {
+        "mean": 0.26049999999999995,
+        "sd": 0.016252076790367425
+      },
+      "selected_learning_rate": 2e-05,
+      "selected_epochs": 5,
+      "raw_qwen_kd": {
+        "mean": 0.5735333333333333,
+        "sd": 0.008170883265188212
+      },
+      "conclusion_survives": true
+    },
+    {
+      "dataset": "amazon",
+      "display_name": "Amazon",
+      "labels_per_class": 50,
+      "fixed_supervised": {
+        "mean": 0.3376333333333333,
+        "sd": 0.023519424596136145
+      },
+      "cv_selected_supervised": {
+        "mean": 0.3640666666666667,
+        "sd": 0.025258727864509185
+      },
+      "selected_learning_rate": 5e-05,
+      "selected_epochs": 5,
+      "raw_qwen_kd": {
+        "mean": 0.5732333333333334,
+        "sd": 0.010543402360402172
+      },
+      "conclusion_survives": true
+    },
+    {
+      "dataset": "amazon3",
+      "display_name": "Amazon-3",
+      "labels_per_class": 10,
+      "fixed_supervised": {
+        "mean": 0.3887777777777777,
+        "sd": 0.01669442133479636
+      },
+      "cv_selected_supervised": {
+        "mean": 0.40572222222222226,
+        "sd": 0.004631814299354363
+      },
+      "selected_learning_rate": 5e-05,
+      "selected_epochs": 5,
+      "raw_qwen_kd": {
+        "mean": 0.7210555555555556,
+        "sd": 0.009863419135220689
+      },
+      "conclusion_survives": true
+    },
+    {
+      "dataset": "amazon3",
+      "display_name": "Amazon-3",
+      "labels_per_class": 50,
+      "fixed_supervised": {
+        "mean": 0.4766111111111111,
+        "sd": 0.02807842851991809
+      },
+      "cv_selected_supervised": {
+        "mean": 0.5763888888888888,
+        "sd": 0.030143330445894144
+      },
+      "selected_learning_rate": 5e-05,
+      "selected_epochs": 5,
+      "raw_qwen_kd": {
+        "mean": 0.7375555555555556,
+        "sd": 0.002364866294865881
+      },
+      "conclusion_survives": true
+    }
+  ],
+  "conclusions_surviving": 8,
+  "total_conclusions": 8
+}

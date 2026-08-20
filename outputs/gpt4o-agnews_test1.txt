@@ -1,0 +1,151 @@
+Dataset: AG News  |  classes: ['World', 'Sports', 'Business', 'Sci/Tech']
+Teacher: gpt-4o
+
+======================================================================
+SAMPLE 0
+  Text       : "Wall St. Bears Claw Back Into the Black (Reuters) Reuters - Short-sellers, Wall Street's d..."
+  True label : 2 = Business
+  LLM said   : "2"
+
+  RAW top-20 tokens the LLM returned (its view of the whole vocab):
+         token   logprob     prob   kept?
+           '2'    -0.000  100.00%   KEEP -> class 2 (Business)
+           '1'   -13.078    0.00%   KEEP -> class 1 (Sports)
+           '3'   -16.109    0.00%   KEEP -> class 3 (Sci/Tech)
+           '0'   -16.500    0.00%   KEEP -> class 0 (World)
+           '২'   -19.609    0.00%   skip (not a class index)
+           '२'   -19.641    0.00%   skip (not a class index)
+           '２'   -20.359    0.00%   skip (not a class index)
+         '```'   -20.563    0.00%   skip (not a class index)
+        '\x02'   -20.703    0.00%   skip (not a class index)
+           '۲'   -20.969    0.00%   skip (not a class index)
+           '-'   -21.063    0.00%   skip (not a class index)
+           ' '   -21.281    0.00%   skip (not a class index)
+          '02'   -21.406    0.00%   skip (not a class index)
+      'Answer'   -21.938    0.00%   skip (not a class index)
+        'None'   -22.133    0.00%   skip (not a class index)
+           '٢'   -22.313    0.00%   skip (not a class index)
+           '`'   -22.469    0.00%   skip (not a class index)
+          '``'   -22.555    0.00%   skip (not a class index)
+           '<'   -22.641    0.00%   skip (not a class index)
+     '<|end|>'   -22.742    0.00%   skip (not a class index)
+
+  CLEAN 4-class output (after the hard constraint / parser):
+    class 0 World      logit= -16.500  prob=  0.00%
+    class 1 Sports     logit= -13.078  prob=  0.00%
+    class 2 Business   logit=  -0.000  prob=100.00%
+    class 3 Sci/Tech   logit= -16.109  prob=  0.00%
+
+  Prediction : class 2 = Business  (correct)
+----------------------------------------------------------------------
+
+SAMPLE 1
+  Text       : "Carlyle Looks Toward Commercial Aerospace (Reuters) Reuters - Private investment firm Carl..."
+  True label : 2 = Business
+  LLM said   : "2"
+
+  RAW top-20 tokens the LLM returned (its view of the whole vocab):
+         token   logprob     prob   kept?
+           '2'    -0.000  100.00%   KEEP -> class 2 (Business)
+           '1'   -14.922    0.00%   KEEP -> class 1 (Sports)
+           '3'   -16.266    0.00%   KEEP -> class 3 (Sci/Tech)
+           '0'   -18.359    0.00%   KEEP -> class 0 (World)
+           '২'   -19.891    0.00%   skip (not a class index)
+           '２'   -20.266    0.00%   skip (not a class index)
+           '२'   -20.438    0.00%   skip (not a class index)
+           '۲'   -21.578    0.00%   skip (not a class index)
+        '\x02'   -22.016    0.00%   skip (not a class index)
+         '```'   -22.125    0.00%   skip (not a class index)
+     '<|end|>'   -22.625    0.00%   skip (not a class index)
+           '٢'   -22.953    0.00%   skip (not a class index)
+          '02'   -23.125    0.00%   skip (not a class index)
+        'None'   -23.391    0.00%   skip (not a class index)
+           ' '   -23.422    0.00%   skip (not a class index)
+           '-'   -23.453    0.00%   skip (not a class index)
+           '<'   -23.844    0.00%   skip (not a class index)
+       'World'   -24.094    0.00%   skip (not a class index)
+    'Business'   -24.203    0.00%   skip (not a class index)
+           '#'   -24.344    0.00%   skip (not a class index)
+
+  CLEAN 4-class output (after the hard constraint / parser):
+    class 0 World      logit= -18.359  prob=  0.00%
+    class 1 Sports     logit= -14.922  prob=  0.00%
+    class 2 Business   logit=  -0.000  prob=100.00%
+    class 3 Sci/Tech   logit= -16.266  prob=  0.00%
+
+  Prediction : class 2 = Business  (correct)
+----------------------------------------------------------------------
+
+SAMPLE 2
+  Text       : "Oil and Economy Cloud Stocks' Outlook (Reuters) Reuters - Soaring crude prices plus worrie..."
+  True label : 2 = Business
+  LLM said   : "2"
+
+  RAW top-20 tokens the LLM returned (its view of the whole vocab):
+         token   logprob     prob   kept?
+           '2'    -0.000  100.00%   KEEP -> class 2 (Business)
+           '1'   -13.406    0.00%   KEEP -> class 1 (Sports)
+           '3'   -15.766    0.00%   KEEP -> class 3 (Sci/Tech)
+           '0'   -17.484    0.00%   KEEP -> class 0 (World)
+           '২'   -20.609    0.00%   skip (not a class index)
+           '２'   -20.688    0.00%   skip (not a class index)
+           '२'   -20.797    0.00%   skip (not a class index)
+        '\x02'   -21.359    0.00%   skip (not a class index)
+           ' '   -21.578    0.00%   skip (not a class index)
+           '۲'   -21.719    0.00%   skip (not a class index)
+         '```'   -22.484    0.00%   skip (not a class index)
+           '-'   -22.688    0.00%   skip (not a class index)
+       'World'   -22.797    0.00%   skip (not a class index)
+          '02'   -22.906    0.00%   skip (not a class index)
+           '#'   -23.086    0.00%   skip (not a class index)
+           '['   -23.109    0.00%   skip (not a class index)
+           '٢'   -23.156    0.00%   skip (not a class index)
+           '<'   -23.313    0.00%   skip (not a class index)
+           '('   -23.422    0.00%   skip (not a class index)
+           '"'   -23.563    0.00%   skip (not a class index)
+
+  CLEAN 4-class output (after the hard constraint / parser):
+    class 0 World      logit= -17.484  prob=  0.00%
+    class 1 Sports     logit= -13.406  prob=  0.00%
+    class 2 Business   logit=  -0.000  prob=100.00%
+    class 3 Sci/Tech   logit= -15.766  prob=  0.00%
+
+  Prediction : class 2 = Business  (correct)
+----------------------------------------------------------------------
+
+SAMPLE 3
+  Text       : "Iraq Halts Oil Exports from Main Southern Pipeline (Reuters) Reuters - Authorities have ha..."
+  True label : 2 = Business
+  LLM said   : "0"
+
+  RAW top-20 tokens the LLM returned (its view of the whole vocab):
+         token   logprob     prob   kept?
+           '0'    -0.562   56.98%   KEEP -> class 0 (World)
+           '2'    -0.844   43.01%   KEEP -> class 2 (Business)
+           '3'   -10.984    0.00%   KEEP -> class 3 (Sci/Tech)
+           '1'   -14.969    0.00%   KEEP -> class 1 (Sports)
+           '-'   -18.141    0.00%   skip (not a class index)
+           ' '   -18.687    0.00%   skip (not a class index)
+          '02'   -18.695    0.00%   skip (not a class index)
+       'World'   -18.805    0.00%   skip (not a class index)
+           '4'   -18.883    0.00%   skip (not a class index)
+           '('   -19.711    0.00%   skip (not a class index)
+    'Business'   -19.726    0.00%   skip (not a class index)
+           '２'   -19.781    0.00%   skip (not a class index)
+        'None'   -19.820    0.00%   skip (not a class index)
+           '#'   -20.297    0.00%   skip (not a class index)
+    'Category'   -20.703    0.00%   skip (not a class index)
+           '<'   -20.703    0.00%   skip (not a class index)
+       'world'   -20.867    0.00%   skip (not a class index)
+           '۰'   -20.937    0.00%   skip (not a class index)
+           '['   -20.984    0.00%   skip (not a class index)
+           '０'   -21.055    0.00%   skip (not a class index)
+
+  CLEAN 4-class output (after the hard constraint / parser):
+    class 0 World      logit=  -0.562  prob= 56.98%
+    class 1 Sports     logit= -14.969  prob=  0.00%
+    class 2 Business   logit=  -0.844  prob= 43.01%
+    class 3 Sci/Tech   logit= -10.984  prob=  0.00%
+
+  Prediction : class 0 = World  (WRONG)
+----------------------------------------------------------------------

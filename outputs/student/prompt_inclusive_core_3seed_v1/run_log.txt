@@ -1,0 +1,387 @@
+[2026-07-23T17:25:55Z] === prompt_inclusive_core_3seed_v1 runner begin ===
+[2026-07-23T17:25:55Z] OUT_DIR=outputs/student/prompt_inclusive_core_3seed_v1 expected_cells=192
+[2026-07-23T17:25:56Z] START dataset=ag_news method=supervised mode=supervised teacher=none L=10 seed=42
+[2026-07-23T17:26:17Z] OK dataset=ag_news method=supervised L=10 seed=42 status=0 start=2026-07-23T17:25:56Z end=2026-07-23T17:26:16Z
+[2026-07-23T17:26:18Z] START dataset=ag_news method=raw_qwen mode=kd teacher=qwen3.5-27b-vllm-guided L=10 seed=42
+[2026-07-23T17:28:02Z] OK dataset=ag_news method=raw_qwen L=10 seed=42 status=0 start=2026-07-23T17:26:18Z end=2026-07-23T17:28:01Z
+[2026-07-23T17:28:03Z] START dataset=ag_news method=prior_matched_qwen mode=kd teacher=qwen-prior-matched-guided L=10 seed=42
+[2026-07-23T17:29:47Z] OK dataset=ag_news method=prior_matched_qwen L=10 seed=42 status=0 start=2026-07-23T17:28:03Z end=2026-07-23T17:29:46Z
+[2026-07-23T17:29:48Z] START dataset=ag_news method=logit_mean mode=kd teacher=multi-mean-guided L=10 seed=42
+[2026-07-23T17:31:33Z] OK dataset=ag_news method=logit_mean L=10 seed=42 status=0 start=2026-07-23T17:29:48Z end=2026-07-23T17:31:32Z
+[2026-07-23T17:31:34Z] START dataset=ag_news method=prob_mean mode=kd teacher=multi-probmean-guided L=10 seed=42
+[2026-07-23T17:33:19Z] OK dataset=ag_news method=prob_mean L=10 seed=42 status=0 start=2026-07-23T17:31:34Z end=2026-07-23T17:33:18Z
+[2026-07-23T17:33:20Z] START dataset=ag_news method=prior_matched mode=kd teacher=multi-prior-matched-guided L=10 seed=42
+[2026-07-23T17:35:04Z] OK dataset=ag_news method=prior_matched L=10 seed=42 status=0 start=2026-07-23T17:33:20Z end=2026-07-23T17:35:03Z
+[2026-07-23T17:35:05Z] START dataset=ag_news method=scale_aligned mode=kd teacher=multi-scale-aligned-guided L=10 seed=42
+[2026-07-23T17:36:50Z] OK dataset=ag_news method=scale_aligned L=10 seed=42 status=0 start=2026-07-23T17:35:05Z end=2026-07-23T17:36:49Z
+[2026-07-23T17:36:51Z] START dataset=ag_news method=combined mode=kd teacher=multi-prior-scale-aligned-guided L=10 seed=42
+[2026-07-23T17:38:36Z] OK dataset=ag_news method=combined L=10 seed=42 status=0 start=2026-07-23T17:36:51Z end=2026-07-23T17:38:35Z
+[2026-07-23T17:38:37Z] START dataset=ag_news method=supervised mode=supervised teacher=none L=10 seed=123
+[2026-07-23T17:38:57Z] OK dataset=ag_news method=supervised L=10 seed=123 status=0 start=2026-07-23T17:38:37Z end=2026-07-23T17:38:56Z
+[2026-07-23T17:38:58Z] START dataset=ag_news method=raw_qwen mode=kd teacher=qwen3.5-27b-vllm-guided L=10 seed=123
+[2026-07-23T17:40:42Z] OK dataset=ag_news method=raw_qwen L=10 seed=123 status=0 start=2026-07-23T17:38:58Z end=2026-07-23T17:40:41Z
+[2026-07-23T17:40:43Z] START dataset=ag_news method=prior_matched_qwen mode=kd teacher=qwen-prior-matched-guided L=10 seed=123
+[2026-07-23T17:42:27Z] OK dataset=ag_news method=prior_matched_qwen L=10 seed=123 status=0 start=2026-07-23T17:40:43Z end=2026-07-23T17:42:26Z
+[2026-07-23T17:42:28Z] START dataset=ag_news method=logit_mean mode=kd teacher=multi-mean-guided L=10 seed=123
+[2026-07-23T17:44:13Z] OK dataset=ag_news method=logit_mean L=10 seed=123 status=0 start=2026-07-23T17:42:28Z end=2026-07-23T17:44:12Z
+[2026-07-23T17:44:14Z] START dataset=ag_news method=prob_mean mode=kd teacher=multi-probmean-guided L=10 seed=123
+[2026-07-23T17:45:59Z] OK dataset=ag_news method=prob_mean L=10 seed=123 status=0 start=2026-07-23T17:44:14Z end=2026-07-23T17:45:58Z
+[2026-07-23T17:46:00Z] START dataset=ag_news method=prior_matched mode=kd teacher=multi-prior-matched-guided L=10 seed=123
+[2026-07-23T17:47:45Z] OK dataset=ag_news method=prior_matched L=10 seed=123 status=0 start=2026-07-23T17:46:00Z end=2026-07-23T17:47:44Z
+[2026-07-23T17:47:46Z] START dataset=ag_news method=scale_aligned mode=kd teacher=multi-scale-aligned-guided L=10 seed=123
+[2026-07-23T17:49:31Z] OK dataset=ag_news method=scale_aligned L=10 seed=123 status=0 start=2026-07-23T17:47:46Z end=2026-07-23T17:49:30Z
+[2026-07-23T17:49:32Z] START dataset=ag_news method=combined mode=kd teacher=multi-prior-scale-aligned-guided L=10 seed=123
+[2026-07-23T17:51:18Z] OK dataset=ag_news method=combined L=10 seed=123 status=0 start=2026-07-23T17:49:32Z end=2026-07-23T17:51:17Z
+[2026-07-23T17:51:19Z] START dataset=ag_news method=supervised mode=supervised teacher=none L=10 seed=456
+[2026-07-23T17:51:39Z] OK dataset=ag_news method=supervised L=10 seed=456 status=0 start=2026-07-23T17:51:19Z end=2026-07-23T17:51:38Z
+[2026-07-23T17:51:40Z] START dataset=ag_news method=raw_qwen mode=kd teacher=qwen3.5-27b-vllm-guided L=10 seed=456
+[2026-07-23T17:53:24Z] OK dataset=ag_news method=raw_qwen L=10 seed=456 status=0 start=2026-07-23T17:51:40Z end=2026-07-23T17:53:23Z
+[2026-07-23T17:53:25Z] START dataset=ag_news method=prior_matched_qwen mode=kd teacher=qwen-prior-matched-guided L=10 seed=456
+[2026-07-23T17:55:09Z] OK dataset=ag_news method=prior_matched_qwen L=10 seed=456 status=0 start=2026-07-23T17:53:25Z end=2026-07-23T17:55:08Z
+[2026-07-23T17:55:10Z] START dataset=ag_news method=logit_mean mode=kd teacher=multi-mean-guided L=10 seed=456
+[2026-07-23T17:56:56Z] OK dataset=ag_news method=logit_mean L=10 seed=456 status=0 start=2026-07-23T17:55:10Z end=2026-07-23T17:56:55Z
+[2026-07-23T17:56:57Z] START dataset=ag_news method=prob_mean mode=kd teacher=multi-probmean-guided L=10 seed=456
+[2026-07-23T17:58:43Z] OK dataset=ag_news method=prob_mean L=10 seed=456 status=0 start=2026-07-23T17:56:57Z end=2026-07-23T17:58:42Z
+[2026-07-23T17:58:44Z] START dataset=ag_news method=prior_matched mode=kd teacher=multi-prior-matched-guided L=10 seed=456
+[2026-07-23T18:00:30Z] OK dataset=ag_news method=prior_matched L=10 seed=456 status=0 start=2026-07-23T17:58:44Z end=2026-07-23T18:00:29Z
+[2026-07-23T18:00:31Z] START dataset=ag_news method=scale_aligned mode=kd teacher=multi-scale-aligned-guided L=10 seed=456
+[2026-07-23T18:02:15Z] OK dataset=ag_news method=scale_aligned L=10 seed=456 status=0 start=2026-07-23T18:00:31Z end=2026-07-23T18:02:14Z
+[2026-07-23T18:02:16Z] START dataset=ag_news method=combined mode=kd teacher=multi-prior-scale-aligned-guided L=10 seed=456
+[2026-07-23T18:04:00Z] OK dataset=ag_news method=combined L=10 seed=456 status=0 start=2026-07-23T18:02:16Z end=2026-07-23T18:03:59Z
+[2026-07-23T18:04:01Z] START dataset=yahoo method=supervised mode=supervised teacher=none L=10 seed=42
+[2026-07-23T18:04:41Z] OK dataset=yahoo method=supervised L=10 seed=42 status=0 start=2026-07-23T18:04:01Z end=2026-07-23T18:04:40Z
+[2026-07-23T18:04:42Z] START dataset=yahoo method=raw_qwen mode=kd teacher=qwen3.5-27b-vllm-guided L=10 seed=42
+[2026-07-23T18:07:23Z] OK dataset=yahoo method=raw_qwen L=10 seed=42 status=0 start=2026-07-23T18:04:42Z end=2026-07-23T18:07:22Z
+[2026-07-23T18:07:24Z] START dataset=yahoo method=prior_matched_qwen mode=kd teacher=qwen-prior-matched-guided L=10 seed=42
+[2026-07-23T18:10:06Z] OK dataset=yahoo method=prior_matched_qwen L=10 seed=42 status=0 start=2026-07-23T18:07:24Z end=2026-07-23T18:10:06Z
+[2026-07-23T18:10:07Z] START dataset=yahoo method=logit_mean mode=kd teacher=multi-mean-guided L=10 seed=42
+[2026-07-23T18:12:51Z] OK dataset=yahoo method=logit_mean L=10 seed=42 status=0 start=2026-07-23T18:10:07Z end=2026-07-23T18:12:50Z
+[2026-07-23T18:12:52Z] START dataset=yahoo method=prob_mean mode=kd teacher=multi-probmean-guided L=10 seed=42
+[2026-07-23T18:15:35Z] OK dataset=yahoo method=prob_mean L=10 seed=42 status=0 start=2026-07-23T18:12:52Z end=2026-07-23T18:15:34Z
+[2026-07-23T18:15:36Z] START dataset=yahoo method=prior_matched mode=kd teacher=multi-prior-matched-guided L=10 seed=42
+[2026-07-23T18:18:18Z] OK dataset=yahoo method=prior_matched L=10 seed=42 status=0 start=2026-07-23T18:15:36Z end=2026-07-23T18:18:17Z
+[2026-07-23T18:18:19Z] START dataset=yahoo method=scale_aligned mode=kd teacher=multi-scale-aligned-guided L=10 seed=42
+[2026-07-23T18:21:03Z] OK dataset=yahoo method=scale_aligned L=10 seed=42 status=0 start=2026-07-23T18:18:19Z end=2026-07-23T18:21:02Z
+[2026-07-23T18:21:04Z] START dataset=yahoo method=combined mode=kd teacher=multi-prior-scale-aligned-guided L=10 seed=42
+[2026-07-23T18:23:47Z] OK dataset=yahoo method=combined L=10 seed=42 status=0 start=2026-07-23T18:21:04Z end=2026-07-23T18:23:46Z
+[2026-07-23T18:23:48Z] START dataset=yahoo method=supervised mode=supervised teacher=none L=10 seed=123
+[2026-07-23T18:24:29Z] OK dataset=yahoo method=supervised L=10 seed=123 status=0 start=2026-07-23T18:23:48Z end=2026-07-23T18:24:28Z
+[2026-07-23T18:24:30Z] START dataset=yahoo method=raw_qwen mode=kd teacher=qwen3.5-27b-vllm-guided L=10 seed=123
+[2026-07-23T18:27:13Z] OK dataset=yahoo method=raw_qwen L=10 seed=123 status=0 start=2026-07-23T18:24:30Z end=2026-07-23T18:27:12Z
+[2026-07-23T18:27:14Z] START dataset=yahoo method=prior_matched_qwen mode=kd teacher=qwen-prior-matched-guided L=10 seed=123
+[2026-07-23T18:29:56Z] OK dataset=yahoo method=prior_matched_qwen L=10 seed=123 status=0 start=2026-07-23T18:27:14Z end=2026-07-23T18:29:55Z
+[2026-07-23T18:29:57Z] START dataset=yahoo method=logit_mean mode=kd teacher=multi-mean-guided L=10 seed=123
+[2026-07-23T18:32:40Z] OK dataset=yahoo method=logit_mean L=10 seed=123 status=0 start=2026-07-23T18:29:57Z end=2026-07-23T18:32:39Z
+[2026-07-23T18:32:41Z] START dataset=yahoo method=prob_mean mode=kd teacher=multi-probmean-guided L=10 seed=123
+[2026-07-23T18:35:24Z] OK dataset=yahoo method=prob_mean L=10 seed=123 status=0 start=2026-07-23T18:32:41Z end=2026-07-23T18:35:23Z
+[2026-07-23T18:35:25Z] START dataset=yahoo method=prior_matched mode=kd teacher=multi-prior-matched-guided L=10 seed=123
+[2026-07-23T18:38:08Z] OK dataset=yahoo method=prior_matched L=10 seed=123 status=0 start=2026-07-23T18:35:25Z end=2026-07-23T18:38:07Z
+[2026-07-23T18:38:09Z] START dataset=yahoo method=scale_aligned mode=kd teacher=multi-scale-aligned-guided L=10 seed=123
+[2026-07-23T18:40:52Z] OK dataset=yahoo method=scale_aligned L=10 seed=123 status=0 start=2026-07-23T18:38:09Z end=2026-07-23T18:40:51Z
+[2026-07-23T18:40:53Z] START dataset=yahoo method=combined mode=kd teacher=multi-prior-scale-aligned-guided L=10 seed=123
+[2026-07-23T18:43:35Z] OK dataset=yahoo method=combined L=10 seed=123 status=0 start=2026-07-23T18:40:53Z end=2026-07-23T18:43:34Z
+[2026-07-23T18:43:36Z] START dataset=yahoo method=supervised mode=supervised teacher=none L=10 seed=456
+[2026-07-23T18:44:16Z] OK dataset=yahoo method=supervised L=10 seed=456 status=0 start=2026-07-23T18:43:36Z end=2026-07-23T18:44:15Z
+[2026-07-23T18:44:17Z] START dataset=yahoo method=raw_qwen mode=kd teacher=qwen3.5-27b-vllm-guided L=10 seed=456
+[2026-07-23T18:47:02Z] OK dataset=yahoo method=raw_qwen L=10 seed=456 status=0 start=2026-07-23T18:44:17Z end=2026-07-23T18:47:01Z
+[2026-07-23T18:47:03Z] START dataset=yahoo method=prior_matched_qwen mode=kd teacher=qwen-prior-matched-guided L=10 seed=456
+[2026-07-23T18:49:45Z] OK dataset=yahoo method=prior_matched_qwen L=10 seed=456 status=0 start=2026-07-23T18:47:03Z end=2026-07-23T18:49:44Z
+[2026-07-23T18:49:46Z] START dataset=yahoo method=logit_mean mode=kd teacher=multi-mean-guided L=10 seed=456
+[2026-07-23T18:52:29Z] OK dataset=yahoo method=logit_mean L=10 seed=456 status=0 start=2026-07-23T18:49:46Z end=2026-07-23T18:52:28Z
+[2026-07-23T18:52:30Z] START dataset=yahoo method=prob_mean mode=kd teacher=multi-probmean-guided L=10 seed=456
+[2026-07-23T18:55:12Z] OK dataset=yahoo method=prob_mean L=10 seed=456 status=0 start=2026-07-23T18:52:30Z end=2026-07-23T18:55:11Z
+[2026-07-23T18:55:13Z] START dataset=yahoo method=prior_matched mode=kd teacher=multi-prior-matched-guided L=10 seed=456
+[2026-07-23T18:57:56Z] OK dataset=yahoo method=prior_matched L=10 seed=456 status=0 start=2026-07-23T18:55:13Z end=2026-07-23T18:57:55Z
+[2026-07-23T18:57:57Z] START dataset=yahoo method=scale_aligned mode=kd teacher=multi-scale-aligned-guided L=10 seed=456
+[2026-07-23T19:00:38Z] OK dataset=yahoo method=scale_aligned L=10 seed=456 status=0 start=2026-07-23T18:57:57Z end=2026-07-23T19:00:37Z
+[2026-07-23T19:00:39Z] START dataset=yahoo method=combined mode=kd teacher=multi-prior-scale-aligned-guided L=10 seed=456
+[2026-07-23T19:03:22Z] OK dataset=yahoo method=combined L=10 seed=456 status=0 start=2026-07-23T19:00:39Z end=2026-07-23T19:03:21Z
+[2026-07-23T19:03:23Z] START dataset=amazon method=supervised mode=supervised teacher=none L=10 seed=42
+[2026-07-23T19:04:00Z] OK dataset=amazon method=supervised L=10 seed=42 status=0 start=2026-07-23T19:03:23Z end=2026-07-23T19:03:59Z
+[2026-07-23T19:04:01Z] START dataset=amazon method=raw_qwen mode=kd teacher=qwen3.5-27b-vllm-guided L=10 seed=42
+[2026-07-23T19:05:37Z] OK dataset=amazon method=raw_qwen L=10 seed=42 status=0 start=2026-07-23T19:04:01Z end=2026-07-23T19:05:36Z
+[2026-07-23T19:05:38Z] START dataset=amazon method=prior_matched_qwen mode=kd teacher=qwen-prior-matched-guided L=10 seed=42
+[2026-07-23T19:07:15Z] OK dataset=amazon method=prior_matched_qwen L=10 seed=42 status=0 start=2026-07-23T19:05:38Z end=2026-07-23T19:07:14Z
+[2026-07-23T19:07:16Z] START dataset=amazon method=logit_mean mode=kd teacher=multi-mean-guided L=10 seed=42
+[2026-07-23T19:08:52Z] OK dataset=amazon method=logit_mean L=10 seed=42 status=0 start=2026-07-23T19:07:16Z end=2026-07-23T19:08:51Z
+[2026-07-23T19:08:53Z] START dataset=amazon method=prob_mean mode=kd teacher=multi-probmean-guided L=10 seed=42
+[2026-07-23T19:10:29Z] OK dataset=amazon method=prob_mean L=10 seed=42 status=0 start=2026-07-23T19:08:53Z end=2026-07-23T19:10:28Z
+[2026-07-23T19:10:30Z] START dataset=amazon method=prior_matched mode=kd teacher=multi-prior-matched-guided L=10 seed=42
+[2026-07-23T19:12:06Z] OK dataset=amazon method=prior_matched L=10 seed=42 status=0 start=2026-07-23T19:10:30Z end=2026-07-23T19:12:05Z
+[2026-07-23T19:12:07Z] START dataset=amazon method=scale_aligned mode=kd teacher=multi-scale-aligned-guided L=10 seed=42
+[2026-07-23T19:13:43Z] OK dataset=amazon method=scale_aligned L=10 seed=42 status=0 start=2026-07-23T19:12:07Z end=2026-07-23T19:13:42Z
+[2026-07-23T19:13:44Z] START dataset=amazon method=combined mode=kd teacher=multi-prior-scale-aligned-guided L=10 seed=42
+[2026-07-23T19:15:21Z] OK dataset=amazon method=combined L=10 seed=42 status=0 start=2026-07-23T19:13:44Z end=2026-07-23T19:15:20Z
+[2026-07-23T19:15:22Z] START dataset=amazon method=supervised mode=supervised teacher=none L=10 seed=123
+[2026-07-23T19:16:00Z] OK dataset=amazon method=supervised L=10 seed=123 status=0 start=2026-07-23T19:15:22Z end=2026-07-23T19:15:59Z
+[2026-07-23T19:16:01Z] START dataset=amazon method=raw_qwen mode=kd teacher=qwen3.5-27b-vllm-guided L=10 seed=123
+[2026-07-23T19:17:41Z] OK dataset=amazon method=raw_qwen L=10 seed=123 status=0 start=2026-07-23T19:16:01Z end=2026-07-23T19:17:40Z
+[2026-07-23T19:17:42Z] START dataset=amazon method=prior_matched_qwen mode=kd teacher=qwen-prior-matched-guided L=10 seed=123
+[2026-07-23T19:19:18Z] OK dataset=amazon method=prior_matched_qwen L=10 seed=123 status=0 start=2026-07-23T19:17:42Z end=2026-07-23T19:19:17Z
+[2026-07-23T19:19:19Z] START dataset=amazon method=logit_mean mode=kd teacher=multi-mean-guided L=10 seed=123
+[2026-07-23T19:20:55Z] OK dataset=amazon method=logit_mean L=10 seed=123 status=0 start=2026-07-23T19:19:19Z end=2026-07-23T19:20:54Z
+[2026-07-23T19:20:56Z] START dataset=amazon method=prob_mean mode=kd teacher=multi-probmean-guided L=10 seed=123
+[2026-07-23T19:22:32Z] OK dataset=amazon method=prob_mean L=10 seed=123 status=0 start=2026-07-23T19:20:56Z end=2026-07-23T19:22:31Z
+[2026-07-23T19:22:33Z] START dataset=amazon method=prior_matched mode=kd teacher=multi-prior-matched-guided L=10 seed=123
+[2026-07-23T19:24:10Z] OK dataset=amazon method=prior_matched L=10 seed=123 status=0 start=2026-07-23T19:22:33Z end=2026-07-23T19:24:09Z
+[2026-07-23T19:24:11Z] START dataset=amazon method=scale_aligned mode=kd teacher=multi-scale-aligned-guided L=10 seed=123
+[2026-07-23T19:25:47Z] OK dataset=amazon method=scale_aligned L=10 seed=123 status=0 start=2026-07-23T19:24:11Z end=2026-07-23T19:25:46Z
+[2026-07-23T19:25:48Z] START dataset=amazon method=combined mode=kd teacher=multi-prior-scale-aligned-guided L=10 seed=123
+[2026-07-23T19:27:24Z] OK dataset=amazon method=combined L=10 seed=123 status=0 start=2026-07-23T19:25:48Z end=2026-07-23T19:27:23Z
+[2026-07-23T19:27:25Z] START dataset=amazon method=supervised mode=supervised teacher=none L=10 seed=456
+[2026-07-23T19:28:03Z] OK dataset=amazon method=supervised L=10 seed=456 status=0 start=2026-07-23T19:27:25Z end=2026-07-23T19:28:02Z
+[2026-07-23T19:28:04Z] START dataset=amazon method=raw_qwen mode=kd teacher=qwen3.5-27b-vllm-guided L=10 seed=456
+[2026-07-23T19:29:40Z] OK dataset=amazon method=raw_qwen L=10 seed=456 status=0 start=2026-07-23T19:28:04Z end=2026-07-23T19:29:39Z
+[2026-07-23T19:29:41Z] START dataset=amazon method=prior_matched_qwen mode=kd teacher=qwen-prior-matched-guided L=10 seed=456
+[2026-07-23T19:31:16Z] OK dataset=amazon method=prior_matched_qwen L=10 seed=456 status=0 start=2026-07-23T19:29:41Z end=2026-07-23T19:31:15Z
+[2026-07-23T19:31:17Z] START dataset=amazon method=logit_mean mode=kd teacher=multi-mean-guided L=10 seed=456
+[2026-07-23T19:32:53Z] OK dataset=amazon method=logit_mean L=10 seed=456 status=0 start=2026-07-23T19:31:17Z end=2026-07-23T19:32:52Z
+[2026-07-23T19:32:54Z] START dataset=amazon method=prob_mean mode=kd teacher=multi-probmean-guided L=10 seed=456
+[2026-07-23T19:34:29Z] OK dataset=amazon method=prob_mean L=10 seed=456 status=0 start=2026-07-23T19:32:54Z end=2026-07-23T19:34:28Z
+[2026-07-23T19:34:30Z] START dataset=amazon method=prior_matched mode=kd teacher=multi-prior-matched-guided L=10 seed=456
+[2026-07-23T19:36:06Z] OK dataset=amazon method=prior_matched L=10 seed=456 status=0 start=2026-07-23T19:34:30Z end=2026-07-23T19:36:05Z
+[2026-07-23T19:36:07Z] START dataset=amazon method=scale_aligned mode=kd teacher=multi-scale-aligned-guided L=10 seed=456
+[2026-07-23T19:37:43Z] OK dataset=amazon method=scale_aligned L=10 seed=456 status=0 start=2026-07-23T19:36:07Z end=2026-07-23T19:37:42Z
+[2026-07-23T19:37:44Z] START dataset=amazon method=combined mode=kd teacher=multi-prior-scale-aligned-guided L=10 seed=456
+[2026-07-23T19:39:20Z] OK dataset=amazon method=combined L=10 seed=456 status=0 start=2026-07-23T19:37:44Z end=2026-07-23T19:39:19Z
+[2026-07-23T19:39:21Z] START dataset=amazon3 method=supervised mode=supervised teacher=none L=10 seed=42
+[2026-07-23T19:39:47Z] OK dataset=amazon3 method=supervised L=10 seed=42 status=0 start=2026-07-23T19:39:21Z end=2026-07-23T19:39:46Z
+[2026-07-23T19:39:48Z] START dataset=amazon3 method=raw_qwen mode=kd teacher=qwen3.5-27b-vllm-guided L=10 seed=42
+[2026-07-23T19:40:50Z] OK dataset=amazon3 method=raw_qwen L=10 seed=42 status=0 start=2026-07-23T19:39:48Z end=2026-07-23T19:40:49Z
+[2026-07-23T19:40:51Z] START dataset=amazon3 method=prior_matched_qwen mode=kd teacher=qwen-prior-matched-guided L=10 seed=42
+[2026-07-23T19:41:52Z] OK dataset=amazon3 method=prior_matched_qwen L=10 seed=42 status=0 start=2026-07-23T19:40:51Z end=2026-07-23T19:41:51Z
+[2026-07-23T19:41:53Z] START dataset=amazon3 method=logit_mean mode=kd teacher=multi-mean-guided L=10 seed=42
+[2026-07-23T19:42:54Z] OK dataset=amazon3 method=logit_mean L=10 seed=42 status=0 start=2026-07-23T19:41:53Z end=2026-07-23T19:42:53Z
+[2026-07-23T19:42:55Z] START dataset=amazon3 method=prob_mean mode=kd teacher=multi-probmean-guided L=10 seed=42
+[2026-07-23T19:43:56Z] OK dataset=amazon3 method=prob_mean L=10 seed=42 status=0 start=2026-07-23T19:42:55Z end=2026-07-23T19:43:55Z
+[2026-07-23T19:43:57Z] START dataset=amazon3 method=prior_matched mode=kd teacher=multi-prior-matched-guided L=10 seed=42
+[2026-07-23T19:44:59Z] OK dataset=amazon3 method=prior_matched L=10 seed=42 status=0 start=2026-07-23T19:43:57Z end=2026-07-23T19:44:58Z
+[2026-07-23T19:45:00Z] START dataset=amazon3 method=scale_aligned mode=kd teacher=multi-scale-aligned-guided L=10 seed=42
+[2026-07-23T19:46:01Z] OK dataset=amazon3 method=scale_aligned L=10 seed=42 status=0 start=2026-07-23T19:45:00Z end=2026-07-23T19:46:00Z
+[2026-07-23T19:46:02Z] START dataset=amazon3 method=combined mode=kd teacher=multi-prior-scale-aligned-guided L=10 seed=42
+[2026-07-23T19:47:04Z] OK dataset=amazon3 method=combined L=10 seed=42 status=0 start=2026-07-23T19:46:02Z end=2026-07-23T19:47:03Z
+[2026-07-23T19:47:05Z] START dataset=amazon3 method=supervised mode=supervised teacher=none L=10 seed=123
+[2026-07-23T19:47:31Z] OK dataset=amazon3 method=supervised L=10 seed=123 status=0 start=2026-07-23T19:47:05Z end=2026-07-23T19:47:30Z
+[2026-07-23T19:47:32Z] START dataset=amazon3 method=raw_qwen mode=kd teacher=qwen3.5-27b-vllm-guided L=10 seed=123
+[2026-07-23T19:48:33Z] OK dataset=amazon3 method=raw_qwen L=10 seed=123 status=0 start=2026-07-23T19:47:32Z end=2026-07-23T19:48:32Z
+[2026-07-23T19:48:34Z] START dataset=amazon3 method=prior_matched_qwen mode=kd teacher=qwen-prior-matched-guided L=10 seed=123
+[2026-07-23T19:49:35Z] OK dataset=amazon3 method=prior_matched_qwen L=10 seed=123 status=0 start=2026-07-23T19:48:34Z end=2026-07-23T19:49:34Z
+[2026-07-23T19:49:36Z] START dataset=amazon3 method=logit_mean mode=kd teacher=multi-mean-guided L=10 seed=123
+[2026-07-23T19:50:37Z] OK dataset=amazon3 method=logit_mean L=10 seed=123 status=0 start=2026-07-23T19:49:36Z end=2026-07-23T19:50:36Z
+[2026-07-23T19:50:38Z] START dataset=amazon3 method=prob_mean mode=kd teacher=multi-probmean-guided L=10 seed=123
+[2026-07-23T19:51:39Z] OK dataset=amazon3 method=prob_mean L=10 seed=123 status=0 start=2026-07-23T19:50:38Z end=2026-07-23T19:51:38Z
+[2026-07-23T19:51:40Z] START dataset=amazon3 method=prior_matched mode=kd teacher=multi-prior-matched-guided L=10 seed=123
+[2026-07-23T19:52:43Z] OK dataset=amazon3 method=prior_matched L=10 seed=123 status=0 start=2026-07-23T19:51:40Z end=2026-07-23T19:52:42Z
+[2026-07-23T19:52:44Z] START dataset=amazon3 method=scale_aligned mode=kd teacher=multi-scale-aligned-guided L=10 seed=123
+[2026-07-23T19:53:46Z] OK dataset=amazon3 method=scale_aligned L=10 seed=123 status=0 start=2026-07-23T19:52:44Z end=2026-07-23T19:53:45Z
+[2026-07-23T19:53:46Z] START dataset=amazon3 method=combined mode=kd teacher=multi-prior-scale-aligned-guided L=10 seed=123
+[2026-07-23T19:54:48Z] OK dataset=amazon3 method=combined L=10 seed=123 status=0 start=2026-07-23T19:53:46Z end=2026-07-23T19:54:47Z
+[2026-07-23T19:54:49Z] START dataset=amazon3 method=supervised mode=supervised teacher=none L=10 seed=456
+[2026-07-23T19:55:16Z] OK dataset=amazon3 method=supervised L=10 seed=456 status=0 start=2026-07-23T19:54:49Z end=2026-07-23T19:55:15Z
+[2026-07-23T19:55:17Z] START dataset=amazon3 method=raw_qwen mode=kd teacher=qwen3.5-27b-vllm-guided L=10 seed=456
+[2026-07-23T19:56:18Z] OK dataset=amazon3 method=raw_qwen L=10 seed=456 status=0 start=2026-07-23T19:55:17Z end=2026-07-23T19:56:17Z
+[2026-07-23T19:56:19Z] START dataset=amazon3 method=prior_matched_qwen mode=kd teacher=qwen-prior-matched-guided L=10 seed=456
+[2026-07-23T19:57:21Z] OK dataset=amazon3 method=prior_matched_qwen L=10 seed=456 status=0 start=2026-07-23T19:56:19Z end=2026-07-23T19:57:20Z
+[2026-07-23T19:57:22Z] START dataset=amazon3 method=logit_mean mode=kd teacher=multi-mean-guided L=10 seed=456
+[2026-07-23T19:58:24Z] OK dataset=amazon3 method=logit_mean L=10 seed=456 status=0 start=2026-07-23T19:57:22Z end=2026-07-23T19:58:23Z
+[2026-07-23T19:58:25Z] START dataset=amazon3 method=prob_mean mode=kd teacher=multi-probmean-guided L=10 seed=456
+[2026-07-23T19:59:26Z] OK dataset=amazon3 method=prob_mean L=10 seed=456 status=0 start=2026-07-23T19:58:25Z end=2026-07-23T19:59:25Z
+[2026-07-23T19:59:27Z] START dataset=amazon3 method=prior_matched mode=kd teacher=multi-prior-matched-guided L=10 seed=456
+[2026-07-23T20:00:30Z] OK dataset=amazon3 method=prior_matched L=10 seed=456 status=0 start=2026-07-23T19:59:27Z end=2026-07-23T20:00:29Z
+[2026-07-23T20:00:31Z] START dataset=amazon3 method=scale_aligned mode=kd teacher=multi-scale-aligned-guided L=10 seed=456
+[2026-07-23T20:01:32Z] OK dataset=amazon3 method=scale_aligned L=10 seed=456 status=0 start=2026-07-23T20:00:31Z end=2026-07-23T20:01:31Z
+[2026-07-23T20:01:33Z] START dataset=amazon3 method=combined mode=kd teacher=multi-prior-scale-aligned-guided L=10 seed=456
+[2026-07-23T20:02:35Z] OK dataset=amazon3 method=combined L=10 seed=456 status=0 start=2026-07-23T20:01:33Z end=2026-07-23T20:02:34Z
+[2026-07-23T20:02:36Z] START dataset=ag_news method=supervised mode=supervised teacher=none L=50 seed=42
+[2026-07-23T20:02:59Z] OK dataset=ag_news method=supervised L=50 seed=42 status=0 start=2026-07-23T20:02:36Z end=2026-07-23T20:02:58Z
+[2026-07-23T20:03:00Z] START dataset=ag_news method=raw_qwen mode=kd teacher=qwen3.5-27b-vllm-guided L=50 seed=42
+[2026-07-23T20:04:45Z] OK dataset=ag_news method=raw_qwen L=50 seed=42 status=0 start=2026-07-23T20:03:00Z end=2026-07-23T20:04:44Z
+[2026-07-23T20:04:46Z] START dataset=ag_news method=prior_matched_qwen mode=kd teacher=qwen-prior-matched-guided L=50 seed=42
+[2026-07-23T20:06:31Z] OK dataset=ag_news method=prior_matched_qwen L=50 seed=42 status=0 start=2026-07-23T20:04:46Z end=2026-07-23T20:06:30Z
+[2026-07-23T20:06:32Z] START dataset=ag_news method=logit_mean mode=kd teacher=multi-mean-guided L=50 seed=42
+[2026-07-23T20:08:17Z] OK dataset=ag_news method=logit_mean L=50 seed=42 status=0 start=2026-07-23T20:06:32Z end=2026-07-23T20:08:16Z
+[2026-07-23T20:08:18Z] START dataset=ag_news method=prob_mean mode=kd teacher=multi-probmean-guided L=50 seed=42
+[2026-07-23T20:10:02Z] OK dataset=ag_news method=prob_mean L=50 seed=42 status=0 start=2026-07-23T20:08:18Z end=2026-07-23T20:10:01Z
+[2026-07-23T20:10:03Z] START dataset=ag_news method=prior_matched mode=kd teacher=multi-prior-matched-guided L=50 seed=42
+[2026-07-23T20:11:48Z] OK dataset=ag_news method=prior_matched L=50 seed=42 status=0 start=2026-07-23T20:10:03Z end=2026-07-23T20:11:47Z
+[2026-07-23T20:11:49Z] START dataset=ag_news method=scale_aligned mode=kd teacher=multi-scale-aligned-guided L=50 seed=42
+[2026-07-23T20:13:35Z] OK dataset=ag_news method=scale_aligned L=50 seed=42 status=0 start=2026-07-23T20:11:49Z end=2026-07-23T20:13:34Z
+[2026-07-23T20:13:36Z] START dataset=ag_news method=combined mode=kd teacher=multi-prior-scale-aligned-guided L=50 seed=42
+[2026-07-23T20:15:22Z] OK dataset=ag_news method=combined L=50 seed=42 status=0 start=2026-07-23T20:13:36Z end=2026-07-23T20:15:21Z
+[2026-07-23T20:15:23Z] START dataset=ag_news method=supervised mode=supervised teacher=none L=50 seed=123
+[2026-07-23T20:15:45Z] OK dataset=ag_news method=supervised L=50 seed=123 status=0 start=2026-07-23T20:15:23Z end=2026-07-23T20:15:44Z
+[2026-07-23T20:15:46Z] START dataset=ag_news method=raw_qwen mode=kd teacher=qwen3.5-27b-vllm-guided L=50 seed=123
+[2026-07-23T20:17:31Z] OK dataset=ag_news method=raw_qwen L=50 seed=123 status=0 start=2026-07-23T20:15:46Z end=2026-07-23T20:17:30Z
+[2026-07-23T20:17:32Z] START dataset=ag_news method=prior_matched_qwen mode=kd teacher=qwen-prior-matched-guided L=50 seed=123
+[2026-07-23T20:19:20Z] OK dataset=ag_news method=prior_matched_qwen L=50 seed=123 status=0 start=2026-07-23T20:17:32Z end=2026-07-23T20:19:19Z
+[2026-07-23T20:19:21Z] START dataset=ag_news method=logit_mean mode=kd teacher=multi-mean-guided L=50 seed=123
+[2026-07-23T20:21:06Z] OK dataset=ag_news method=logit_mean L=50 seed=123 status=0 start=2026-07-23T20:19:21Z end=2026-07-23T20:21:05Z
+[2026-07-23T20:21:07Z] START dataset=ag_news method=prob_mean mode=kd teacher=multi-probmean-guided L=50 seed=123
+[2026-07-23T20:22:53Z] OK dataset=ag_news method=prob_mean L=50 seed=123 status=0 start=2026-07-23T20:21:07Z end=2026-07-23T20:22:52Z
+[2026-07-23T20:22:54Z] START dataset=ag_news method=prior_matched mode=kd teacher=multi-prior-matched-guided L=50 seed=123
+[2026-07-23T20:24:39Z] OK dataset=ag_news method=prior_matched L=50 seed=123 status=0 start=2026-07-23T20:22:54Z end=2026-07-23T20:24:38Z
+[2026-07-23T20:24:40Z] START dataset=ag_news method=scale_aligned mode=kd teacher=multi-scale-aligned-guided L=50 seed=123
+[2026-07-23T20:26:26Z] OK dataset=ag_news method=scale_aligned L=50 seed=123 status=0 start=2026-07-23T20:24:40Z end=2026-07-23T20:26:25Z
+[2026-07-23T20:26:27Z] START dataset=ag_news method=combined mode=kd teacher=multi-prior-scale-aligned-guided L=50 seed=123
+[2026-07-23T20:28:13Z] OK dataset=ag_news method=combined L=50 seed=123 status=0 start=2026-07-23T20:26:27Z end=2026-07-23T20:28:12Z
+[2026-07-23T20:28:14Z] START dataset=ag_news method=supervised mode=supervised teacher=none L=50 seed=456
+[2026-07-23T20:28:37Z] OK dataset=ag_news method=supervised L=50 seed=456 status=0 start=2026-07-23T20:28:14Z end=2026-07-23T20:28:36Z
+[2026-07-23T20:28:38Z] START dataset=ag_news method=raw_qwen mode=kd teacher=qwen3.5-27b-vllm-guided L=50 seed=456
+[2026-07-23T20:30:24Z] OK dataset=ag_news method=raw_qwen L=50 seed=456 status=0 start=2026-07-23T20:28:38Z end=2026-07-23T20:30:23Z
+[2026-07-23T20:30:25Z] START dataset=ag_news method=prior_matched_qwen mode=kd teacher=qwen-prior-matched-guided L=50 seed=456
+[2026-07-23T20:32:11Z] OK dataset=ag_news method=prior_matched_qwen L=50 seed=456 status=0 start=2026-07-23T20:30:25Z end=2026-07-23T20:32:10Z
+[2026-07-23T20:32:12Z] START dataset=ag_news method=logit_mean mode=kd teacher=multi-mean-guided L=50 seed=456
+[2026-07-23T20:33:56Z] OK dataset=ag_news method=logit_mean L=50 seed=456 status=0 start=2026-07-23T20:32:12Z end=2026-07-23T20:33:55Z
+[2026-07-23T20:33:57Z] START dataset=ag_news method=prob_mean mode=kd teacher=multi-probmean-guided L=50 seed=456
+[2026-07-23T20:35:42Z] OK dataset=ag_news method=prob_mean L=50 seed=456 status=0 start=2026-07-23T20:33:57Z end=2026-07-23T20:35:40Z
+[2026-07-23T20:35:42Z] START dataset=ag_news method=prior_matched mode=kd teacher=multi-prior-matched-guided L=50 seed=456
+[2026-07-23T20:37:28Z] OK dataset=ag_news method=prior_matched L=50 seed=456 status=0 start=2026-07-23T20:35:42Z end=2026-07-23T20:37:27Z
+[2026-07-23T20:37:29Z] START dataset=ag_news method=scale_aligned mode=kd teacher=multi-scale-aligned-guided L=50 seed=456
+[2026-07-23T20:39:13Z] OK dataset=ag_news method=scale_aligned L=50 seed=456 status=0 start=2026-07-23T20:37:29Z end=2026-07-23T20:39:12Z
+[2026-07-23T20:39:14Z] START dataset=ag_news method=combined mode=kd teacher=multi-prior-scale-aligned-guided L=50 seed=456
+[2026-07-23T20:40:58Z] OK dataset=ag_news method=combined L=50 seed=456 status=0 start=2026-07-23T20:39:14Z end=2026-07-23T20:40:57Z
+[2026-07-23T20:40:59Z] START dataset=yahoo method=supervised mode=supervised teacher=none L=50 seed=42
+[2026-07-23T20:41:51Z] OK dataset=yahoo method=supervised L=50 seed=42 status=0 start=2026-07-23T20:40:59Z end=2026-07-23T20:41:50Z
+[2026-07-23T20:41:52Z] START dataset=yahoo method=raw_qwen mode=kd teacher=qwen3.5-27b-vllm-guided L=50 seed=42
+[2026-07-23T20:44:34Z] OK dataset=yahoo method=raw_qwen L=50 seed=42 status=0 start=2026-07-23T20:41:52Z end=2026-07-23T20:44:33Z
+[2026-07-23T20:44:35Z] START dataset=yahoo method=prior_matched_qwen mode=kd teacher=qwen-prior-matched-guided L=50 seed=42
+[2026-07-23T20:47:18Z] OK dataset=yahoo method=prior_matched_qwen L=50 seed=42 status=0 start=2026-07-23T20:44:35Z end=2026-07-23T20:47:17Z
+[2026-07-23T20:47:19Z] START dataset=yahoo method=logit_mean mode=kd teacher=multi-mean-guided L=50 seed=42
+[2026-07-23T20:50:01Z] OK dataset=yahoo method=logit_mean L=50 seed=42 status=0 start=2026-07-23T20:47:19Z end=2026-07-23T20:50:00Z
+[2026-07-23T20:50:02Z] START dataset=yahoo method=prob_mean mode=kd teacher=multi-probmean-guided L=50 seed=42
+[2026-07-23T20:52:45Z] OK dataset=yahoo method=prob_mean L=50 seed=42 status=0 start=2026-07-23T20:50:02Z end=2026-07-23T20:52:44Z
+[2026-07-23T20:52:46Z] START dataset=yahoo method=prior_matched mode=kd teacher=multi-prior-matched-guided L=50 seed=42
+[2026-07-23T20:55:30Z] OK dataset=yahoo method=prior_matched L=50 seed=42 status=0 start=2026-07-23T20:52:46Z end=2026-07-23T20:55:29Z
+[2026-07-23T20:55:31Z] START dataset=yahoo method=scale_aligned mode=kd teacher=multi-scale-aligned-guided L=50 seed=42
+[2026-07-23T20:58:14Z] OK dataset=yahoo method=scale_aligned L=50 seed=42 status=0 start=2026-07-23T20:55:31Z end=2026-07-23T20:58:13Z
+[2026-07-23T20:58:15Z] START dataset=yahoo method=combined mode=kd teacher=multi-prior-scale-aligned-guided L=50 seed=42
+[2026-07-23T21:00:58Z] OK dataset=yahoo method=combined L=50 seed=42 status=0 start=2026-07-23T20:58:15Z end=2026-07-23T21:00:57Z
+[2026-07-23T21:00:59Z] START dataset=yahoo method=supervised mode=supervised teacher=none L=50 seed=123
+[2026-07-23T21:01:49Z] OK dataset=yahoo method=supervised L=50 seed=123 status=0 start=2026-07-23T21:00:59Z end=2026-07-23T21:01:48Z
+[2026-07-23T21:01:50Z] START dataset=yahoo method=raw_qwen mode=kd teacher=qwen3.5-27b-vllm-guided L=50 seed=123
+[2026-07-23T21:04:32Z] OK dataset=yahoo method=raw_qwen L=50 seed=123 status=0 start=2026-07-23T21:01:50Z end=2026-07-23T21:04:31Z
+[2026-07-23T21:04:33Z] START dataset=yahoo method=prior_matched_qwen mode=kd teacher=qwen-prior-matched-guided L=50 seed=123
+[2026-07-23T21:07:17Z] OK dataset=yahoo method=prior_matched_qwen L=50 seed=123 status=0 start=2026-07-23T21:04:33Z end=2026-07-23T21:07:16Z
+[2026-07-23T21:07:18Z] START dataset=yahoo method=logit_mean mode=kd teacher=multi-mean-guided L=50 seed=123
+[2026-07-23T21:10:00Z] OK dataset=yahoo method=logit_mean L=50 seed=123 status=0 start=2026-07-23T21:07:18Z end=2026-07-23T21:09:59Z
+[2026-07-23T21:10:01Z] START dataset=yahoo method=prob_mean mode=kd teacher=multi-probmean-guided L=50 seed=123
+[2026-07-23T21:12:42Z] OK dataset=yahoo method=prob_mean L=50 seed=123 status=0 start=2026-07-23T21:10:01Z end=2026-07-23T21:12:41Z
+[2026-07-23T21:12:43Z] START dataset=yahoo method=prior_matched mode=kd teacher=multi-prior-matched-guided L=50 seed=123
+[2026-07-23T21:15:26Z] OK dataset=yahoo method=prior_matched L=50 seed=123 status=0 start=2026-07-23T21:12:43Z end=2026-07-23T21:15:25Z
+[2026-07-23T21:15:27Z] START dataset=yahoo method=scale_aligned mode=kd teacher=multi-scale-aligned-guided L=50 seed=123
+[2026-07-23T21:18:09Z] OK dataset=yahoo method=scale_aligned L=50 seed=123 status=0 start=2026-07-23T21:15:27Z end=2026-07-23T21:18:08Z
+[2026-07-23T21:18:10Z] START dataset=yahoo method=combined mode=kd teacher=multi-prior-scale-aligned-guided L=50 seed=123
+[2026-07-23T21:20:52Z] OK dataset=yahoo method=combined L=50 seed=123 status=0 start=2026-07-23T21:18:10Z end=2026-07-23T21:20:51Z
+[2026-07-23T21:20:53Z] START dataset=yahoo method=supervised mode=supervised teacher=none L=50 seed=456
+[2026-07-23T21:21:43Z] OK dataset=yahoo method=supervised L=50 seed=456 status=0 start=2026-07-23T21:20:53Z end=2026-07-23T21:21:42Z
+[2026-07-23T21:21:44Z] START dataset=yahoo method=raw_qwen mode=kd teacher=qwen3.5-27b-vllm-guided L=50 seed=456
+[2026-07-23T21:24:26Z] OK dataset=yahoo method=raw_qwen L=50 seed=456 status=0 start=2026-07-23T21:21:44Z end=2026-07-23T21:24:25Z
+[2026-07-23T21:24:27Z] START dataset=yahoo method=prior_matched_qwen mode=kd teacher=qwen-prior-matched-guided L=50 seed=456
+[2026-07-23T21:27:10Z] OK dataset=yahoo method=prior_matched_qwen L=50 seed=456 status=0 start=2026-07-23T21:24:27Z end=2026-07-23T21:27:09Z
+[2026-07-23T21:27:11Z] START dataset=yahoo method=logit_mean mode=kd teacher=multi-mean-guided L=50 seed=456
+[2026-07-23T21:29:55Z] OK dataset=yahoo method=logit_mean L=50 seed=456 status=0 start=2026-07-23T21:27:11Z end=2026-07-23T21:29:54Z
+[2026-07-23T21:29:56Z] START dataset=yahoo method=prob_mean mode=kd teacher=multi-probmean-guided L=50 seed=456
+[2026-07-23T21:32:40Z] OK dataset=yahoo method=prob_mean L=50 seed=456 status=0 start=2026-07-23T21:29:56Z end=2026-07-23T21:32:39Z
+[2026-07-23T21:32:41Z] START dataset=yahoo method=prior_matched mode=kd teacher=multi-prior-matched-guided L=50 seed=456
+[2026-07-23T21:35:23Z] OK dataset=yahoo method=prior_matched L=50 seed=456 status=0 start=2026-07-23T21:32:41Z end=2026-07-23T21:35:22Z
+[2026-07-23T21:35:24Z] START dataset=yahoo method=scale_aligned mode=kd teacher=multi-scale-aligned-guided L=50 seed=456
+[2026-07-23T21:38:08Z] OK dataset=yahoo method=scale_aligned L=50 seed=456 status=0 start=2026-07-23T21:35:24Z end=2026-07-23T21:38:07Z
+[2026-07-23T21:38:09Z] START dataset=yahoo method=combined mode=kd teacher=multi-prior-scale-aligned-guided L=50 seed=456
+[2026-07-23T21:40:52Z] OK dataset=yahoo method=combined L=50 seed=456 status=0 start=2026-07-23T21:38:09Z end=2026-07-23T21:40:51Z
+[2026-07-23T21:40:53Z] START dataset=amazon method=supervised mode=supervised teacher=none L=50 seed=42
+[2026-07-23T21:41:36Z] OK dataset=amazon method=supervised L=50 seed=42 status=0 start=2026-07-23T21:40:53Z end=2026-07-23T21:41:35Z
+[2026-07-23T21:41:37Z] START dataset=amazon method=raw_qwen mode=kd teacher=qwen3.5-27b-vllm-guided L=50 seed=42
+[2026-07-23T21:43:13Z] OK dataset=amazon method=raw_qwen L=50 seed=42 status=0 start=2026-07-23T21:41:37Z end=2026-07-23T21:43:12Z
+[2026-07-23T21:43:14Z] START dataset=amazon method=prior_matched_qwen mode=kd teacher=qwen-prior-matched-guided L=50 seed=42
+[2026-07-23T21:44:51Z] OK dataset=amazon method=prior_matched_qwen L=50 seed=42 status=0 start=2026-07-23T21:43:14Z end=2026-07-23T21:44:50Z
+[2026-07-23T21:44:52Z] START dataset=amazon method=logit_mean mode=kd teacher=multi-mean-guided L=50 seed=42
+[2026-07-23T21:46:29Z] OK dataset=amazon method=logit_mean L=50 seed=42 status=0 start=2026-07-23T21:44:52Z end=2026-07-23T21:46:28Z
+[2026-07-23T21:46:30Z] START dataset=amazon method=prob_mean mode=kd teacher=multi-probmean-guided L=50 seed=42
+[2026-07-23T21:48:06Z] OK dataset=amazon method=prob_mean L=50 seed=42 status=0 start=2026-07-23T21:46:30Z end=2026-07-23T21:48:05Z
+[2026-07-23T21:48:07Z] START dataset=amazon method=prior_matched mode=kd teacher=multi-prior-matched-guided L=50 seed=42
+[2026-07-23T21:49:44Z] OK dataset=amazon method=prior_matched L=50 seed=42 status=0 start=2026-07-23T21:48:07Z end=2026-07-23T21:49:43Z
+[2026-07-23T21:49:44Z] START dataset=amazon method=scale_aligned mode=kd teacher=multi-scale-aligned-guided L=50 seed=42
+[2026-07-23T21:51:21Z] OK dataset=amazon method=scale_aligned L=50 seed=42 status=0 start=2026-07-23T21:49:44Z end=2026-07-23T21:51:20Z
+[2026-07-23T21:51:22Z] START dataset=amazon method=combined mode=kd teacher=multi-prior-scale-aligned-guided L=50 seed=42
+[2026-07-23T21:52:59Z] OK dataset=amazon method=combined L=50 seed=42 status=0 start=2026-07-23T21:51:22Z end=2026-07-23T21:52:58Z
+[2026-07-23T21:53:00Z] START dataset=amazon method=supervised mode=supervised teacher=none L=50 seed=123
+[2026-07-23T21:53:42Z] OK dataset=amazon method=supervised L=50 seed=123 status=0 start=2026-07-23T21:53:00Z end=2026-07-23T21:53:41Z
+[2026-07-23T21:53:43Z] START dataset=amazon method=raw_qwen mode=kd teacher=qwen3.5-27b-vllm-guided L=50 seed=123
+[2026-07-23T21:55:19Z] OK dataset=amazon method=raw_qwen L=50 seed=123 status=0 start=2026-07-23T21:53:43Z end=2026-07-23T21:55:18Z
+[2026-07-23T21:55:20Z] START dataset=amazon method=prior_matched_qwen mode=kd teacher=qwen-prior-matched-guided L=50 seed=123
+[2026-07-23T21:56:57Z] OK dataset=amazon method=prior_matched_qwen L=50 seed=123 status=0 start=2026-07-23T21:55:20Z end=2026-07-23T21:56:56Z
+[2026-07-23T21:56:58Z] START dataset=amazon method=logit_mean mode=kd teacher=multi-mean-guided L=50 seed=123
+[2026-07-23T21:58:34Z] OK dataset=amazon method=logit_mean L=50 seed=123 status=0 start=2026-07-23T21:56:58Z end=2026-07-23T21:58:33Z
+[2026-07-23T21:58:35Z] START dataset=amazon method=prob_mean mode=kd teacher=multi-probmean-guided L=50 seed=123
+[2026-07-23T22:00:12Z] OK dataset=amazon method=prob_mean L=50 seed=123 status=0 start=2026-07-23T21:58:35Z end=2026-07-23T22:00:11Z
+[2026-07-23T22:00:13Z] START dataset=amazon method=prior_matched mode=kd teacher=multi-prior-matched-guided L=50 seed=123
+[2026-07-23T22:01:50Z] OK dataset=amazon method=prior_matched L=50 seed=123 status=0 start=2026-07-23T22:00:13Z end=2026-07-23T22:01:49Z
+[2026-07-23T22:01:51Z] START dataset=amazon method=scale_aligned mode=kd teacher=multi-scale-aligned-guided L=50 seed=123
+[2026-07-23T22:03:27Z] OK dataset=amazon method=scale_aligned L=50 seed=123 status=0 start=2026-07-23T22:01:51Z end=2026-07-23T22:03:26Z
+[2026-07-23T22:03:28Z] START dataset=amazon method=combined mode=kd teacher=multi-prior-scale-aligned-guided L=50 seed=123
+[2026-07-23T22:05:05Z] OK dataset=amazon method=combined L=50 seed=123 status=0 start=2026-07-23T22:03:28Z end=2026-07-23T22:05:04Z
+[2026-07-23T22:05:06Z] START dataset=amazon method=supervised mode=supervised teacher=none L=50 seed=456
+[2026-07-23T22:05:49Z] OK dataset=amazon method=supervised L=50 seed=456 status=0 start=2026-07-23T22:05:06Z end=2026-07-23T22:05:48Z
+[2026-07-23T22:05:50Z] START dataset=amazon method=raw_qwen mode=kd teacher=qwen3.5-27b-vllm-guided L=50 seed=456
+[2026-07-23T22:07:26Z] OK dataset=amazon method=raw_qwen L=50 seed=456 status=0 start=2026-07-23T22:05:50Z end=2026-07-23T22:07:25Z
+[2026-07-23T22:07:27Z] START dataset=amazon method=prior_matched_qwen mode=kd teacher=qwen-prior-matched-guided L=50 seed=456
+[2026-07-23T22:09:04Z] OK dataset=amazon method=prior_matched_qwen L=50 seed=456 status=0 start=2026-07-23T22:07:27Z end=2026-07-23T22:09:03Z
+[2026-07-23T22:09:05Z] START dataset=amazon method=logit_mean mode=kd teacher=multi-mean-guided L=50 seed=456
+[2026-07-23T22:10:41Z] OK dataset=amazon method=logit_mean L=50 seed=456 status=0 start=2026-07-23T22:09:05Z end=2026-07-23T22:10:40Z
+[2026-07-23T22:10:42Z] START dataset=amazon method=prob_mean mode=kd teacher=multi-probmean-guided L=50 seed=456
+[2026-07-23T22:12:19Z] OK dataset=amazon method=prob_mean L=50 seed=456 status=0 start=2026-07-23T22:10:42Z end=2026-07-23T22:12:18Z
+[2026-07-23T22:12:20Z] START dataset=amazon method=prior_matched mode=kd teacher=multi-prior-matched-guided L=50 seed=456
+[2026-07-23T22:13:57Z] OK dataset=amazon method=prior_matched L=50 seed=456 status=0 start=2026-07-23T22:12:20Z end=2026-07-23T22:13:56Z
+[2026-07-23T22:13:58Z] START dataset=amazon method=scale_aligned mode=kd teacher=multi-scale-aligned-guided L=50 seed=456
+[2026-07-23T22:15:35Z] OK dataset=amazon method=scale_aligned L=50 seed=456 status=0 start=2026-07-23T22:13:58Z end=2026-07-23T22:15:34Z
+[2026-07-23T22:15:36Z] START dataset=amazon method=combined mode=kd teacher=multi-prior-scale-aligned-guided L=50 seed=456
+[2026-07-23T22:17:12Z] OK dataset=amazon method=combined L=50 seed=456 status=0 start=2026-07-23T22:15:36Z end=2026-07-23T22:17:11Z
+[2026-07-23T22:17:13Z] START dataset=amazon3 method=supervised mode=supervised teacher=none L=50 seed=42
+[2026-07-23T22:17:43Z] OK dataset=amazon3 method=supervised L=50 seed=42 status=0 start=2026-07-23T22:17:13Z end=2026-07-23T22:17:42Z
+[2026-07-23T22:17:44Z] START dataset=amazon3 method=raw_qwen mode=kd teacher=qwen3.5-27b-vllm-guided L=50 seed=42
+[2026-07-23T22:18:46Z] OK dataset=amazon3 method=raw_qwen L=50 seed=42 status=0 start=2026-07-23T22:17:44Z end=2026-07-23T22:18:45Z
+[2026-07-23T22:18:47Z] START dataset=amazon3 method=prior_matched_qwen mode=kd teacher=qwen-prior-matched-guided L=50 seed=42
+[2026-07-23T22:19:49Z] OK dataset=amazon3 method=prior_matched_qwen L=50 seed=42 status=0 start=2026-07-23T22:18:47Z end=2026-07-23T22:19:48Z
+[2026-07-23T22:19:50Z] START dataset=amazon3 method=logit_mean mode=kd teacher=multi-mean-guided L=50 seed=42
+[2026-07-23T22:20:52Z] OK dataset=amazon3 method=logit_mean L=50 seed=42 status=0 start=2026-07-23T22:19:50Z end=2026-07-23T22:20:51Z
+[2026-07-23T22:20:53Z] START dataset=amazon3 method=prob_mean mode=kd teacher=multi-probmean-guided L=50 seed=42
+[2026-07-23T22:21:55Z] OK dataset=amazon3 method=prob_mean L=50 seed=42 status=0 start=2026-07-23T22:20:53Z end=2026-07-23T22:21:54Z
+[2026-07-23T22:21:56Z] START dataset=amazon3 method=prior_matched mode=kd teacher=multi-prior-matched-guided L=50 seed=42
+[2026-07-23T22:22:58Z] OK dataset=amazon3 method=prior_matched L=50 seed=42 status=0 start=2026-07-23T22:21:56Z end=2026-07-23T22:22:57Z
+[2026-07-23T22:22:59Z] START dataset=amazon3 method=scale_aligned mode=kd teacher=multi-scale-aligned-guided L=50 seed=42
+[2026-07-23T22:24:00Z] OK dataset=amazon3 method=scale_aligned L=50 seed=42 status=0 start=2026-07-23T22:22:59Z end=2026-07-23T22:23:59Z
+[2026-07-23T22:24:01Z] START dataset=amazon3 method=combined mode=kd teacher=multi-prior-scale-aligned-guided L=50 seed=42
+[2026-07-23T22:25:03Z] OK dataset=amazon3 method=combined L=50 seed=42 status=0 start=2026-07-23T22:24:01Z end=2026-07-23T22:25:02Z
+[2026-07-23T22:25:04Z] START dataset=amazon3 method=supervised mode=supervised teacher=none L=50 seed=123
+[2026-07-23T22:25:33Z] OK dataset=amazon3 method=supervised L=50 seed=123 status=0 start=2026-07-23T22:25:04Z end=2026-07-23T22:25:32Z
+[2026-07-23T22:25:34Z] START dataset=amazon3 method=raw_qwen mode=kd teacher=qwen3.5-27b-vllm-guided L=50 seed=123
+[2026-07-23T22:26:36Z] OK dataset=amazon3 method=raw_qwen L=50 seed=123 status=0 start=2026-07-23T22:25:34Z end=2026-07-23T22:26:35Z
+[2026-07-23T22:26:37Z] START dataset=amazon3 method=prior_matched_qwen mode=kd teacher=qwen-prior-matched-guided L=50 seed=123
+[2026-07-23T22:27:39Z] OK dataset=amazon3 method=prior_matched_qwen L=50 seed=123 status=0 start=2026-07-23T22:26:37Z end=2026-07-23T22:27:38Z
+[2026-07-23T22:27:40Z] START dataset=amazon3 method=logit_mean mode=kd teacher=multi-mean-guided L=50 seed=123
+[2026-07-23T22:28:42Z] OK dataset=amazon3 method=logit_mean L=50 seed=123 status=0 start=2026-07-23T22:27:40Z end=2026-07-23T22:28:41Z
+[2026-07-23T22:28:43Z] START dataset=amazon3 method=prob_mean mode=kd teacher=multi-probmean-guided L=50 seed=123
+[2026-07-23T22:29:45Z] OK dataset=amazon3 method=prob_mean L=50 seed=123 status=0 start=2026-07-23T22:28:43Z end=2026-07-23T22:29:44Z
+[2026-07-23T22:29:46Z] START dataset=amazon3 method=prior_matched mode=kd teacher=multi-prior-matched-guided L=50 seed=123
+[2026-07-23T22:30:48Z] OK dataset=amazon3 method=prior_matched L=50 seed=123 status=0 start=2026-07-23T22:29:46Z end=2026-07-23T22:30:47Z
+[2026-07-23T22:30:49Z] START dataset=amazon3 method=scale_aligned mode=kd teacher=multi-scale-aligned-guided L=50 seed=123
+[2026-07-23T22:31:53Z] OK dataset=amazon3 method=scale_aligned L=50 seed=123 status=0 start=2026-07-23T22:30:49Z end=2026-07-23T22:31:52Z
+[2026-07-23T22:31:54Z] START dataset=amazon3 method=combined mode=kd teacher=multi-prior-scale-aligned-guided L=50 seed=123
+[2026-07-23T22:32:56Z] OK dataset=amazon3 method=combined L=50 seed=123 status=0 start=2026-07-23T22:31:54Z end=2026-07-23T22:32:55Z
+[2026-07-23T22:32:57Z] START dataset=amazon3 method=supervised mode=supervised teacher=none L=50 seed=456
+[2026-07-23T22:33:26Z] OK dataset=amazon3 method=supervised L=50 seed=456 status=0 start=2026-07-23T22:32:57Z end=2026-07-23T22:33:25Z
+[2026-07-23T22:33:27Z] START dataset=amazon3 method=raw_qwen mode=kd teacher=qwen3.5-27b-vllm-guided L=50 seed=456
+[2026-07-23T22:34:30Z] OK dataset=amazon3 method=raw_qwen L=50 seed=456 status=0 start=2026-07-23T22:33:27Z end=2026-07-23T22:34:29Z
+[2026-07-23T22:34:31Z] START dataset=amazon3 method=prior_matched_qwen mode=kd teacher=qwen-prior-matched-guided L=50 seed=456
+[2026-07-23T22:35:32Z] OK dataset=amazon3 method=prior_matched_qwen L=50 seed=456 status=0 start=2026-07-23T22:34:31Z end=2026-07-23T22:35:31Z
+[2026-07-23T22:35:33Z] START dataset=amazon3 method=logit_mean mode=kd teacher=multi-mean-guided L=50 seed=456
+[2026-07-23T22:36:36Z] OK dataset=amazon3 method=logit_mean L=50 seed=456 status=0 start=2026-07-23T22:35:33Z end=2026-07-23T22:36:35Z
+[2026-07-23T22:36:37Z] START dataset=amazon3 method=prob_mean mode=kd teacher=multi-probmean-guided L=50 seed=456
+[2026-07-23T22:37:38Z] OK dataset=amazon3 method=prob_mean L=50 seed=456 status=0 start=2026-07-23T22:36:37Z end=2026-07-23T22:37:37Z
+[2026-07-23T22:37:39Z] START dataset=amazon3 method=prior_matched mode=kd teacher=multi-prior-matched-guided L=50 seed=456
+[2026-07-23T22:38:40Z] OK dataset=amazon3 method=prior_matched L=50 seed=456 status=0 start=2026-07-23T22:37:39Z end=2026-07-23T22:38:39Z
+[2026-07-23T22:38:41Z] START dataset=amazon3 method=scale_aligned mode=kd teacher=multi-scale-aligned-guided L=50 seed=456
+[2026-07-23T22:39:43Z] OK dataset=amazon3 method=scale_aligned L=50 seed=456 status=0 start=2026-07-23T22:38:41Z end=2026-07-23T22:39:42Z
+[2026-07-23T22:39:44Z] START dataset=amazon3 method=combined mode=kd teacher=multi-prior-scale-aligned-guided L=50 seed=456
+[2026-07-23T22:40:46Z] OK dataset=amazon3 method=combined L=50 seed=456 status=0 start=2026-07-23T22:39:44Z end=2026-07-23T22:40:45Z
+[2026-07-23T22:40:46Z] === runner end failures=0 started=192 skipped=0 ===

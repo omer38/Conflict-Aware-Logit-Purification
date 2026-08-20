@@ -1,0 +1,854 @@
+[2026-08-18T22:16:55Z] === prior_misspecification_a12_v1 runner begin ===
+[2026-08-18T22:16:55Z] OUT_DIR=outputs/student/prior_misspecification_a12_v1 expected_new_cells=36 expected_correct_baselines=18 expected_total_comparison_cells=54
+[2026-08-18T22:16:57Z] BASELINE OK dataset=ag_news L=10 seed=42 path=outputs/student/prompt_inclusive_core_3seed_v1/ag_news_kd_multi-prior-scale-aligned-guided_L10_s42_prompt-inclusive-v1.json
+[2026-08-18T22:16:58Z] BASELINE OK dataset=ag_news L=10 seed=123 path=outputs/student/prompt_inclusive_core_3seed_v1/ag_news_kd_multi-prior-scale-aligned-guided_L10_s123_prompt-inclusive-v1.json
+[2026-08-18T22:17:00Z] BASELINE OK dataset=ag_news L=10 seed=456 path=outputs/student/prompt_inclusive_core_3seed_v1/ag_news_kd_multi-prior-scale-aligned-guided_L10_s456_prompt-inclusive-v1.json
+[2026-08-18T22:17:01Z] BASELINE OK dataset=amazon L=10 seed=42 path=outputs/student/prompt_inclusive_core_3seed_v1/amazon_kd_multi-prior-scale-aligned-guided_L10_s42_prompt-inclusive-v1.json
+[2026-08-18T22:17:03Z] BASELINE OK dataset=amazon L=10 seed=123 path=outputs/student/prompt_inclusive_core_3seed_v1/amazon_kd_multi-prior-scale-aligned-guided_L10_s123_prompt-inclusive-v1.json
+[2026-08-18T22:17:04Z] BASELINE OK dataset=amazon L=10 seed=456 path=outputs/student/prompt_inclusive_core_3seed_v1/amazon_kd_multi-prior-scale-aligned-guided_L10_s456_prompt-inclusive-v1.json
+[2026-08-18T22:17:06Z] BASELINE OK dataset=yahoo L=10 seed=42 path=outputs/student/prompt_inclusive_core_3seed_v1/yahoo_kd_multi-prior-scale-aligned-guided_L10_s42_prompt-inclusive-v1.json
+[2026-08-18T22:17:07Z] BASELINE OK dataset=yahoo L=10 seed=123 path=outputs/student/prompt_inclusive_core_3seed_v1/yahoo_kd_multi-prior-scale-aligned-guided_L10_s123_prompt-inclusive-v1.json
+[2026-08-18T22:17:09Z] BASELINE OK dataset=yahoo L=10 seed=456 path=outputs/student/prompt_inclusive_core_3seed_v1/yahoo_kd_multi-prior-scale-aligned-guided_L10_s456_prompt-inclusive-v1.json
+[2026-08-18T22:17:10Z] BASELINE OK dataset=ag_news L=50 seed=42 path=outputs/student/prompt_inclusive_core_3seed_v1/ag_news_kd_multi-prior-scale-aligned-guided_L50_s42_prompt-inclusive-v1.json
+[2026-08-18T22:17:12Z] BASELINE OK dataset=ag_news L=50 seed=123 path=outputs/student/prompt_inclusive_core_3seed_v1/ag_news_kd_multi-prior-scale-aligned-guided_L50_s123_prompt-inclusive-v1.json
+[2026-08-18T22:17:13Z] BASELINE OK dataset=ag_news L=50 seed=456 path=outputs/student/prompt_inclusive_core_3seed_v1/ag_news_kd_multi-prior-scale-aligned-guided_L50_s456_prompt-inclusive-v1.json
+[2026-08-18T22:17:15Z] BASELINE OK dataset=amazon L=50 seed=42 path=outputs/student/prompt_inclusive_core_3seed_v1/amazon_kd_multi-prior-scale-aligned-guided_L50_s42_prompt-inclusive-v1.json
+[2026-08-18T22:17:16Z] BASELINE OK dataset=amazon L=50 seed=123 path=outputs/student/prompt_inclusive_core_3seed_v1/amazon_kd_multi-prior-scale-aligned-guided_L50_s123_prompt-inclusive-v1.json
+[2026-08-18T22:17:18Z] BASELINE OK dataset=amazon L=50 seed=456 path=outputs/student/prompt_inclusive_core_3seed_v1/amazon_kd_multi-prior-scale-aligned-guided_L50_s456_prompt-inclusive-v1.json
+[2026-08-18T22:17:19Z] BASELINE OK dataset=yahoo L=50 seed=42 path=outputs/student/prompt_inclusive_core_3seed_v1/yahoo_kd_multi-prior-scale-aligned-guided_L50_s42_prompt-inclusive-v1.json
+[2026-08-18T22:17:21Z] BASELINE OK dataset=yahoo L=50 seed=123 path=outputs/student/prompt_inclusive_core_3seed_v1/yahoo_kd_multi-prior-scale-aligned-guided_L50_s123_prompt-inclusive-v1.json
+[2026-08-18T22:17:22Z] BASELINE OK dataset=yahoo L=50 seed=456 path=outputs/student/prompt_inclusive_core_3seed_v1/yahoo_kd_multi-prior-scale-aligned-guided_L50_s456_prompt-inclusive-v1.json
+[2026-08-18T22:17:22Z] All 18 correct-prior baseline cells validated.
+[2026-08-18T22:17:22Z] START dataset=ag_news condition=mild L=10 seed=42 start=2026-08-18T22:17:22Z
+Mode: kd | teacher: multi-prior-scale-aligned-guided | device: cuda
+Dataset: ag_news (4 classes) | declared_labeled=40 prompt_demos/class=2 CE/class=10 router_cal/class=0 unlabeled=5960 test=7600
+Training on 6000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6771.11it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.2344
+  epoch 2/3  loss 0.0671
+  epoch 3/3  loss 0.0407
+
+Test accuracy: 0.8404 | macro-F1: 0.8411
+Saved: outputs/student/prior_misspecification_a12_v1/ag_news_kd_multi-prior-scale-aligned-guided_prior-mild-d0_L10_s42_prompt-inclusive-v1.json
+[2026-08-18T22:19:16Z] OK dataset=ag_news condition=mild L=10 seed=42 status=0 start=2026-08-18T22:17:22Z end=2026-08-18T22:19:15Z
+[2026-08-18T22:19:16Z] START dataset=ag_news condition=strong L=10 seed=42 start=2026-08-18T22:19:16Z
+Mode: kd | teacher: multi-prior-scale-aligned-guided | device: cuda
+Dataset: ag_news (4 classes) | declared_labeled=40 prompt_demos/class=2 CE/class=10 router_cal/class=0 unlabeled=5960 test=7600
+Training on 6000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 8431.88it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.2329
+  epoch 2/3  loss 0.0649
+  epoch 3/3  loss 0.0362
+
+Test accuracy: 0.6164 | macro-F1: 0.6232
+Saved: outputs/student/prior_misspecification_a12_v1/ag_news_kd_multi-prior-scale-aligned-guided_prior-strong-d0_L10_s42_prompt-inclusive-v1.json
+[2026-08-18T22:21:12Z] OK dataset=ag_news condition=strong L=10 seed=42 status=0 start=2026-08-18T22:19:16Z end=2026-08-18T22:21:11Z
+[2026-08-18T22:21:12Z] START dataset=ag_news condition=mild L=10 seed=123 start=2026-08-18T22:21:12Z
+Mode: kd | teacher: multi-prior-scale-aligned-guided | device: cuda
+Dataset: ag_news (4 classes) | declared_labeled=40 prompt_demos/class=2 CE/class=10 router_cal/class=0 unlabeled=5960 test=7600
+Training on 6000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 7287.73it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.2867
+  epoch 2/3  loss 0.0843
+  epoch 3/3  loss 0.0450
+
+Test accuracy: 0.8354 | macro-F1: 0.8361
+Saved: outputs/student/prior_misspecification_a12_v1/ag_news_kd_multi-prior-scale-aligned-guided_prior-mild-d0_L10_s123_prompt-inclusive-v1.json
+[2026-08-18T22:23:09Z] OK dataset=ag_news condition=mild L=10 seed=123 status=0 start=2026-08-18T22:21:12Z end=2026-08-18T22:23:08Z
+[2026-08-18T22:23:09Z] START dataset=ag_news condition=strong L=10 seed=123 start=2026-08-18T22:23:09Z
+Mode: kd | teacher: multi-prior-scale-aligned-guided | device: cuda
+Dataset: ag_news (4 classes) | declared_labeled=40 prompt_demos/class=2 CE/class=10 router_cal/class=0 unlabeled=5960 test=7600
+Training on 6000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 7150.97it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.2747
+  epoch 2/3  loss 0.1078
+  epoch 3/3  loss 0.0502
+
+Test accuracy: 0.6080 | macro-F1: 0.6151
+Saved: outputs/student/prior_misspecification_a12_v1/ag_news_kd_multi-prior-scale-aligned-guided_prior-strong-d0_L10_s123_prompt-inclusive-v1.json
+[2026-08-18T22:25:05Z] OK dataset=ag_news condition=strong L=10 seed=123 status=0 start=2026-08-18T22:23:09Z end=2026-08-18T22:25:03Z
+[2026-08-18T22:25:05Z] START dataset=ag_news condition=mild L=10 seed=456 start=2026-08-18T22:25:05Z
+Mode: kd | teacher: multi-prior-scale-aligned-guided | device: cuda
+Dataset: ag_news (4 classes) | declared_labeled=40 prompt_demos/class=2 CE/class=10 router_cal/class=0 unlabeled=5960 test=7600
+Training on 6000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 7135.13it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.2703
+  epoch 2/3  loss 0.0788
+  epoch 3/3  loss 0.0457
+
+Test accuracy: 0.8568 | macro-F1: 0.8570
+Saved: outputs/student/prior_misspecification_a12_v1/ag_news_kd_multi-prior-scale-aligned-guided_prior-mild-d0_L10_s456_prompt-inclusive-v1.json
+[2026-08-18T22:27:02Z] OK dataset=ag_news condition=mild L=10 seed=456 status=0 start=2026-08-18T22:25:05Z end=2026-08-18T22:27:00Z
+[2026-08-18T22:27:02Z] START dataset=ag_news condition=strong L=10 seed=456 start=2026-08-18T22:27:02Z
+Mode: kd | teacher: multi-prior-scale-aligned-guided | device: cuda
+Dataset: ag_news (4 classes) | declared_labeled=40 prompt_demos/class=2 CE/class=10 router_cal/class=0 unlabeled=5960 test=7600
+Training on 6000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6350.34it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.2736
+  epoch 2/3  loss 0.0906
+  epoch 3/3  loss 0.0601
+
+Test accuracy: 0.7014 | macro-F1: 0.7047
+Saved: outputs/student/prior_misspecification_a12_v1/ag_news_kd_multi-prior-scale-aligned-guided_prior-strong-d0_L10_s456_prompt-inclusive-v1.json
+[2026-08-18T22:28:59Z] OK dataset=ag_news condition=strong L=10 seed=456 status=0 start=2026-08-18T22:27:02Z end=2026-08-18T22:28:57Z
+[2026-08-18T22:28:59Z] START dataset=amazon condition=mild L=10 seed=42 start=2026-08-18T22:28:59Z
+Mode: kd | teacher: multi-prior-scale-aligned-guided | device: cuda
+Dataset: amazon (5 classes) | declared_labeled=50 prompt_demos/class=2 CE/class=10 router_cal/class=0 unlabeled=2450 test=10000
+Training on 2500 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 7633.97it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.6445
+  epoch 2/3  loss 0.2615
+  epoch 3/3  loss 0.1409
+
+Test accuracy: 0.5435 | macro-F1: 0.5233
+Saved: outputs/student/prior_misspecification_a12_v1/amazon_kd_multi-prior-scale-aligned-guided_prior-mild-d0_L10_s42_prompt-inclusive-v1.json
+[2026-08-18T22:30:59Z] OK dataset=amazon condition=mild L=10 seed=42 status=0 start=2026-08-18T22:28:59Z end=2026-08-18T22:30:58Z
+[2026-08-18T22:30:59Z] START dataset=amazon condition=strong L=10 seed=42 start=2026-08-18T22:30:59Z
+Mode: kd | teacher: multi-prior-scale-aligned-guided | device: cuda
+Dataset: amazon (5 classes) | declared_labeled=50 prompt_demos/class=2 CE/class=10 router_cal/class=0 unlabeled=2450 test=10000
+Training on 2500 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6171.76it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.6925
+  epoch 2/3  loss 0.3156
+  epoch 3/3  loss 0.1515
+
+Test accuracy: 0.3548 | macro-F1: 0.3126
+Saved: outputs/student/prior_misspecification_a12_v1/amazon_kd_multi-prior-scale-aligned-guided_prior-strong-d0_L10_s42_prompt-inclusive-v1.json
+[2026-08-18T22:32:58Z] OK dataset=amazon condition=strong L=10 seed=42 status=0 start=2026-08-18T22:30:59Z end=2026-08-18T22:32:57Z
+[2026-08-18T22:32:58Z] START dataset=amazon condition=mild L=10 seed=123 start=2026-08-18T22:32:58Z
+Mode: kd | teacher: multi-prior-scale-aligned-guided | device: cuda
+Dataset: amazon (5 classes) | declared_labeled=50 prompt_demos/class=2 CE/class=10 router_cal/class=0 unlabeled=2450 test=10000
+Training on 2500 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 7250.03it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.7675
+  epoch 2/3  loss 0.3185
+  epoch 3/3  loss 0.1570
+
+Test accuracy: 0.5314 | macro-F1: 0.5136
+Saved: outputs/student/prior_misspecification_a12_v1/amazon_kd_multi-prior-scale-aligned-guided_prior-mild-d0_L10_s123_prompt-inclusive-v1.json
+[2026-08-18T22:34:58Z] OK dataset=amazon condition=mild L=10 seed=123 status=0 start=2026-08-18T22:32:58Z end=2026-08-18T22:34:57Z
+[2026-08-18T22:34:58Z] START dataset=amazon condition=strong L=10 seed=123 start=2026-08-18T22:34:58Z
+Mode: kd | teacher: multi-prior-scale-aligned-guided | device: cuda
+Dataset: amazon (5 classes) | declared_labeled=50 prompt_demos/class=2 CE/class=10 router_cal/class=0 unlabeled=2450 test=10000
+Training on 2500 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 7669.28it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.8031
+  epoch 2/3  loss 0.4590
+  epoch 3/3  loss 0.2076
+
+Test accuracy: 0.3232 | macro-F1: 0.2694
+Saved: outputs/student/prior_misspecification_a12_v1/amazon_kd_multi-prior-scale-aligned-guided_prior-strong-d0_L10_s123_prompt-inclusive-v1.json
+[2026-08-18T22:36:56Z] OK dataset=amazon condition=strong L=10 seed=123 status=0 start=2026-08-18T22:34:58Z end=2026-08-18T22:36:55Z
+[2026-08-18T22:36:56Z] START dataset=amazon condition=mild L=10 seed=456 start=2026-08-18T22:36:56Z
+Mode: kd | teacher: multi-prior-scale-aligned-guided | device: cuda
+Dataset: amazon (5 classes) | declared_labeled=50 prompt_demos/class=2 CE/class=10 router_cal/class=0 unlabeled=2450 test=10000
+Training on 2500 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6261.25it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.7318
+  epoch 2/3  loss 0.2902
+  epoch 3/3  loss 0.1476
+
+Test accuracy: 0.5531 | macro-F1: 0.5475
+Saved: outputs/student/prior_misspecification_a12_v1/amazon_kd_multi-prior-scale-aligned-guided_prior-mild-d0_L10_s456_prompt-inclusive-v1.json
+[2026-08-18T22:38:55Z] OK dataset=amazon condition=mild L=10 seed=456 status=0 start=2026-08-18T22:36:56Z end=2026-08-18T22:38:54Z
+[2026-08-18T22:38:55Z] START dataset=amazon condition=strong L=10 seed=456 start=2026-08-18T22:38:55Z
+Mode: kd | teacher: multi-prior-scale-aligned-guided | device: cuda
+Dataset: amazon (5 classes) | declared_labeled=50 prompt_demos/class=2 CE/class=10 router_cal/class=0 unlabeled=2450 test=10000
+Training on 2500 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 5876.31it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.7809
+  epoch 2/3  loss 0.3844
+  epoch 3/3  loss 0.1764
+
+Test accuracy: 0.3874 | macro-F1: 0.3581
+Saved: outputs/student/prior_misspecification_a12_v1/amazon_kd_multi-prior-scale-aligned-guided_prior-strong-d0_L10_s456_prompt-inclusive-v1.json
+[2026-08-18T22:40:54Z] OK dataset=amazon condition=strong L=10 seed=456 status=0 start=2026-08-18T22:38:55Z end=2026-08-18T22:40:53Z
+[2026-08-18T22:40:54Z] START dataset=yahoo condition=mild L=10 seed=42 start=2026-08-18T22:40:54Z
+Mode: kd | teacher: multi-prior-scale-aligned-guided | device: cuda
+Dataset: yahoo (10 classes) | declared_labeled=100 prompt_demos/class=2 CE/class=10 router_cal/class=0 unlabeled=4900 test=10000
+Training on 5000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 8363.64it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.6953
+  epoch 2/3  loss 0.3029
+  epoch 3/3  loss 0.1843
+
+Test accuracy: 0.5852 | macro-F1: 0.6006
+Saved: outputs/student/prior_misspecification_a12_v1/yahoo_kd_multi-prior-scale-aligned-guided_prior-mild-d0_L10_s42_prompt-inclusive-v1.json
+[2026-08-18T22:44:14Z] OK dataset=yahoo condition=mild L=10 seed=42 status=0 start=2026-08-18T22:40:54Z end=2026-08-18T22:44:13Z
+[2026-08-18T22:44:14Z] START dataset=yahoo condition=strong L=10 seed=42 start=2026-08-18T22:44:14Z
+Mode: kd | teacher: multi-prior-scale-aligned-guided | device: cuda
+Dataset: yahoo (10 classes) | declared_labeled=100 prompt_demos/class=2 CE/class=10 router_cal/class=0 unlabeled=4900 test=10000
+Training on 5000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6608.03it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.7941
+  epoch 2/3  loss 0.3523
+  epoch 3/3  loss 0.1919
+
+Test accuracy: 0.4049 | macro-F1: 0.4613
+Saved: outputs/student/prior_misspecification_a12_v1/yahoo_kd_multi-prior-scale-aligned-guided_prior-strong-d0_L10_s42_prompt-inclusive-v1.json
+[2026-08-18T22:47:34Z] OK dataset=yahoo condition=strong L=10 seed=42 status=0 start=2026-08-18T22:44:14Z end=2026-08-18T22:47:33Z
+[2026-08-18T22:47:34Z] START dataset=yahoo condition=mild L=10 seed=123 start=2026-08-18T22:47:34Z
+Mode: kd | teacher: multi-prior-scale-aligned-guided | device: cuda
+Dataset: yahoo (10 classes) | declared_labeled=100 prompt_demos/class=2 CE/class=10 router_cal/class=0 unlabeled=4900 test=10000
+Training on 5000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 7748.45it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.6496
+  epoch 2/3  loss 0.2787
+  epoch 3/3  loss 0.1609
+
+Test accuracy: 0.5843 | macro-F1: 0.6013
+Saved: outputs/student/prior_misspecification_a12_v1/yahoo_kd_multi-prior-scale-aligned-guided_prior-mild-d0_L10_s123_prompt-inclusive-v1.json
+[2026-08-18T22:50:53Z] OK dataset=yahoo condition=mild L=10 seed=123 status=0 start=2026-08-18T22:47:34Z end=2026-08-18T22:50:51Z
+[2026-08-18T22:50:53Z] START dataset=yahoo condition=strong L=10 seed=123 start=2026-08-18T22:50:53Z
+Mode: kd | teacher: multi-prior-scale-aligned-guided | device: cuda
+Dataset: yahoo (10 classes) | declared_labeled=100 prompt_demos/class=2 CE/class=10 router_cal/class=0 unlabeled=4900 test=10000
+Training on 5000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 5787.65it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.7527
+  epoch 2/3  loss 0.3273
+  epoch 3/3  loss 0.1795
+
+Test accuracy: 0.4194 | macro-F1: 0.4736
+Saved: outputs/student/prior_misspecification_a12_v1/yahoo_kd_multi-prior-scale-aligned-guided_prior-strong-d0_L10_s123_prompt-inclusive-v1.json
+[2026-08-18T22:54:13Z] OK dataset=yahoo condition=strong L=10 seed=123 status=0 start=2026-08-18T22:50:53Z end=2026-08-18T22:54:12Z
+[2026-08-18T22:54:13Z] START dataset=yahoo condition=mild L=10 seed=456 start=2026-08-18T22:54:13Z
+Mode: kd | teacher: multi-prior-scale-aligned-guided | device: cuda
+Dataset: yahoo (10 classes) | declared_labeled=100 prompt_demos/class=2 CE/class=10 router_cal/class=0 unlabeled=4900 test=10000
+Training on 5000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 8962.47it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.7714
+  epoch 2/3  loss 0.3188
+  epoch 3/3  loss 0.1820
+
+Test accuracy: 0.5717 | macro-F1: 0.5900
+Saved: outputs/student/prior_misspecification_a12_v1/yahoo_kd_multi-prior-scale-aligned-guided_prior-mild-d0_L10_s456_prompt-inclusive-v1.json
+[2026-08-18T22:57:32Z] OK dataset=yahoo condition=mild L=10 seed=456 status=0 start=2026-08-18T22:54:13Z end=2026-08-18T22:57:30Z
+[2026-08-18T22:57:32Z] START dataset=yahoo condition=strong L=10 seed=456 start=2026-08-18T22:57:32Z
+Mode: kd | teacher: multi-prior-scale-aligned-guided | device: cuda
+Dataset: yahoo (10 classes) | declared_labeled=100 prompt_demos/class=2 CE/class=10 router_cal/class=0 unlabeled=4900 test=10000
+Training on 5000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 7485.50it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.9068
+  epoch 2/3  loss 0.3750
+  epoch 3/3  loss 0.1990
+
+Test accuracy: 0.3613 | macro-F1: 0.4178
+Saved: outputs/student/prior_misspecification_a12_v1/yahoo_kd_multi-prior-scale-aligned-guided_prior-strong-d0_L10_s456_prompt-inclusive-v1.json
+[2026-08-18T23:00:50Z] OK dataset=yahoo condition=strong L=10 seed=456 status=0 start=2026-08-18T22:57:32Z end=2026-08-18T23:00:49Z
+[2026-08-18T23:00:50Z] START dataset=ag_news condition=mild L=50 seed=42 start=2026-08-18T23:00:50Z
+Mode: kd | teacher: multi-prior-scale-aligned-guided | device: cuda
+Dataset: ag_news (4 classes) | declared_labeled=200 prompt_demos/class=2 CE/class=50 router_cal/class=0 unlabeled=5800 test=7600
+Training on 6000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6944.13it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.3927
+  epoch 2/3  loss 0.1223
+  epoch 3/3  loss 0.0678
+
+Test accuracy: 0.8430 | macro-F1: 0.8437
+Saved: outputs/student/prior_misspecification_a12_v1/ag_news_kd_multi-prior-scale-aligned-guided_prior-mild-d0_L50_s42_prompt-inclusive-v1.json
+[2026-08-18T23:02:46Z] OK dataset=ag_news condition=mild L=50 seed=42 status=0 start=2026-08-18T23:00:50Z end=2026-08-18T23:02:44Z
+[2026-08-18T23:02:46Z] START dataset=ag_news condition=strong L=50 seed=42 start=2026-08-18T23:02:46Z
+Mode: kd | teacher: multi-prior-scale-aligned-guided | device: cuda
+Dataset: ag_news (4 classes) | declared_labeled=200 prompt_demos/class=2 CE/class=50 router_cal/class=0 unlabeled=5800 test=7600
+Training on 6000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6945.73it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.4827
+  epoch 2/3  loss 0.1958
+  epoch 3/3  loss 0.1172
+
+Test accuracy: 0.6572 | macro-F1: 0.6589
+Saved: outputs/student/prior_misspecification_a12_v1/ag_news_kd_multi-prior-scale-aligned-guided_prior-strong-d0_L50_s42_prompt-inclusive-v1.json
+[2026-08-18T23:04:41Z] OK dataset=ag_news condition=strong L=50 seed=42 status=0 start=2026-08-18T23:02:46Z end=2026-08-18T23:04:40Z
+[2026-08-18T23:04:41Z] START dataset=ag_news condition=mild L=50 seed=123 start=2026-08-18T23:04:41Z
+Mode: kd | teacher: multi-prior-scale-aligned-guided | device: cuda
+Dataset: ag_news (4 classes) | declared_labeled=200 prompt_demos/class=2 CE/class=50 router_cal/class=0 unlabeled=5800 test=7600
+Training on 6000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6235.72it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.4409
+  epoch 2/3  loss 0.1539
+  epoch 3/3  loss 0.0834
+
+Test accuracy: 0.8425 | macro-F1: 0.8428
+Saved: outputs/student/prior_misspecification_a12_v1/ag_news_kd_multi-prior-scale-aligned-guided_prior-mild-d0_L50_s123_prompt-inclusive-v1.json
+[2026-08-18T23:06:37Z] OK dataset=ag_news condition=mild L=50 seed=123 status=0 start=2026-08-18T23:04:41Z end=2026-08-18T23:06:36Z
+[2026-08-18T23:06:37Z] START dataset=ag_news condition=strong L=50 seed=123 start=2026-08-18T23:06:37Z
+Mode: kd | teacher: multi-prior-scale-aligned-guided | device: cuda
+Dataset: ag_news (4 classes) | declared_labeled=200 prompt_demos/class=2 CE/class=50 router_cal/class=0 unlabeled=5800 test=7600
+Training on 6000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 4916.15it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.5073
+  epoch 2/3  loss 0.2210
+  epoch 3/3  loss 0.1191
+
+Test accuracy: 0.7136 | macro-F1: 0.7151
+Saved: outputs/student/prior_misspecification_a12_v1/ag_news_kd_multi-prior-scale-aligned-guided_prior-strong-d0_L50_s123_prompt-inclusive-v1.json
+[2026-08-18T23:08:35Z] OK dataset=ag_news condition=strong L=50 seed=123 status=0 start=2026-08-18T23:06:37Z end=2026-08-18T23:08:34Z
+[2026-08-18T23:08:35Z] START dataset=ag_news condition=mild L=50 seed=456 start=2026-08-18T23:08:35Z
+Mode: kd | teacher: multi-prior-scale-aligned-guided | device: cuda
+Dataset: ag_news (4 classes) | declared_labeled=200 prompt_demos/class=2 CE/class=50 router_cal/class=0 unlabeled=5800 test=7600
+Training on 6000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6920.37it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.3493
+  epoch 2/3  loss 0.1180
+  epoch 3/3  loss 0.0771
+
+Test accuracy: 0.8488 | macro-F1: 0.8495
+Saved: outputs/student/prior_misspecification_a12_v1/ag_news_kd_multi-prior-scale-aligned-guided_prior-mild-d0_L50_s456_prompt-inclusive-v1.json
+[2026-08-18T23:10:31Z] OK dataset=ag_news condition=mild L=50 seed=456 status=0 start=2026-08-18T23:08:35Z end=2026-08-18T23:10:30Z
+[2026-08-18T23:10:31Z] START dataset=ag_news condition=strong L=50 seed=456 start=2026-08-18T23:10:31Z
+Mode: kd | teacher: multi-prior-scale-aligned-guided | device: cuda
+Dataset: ag_news (4 classes) | declared_labeled=200 prompt_demos/class=2 CE/class=50 router_cal/class=0 unlabeled=5800 test=7600
+Training on 6000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 7729.86it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.4351
+  epoch 2/3  loss 0.1904
+  epoch 3/3  loss 0.1269
+
+Test accuracy: 0.6658 | macro-F1: 0.6770
+Saved: outputs/student/prior_misspecification_a12_v1/ag_news_kd_multi-prior-scale-aligned-guided_prior-strong-d0_L50_s456_prompt-inclusive-v1.json
+[2026-08-18T23:12:26Z] OK dataset=ag_news condition=strong L=50 seed=456 status=0 start=2026-08-18T23:10:31Z end=2026-08-18T23:12:25Z
+[2026-08-18T23:12:26Z] START dataset=amazon condition=mild L=50 seed=42 start=2026-08-18T23:12:26Z
+Mode: kd | teacher: multi-prior-scale-aligned-guided | device: cuda
+Dataset: amazon (5 classes) | declared_labeled=250 prompt_demos/class=2 CE/class=50 router_cal/class=0 unlabeled=2250 test=10000
+Training on 2500 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 8327.38it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 1.1715
+  epoch 2/3  loss 0.6768
+  epoch 3/3  loss 0.3676
+
+Test accuracy: 0.5331 | macro-F1: 0.5341
+Saved: outputs/student/prior_misspecification_a12_v1/amazon_kd_multi-prior-scale-aligned-guided_prior-mild-d0_L50_s42_prompt-inclusive-v1.json
+[2026-08-18T23:14:23Z] OK dataset=amazon condition=mild L=50 seed=42 status=0 start=2026-08-18T23:12:26Z end=2026-08-18T23:14:22Z
+[2026-08-18T23:14:23Z] START dataset=amazon condition=strong L=50 seed=42 start=2026-08-18T23:14:23Z
+Mode: kd | teacher: multi-prior-scale-aligned-guided | device: cuda
+Dataset: amazon (5 classes) | declared_labeled=250 prompt_demos/class=2 CE/class=50 router_cal/class=0 unlabeled=2250 test=10000
+Training on 2500 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6914.75it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 1.1892
+  epoch 2/3  loss 0.8043
+  epoch 3/3  loss 0.4265
+
+Test accuracy: 0.5117 | macro-F1: 0.4988
+Saved: outputs/student/prior_misspecification_a12_v1/amazon_kd_multi-prior-scale-aligned-guided_prior-strong-d0_L50_s42_prompt-inclusive-v1.json
+[2026-08-18T23:16:21Z] OK dataset=amazon condition=strong L=50 seed=42 status=0 start=2026-08-18T23:14:23Z end=2026-08-18T23:16:20Z
+[2026-08-18T23:16:21Z] START dataset=amazon condition=mild L=50 seed=123 start=2026-08-18T23:16:21Z
+Mode: kd | teacher: multi-prior-scale-aligned-guided | device: cuda
+Dataset: amazon (5 classes) | declared_labeled=250 prompt_demos/class=2 CE/class=50 router_cal/class=0 unlabeled=2250 test=10000
+Training on 2500 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 7843.27it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 1.3084
+  epoch 2/3  loss 0.7459
+  epoch 3/3  loss 0.3994
+
+Test accuracy: 0.5015 | macro-F1: 0.4814
+Saved: outputs/student/prior_misspecification_a12_v1/amazon_kd_multi-prior-scale-aligned-guided_prior-mild-d0_L50_s123_prompt-inclusive-v1.json
+[2026-08-18T23:18:19Z] OK dataset=amazon condition=mild L=50 seed=123 status=0 start=2026-08-18T23:16:21Z end=2026-08-18T23:18:18Z
+[2026-08-18T23:18:19Z] START dataset=amazon condition=strong L=50 seed=123 start=2026-08-18T23:18:19Z
+Mode: kd | teacher: multi-prior-scale-aligned-guided | device: cuda
+Dataset: amazon (5 classes) | declared_labeled=250 prompt_demos/class=2 CE/class=50 router_cal/class=0 unlabeled=2250 test=10000
+Training on 2500 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 8227.09it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 1.3478
+  epoch 2/3  loss 0.8013
+  epoch 3/3  loss 0.4314
+
+Test accuracy: 0.4044 | macro-F1: 0.3630
+Saved: outputs/student/prior_misspecification_a12_v1/amazon_kd_multi-prior-scale-aligned-guided_prior-strong-d0_L50_s123_prompt-inclusive-v1.json
+[2026-08-18T23:20:17Z] OK dataset=amazon condition=strong L=50 seed=123 status=0 start=2026-08-18T23:18:19Z end=2026-08-18T23:20:16Z
+[2026-08-18T23:20:17Z] START dataset=amazon condition=mild L=50 seed=456 start=2026-08-18T23:20:17Z
+Mode: kd | teacher: multi-prior-scale-aligned-guided | device: cuda
+Dataset: amazon (5 classes) | declared_labeled=250 prompt_demos/class=2 CE/class=50 router_cal/class=0 unlabeled=2250 test=10000
+Training on 2500 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 8599.42it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 1.1337
+  epoch 2/3  loss 0.5946
+  epoch 3/3  loss 0.3608
+
+Test accuracy: 0.5627 | macro-F1: 0.5477
+Saved: outputs/student/prior_misspecification_a12_v1/amazon_kd_multi-prior-scale-aligned-guided_prior-mild-d0_L50_s456_prompt-inclusive-v1.json
+[2026-08-18T23:22:15Z] OK dataset=amazon condition=mild L=50 seed=456 status=0 start=2026-08-18T23:20:17Z end=2026-08-18T23:22:14Z
+[2026-08-18T23:22:15Z] START dataset=amazon condition=strong L=50 seed=456 start=2026-08-18T23:22:15Z
+Mode: kd | teacher: multi-prior-scale-aligned-guided | device: cuda
+Dataset: amazon (5 classes) | declared_labeled=250 prompt_demos/class=2 CE/class=50 router_cal/class=0 unlabeled=2250 test=10000
+Training on 2500 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 7602.02it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 1.3119
+  epoch 2/3  loss 0.8500
+  epoch 3/3  loss 0.5264
+
+Test accuracy: 0.4342 | macro-F1: 0.3899
+Saved: outputs/student/prior_misspecification_a12_v1/amazon_kd_multi-prior-scale-aligned-guided_prior-strong-d0_L50_s456_prompt-inclusive-v1.json
+[2026-08-18T23:24:13Z] OK dataset=amazon condition=strong L=50 seed=456 status=0 start=2026-08-18T23:22:15Z end=2026-08-18T23:24:12Z
+[2026-08-18T23:24:13Z] START dataset=yahoo condition=mild L=50 seed=42 start=2026-08-18T23:24:13Z
+Mode: kd | teacher: multi-prior-scale-aligned-guided | device: cuda
+Dataset: yahoo (10 classes) | declared_labeled=500 prompt_demos/class=2 CE/class=50 router_cal/class=0 unlabeled=4500 test=10000
+Training on 5000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 7400.53it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 1.1425
+  epoch 2/3  loss 0.5606
+  epoch 3/3  loss 0.3539
+
+Test accuracy: 0.5997 | macro-F1: 0.6055
+Saved: outputs/student/prior_misspecification_a12_v1/yahoo_kd_multi-prior-scale-aligned-guided_prior-mild-d0_L50_s42_prompt-inclusive-v1.json
+[2026-08-18T23:27:32Z] OK dataset=yahoo condition=mild L=50 seed=42 status=0 start=2026-08-18T23:24:13Z end=2026-08-18T23:27:31Z
+[2026-08-18T23:27:32Z] START dataset=yahoo condition=strong L=50 seed=42 start=2026-08-18T23:27:32Z
+Mode: kd | teacher: multi-prior-scale-aligned-guided | device: cuda
+Dataset: yahoo (10 classes) | declared_labeled=500 prompt_demos/class=2 CE/class=50 router_cal/class=0 unlabeled=4500 test=10000
+Training on 5000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 7698.98it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 1.3915
+  epoch 2/3  loss 0.7159
+  epoch 3/3  loss 0.4510
+
+Test accuracy: 0.5075 | macro-F1: 0.5484
+Saved: outputs/student/prior_misspecification_a12_v1/yahoo_kd_multi-prior-scale-aligned-guided_prior-strong-d0_L50_s42_prompt-inclusive-v1.json
+[2026-08-18T23:30:51Z] OK dataset=yahoo condition=strong L=50 seed=42 status=0 start=2026-08-18T23:27:32Z end=2026-08-18T23:30:50Z
+[2026-08-18T23:30:51Z] START dataset=yahoo condition=mild L=50 seed=123 start=2026-08-18T23:30:51Z
+Mode: kd | teacher: multi-prior-scale-aligned-guided | device: cuda
+Dataset: yahoo (10 classes) | declared_labeled=500 prompt_demos/class=2 CE/class=50 router_cal/class=0 unlabeled=4500 test=10000
+Training on 5000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 7793.65it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 1.2105
+  epoch 2/3  loss 0.5626
+  epoch 3/3  loss 0.3514
+
+Test accuracy: 0.5713 | macro-F1: 0.5866
+Saved: outputs/student/prior_misspecification_a12_v1/yahoo_kd_multi-prior-scale-aligned-guided_prior-mild-d0_L50_s123_prompt-inclusive-v1.json
+[2026-08-18T23:34:12Z] OK dataset=yahoo condition=mild L=50 seed=123 status=0 start=2026-08-18T23:30:51Z end=2026-08-18T23:34:10Z
+[2026-08-18T23:34:12Z] START dataset=yahoo condition=strong L=50 seed=123 start=2026-08-18T23:34:12Z
+Mode: kd | teacher: multi-prior-scale-aligned-guided | device: cuda
+Dataset: yahoo (10 classes) | declared_labeled=500 prompt_demos/class=2 CE/class=50 router_cal/class=0 unlabeled=4500 test=10000
+Training on 5000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 8922.52it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 1.4013
+  epoch 2/3  loss 0.7382
+  epoch 3/3  loss 0.4717
+
+Test accuracy: 0.4119 | macro-F1: 0.4567
+Saved: outputs/student/prior_misspecification_a12_v1/yahoo_kd_multi-prior-scale-aligned-guided_prior-strong-d0_L50_s123_prompt-inclusive-v1.json
+[2026-08-18T23:37:31Z] OK dataset=yahoo condition=strong L=50 seed=123 status=0 start=2026-08-18T23:34:12Z end=2026-08-18T23:37:30Z
+[2026-08-18T23:37:31Z] START dataset=yahoo condition=mild L=50 seed=456 start=2026-08-18T23:37:31Z
+Mode: kd | teacher: multi-prior-scale-aligned-guided | device: cuda
+Dataset: yahoo (10 classes) | declared_labeled=500 prompt_demos/class=2 CE/class=50 router_cal/class=0 unlabeled=4500 test=10000
+Training on 5000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 5337.76it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 1.1973
+  epoch 2/3  loss 0.6437
+  epoch 3/3  loss 0.4029
+
+Test accuracy: 0.5980 | macro-F1: 0.6056
+Saved: outputs/student/prior_misspecification_a12_v1/yahoo_kd_multi-prior-scale-aligned-guided_prior-mild-d0_L50_s456_prompt-inclusive-v1.json
+[2026-08-18T23:40:50Z] OK dataset=yahoo condition=mild L=50 seed=456 status=0 start=2026-08-18T23:37:31Z end=2026-08-18T23:40:49Z
+[2026-08-18T23:40:50Z] START dataset=yahoo condition=strong L=50 seed=456 start=2026-08-18T23:40:50Z
+Mode: kd | teacher: multi-prior-scale-aligned-guided | device: cuda
+Dataset: yahoo (10 classes) | declared_labeled=500 prompt_demos/class=2 CE/class=50 router_cal/class=0 unlabeled=4500 test=10000
+Training on 5000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 8196.24it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 1.4387
+  epoch 2/3  loss 0.8496
+  epoch 3/3  loss 0.5157
+
+Test accuracy: 0.5201 | macro-F1: 0.5618
+Saved: outputs/student/prior_misspecification_a12_v1/yahoo_kd_multi-prior-scale-aligned-guided_prior-strong-d0_L50_s456_prompt-inclusive-v1.json
+[2026-08-18T23:44:10Z] OK dataset=yahoo condition=strong L=50 seed=456 status=0 start=2026-08-18T23:40:50Z end=2026-08-18T23:44:09Z
+[2026-08-18T23:44:10Z] === runner end started=36 skipped=0 completed=36 failures=0 ===
+[2026-08-18T23:44:10Z] overall_start=2026-08-18T22:16:55Z overall_end=2026-08-18T23:44:10Z
+started=36 skipped=0 completed=36 failures=0 (valid new cells: 36/36)
+All 36 new prior-misspecification cells are complete under outputs/student/prior_misspecification_a12_v1.
+Combined with the 18 correct-prior baselines, all 54 comparison cells are ready for analysis.

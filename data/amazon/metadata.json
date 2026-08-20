@@ -1,0 +1,39 @@
+{
+  "source": "vgaraujov/amazon_review_full",
+  "artifact_version": "large-test-v1",
+  "num_classes": 5,
+  "label_names": [
+    "1 star",
+    "2 stars",
+    "3 stars",
+    "4 stars",
+    "5 stars"
+  ],
+  "train_per_class": 500,
+  "test_per_class": 2000,
+  "seed": 42,
+  "train_size": 2500,
+  "test_size": 10000,
+  "train_identity": {
+    "size": 2500,
+    "class_counts": [
+      500,
+      500,
+      500,
+      500,
+      500
+    ],
+    "sha256": "f26f23b0190fbf3a6085e2e5e5ec6398159b67e568fd3bca4abd1b254b8310bd"
+  },
+  "test_identity": {
+    "size": 10000,
+    "class_counts": [
+      2000,
+      2000,
+      2000,
+      2000,
+      2000
+    ],
+    "sha256": "49567974d753373ebda68ff5b521d336095fca0de443f80fc4894218d04b50c4"
+  }
+}

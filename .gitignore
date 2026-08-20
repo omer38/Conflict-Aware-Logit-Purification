@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+
+# Virtual environment
+.venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+
+# Secrets
+.env
+
+# vLLM server (Python 3.12 — separate from main .venv)
+vllm-server/.venv/
+vllm.log
+vllm-env/
+.venv-vllm/
+
+# Cached teacher logits (large files)
+cache/
+
+# IDE
+.vscode/
+.idea/

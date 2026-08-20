@@ -1,0 +1,27 @@
+{
+  "dataset": "amazon",
+  "mode": "kd",
+  "teacher": "multi-probmean-guided",
+  "labels_per_class": 10,
+  "seed": 42,
+  "cal_ratio": 0.3,
+  "config": {
+    "model_name": "answerdotai/ModernBERT-base",
+    "max_length": 256,
+    "lr": 2e-05,
+    "batch_size": 16,
+    "epochs": 3,
+    "temperature": 2.0,
+    "alpha": 0.5
+  },
+  "metrics": {
+    "accuracy": 0.57,
+    "macro_f1": 0.5566710292188402
+  },
+  "aggregation": "prob_mean",
+  "teachers": [
+    "qwen3.5-27b-vllm-guided",
+    "gemma4-26b-vllm-guided",
+    "mistral-small-24b-vllm-guided"
+  ]
+}

@@ -1,0 +1,98 @@
+[
+  {
+    "dataset": "ag_news",
+    "display_name": "AG News",
+    "teachers": [
+      "qwen3.5-27b-vllm-guided",
+      "gemma4-26b-vllm-guided",
+      "mistral-small-24b-vllm-guided"
+    ],
+    "fitted_scales": {
+      "qwen3.5-27b-vllm-guided": 1.3909773230552638,
+      "gemma4-26b-vllm-guided": 2.5612493753433183,
+      "mistral-small-24b-vllm-guided": 0.9999999701976837
+    },
+    "entropy_units": "nats",
+    "h_raw": 0.1256699562072754,
+    "h_aligned": 0.24462978541851044,
+    "h_kd": 0.6886692643165588,
+    "kd_temperature": 2.0,
+    "definitions": {
+      "h_raw": "entropy of the unaligned arithmetic probability-mean target",
+      "h_aligned": "entropy after uniform-prior matching and confidence-scale alignment, before KD softening",
+      "h_kd": "entropy of the aligned target after KD softening"
+    }
+  },
+  {
+    "dataset": "yahoo",
+    "display_name": "Yahoo",
+    "teachers": [
+      "qwen3.5-27b-vllm-guided",
+      "gemma4-26b-vllm-guided",
+      "mistral-small-24b-vllm-guided"
+    ],
+    "fitted_scales": {
+      "qwen3.5-27b-vllm-guided": 1.2405658364295973,
+      "gemma4-26b-vllm-guided": 3.1596273183822623,
+      "mistral-small-24b-vllm-guided": 0.9999999701976837
+    },
+    "entropy_units": "nats",
+    "h_raw": 0.5557959079742432,
+    "h_aligned": 0.8382529020309448,
+    "h_kd": 1.7255349159240723,
+    "kd_temperature": 2.0,
+    "definitions": {
+      "h_raw": "entropy of the unaligned arithmetic probability-mean target",
+      "h_aligned": "entropy after uniform-prior matching and confidence-scale alignment, before KD softening",
+      "h_kd": "entropy of the aligned target after KD softening"
+    }
+  },
+  {
+    "dataset": "amazon",
+    "display_name": "Amazon",
+    "teachers": [
+      "qwen3.5-27b-vllm-guided",
+      "gemma4-26b-vllm-guided",
+      "mistral-small-24b-vllm-guided"
+    ],
+    "fitted_scales": {
+      "qwen3.5-27b-vllm-guided": 2.024350762367254,
+      "gemma4-26b-vllm-guided": 4.802431821823115,
+      "mistral-small-24b-vllm-guided": 0.9999999701976837
+    },
+    "entropy_units": "nats",
+    "h_raw": 0.5244625806808472,
+    "h_aligned": 0.868446946144104,
+    "h_kd": 1.3089396953582764,
+    "kd_temperature": 2.0,
+    "definitions": {
+      "h_raw": "entropy of the unaligned arithmetic probability-mean target",
+      "h_aligned": "entropy after uniform-prior matching and confidence-scale alignment, before KD softening",
+      "h_kd": "entropy of the aligned target after KD softening"
+    }
+  },
+  {
+    "dataset": "amazon3",
+    "display_name": "Amazon-3",
+    "teachers": [
+      "qwen3.5-27b-vllm-guided",
+      "gemma4-26b-vllm-guided",
+      "mistral-small-24b-vllm-guided"
+    ],
+    "fitted_scales": {
+      "qwen3.5-27b-vllm-guided": 1.9795872569084212,
+      "gemma4-26b-vllm-guided": 4.506167173385618,
+      "mistral-small-24b-vllm-guided": 0.9999999701976837
+    },
+    "entropy_units": "nats",
+    "h_raw": 0.34422600269317627,
+    "h_aligned": 0.5171247720718384,
+    "h_kd": 0.8539747595787048,
+    "kd_temperature": 2.0,
+    "definitions": {
+      "h_raw": "entropy of the unaligned arithmetic probability-mean target",
+      "h_aligned": "entropy after uniform-prior matching and confidence-scale alignment, before KD softening",
+      "h_kd": "entropy of the aligned target after KD softening"
+    }
+  }
+]

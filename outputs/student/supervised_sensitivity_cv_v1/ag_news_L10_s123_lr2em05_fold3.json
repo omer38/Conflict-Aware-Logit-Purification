@@ -1,0 +1,70 @@
+{
+  "protocol": "prompt-inclusive-supervised-cv-v1",
+  "dataset": "ag_news",
+  "labels_per_class": 10,
+  "seed": 123,
+  "learning_rate": 2e-05,
+  "fold": 3,
+  "n_splits": 5,
+  "run_seed": 12303,
+  "selection_split": "labelled training pool only",
+  "selection_metric": "macro_f1",
+  "train_indices": [
+    1499,
+    1498,
+    23,
+    329,
+    381,
+    1359,
+    1018,
+    885,
+    2999,
+    2998,
+    1537,
+    2723,
+    2267,
+    2830,
+    1901,
+    2676,
+    4499,
+    4498,
+    3346,
+    4250,
+    3221,
+    4197,
+    4385,
+    3939,
+    5999,
+    5998,
+    5370,
+    5041,
+    4714,
+    4524,
+    4775,
+    5242
+  ],
+  "validation_indices": [
+    80,
+    276,
+    1912,
+    2787,
+    3654,
+    4105,
+    4522,
+    5121
+  ],
+  "checkpoints": {
+    "2": {
+      "accuracy": 0.375,
+      "macro_f1": 0.30952380952380953
+    },
+    "3": {
+      "accuracy": 0.625,
+      "macro_f1": 0.6428571428571428
+    },
+    "5": {
+      "accuracy": 0.75,
+      "macro_f1": 0.7499999999999999
+    }
+  }
+}

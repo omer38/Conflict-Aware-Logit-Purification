@@ -1,0 +1,214 @@
+Dataset: Banking77  |  77 intent classes
+Teacher: gpt-4o
+Note: top_logprobs=20, so at most 20 of 77 classes can appear in any response.
+
+======================================================================
+SAMPLE 0
+  Text       : "I am still waiting on my card?"
+  True label : 11 = card_arrival
+  LLM said   : "11"
+
+  RAW top-20 tokens the LLM returned (its view of the whole vocab):
+         token   logprob     prob   kept?
+          '11'    -0.043   95.81%   KEEP -> class 11 (card_arrival)
+          '12'    -3.230    3.95%   KEEP -> class 12 (card_delivery_estimate)
+          '38'    -6.262    0.19%   KEEP -> class 38 (get_physical_card)
+          '43'    -7.855    0.04%   KEEP -> class 43 (order_physical_card)
+          '10'   -10.387    0.00%   KEEP -> class 10 (card_acceptance)
+          '13'   -10.480    0.00%   KEEP -> class 13 (card_linking)
+          '39'   -11.012    0.00%   KEEP -> class 39 (getting_spare_card)
+          '41'   -13.246    0.00%   KEEP -> class 41 (lost_or_stolen_card)
+          '14'   -13.293    0.00%   KEEP -> class 14 (card_not_working)
+           '9'   -13.324    0.00%   KEEP -> class 9 (card_about_to_expire)
+           '1'   -13.433    0.00%   KEEP -> class 1 (age_limit)
+          '42'   -13.777    0.00%   KEEP -> class 42 (lost_or_stolen_phone)
+          '40'   -13.840    0.00%   KEEP -> class 40 (getting_virtual_card)
+           '3'   -14.027    0.00%   KEEP -> class 3 (atm_support)
+          '44'   -14.355    0.00%   KEEP -> class 44 (passcode_forgotten)
+          '15'   -14.558    0.00%   KEEP -> class 15 (card_payment_fee_charged)
+           ' '   -14.683    0.00%   skip (not a class index)
+           '2'   -14.738    0.00%   KEEP -> class 2 (apple_pay_or_google_pay)
+          '18'   -15.527    0.00%   KEEP -> class 18 (card_swallowed)
+           '8'   -15.652    0.00%   KEEP -> class 8 (cancel_transfer)
+
+  CLEAN output: 19 classes observed in top-k (58/77 at LOGPROB_FLOOR -- not seen by the model):
+    class  name                                   logit      prob
+       11  card_arrival                          -0.043    95.81%
+       12  card_delivery_estimate                -3.230     3.95%
+       38  get_physical_card                     -6.262     0.19%
+       43  order_physical_card                   -7.855     0.04%
+       10  card_acceptance                      -10.387     0.00%
+       13  card_linking                         -10.480     0.00%
+       39  getting_spare_card                   -11.012     0.00%
+       41  lost_or_stolen_card                  -13.246     0.00%
+       14  card_not_working                     -13.293     0.00%
+        9  card_about_to_expire                 -13.324     0.00%
+        1  age_limit                            -13.433     0.00%
+       42  lost_or_stolen_phone                 -13.777     0.00%
+       40  getting_virtual_card                 -13.840     0.00%
+        3  atm_support                          -14.027     0.00%
+       44  passcode_forgotten                   -14.355     0.00%
+       15  card_payment_fee_charged             -14.558     0.00%
+        2  apple_pay_or_google_pay              -14.738     0.00%
+       18  card_swallowed                       -15.527     0.00%
+        8  cancel_transfer                      -15.652     0.00%
+
+  Prediction : class 11 = card_arrival  (correct)
+----------------------------------------------------------------------
+
+SAMPLE 1
+  Text       : "What can I do if my card still hasn't arrived after 2 weeks?"
+  True label : 11 = card_arrival
+  LLM said   : "12"
+
+  RAW top-20 tokens the LLM returned (its view of the whole vocab):
+         token   logprob     prob   kept?
+          '12'    -0.457   63.33%   KEEP -> class 12 (card_delivery_estimate)
+          '11'    -1.004   36.65%   KEEP -> class 11 (card_arrival)
+          '38'    -9.488    0.01%   KEEP -> class 38 (get_physical_card)
+          '10'   -10.879    0.00%   KEEP -> class 10 (card_acceptance)
+           '1'   -12.238    0.00%   KEEP -> class 1 (age_limit)
+          '43'   -12.566    0.00%   KEEP -> class 43 (order_physical_card)
+          '13'   -12.972    0.00%   KEEP -> class 13 (card_linking)
+          '39'   -13.738    0.00%   KEEP -> class 39 (getting_spare_card)
+           '2'   -14.191    0.00%   KEEP -> class 2 (apple_pay_or_google_pay)
+           '9'   -14.238    0.00%   KEEP -> class 9 (card_about_to_expire)
+           '3'   -14.832    0.00%   KEEP -> class 3 (atm_support)
+           ' '   -15.097    0.00%   skip (not a class index)
+          '14'   -15.879    0.00%   KEEP -> class 14 (card_not_working)
+          '42'   -15.972    0.00%   KEEP -> class 42 (lost_or_stolen_phone)
+          '44'   -16.175    0.00%   KEEP -> class 44 (passcode_forgotten)
+        'Card'   -16.222    0.00%   skip (not a class index)
+          '41'   -16.316    0.00%   KEEP -> class 41 (lost_or_stolen_card)
+           '8'   -16.972    0.00%   KEEP -> class 8 (cancel_transfer)
+          '\t'   -17.019    0.00%   skip (not a class index)
+          '15'   -17.316    0.00%   KEEP -> class 15 (card_payment_fee_charged)
+
+  CLEAN output: 17 classes observed in top-k (60/77 at LOGPROB_FLOOR -- not seen by the model):
+    class  name                                   logit      prob
+       12  card_delivery_estimate                -0.457    63.33%
+       11  card_arrival                          -1.004    36.65%
+       38  get_physical_card                     -9.488     0.01%
+       10  card_acceptance                      -10.879     0.00%
+        1  age_limit                            -12.238     0.00%
+       43  order_physical_card                  -12.566     0.00%
+       13  card_linking                         -12.972     0.00%
+       39  getting_spare_card                   -13.738     0.00%
+        2  apple_pay_or_google_pay              -14.191     0.00%
+        9  card_about_to_expire                 -14.238     0.00%
+        3  atm_support                          -14.832     0.00%
+       14  card_not_working                     -15.879     0.00%
+       42  lost_or_stolen_phone                 -15.972     0.00%
+       44  passcode_forgotten                   -16.175     0.00%
+       41  lost_or_stolen_card                  -16.316     0.00%
+        8  cancel_transfer                      -16.972     0.00%
+       15  card_payment_fee_charged             -17.316     0.00%
+
+  Prediction : class 12 = card_delivery_estimate  (WRONG)
+----------------------------------------------------------------------
+
+SAMPLE 2
+  Text       : "I have been waiting over a week. Is the card still coming?"
+  True label : 11 = card_arrival
+  LLM said   : "12"
+
+  RAW top-20 tokens the LLM returned (its view of the whole vocab):
+         token   logprob     prob   kept?
+          '12'    -0.002   99.79%   KEEP -> class 12 (card_delivery_estimate)
+          '11'    -6.174    0.21%   KEEP -> class 11 (card_arrival)
+          '38'   -11.955    0.00%   KEEP -> class 38 (get_physical_card)
+          '10'   -12.611    0.00%   KEEP -> class 10 (card_acceptance)
+           '9'   -13.955    0.00%   KEEP -> class 9 (card_about_to_expire)
+          '43'   -13.955    0.00%   KEEP -> class 43 (order_physical_card)
+           '1'   -14.705    0.00%   KEEP -> class 1 (age_limit)
+          '13'   -15.346    0.00%   KEEP -> class 13 (card_linking)
+          '39'   -15.627    0.00%   KEEP -> class 39 (getting_spare_card)
+           '2'   -15.893    0.00%   KEEP -> class 2 (apple_pay_or_google_pay)
+           '3'   -15.908    0.00%   KEEP -> class 3 (atm_support)
+           ' '   -16.658    0.00%   skip (not a class index)
+          '14'   -17.190    0.00%   KEEP -> class 14 (card_not_working)
+          '42'   -17.252    0.00%   KEEP -> class 42 (lost_or_stolen_phone)
+          '44'   -18.440    0.00%   KEEP -> class 44 (passcode_forgotten)
+          '15'   -18.901    0.00%   KEEP -> class 15 (card_payment_fee_charged)
+           '4'   -19.018    0.00%   KEEP -> class 4 (automatic_top_up)
+           '8'   -19.143    0.00%   KEEP -> class 8 (cancel_transfer)
+          '41'   -19.190    0.00%   KEEP -> class 41 (lost_or_stolen_card)
+           '0'   -19.604    0.00%   KEEP -> class 0 (activate_my_card)
+
+  CLEAN output: 19 classes observed in top-k (58/77 at LOGPROB_FLOOR -- not seen by the model):
+    class  name                                   logit      prob
+       12  card_delivery_estimate                -0.002    99.79%
+       11  card_arrival                          -6.174     0.21%
+       38  get_physical_card                    -11.955     0.00%
+       10  card_acceptance                      -12.611     0.00%
+        9  card_about_to_expire                 -13.955     0.00%
+       43  order_physical_card                  -13.955     0.00%
+        1  age_limit                            -14.705     0.00%
+       13  card_linking                         -15.346     0.00%
+       39  getting_spare_card                   -15.627     0.00%
+        2  apple_pay_or_google_pay              -15.893     0.00%
+        3  atm_support                          -15.908     0.00%
+       14  card_not_working                     -17.190     0.00%
+       42  lost_or_stolen_phone                 -17.252     0.00%
+       44  passcode_forgotten                   -18.440     0.00%
+       15  card_payment_fee_charged             -18.901     0.00%
+        4  automatic_top_up                     -19.018     0.00%
+        8  cancel_transfer                      -19.143     0.00%
+       41  lost_or_stolen_card                  -19.190     0.00%
+        0  activate_my_card                     -19.604     0.00%
+
+  Prediction : class 12 = card_delivery_estimate  (WRONG)
+----------------------------------------------------------------------
+
+SAMPLE 3
+  Text       : "Can I track my card while it is in the process of delivery?"
+  True label : 11 = card_arrival
+  LLM said   : "12"
+
+  RAW top-20 tokens the LLM returned (its view of the whole vocab):
+         token   logprob     prob   kept?
+          '12'    -0.000  100.00%   KEEP -> class 12 (card_delivery_estimate)
+          '11'   -10.781    0.00%   KEEP -> class 11 (card_arrival)
+          '10'   -12.625    0.00%   KEEP -> class 10 (card_acceptance)
+          '13'   -14.094    0.00%   KEEP -> class 13 (card_linking)
+           '1'   -14.750    0.00%   KEEP -> class 1 (age_limit)
+           '2'   -14.859    0.00%   KEEP -> class 2 (apple_pay_or_google_pay)
+           '3'   -15.156    0.00%   KEEP -> class 3 (atm_support)
+           '9'   -15.844    0.00%   KEEP -> class 9 (card_about_to_expire)
+          '43'   -15.953    0.00%   KEEP -> class 43 (order_physical_card)
+          '38'   -16.000    0.00%   KEEP -> class 38 (get_physical_card)
+           '0'   -16.109    0.00%   KEEP -> class 0 (activate_my_card)
+          '39'   -16.609    0.00%   KEEP -> class 39 (getting_spare_card)
+           ' '   -17.313    0.00%   skip (not a class index)
+          '14'   -17.484    0.00%   KEEP -> class 14 (card_not_working)
+          '42'   -17.563    0.00%   KEEP -> class 42 (lost_or_stolen_phone)
+           '4'   -17.734    0.00%   KEEP -> class 4 (automatic_top_up)
+          '15'   -18.734    0.00%   KEEP -> class 15 (card_payment_fee_charged)
+          '40'   -18.734    0.00%   KEEP -> class 40 (getting_virtual_card)
+          '44'   -19.063    0.00%   KEEP -> class 44 (passcode_forgotten)
+           '8'   -19.188    0.00%   KEEP -> class 8 (cancel_transfer)
+
+  CLEAN output: 19 classes observed in top-k (58/77 at LOGPROB_FLOOR -- not seen by the model):
+    class  name                                   logit      prob
+       12  card_delivery_estimate                -0.000   100.00%
+       11  card_arrival                         -10.781     0.00%
+       10  card_acceptance                      -12.625     0.00%
+       13  card_linking                         -14.094     0.00%
+        1  age_limit                            -14.750     0.00%
+        2  apple_pay_or_google_pay              -14.859     0.00%
+        3  atm_support                          -15.156     0.00%
+        9  card_about_to_expire                 -15.844     0.00%
+       43  order_physical_card                  -15.953     0.00%
+       38  get_physical_card                    -16.000     0.00%
+        0  activate_my_card                     -16.109     0.00%
+       39  getting_spare_card                   -16.609     0.00%
+       14  card_not_working                     -17.484     0.00%
+       42  lost_or_stolen_phone                 -17.563     0.00%
+        4  automatic_top_up                     -17.734     0.00%
+       15  card_payment_fee_charged             -18.734     0.00%
+       40  getting_virtual_card                 -18.734     0.00%
+       44  passcode_forgotten                   -19.063     0.00%
+        8  cancel_transfer                      -19.188     0.00%
+
+  Prediction : class 12 = card_delivery_estimate  (WRONG)
+----------------------------------------------------------------------

@@ -1,0 +1,147 @@
+(conflict-aware-logit-purification) omertugrul@MacBook-Pro-5327 MSc-Dissertation % python scripts/check_verbalizer_tokens.py --dataset banking15 --teacher all
+Dataset: banking15 (15 classes)
+Labels:  ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O']
+
+gpt-4o (gpt-4o)
+----------------------------------------------------------------------
+  'A'  OK   generated='A'    first_token='A'    tokens=['A']
+  'B'  OK   generated='B'    first_token='B'    tokens=['B']
+  'C'  OK   generated='C'    first_token='C'    tokens=['C']
+  'D'  OK   generated='D'    first_token='D'    tokens=['D']
+  'E'  OK   generated='E'    first_token='E'    tokens=['E']
+  'F'  OK   generated='F'    first_token='F'    tokens=['F']
+  'G'  OK   generated='G'    first_token='G'    tokens=['G']
+  'H'  OK   generated='H'    first_token='H'    tokens=['H']
+  'I'  OK   generated='I'    first_token='I'    tokens=['I']
+  'J'  OK   generated='J'    first_token='J'    tokens=['J']
+  'K'  OK   generated='K'    first_token='K'    tokens=['K']
+  'L'  OK   generated='L'    first_token='L'    tokens=['L']
+  'M'  OK   generated='M'    first_token='M'    tokens=['M']
+  'N'  OK   generated='N'    first_token='N'    tokens=['N']
+  'O'  OK   generated='O'    first_token='O'    tokens=['O']
+
+  PASSED: all 15 labels are single first-output tokens.
+
+gemma-4-31b (google/gemma-4-31b-it)
+----------------------------------------------------------------------
+  'A'  OK   generated='A'    first_token='A'    tokens=['A']
+  'B'  OK   generated='B'    first_token='B'    tokens=['B']
+  'C'  OK   generated='C'    first_token='C'    tokens=['C']
+  'D'  OK   generated='D'    first_token='D'    tokens=['D']
+  'E'  OK   generated='E'    first_token='E'    tokens=['E']
+  'F'  OK   generated='F'    first_token='F'    tokens=['F']
+  'G'  OK   generated='G'    first_token='G'    tokens=['G']
+  'H'  OK   generated='H'    first_token='H'    tokens=['H']
+  'I'  OK   generated='I'    first_token='I'    tokens=['I']
+  'J'  OK   generated='J'    first_token='J'    tokens=['J']
+  'K'  OK   generated='K'    first_token='K'    tokens=['K']
+  'L'  OK   generated='L'    first_token='L'    tokens=['L']
+  'M'  OK   generated='M'    first_token='M'    tokens=['M']
+  'N'  OK   generated='N'    first_token='N'    tokens=['N']
+  'O'  OK   generated='O'    first_token='O'    tokens=['O']
+
+  PASSED: all 15 labels are single first-output tokens.
+
+qwen3.5 (qwen/qwen3.5-27b)
+----------------------------------------------------------------------
+  'A'  OK   generated='A'    first_token='A'    tokens=['A']
+  'B'  OK   generated='B'    first_token='B'    tokens=['B']
+  'C'  OK   generated='C'    first_token='C'    tokens=['C']
+  'D'  OK   generated='D'    first_token='D'    tokens=['D']
+  'E'  OK   generated='E'    first_token='E'    tokens=['E']
+  'F'  OK   generated='F'    first_token='F'    tokens=['F']
+  'G'  OK   generated='G'    first_token='G'    tokens=['G']
+  'H'  OK   generated='H'    first_token='H'    tokens=['H']
+  'I'  OK   generated='I'    first_token='I'    tokens=['I']
+  'J'  OK   generated='J'    first_token='J'    tokens=['J']
+  'K'  OK   generated='K'    first_token='K'    tokens=['K']
+  'L'  OK   generated='L'    first_token='L'    tokens=['L']
+  'M'  OK   generated='M'    first_token='M'    tokens=['M']
+  'N'  OK   generated='N'    first_token='N'    tokens=['N']
+  'O'  OK   generated='O'    first_token='O'    tokens=['O']
+
+  PASSED: all 15 labels are single first-output tokens.
+
+  --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+  (conflict-aware-logit-purification) omertugrul@MacBook-Pro-5327 MSc-Dissertation % python scripts/check_verbalizer_tokens.py --dataset yahoo --teacher all
+Dataset: yahoo (10 classes)
+Labels:  ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J']
+
+gpt-4o (gpt-4o)
+----------------------------------------------------------------------
+  'A'  OK   generated='A'    first_token='A'    tokens=['A']
+  'B'  OK   generated='B'    first_token='B'    tokens=['B']
+  'C'  OK   generated='C'    first_token='C'    tokens=['C']
+  'D'  OK   generated='D'    first_token='D'    tokens=['D']
+  'E'  OK   generated='E'    first_token='E'    tokens=['E']
+  'F'  OK   generated='F'    first_token='F'    tokens=['F']
+  'G'  OK   generated='G'    first_token='G'    tokens=['G']
+  'H'  OK   generated='H'    first_token='H'    tokens=['H']
+  'I'  OK   generated='I'    first_token='I'    tokens=['I']
+  'J'  OK   generated='J'    first_token='J'    tokens=['J']
+
+  PASSED: all 10 labels are single first-output tokens.
+
+gemma-4-31b (google/gemma-4-31b-it)
+----------------------------------------------------------------------
+  'A'  OK   generated='A'    first_token='A'    tokens=['A']
+  'B'  OK   generated='B'    first_token='B'    tokens=['B']
+  'C'  OK   generated='C'    first_token='C'    tokens=['C']
+  'D'  OK   generated='D'    first_token='D'    tokens=['D']
+  'E'  OK   generated='E'    first_token='E'    tokens=['E']
+  'F'  OK   generated='F'    first_token='F'    tokens=['F']
+  'G'  OK   generated='G'    first_token='G'    tokens=['G']
+  'H'  OK   generated='H'    first_token='H'    tokens=['H']
+  'I'  OK   generated='I'    first_token='I'    tokens=['I']
+  'J'  OK   generated='J'    first_token='J'    tokens=['J']
+
+  PASSED: all 10 labels are single first-output tokens.
+
+qwen3.5 (qwen/qwen3.5-27b)
+----------------------------------------------------------------------
+  'A'  OK   generated='A'    first_token='A'    tokens=['A']
+  'B'  OK   generated='B'    first_token='B'    tokens=['B']
+  'C'  OK   generated='C'    first_token='C'    tokens=['C']
+  'D'  OK   generated='D'    first_token='D'    tokens=['D']
+  'E'  OK   generated='E'    first_token='E'    tokens=['E']
+  'F'  OK   generated='F'    first_token='F'    tokens=['F']
+  'G'  OK   generated='G'    first_token='G'    tokens=['G']
+  'H'  OK   generated='H'    first_token='H'    tokens=['H']
+  'I'  OK   generated='I'    first_token='I'    tokens=['I']
+  'J'  OK   generated='J'    first_token='J'    tokens=['J']
+
+  PASSED: all 10 labels are single first-output tokens.
+
+  --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+  (conflict-aware-logit-purification) omertugrul@MacBook-Pro-5327 MSc-Dissertation % python scripts/check_verbalizer_tokens.py --dataset ag_news --teacher all
+Dataset: ag_news (4 classes)
+Labels:  ['A', 'B', 'C', 'D']
+
+gpt-4o (gpt-4o)
+----------------------------------------------------------------------
+  'A'  OK   generated='A'    first_token='A'    tokens=['A']
+  'B'  OK   generated='B'    first_token='B'    tokens=['B']
+  'C'  OK   generated='C'    first_token='C'    tokens=['C']
+  'D'  OK   generated='D'    first_token='D'    tokens=['D']
+
+  PASSED: all 4 labels are single first-output tokens.
+
+gemma-4-31b (google/gemma-4-31b-it)
+----------------------------------------------------------------------
+  'A'  OK   generated='A'    first_token='A'    tokens=['A']
+  'B'  OK   generated='B'    first_token='B'    tokens=['B']
+  'C'  OK   generated='C'    first_token='C'    tokens=['C']
+  'D'  OK   generated='D'    first_token='D'    tokens=['D']
+
+  PASSED: all 4 labels are single first-output tokens.
+
+qwen3.5 (qwen/qwen3.5-27b)
+----------------------------------------------------------------------
+  'A'  OK   generated='A'    first_token='A'    tokens=['A']
+  'B'  OK   generated='B'    first_token='B'    tokens=['B']
+  'C'  OK   generated='C'    first_token='C'    tokens=['C']
+  'D'  OK   generated='D'    first_token='D'    tokens=['D']
+
+  PASSED: all 4 labels are single first-output tokens.

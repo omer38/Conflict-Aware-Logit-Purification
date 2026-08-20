@@ -1,0 +1,258 @@
+[2026-08-19T21:24:16Z] === BCTS+MLLS preflight begin ===
+Traceback (most recent call last):
+  File "/root/MSc-Dissertation/tests/test_amazon3_source_prior.py", line 30, in <module>
+    from src.student.prior_estimation import (  # noqa: E402
+  File "/root/MSc-Dissertation/src/student/prior_estimation.py", line 18, in <module>
+    from scipy.optimize import minimize
+ModuleNotFoundError: No module named 'scipy'
+[2026-08-19T21:24:16Z] Preflight failed: focused tests
+[2026-08-19T21:46:34Z] === BCTS+MLLS preflight begin ===
+Traceback (most recent call last):
+  File "/root/MSc-Dissertation/tests/test_amazon3_source_prior.py", line 52, in <module>
+    import scripts.analyse_amazon3_source_prior as analysis  # noqa: E402
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/MSc-Dissertation/scripts/analyse_amazon3_source_prior.py", line 43, in <module>
+    import scripts.train_amazon3_source_prior as experiment  # noqa: E402
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/MSc-Dissertation/scripts/train_amazon3_source_prior.py", line 79, in <module>
+    import scripts.build_amazon3 as amazon3_builder  # noqa: E402
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/MSc-Dissertation/scripts/build_amazon3.py", line 33, in <module>
+    from src.teachers.extraction import make_verbalizers
+  File "/root/MSc-Dissertation/src/teachers/__init__.py", line 1, in <module>
+    from .llm import TeacherConfig, TEACHER_PRESETS, get_client, complete
+  File "/root/MSc-Dissertation/src/teachers/llm.py", line 13, in <module>
+    from openai import APIConnectionError, OpenAI
+ModuleNotFoundError: No module named 'openai'
+[2026-08-19T21:46:39Z] Preflight failed: focused tests
+[2026-08-19T21:47:11Z] === BCTS+MLLS preflight begin ===
+Traceback (most recent call last):
+  File "/root/MSc-Dissertation/tests/test_amazon3_source_prior.py", line 52, in <module>
+    import scripts.analyse_amazon3_source_prior as analysis  # noqa: E402
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/MSc-Dissertation/scripts/analyse_amazon3_source_prior.py", line 43, in <module>
+    import scripts.train_amazon3_source_prior as experiment  # noqa: E402
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/MSc-Dissertation/scripts/train_amazon3_source_prior.py", line 79, in <module>
+    import scripts.build_amazon3 as amazon3_builder  # noqa: E402
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/MSc-Dissertation/scripts/build_amazon3.py", line 33, in <module>
+    from src.teachers.extraction import make_verbalizers
+  File "/root/MSc-Dissertation/src/teachers/__init__.py", line 1, in <module>
+    from .llm import TeacherConfig, TEACHER_PRESETS, get_client, complete
+  File "/root/MSc-Dissertation/src/teachers/llm.py", line 13, in <module>
+    from openai import APIConnectionError, OpenAI
+ModuleNotFoundError: No module named 'openai'
+[2026-08-19T21:47:16Z] Preflight failed: focused tests
+[2026-08-19T21:47:31Z] === BCTS+MLLS preflight begin ===
+............[2026-08-19T21:47:43Z] === BCTS+MLLS preflight begin ===
+............................................................................
+----------------------------------------------------------------------
+Ran 60 tests in 44.291s
+
+OK
+..........................BCTS+MLLS estimate: [0.45640829588789, 0.13520871186191394, 0.40838299225019614] (l1_error=0.1296, tv_error=0.0648, temperature=1.3058, iterations=52, solver_success=True)
+......
+----------------------------------------------------------------------
+Ran 60 tests in 44.648s
+
+OK
+BCTS+MLLS estimate: [0.5232547724865648, 0.07712583929433833, 0.39961938821909687] (l1_error=0.2465, tv_error=0.1233, temperature=2.0672, iterations=160, solver_success=True)
+BCTS+MLLS estimate: [0.45640829588789, 0.13520871186191394, 0.40838299225019614] (l1_error=0.1296, tv_error=0.0648, temperature=1.3058, iterations=52, solver_success=True)
+BCTS+MLLS estimate: [0.3936044806867209, 0.16850353656380695, 0.4378919827494722] (l1_error=0.0758, tv_error=0.0379, temperature=1.3985, iterations=49, solver_success=True)
+BCTS+MLLS estimate: [0.5232547724865648, 0.07712583929433833, 0.39961938821909687] (l1_error=0.2465, tv_error=0.1233, temperature=2.0672, iterations=160, solver_success=True)
+BCTS+MLLS estimate: [0.4073985757616491, 0.10065865431460533, 0.49194276992374564] (l1_error=0.1987, tv_error=0.0993, temperature=1.5069, iterations=71, solver_success=True)
+BCTS+MLLS estimate: [0.3936044806867209, 0.16850353656380695, 0.4378919827494722] (l1_error=0.0758, tv_error=0.0379, temperature=1.3985, iterations=49, solver_success=True)
+BCTS+MLLS estimate: [0.38574830273681804, 0.20499017844911932, 0.40926151881406275] (l1_error=0.0285, tv_error=0.0143, temperature=1.4096, iterations=45, solver_success=True)
+BCTS+MLLS estimate: [0.4073985757616491, 0.10065865431460533, 0.49194276992374564] (l1_error=0.1987, tv_error=0.0993, temperature=1.5069, iterations=71, solver_success=True)
+BCTS+MLLS estimate: [0.34817968495193874, 0.2593842727733974, 0.3924360422746637] (l1_error=0.1188, tv_error=0.0594, temperature=1.5117, iterations=44, solver_success=True)
+[2026-08-19T21:49:00Z] === BCTS+MLLS preflight OK ===
+[2026-08-19T21:49:00Z] START L=10 seed=42
+=== amazon3_source_prior_transfer_mlls_v1: method=estimated_prior_mlls_bcts L=10 seed=42 ===
+True prior: [0.4, 0.2, 0.4] | assumed prior: [0.45640829588789, 0.13520871186191394, 0.40838299225019614]
+BCTS+MLLS estimate: [0.45640829588789, 0.13520871186191394, 0.40838299225019614] (l1_error=0.1296, tv_error=0.0648, temperature=1.3058, iterations=52, solver_success=True)
+Reference batch: n=500 hash=b6caf05c632faadc... | Working pool: n=2000 hash=37b972d19f6a4855...
+Working-pool teacher-marginal L1 error vs true prior: 0.1366
+Device: cuda
+Training on 2000 working-pool examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+BCTS+MLLS estimate: [0.38574830273681804, 0.20499017844911932, 0.40926151881406275] (l1_error=0.0285, tv_error=0.0143, temperature=1.4096, iterations=45, solver_success=True)
+BCTS+MLLS estimate: [0.34817968495193874, 0.2593842727733974, 0.3924360422746637] (l1_error=0.1188, tv_error=0.0594, temperature=1.5117, iterations=44, solver_success=True)
+[2026-08-19T21:49:12Z] === BCTS+MLLS preflight OK ===
+[2026-08-19T21:49:12Z] START L=10 seed=42
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 5610.17it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+=== amazon3_source_prior_transfer_mlls_v1: method=estimated_prior_mlls_bcts L=10 seed=42 ===
+True prior: [0.4, 0.2, 0.4] | assumed prior: [0.45640829588789, 0.13520871186191394, 0.40838299225019614]
+BCTS+MLLS estimate: [0.45640829588789, 0.13520871186191394, 0.40838299225019614] (l1_error=0.1296, tv_error=0.0648, temperature=1.3058, iterations=52, solver_success=True)
+Reference batch: n=500 hash=b6caf05c632faadc... | Working pool: n=2000 hash=37b972d19f6a4855...
+Working-pool teacher-marginal L1 error vs true prior: 0.1366
+Device: cuda
+Training on 2000 working-pool examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 9353.23it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.3954
+  epoch 2/3  loss 0.1151
+  epoch 3/3  loss 0.0613
+
+Test accuracy: 0.7854 | macro-F1: 0.7013
+Saved: outputs/student/amazon3_source_prior_transfer_mlls_v1/amazon3_source-prior-transfer_estimated_prior_mlls_bcts_L10_s42.json
+[2026-08-19T21:50:55Z] OK L=10 seed=42
+[2026-08-19T21:50:55Z] START L=10 seed=123
+=== amazon3_source_prior_transfer_mlls_v1: method=estimated_prior_mlls_bcts L=10 seed=123 ===
+True prior: [0.4, 0.2, 0.4] | assumed prior: [0.5232547724865648, 0.07712583929433833, 0.39961938821909687]
+BCTS+MLLS estimate: [0.5232547724865648, 0.07712583929433833, 0.39961938821909687] (l1_error=0.2465, tv_error=0.1233, temperature=2.0672, iterations=160, solver_success=True)
+Reference batch: n=500 hash=b6caf05c632faadc... | Working pool: n=2000 hash=37b972d19f6a4855...
+Working-pool teacher-marginal L1 error vs true prior: 0.2879
+Device: cuda
+Training on 2000 working-pool examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6973.50it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.4982
+  epoch 2/3  loss 0.1506
+  epoch 3/3  loss 0.0826
+
+Test accuracy: 0.7626 | macro-F1: 0.6405
+Saved: outputs/student/amazon3_source_prior_transfer_mlls_v1/amazon3_source-prior-transfer_estimated_prior_mlls_bcts_L10_s123.json
+[2026-08-19T21:52:37Z] OK L=10 seed=123
+[2026-08-19T21:52:37Z] START L=10 seed=456
+=== amazon3_source_prior_transfer_mlls_v1: method=estimated_prior_mlls_bcts L=10 seed=456 ===
+True prior: [0.4, 0.2, 0.4] | assumed prior: [0.3936044806867209, 0.16850353656380695, 0.4378919827494722]
+BCTS+MLLS estimate: [0.3936044806867209, 0.16850353656380695, 0.4378919827494722] (l1_error=0.0758, tv_error=0.0379, temperature=1.3985, iterations=49, solver_success=True)
+Reference batch: n=500 hash=b6caf05c632faadc... | Working pool: n=2000 hash=37b972d19f6a4855...
+Working-pool teacher-marginal L1 error vs true prior: 0.0687
+Device: cuda
+Training on 2000 working-pool examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 9090.44it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.4646
+  epoch 2/3  loss 0.1590
+  epoch 3/3  loss 0.0613
+
+Test accuracy: 0.7927 | macro-F1: 0.7337
+Saved: outputs/student/amazon3_source_prior_transfer_mlls_v1/amazon3_source-prior-transfer_estimated_prior_mlls_bcts_L10_s456.json
+[2026-08-19T21:54:21Z] OK L=10 seed=456
+[2026-08-19T21:54:21Z] START L=50 seed=42
+=== amazon3_source_prior_transfer_mlls_v1: method=estimated_prior_mlls_bcts L=50 seed=42 ===
+True prior: [0.4, 0.2, 0.4] | assumed prior: [0.4073985757616491, 0.10065865431460533, 0.49194276992374564]
+BCTS+MLLS estimate: [0.4073985757616491, 0.10065865431460533, 0.49194276992374564] (l1_error=0.1987, tv_error=0.0993, temperature=1.5069, iterations=71, solver_success=True)
+Reference batch: n=500 hash=b6caf05c632faadc... | Working pool: n=2000 hash=37b972d19f6a4855...
+Working-pool teacher-marginal L1 error vs true prior: 0.2172
+Device: cuda
+Training on 2000 working-pool examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 11283.26it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.7508
+  epoch 2/3  loss 0.2831
+  epoch 3/3  loss 0.1588
+
+Test accuracy: 0.7675 | macro-F1: 0.6409
+Saved: outputs/student/amazon3_source_prior_transfer_mlls_v1/amazon3_source-prior-transfer_estimated_prior_mlls_bcts_L50_s42.json
+[2026-08-19T21:56:04Z] OK L=50 seed=42
+[2026-08-19T21:56:04Z] START L=50 seed=123
+=== amazon3_source_prior_transfer_mlls_v1: method=estimated_prior_mlls_bcts L=50 seed=123 ===
+True prior: [0.4, 0.2, 0.4] | assumed prior: [0.38574830273681804, 0.20499017844911932, 0.40926151881406275]
+BCTS+MLLS estimate: [0.38574830273681804, 0.20499017844911932, 0.40926151881406275] (l1_error=0.0285, tv_error=0.0143, temperature=1.4096, iterations=45, solver_success=True)
+Reference batch: n=500 hash=b6caf05c632faadc... | Working pool: n=2000 hash=37b972d19f6a4855...
+Working-pool teacher-marginal L1 error vs true prior: 0.0461
+Device: cuda
+Training on 2000 working-pool examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 9603.28it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.9107
+  epoch 2/3  loss 0.4162
+  epoch 3/3  loss 0.2443
+
+Test accuracy: 0.7523 | macro-F1: 0.6600
+Saved: outputs/student/amazon3_source_prior_transfer_mlls_v1/amazon3_source-prior-transfer_estimated_prior_mlls_bcts_L50_s123.json
+[2026-08-19T21:57:48Z] OK L=50 seed=123
+[2026-08-19T21:57:48Z] START L=50 seed=456
+=== amazon3_source_prior_transfer_mlls_v1: method=estimated_prior_mlls_bcts L=50 seed=456 ===
+True prior: [0.4, 0.2, 0.4] | assumed prior: [0.34817968495193874, 0.2593842727733974, 0.3924360422746637]
+BCTS+MLLS estimate: [0.34817968495193874, 0.2593842727733974, 0.3924360422746637] (l1_error=0.1188, tv_error=0.0594, temperature=1.5117, iterations=44, solver_success=True)
+Reference batch: n=500 hash=b6caf05c632faadc... | Working pool: n=2000 hash=37b972d19f6a4855...
+Working-pool teacher-marginal L1 error vs true prior: 0.1521
+Device: cuda
+Training on 2000 working-pool examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 7305.37it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.7032
+  epoch 2/3  loss 0.2686
+  epoch 3/3  loss 0.1725
+
+Test accuracy: 0.7858 | macro-F1: 0.7213
+Saved: outputs/student/amazon3_source_prior_transfer_mlls_v1/amazon3_source-prior-transfer_estimated_prior_mlls_bcts_L50_s456.json
+[2026-08-19T21:59:31Z] OK L=50 seed=456
+[2026-08-19T21:59:31Z] === runner end started=6 skipped=0 completed=6 failures=0 ===
+Wrote outputs/reports/amazon3_source_prior_transfer_mlls_v1.json
+Wrote outputs/reports/amazon3_source_prior_transfer_mlls_v1.md
+[2026-08-19T22:00:35Z] All six BCTS+MLLS cells complete and analysed.

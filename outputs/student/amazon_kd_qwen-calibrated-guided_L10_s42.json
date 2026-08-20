@@ -1,0 +1,25 @@
+{
+  "dataset": "amazon",
+  "mode": "kd",
+  "teacher": "qwen-calibrated-guided",
+  "labels_per_class": 10,
+  "seed": 42,
+  "cal_ratio": 0.3,
+  "config": {
+    "model_name": "answerdotai/ModernBERT-base",
+    "max_length": 256,
+    "lr": 2e-05,
+    "batch_size": 16,
+    "epochs": 3,
+    "temperature": 2.0,
+    "alpha": 0.5
+  },
+  "metrics": {
+    "accuracy": 0.578,
+    "macro_f1": 0.5800055495224934
+  },
+  "aggregation": "calibrated_single",
+  "teachers": [
+    "qwen3.5-27b-vllm-guided"
+  ]
+}

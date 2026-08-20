@@ -1,0 +1,9 @@
+{
+  "teacher": "mistral-small-24b-vllm",
+  "dataset": "ag_news",
+  "n_samples_reported": 6000,
+  "accuracy": 0.862,
+  "floor_fraction": 0.0,
+  "report_csv": "outputs/reports/mistral-small-24b-vllm_ag_news.csv",
+  "generated_at": "2026-06-18T16:58:26.652923+00:00"
+}

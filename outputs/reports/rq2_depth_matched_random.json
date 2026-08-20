@@ -1,0 +1,2094 @@
+{
+  "experiment": "rq2_depth_matched_random",
+  "policies": [
+    "multi-cascade-guided",
+    "multi-depth-matched-random-guided"
+  ],
+  "query_rates": [
+    1.4,
+    2.0
+  ],
+  "datasets": [
+    "ag_news",
+    "yahoo",
+    "amazon",
+    "amazon3"
+  ],
+  "label_budgets": [
+    10,
+    50
+  ],
+  "seeds": [
+    42,
+    123,
+    456
+  ],
+  "n_random_result_cells": 48,
+  "validation_status": "complete",
+  "groups": [
+    {
+      "dataset": "ag_news",
+      "labels_per_class": 10,
+      "target_queries_per_sample": 1.4,
+      "source_depth_policy": {
+        "n_samples": 6000,
+        "depth_1_count": 3868,
+        "depth_2_count": 1864,
+        "depth_3_count": 268,
+        "realised_queries_per_sample": 1.4
+      },
+      "query_rate_audit": {
+        "requested_queries_per_sample": 1.4,
+        "recomputed_cascade_queries_per_sample": 1.4,
+        "depth_matched_random_queries_per_sample": [
+          1.4,
+          1.4,
+          1.4
+        ],
+        "stored_historical_cascade_queries_per_sample": [
+          1.4001666666666666,
+          1.4001666666666666,
+          1.4001666666666666
+        ],
+        "random_matches_recomputed_cascade_exactly": true,
+        "stored_cascade_matches_recomputed_exactly": false,
+        "all_rates_within_requested_tolerance": true
+      },
+      "cascade": {
+        "accuracy": {
+          "mean": 0.8835526315789473,
+          "std": 0.0014828194302085238,
+          "values": [
+            0.8852631578947369,
+            0.8826315789473684,
+            0.8827631578947368
+          ]
+        },
+        "macro_f1": {
+          "mean": 0.8832667211106293,
+          "std": 0.0015504733730083954,
+          "values": [
+            0.8850513206884488,
+            0.8822504417244357,
+            0.8824984009190032
+          ]
+        }
+      },
+      "depth_matched_random": {
+        "accuracy": {
+          "mean": 0.8854385964912281,
+          "std": 0.0012643452022280054,
+          "values": [
+            0.886578947368421,
+            0.8856578947368421,
+            0.8840789473684211
+          ]
+        },
+        "macro_f1": {
+          "mean": 0.8852181800481045,
+          "std": 0.0013176905460984079,
+          "values": [
+            0.8864759685961145,
+            0.8853307602184654,
+            0.8838478113297332
+          ]
+        }
+      },
+      "paired_cascade_minus_random_accuracy": {
+        "mean": -0.0018859649122806947,
+        "std": 0.0009875728288769722,
+        "values": [
+          -0.001315789473684159,
+          -0.0030263157894736548,
+          -0.0013157894736842701
+        ]
+      },
+      "seed_directions": [
+        "depth_matched_random",
+        "depth_matched_random",
+        "depth_matched_random"
+      ],
+      "maximum_holm_p": 0.8228464405278749,
+      "robust_winner": "none",
+      "seeds": [
+        {
+          "seed": 42,
+          "cascade_accuracy": 0.8852631578947369,
+          "depth_matched_random_accuracy": 0.886578947368421,
+          "cascade_minus_random_accuracy": -0.001315789473684159,
+          "direction": "depth_matched_random",
+          "mcnemar": {
+            "only_cascade_correct": 61,
+            "only_depth_matched_random_correct": 71,
+            "n_discordant": 132,
+            "p_value": 0.43353726974233275,
+            "p_value_holm": 0.8228464405278749
+          }
+        },
+        {
+          "seed": 123,
+          "cascade_accuracy": 0.8826315789473684,
+          "depth_matched_random_accuracy": 0.8856578947368421,
+          "cascade_minus_random_accuracy": -0.0030263157894736548,
+          "direction": "depth_matched_random",
+          "mcnemar": {
+            "only_cascade_correct": 63,
+            "only_depth_matched_random_correct": 86,
+            "n_discordant": 149,
+            "p_value": 0.071139274359113,
+            "p_value_holm": 0.21341782307733903
+          }
+        },
+        {
+          "seed": 456,
+          "cascade_accuracy": 0.8827631578947368,
+          "depth_matched_random_accuracy": 0.8840789473684211,
+          "cascade_minus_random_accuracy": -0.0013157894736842701,
+          "direction": "depth_matched_random",
+          "mcnemar": {
+            "only_cascade_correct": 55,
+            "only_depth_matched_random_correct": 65,
+            "n_discordant": 120,
+            "p_value": 0.41142322026393746,
+            "p_value_holm": 0.8228464405278749
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "ag_news",
+      "labels_per_class": 50,
+      "target_queries_per_sample": 1.4,
+      "source_depth_policy": {
+        "n_samples": 6000,
+        "depth_1_count": 3868,
+        "depth_2_count": 1864,
+        "depth_3_count": 268,
+        "realised_queries_per_sample": 1.4
+      },
+      "query_rate_audit": {
+        "requested_queries_per_sample": 1.4,
+        "recomputed_cascade_queries_per_sample": 1.4,
+        "depth_matched_random_queries_per_sample": [
+          1.4,
+          1.4,
+          1.4
+        ],
+        "stored_historical_cascade_queries_per_sample": [
+          1.4001666666666666,
+          1.4001666666666666,
+          1.4001666666666666
+        ],
+        "random_matches_recomputed_cascade_exactly": true,
+        "stored_cascade_matches_recomputed_exactly": false,
+        "all_rates_within_requested_tolerance": true
+      },
+      "cascade": {
+        "accuracy": {
+          "mean": 0.8846491228070176,
+          "std": 0.0014069311344162456,
+          "values": [
+            0.8861842105263158,
+            0.8843421052631579,
+            0.883421052631579
+          ]
+        },
+        "macro_f1": {
+          "mean": 0.8844020427380378,
+          "std": 0.0014727197747660585,
+          "values": [
+            0.8860446121150587,
+            0.8839620426102455,
+            0.8831994734888093
+          ]
+        }
+      },
+      "depth_matched_random": {
+        "accuracy": {
+          "mean": 0.8867105263157895,
+          "std": 0.0011694992654362835,
+          "values": [
+            0.8853947368421052,
+            0.8876315789473684,
+            0.8871052631578947
+          ]
+        },
+        "macro_f1": {
+          "mean": 0.8866199599385306,
+          "std": 0.0011497463745425277,
+          "values": [
+            0.8853169523449043,
+            0.8874917933384111,
+            0.8870511341322763
+          ]
+        }
+      },
+      "paired_cascade_minus_random_accuracy": {
+        "mean": -0.002061403508771894,
+        "std": 0.002476808404122016,
+        "values": [
+          0.0007894736842105621,
+          -0.003289473684210509,
+          -0.0036842105263157343
+        ]
+      },
+      "seed_directions": [
+        "cascade",
+        "depth_matched_random",
+        "depth_matched_random"
+      ],
+      "maximum_holm_p": 0.6727565036145107,
+      "robust_winner": "none",
+      "seeds": [
+        {
+          "seed": 42,
+          "cascade_accuracy": 0.8861842105263158,
+          "depth_matched_random_accuracy": 0.8853947368421052,
+          "cascade_minus_random_accuracy": 0.0007894736842105621,
+          "direction": "cascade",
+          "mcnemar": {
+            "only_cascade_correct": 73,
+            "only_depth_matched_random_correct": 67,
+            "n_discordant": 140,
+            "p_value": 0.6727565036145107,
+            "p_value_holm": 0.6727565036145107
+          }
+        },
+        {
+          "seed": 123,
+          "cascade_accuracy": 0.8843421052631579,
+          "depth_matched_random_accuracy": 0.8876315789473684,
+          "cascade_minus_random_accuracy": -0.003289473684210509,
+          "direction": "depth_matched_random",
+          "mcnemar": {
+            "only_cascade_correct": 51,
+            "only_depth_matched_random_correct": 76,
+            "n_discordant": 127,
+            "p_value": 0.032789561693033514,
+            "p_value_holm": 0.0974222742500134
+          }
+        },
+        {
+          "seed": 456,
+          "cascade_accuracy": 0.883421052631579,
+          "depth_matched_random_accuracy": 0.8871052631578947,
+          "cascade_minus_random_accuracy": -0.0036842105263157343,
+          "direction": "depth_matched_random",
+          "mcnemar": {
+            "only_cascade_correct": 66,
+            "only_depth_matched_random_correct": 94,
+            "n_discordant": 160,
+            "p_value": 0.03247409141667113,
+            "p_value_holm": 0.0974222742500134
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "yahoo",
+      "labels_per_class": 10,
+      "target_queries_per_sample": 1.4,
+      "source_depth_policy": {
+        "n_samples": 5000,
+        "depth_1_count": 3564,
+        "depth_2_count": 872,
+        "depth_3_count": 564,
+        "realised_queries_per_sample": 1.4
+      },
+      "query_rate_audit": {
+        "requested_queries_per_sample": 1.4,
+        "recomputed_cascade_queries_per_sample": 1.4,
+        "depth_matched_random_queries_per_sample": [
+          1.4,
+          1.4,
+          1.4
+        ],
+        "stored_historical_cascade_queries_per_sample": [
+          1.4,
+          1.4,
+          1.4
+        ],
+        "random_matches_recomputed_cascade_exactly": true,
+        "stored_cascade_matches_recomputed_exactly": true,
+        "all_rates_within_requested_tolerance": true
+      },
+      "cascade": {
+        "accuracy": {
+          "mean": 0.6097,
+          "std": 0.005381449618829522,
+          "values": [
+            0.6157,
+            0.6053,
+            0.6081
+          ]
+        },
+        "macro_f1": {
+          "mean": 0.6083233648321887,
+          "std": 0.005872562326283848,
+          "values": [
+            0.6149867116379968,
+            0.6060811157200154,
+            0.603902267138554
+          ]
+        }
+      },
+      "depth_matched_random": {
+        "accuracy": {
+          "mean": 0.6095,
+          "std": 0.0021656407827707895,
+          "values": [
+            0.612,
+            0.6083,
+            0.6082
+          ]
+        },
+        "macro_f1": {
+          "mean": 0.608487588297611,
+          "std": 0.002827796309572918,
+          "values": [
+            0.6100181686703173,
+            0.6102201821679044,
+            0.6052244140546114
+          ]
+        }
+      },
+      "paired_cascade_minus_random_accuracy": {
+        "mean": 0.00020000000000001497,
+        "std": 0.0033600595232823084,
+        "values": [
+          0.0037000000000000366,
+          -0.0030000000000000027,
+          -9.999999999998899e-05
+        ]
+      },
+      "seed_directions": [
+        "cascade",
+        "depth_matched_random",
+        "depth_matched_random"
+      ],
+      "maximum_holm_p": 1.0,
+      "robust_winner": "none",
+      "seeds": [
+        {
+          "seed": 42,
+          "cascade_accuracy": 0.6157,
+          "depth_matched_random_accuracy": 0.612,
+          "cascade_minus_random_accuracy": 0.0037000000000000366,
+          "direction": "cascade",
+          "mcnemar": {
+            "only_cascade_correct": 245,
+            "only_depth_matched_random_correct": 208,
+            "n_discordant": 453,
+            "p_value": 0.09064460881154048,
+            "p_value_holm": 0.27193382643462144
+          }
+        },
+        {
+          "seed": 123,
+          "cascade_accuracy": 0.6053,
+          "depth_matched_random_accuracy": 0.6083,
+          "cascade_minus_random_accuracy": -0.0030000000000000027,
+          "direction": "depth_matched_random",
+          "mcnemar": {
+            "only_cascade_correct": 234,
+            "only_depth_matched_random_correct": 264,
+            "n_discordant": 498,
+            "p_value": 0.19371392581916447,
+            "p_value_holm": 0.38742785163832894
+          }
+        },
+        {
+          "seed": 456,
+          "cascade_accuracy": 0.6081,
+          "depth_matched_random_accuracy": 0.6082,
+          "cascade_minus_random_accuracy": -9.999999999998899e-05,
+          "direction": "depth_matched_random",
+          "mcnemar": {
+            "only_cascade_correct": 274,
+            "only_depth_matched_random_correct": 275,
+            "n_discordant": 549,
+            "p_value": 1.0,
+            "p_value_holm": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "yahoo",
+      "labels_per_class": 50,
+      "target_queries_per_sample": 1.4,
+      "source_depth_policy": {
+        "n_samples": 5000,
+        "depth_1_count": 3564,
+        "depth_2_count": 872,
+        "depth_3_count": 564,
+        "realised_queries_per_sample": 1.4
+      },
+      "query_rate_audit": {
+        "requested_queries_per_sample": 1.4,
+        "recomputed_cascade_queries_per_sample": 1.4,
+        "depth_matched_random_queries_per_sample": [
+          1.4,
+          1.4,
+          1.4
+        ],
+        "stored_historical_cascade_queries_per_sample": [
+          1.4,
+          1.4,
+          1.4
+        ],
+        "random_matches_recomputed_cascade_exactly": true,
+        "stored_cascade_matches_recomputed_exactly": true,
+        "all_rates_within_requested_tolerance": true
+      },
+      "cascade": {
+        "accuracy": {
+          "mean": 0.6048666666666667,
+          "std": 0.006625959050079728,
+          "values": [
+            0.6125,
+            0.6006,
+            0.6015
+          ]
+        },
+        "macro_f1": {
+          "mean": 0.6037097262697894,
+          "std": 0.005972506435937523,
+          "values": [
+            0.6103883893948397,
+            0.6018594975492079,
+            0.5988812918653206
+          ]
+        }
+      },
+      "depth_matched_random": {
+        "accuracy": {
+          "mean": 0.6071333333333334,
+          "std": 0.0029263173671584958,
+          "values": [
+            0.6096,
+            0.6079,
+            0.6039
+          ]
+        },
+        "macro_f1": {
+          "mean": 0.6062106652178308,
+          "std": 0.002642676650748721,
+          "values": [
+            0.607618143032105,
+            0.6078517065844414,
+            0.6031621460369458
+          ]
+        }
+      },
+      "paired_cascade_minus_random_accuracy": {
+        "mean": -0.002266666666666639,
+        "std": 0.00510130702206143,
+        "values": [
+          0.0029000000000000137,
+          -0.007299999999999973,
+          -0.0023999999999999577
+        ]
+      },
+      "seed_directions": [
+        "cascade",
+        "depth_matched_random",
+        "depth_matched_random"
+      ],
+      "maximum_holm_p": 0.4708734205563629,
+      "robust_winner": "none",
+      "seeds": [
+        {
+          "seed": 42,
+          "cascade_accuracy": 0.6125,
+          "depth_matched_random_accuracy": 0.6096,
+          "cascade_minus_random_accuracy": 0.0029000000000000137,
+          "direction": "cascade",
+          "mcnemar": {
+            "only_cascade_correct": 293,
+            "only_depth_matched_random_correct": 264,
+            "n_discordant": 557,
+            "p_value": 0.23543671027818144,
+            "p_value_holm": 0.4708734205563629
+          }
+        },
+        {
+          "seed": 123,
+          "cascade_accuracy": 0.6006,
+          "depth_matched_random_accuracy": 0.6079,
+          "cascade_minus_random_accuracy": -0.007299999999999973,
+          "direction": "depth_matched_random",
+          "mcnemar": {
+            "only_cascade_correct": 287,
+            "only_depth_matched_random_correct": 360,
+            "n_discordant": 647,
+            "p_value": 0.004608744998018058,
+            "p_value_holm": 0.013826234994054172
+          }
+        },
+        {
+          "seed": 456,
+          "cascade_accuracy": 0.6015,
+          "depth_matched_random_accuracy": 0.6039,
+          "cascade_minus_random_accuracy": -0.0023999999999999577,
+          "direction": "depth_matched_random",
+          "mcnemar": {
+            "only_cascade_correct": 359,
+            "only_depth_matched_random_correct": 383,
+            "n_discordant": 742,
+            "p_value": 0.39848549520053056,
+            "p_value_holm": 0.4708734205563629
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "amazon",
+      "labels_per_class": 10,
+      "target_queries_per_sample": 1.4,
+      "source_depth_policy": {
+        "n_samples": 2500,
+        "depth_1_count": 1727,
+        "depth_2_count": 546,
+        "depth_3_count": 227,
+        "realised_queries_per_sample": 1.4
+      },
+      "query_rate_audit": {
+        "requested_queries_per_sample": 1.4,
+        "recomputed_cascade_queries_per_sample": 1.4,
+        "depth_matched_random_queries_per_sample": [
+          1.4,
+          1.4,
+          1.4
+        ],
+        "stored_historical_cascade_queries_per_sample": [
+          1.4004,
+          1.4004,
+          1.4004
+        ],
+        "random_matches_recomputed_cascade_exactly": true,
+        "stored_cascade_matches_recomputed_exactly": false,
+        "all_rates_within_requested_tolerance": true
+      },
+      "cascade": {
+        "accuracy": {
+          "mean": 0.5826666666666667,
+          "std": 0.004775283586692328,
+          "values": [
+            0.5821,
+            0.5877,
+            0.5782
+          ]
+        },
+        "macro_f1": {
+          "mean": 0.5837259200460337,
+          "std": 0.0043197280157888885,
+          "values": [
+            0.5797285317411532,
+            0.5883083547398974,
+            0.5831408736570507
+          ]
+        }
+      },
+      "depth_matched_random": {
+        "accuracy": {
+          "mean": 0.5828666666666668,
+          "std": 0.003165964834506788,
+          "values": [
+            0.5825,
+            0.5862,
+            0.5799
+          ]
+        },
+        "macro_f1": {
+          "mean": 0.5827094644449993,
+          "std": 0.005306133806102227,
+          "values": [
+            0.5776836252003393,
+            0.5882573076056392,
+            0.5821874605290193
+          ]
+        }
+      },
+      "paired_cascade_minus_random_accuracy": {
+        "mean": -0.00020000000000001497,
+        "std": 0.0016093476939430481,
+        "values": [
+          -0.00040000000000006697,
+          0.0014999999999999458,
+          -0.0016999999999999238
+        ]
+      },
+      "seed_directions": [
+        "depth_matched_random",
+        "cascade",
+        "depth_matched_random"
+      ],
+      "maximum_holm_p": 1.0,
+      "robust_winner": "none",
+      "seeds": [
+        {
+          "seed": 42,
+          "cascade_accuracy": 0.5821,
+          "depth_matched_random_accuracy": 0.5825,
+          "cascade_minus_random_accuracy": -0.00040000000000006697,
+          "direction": "depth_matched_random",
+          "mcnemar": {
+            "only_cascade_correct": 410,
+            "only_depth_matched_random_correct": 414,
+            "n_discordant": 824,
+            "p_value": 0.9167729809895024,
+            "p_value_holm": 1.0
+          }
+        },
+        {
+          "seed": 123,
+          "cascade_accuracy": 0.5877,
+          "depth_matched_random_accuracy": 0.5862,
+          "cascade_minus_random_accuracy": 0.0014999999999999458,
+          "direction": "cascade",
+          "mcnemar": {
+            "only_cascade_correct": 446,
+            "only_depth_matched_random_correct": 431,
+            "n_discordant": 877,
+            "p_value": 0.6364190542691205,
+            "p_value_holm": 1.0
+          }
+        },
+        {
+          "seed": 456,
+          "cascade_accuracy": 0.5782,
+          "depth_matched_random_accuracy": 0.5799,
+          "cascade_minus_random_accuracy": -0.0016999999999999238,
+          "direction": "depth_matched_random",
+          "mcnemar": {
+            "only_cascade_correct": 482,
+            "only_depth_matched_random_correct": 499,
+            "n_discordant": 981,
+            "p_value": 0.6094851213380192,
+            "p_value_holm": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "amazon",
+      "labels_per_class": 50,
+      "target_queries_per_sample": 1.4,
+      "source_depth_policy": {
+        "n_samples": 2500,
+        "depth_1_count": 1727,
+        "depth_2_count": 546,
+        "depth_3_count": 227,
+        "realised_queries_per_sample": 1.4
+      },
+      "query_rate_audit": {
+        "requested_queries_per_sample": 1.4,
+        "recomputed_cascade_queries_per_sample": 1.4,
+        "depth_matched_random_queries_per_sample": [
+          1.4,
+          1.4,
+          1.4
+        ],
+        "stored_historical_cascade_queries_per_sample": [
+          1.4004,
+          1.4004,
+          1.4004
+        ],
+        "random_matches_recomputed_cascade_exactly": true,
+        "stored_cascade_matches_recomputed_exactly": false,
+        "all_rates_within_requested_tolerance": true
+      },
+      "cascade": {
+        "accuracy": {
+          "mean": 0.5477666666666666,
+          "std": 0.012068277977132176,
+          "values": [
+            0.5361,
+            0.547,
+            0.5602
+          ]
+        },
+        "macro_f1": {
+          "mean": 0.5425901523371418,
+          "std": 0.010973275874430496,
+          "values": [
+            0.529934770484387,
+            0.548375841384295,
+            0.5494598451427433
+          ]
+        }
+      },
+      "depth_matched_random": {
+        "accuracy": {
+          "mean": 0.5407333333333333,
+          "std": 0.01951469531746096,
+          "values": [
+            0.5231,
+            0.5374,
+            0.5617
+          ]
+        },
+        "macro_f1": {
+          "mean": 0.5346257984648625,
+          "std": 0.016895383337066524,
+          "values": [
+            0.5182331342167495,
+            0.5336616504026565,
+            0.5519826107751813
+          ]
+        }
+      },
+      "paired_cascade_minus_random_accuracy": {
+        "mean": 0.007033333333333373,
+        "std": 0.007583095234357345,
+        "values": [
+          0.013000000000000012,
+          0.009600000000000053,
+          -0.0014999999999999458
+        ]
+      },
+      "seed_directions": [
+        "cascade",
+        "cascade",
+        "depth_matched_random"
+      ],
+      "maximum_holm_p": 0.6640690638015994,
+      "robust_winner": "none",
+      "seeds": [
+        {
+          "seed": 42,
+          "cascade_accuracy": 0.5361,
+          "depth_matched_random_accuracy": 0.5231,
+          "cascade_minus_random_accuracy": 0.013000000000000012,
+          "direction": "cascade",
+          "mcnemar": {
+            "only_cascade_correct": 659,
+            "only_depth_matched_random_correct": 529,
+            "n_discordant": 1188,
+            "p_value": 0.0001796056580237759,
+            "p_value_holm": 0.0005388169740713277
+          }
+        },
+        {
+          "seed": 123,
+          "cascade_accuracy": 0.547,
+          "depth_matched_random_accuracy": 0.5374,
+          "cascade_minus_random_accuracy": 0.009600000000000053,
+          "direction": "cascade",
+          "mcnemar": {
+            "only_cascade_correct": 582,
+            "only_depth_matched_random_correct": 486,
+            "n_discordant": 1068,
+            "p_value": 0.003629959735817485,
+            "p_value_holm": 0.00725991947163497
+          }
+        },
+        {
+          "seed": 456,
+          "cascade_accuracy": 0.5602,
+          "depth_matched_random_accuracy": 0.5617,
+          "cascade_minus_random_accuracy": -0.0014999999999999458,
+          "direction": "depth_matched_random",
+          "mcnemar": {
+            "only_cascade_correct": 512,
+            "only_depth_matched_random_correct": 527,
+            "n_discordant": 1039,
+            "p_value": 0.6640690638015994,
+            "p_value_holm": 0.6640690638015994
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "amazon3",
+      "labels_per_class": 10,
+      "target_queries_per_sample": 1.4,
+      "source_depth_policy": {
+        "n_samples": 1500,
+        "depth_1_count": 1013,
+        "depth_2_count": 374,
+        "depth_3_count": 113,
+        "realised_queries_per_sample": 1.4
+      },
+      "query_rate_audit": {
+        "requested_queries_per_sample": 1.4,
+        "recomputed_cascade_queries_per_sample": 1.4,
+        "depth_matched_random_queries_per_sample": [
+          1.4,
+          1.4,
+          1.4
+        ],
+        "stored_historical_cascade_queries_per_sample": [
+          1.4,
+          1.4,
+          1.4
+        ],
+        "random_matches_recomputed_cascade_exactly": true,
+        "stored_cascade_matches_recomputed_exactly": true,
+        "all_rates_within_requested_tolerance": true
+      },
+      "cascade": {
+        "accuracy": {
+          "mean": 0.7356666666666666,
+          "std": 0.008261355820929173,
+          "values": [
+            0.7411666666666666,
+            0.7261666666666666,
+            0.7396666666666667
+          ]
+        },
+        "macro_f1": {
+          "mean": 0.730320195943572,
+          "std": 0.014179304060669636,
+          "values": [
+            0.7383865612179408,
+            0.7139479299899388,
+            0.7386260966228365
+          ]
+        }
+      },
+      "depth_matched_random": {
+        "accuracy": {
+          "mean": 0.7398888888888889,
+          "std": 0.004613787710443235,
+          "values": [
+            0.7405,
+            0.735,
+            0.7441666666666666
+          ]
+        },
+        "macro_f1": {
+          "mean": 0.73520286851755,
+          "std": 0.006702644430216206,
+          "values": [
+            0.7348256220346996,
+            0.728696814307724,
+            0.7420861692102264
+          ]
+        }
+      },
+      "paired_cascade_minus_random_accuracy": {
+        "mean": -0.004222222222222238,
+        "std": 0.004756087716849861,
+        "values": [
+          0.0006666666666665932,
+          -0.00883333333333336,
+          -0.0044999999999999485
+        ]
+      },
+      "seed_directions": [
+        "cascade",
+        "depth_matched_random",
+        "depth_matched_random"
+      ],
+      "maximum_holm_p": 0.8651695565157257,
+      "robust_winner": "none",
+      "seeds": [
+        {
+          "seed": 42,
+          "cascade_accuracy": 0.7411666666666666,
+          "depth_matched_random_accuracy": 0.7405,
+          "cascade_minus_random_accuracy": 0.0006666666666665932,
+          "direction": "cascade",
+          "mcnemar": {
+            "only_cascade_correct": 158,
+            "only_depth_matched_random_correct": 154,
+            "n_discordant": 312,
+            "p_value": 0.8651695565157257,
+            "p_value_holm": 0.8651695565157257
+          }
+        },
+        {
+          "seed": 123,
+          "cascade_accuracy": 0.7261666666666666,
+          "depth_matched_random_accuracy": 0.735,
+          "cascade_minus_random_accuracy": -0.00883333333333336,
+          "direction": "depth_matched_random",
+          "mcnemar": {
+            "only_cascade_correct": 141,
+            "only_depth_matched_random_correct": 194,
+            "n_discordant": 335,
+            "p_value": 0.0044257734962159356,
+            "p_value_holm": 0.013277320488647807
+          }
+        },
+        {
+          "seed": 456,
+          "cascade_accuracy": 0.7396666666666667,
+          "depth_matched_random_accuracy": 0.7441666666666666,
+          "cascade_minus_random_accuracy": -0.0044999999999999485,
+          "direction": "depth_matched_random",
+          "mcnemar": {
+            "only_cascade_correct": 132,
+            "only_depth_matched_random_correct": 159,
+            "n_discordant": 291,
+            "p_value": 0.12732785475778363,
+            "p_value_holm": 0.25465570951556726
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "amazon3",
+      "labels_per_class": 50,
+      "target_queries_per_sample": 1.4,
+      "source_depth_policy": {
+        "n_samples": 1500,
+        "depth_1_count": 1013,
+        "depth_2_count": 374,
+        "depth_3_count": 113,
+        "realised_queries_per_sample": 1.4
+      },
+      "query_rate_audit": {
+        "requested_queries_per_sample": 1.4,
+        "recomputed_cascade_queries_per_sample": 1.4,
+        "depth_matched_random_queries_per_sample": [
+          1.4,
+          1.4,
+          1.4
+        ],
+        "stored_historical_cascade_queries_per_sample": [
+          1.4,
+          1.4,
+          1.4
+        ],
+        "random_matches_recomputed_cascade_exactly": true,
+        "stored_cascade_matches_recomputed_exactly": true,
+        "all_rates_within_requested_tolerance": true
+      },
+      "cascade": {
+        "accuracy": {
+          "mean": 0.7218888888888889,
+          "std": 0.0145309376210948,
+          "values": [
+            0.7386666666666667,
+            0.7136666666666667,
+            0.7133333333333334
+          ]
+        },
+        "macro_f1": {
+          "mean": 0.7213615588681418,
+          "std": 0.012528908863711446,
+          "values": [
+            0.7357163284302611,
+            0.7126256490057873,
+            0.7157426991683767
+          ]
+        }
+      },
+      "depth_matched_random": {
+        "accuracy": {
+          "mean": 0.7298888888888889,
+          "std": 0.01537524465327786,
+          "values": [
+            0.7396666666666667,
+            0.7378333333333333,
+            0.7121666666666666
+          ]
+        },
+        "macro_f1": {
+          "mean": 0.7310633066364534,
+          "std": 0.014203516449466169,
+          "values": [
+            0.7375885778060951,
+            0.7408316152481303,
+            0.7147697268551348
+          ]
+        }
+      },
+      "paired_cascade_minus_random_accuracy": {
+        "mean": -0.00799999999999997,
+        "std": 0.014042593935752943,
+        "values": [
+          -0.0010000000000000009,
+          -0.02416666666666667,
+          0.0011666666666667602
+        ]
+      },
+      "seed_directions": [
+        "depth_matched_random",
+        "depth_matched_random",
+        "cascade"
+      ],
+      "maximum_holm_p": 1.0,
+      "robust_winner": "none",
+      "seeds": [
+        {
+          "seed": 42,
+          "cascade_accuracy": 0.7386666666666667,
+          "depth_matched_random_accuracy": 0.7396666666666667,
+          "cascade_minus_random_accuracy": -0.0010000000000000009,
+          "direction": "depth_matched_random",
+          "mcnemar": {
+            "only_cascade_correct": 130,
+            "only_depth_matched_random_correct": 136,
+            "n_discordant": 266,
+            "p_value": 0.7592375817962433,
+            "p_value_holm": 1.0
+          }
+        },
+        {
+          "seed": 123,
+          "cascade_accuracy": 0.7136666666666667,
+          "depth_matched_random_accuracy": 0.7378333333333333,
+          "cascade_minus_random_accuracy": -0.02416666666666667,
+          "direction": "depth_matched_random",
+          "mcnemar": {
+            "only_cascade_correct": 228,
+            "only_depth_matched_random_correct": 373,
+            "n_discordant": 601,
+            "p_value": 3.5966272668704377e-09,
+            "p_value_holm": 1.0789881800611313e-08
+          }
+        },
+        {
+          "seed": 456,
+          "cascade_accuracy": 0.7133333333333334,
+          "depth_matched_random_accuracy": 0.7121666666666666,
+          "cascade_minus_random_accuracy": 0.0011666666666667602,
+          "direction": "cascade",
+          "mcnemar": {
+            "only_cascade_correct": 172,
+            "only_depth_matched_random_correct": 165,
+            "n_discordant": 337,
+            "p_value": 0.7438431429107556,
+            "p_value_holm": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "ag_news",
+      "labels_per_class": 10,
+      "target_queries_per_sample": 2.0,
+      "source_depth_policy": {
+        "n_samples": 6000,
+        "depth_1_count": 276,
+        "depth_2_count": 5448,
+        "depth_3_count": 276,
+        "realised_queries_per_sample": 2.0
+      },
+      "query_rate_audit": {
+        "requested_queries_per_sample": 2.0,
+        "recomputed_cascade_queries_per_sample": 2.0,
+        "depth_matched_random_queries_per_sample": [
+          2.0,
+          2.0,
+          2.0
+        ],
+        "stored_historical_cascade_queries_per_sample": [
+          2.0,
+          2.0,
+          2.0
+        ],
+        "random_matches_recomputed_cascade_exactly": true,
+        "stored_cascade_matches_recomputed_exactly": true,
+        "all_rates_within_requested_tolerance": true
+      },
+      "cascade": {
+        "accuracy": {
+          "mean": 0.8837719298245613,
+          "std": 0.003001423177355369,
+          "values": [
+            0.8864473684210527,
+            0.8805263157894737,
+            0.8843421052631579
+          ]
+        },
+        "macro_f1": {
+          "mean": 0.8835570974802133,
+          "std": 0.00310418033098799,
+          "values": [
+            0.8862994899044472,
+            0.8801870520064157,
+            0.8841847505297766
+          ]
+        }
+      },
+      "depth_matched_random": {
+        "accuracy": {
+          "mean": 0.8825877192982455,
+          "std": 0.002299182881066851,
+          "values": [
+            0.8851315789473684,
+            0.8806578947368421,
+            0.8819736842105264
+          ]
+        },
+        "macro_f1": {
+          "mean": 0.882299597473423,
+          "std": 0.002439544897356272,
+          "values": [
+            0.8849815733860268,
+            0.8802125309626934,
+            0.8817046880715491
+          ]
+        }
+      },
+      "paired_cascade_minus_random_accuracy": {
+        "mean": 0.0011842105263158247,
+        "std": 0.0012551831597591144,
+        "values": [
+          0.0013157894736842701,
+          -0.0001315789473683715,
+          0.002368421052631575
+        ]
+      },
+      "seed_directions": [
+        "cascade",
+        "depth_matched_random",
+        "cascade"
+      ],
+      "maximum_holm_p": 1.0,
+      "robust_winner": "none",
+      "seeds": [
+        {
+          "seed": 42,
+          "cascade_accuracy": 0.8864473684210527,
+          "depth_matched_random_accuracy": 0.8851315789473684,
+          "cascade_minus_random_accuracy": 0.0013157894736842701,
+          "direction": "cascade",
+          "mcnemar": {
+            "only_cascade_correct": 69,
+            "only_depth_matched_random_correct": 59,
+            "n_discordant": 128,
+            "p_value": 0.42643949644402435,
+            "p_value_holm": 0.8528789928880487
+          }
+        },
+        {
+          "seed": 123,
+          "cascade_accuracy": 0.8805263157894737,
+          "depth_matched_random_accuracy": 0.8806578947368421,
+          "cascade_minus_random_accuracy": -0.0001315789473683715,
+          "direction": "depth_matched_random",
+          "mcnemar": {
+            "only_cascade_correct": 61,
+            "only_depth_matched_random_correct": 62,
+            "n_discordant": 123,
+            "p_value": 1.0,
+            "p_value_holm": 1.0
+          }
+        },
+        {
+          "seed": 456,
+          "cascade_accuracy": 0.8843421052631579,
+          "depth_matched_random_accuracy": 0.8819736842105264,
+          "cascade_minus_random_accuracy": 0.002368421052631575,
+          "direction": "cascade",
+          "mcnemar": {
+            "only_cascade_correct": 69,
+            "only_depth_matched_random_correct": 51,
+            "n_discordant": 120,
+            "p_value": 0.12032782773865805,
+            "p_value_holm": 0.3609834832159742
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "ag_news",
+      "labels_per_class": 50,
+      "target_queries_per_sample": 2.0,
+      "source_depth_policy": {
+        "n_samples": 6000,
+        "depth_1_count": 276,
+        "depth_2_count": 5448,
+        "depth_3_count": 276,
+        "realised_queries_per_sample": 2.0
+      },
+      "query_rate_audit": {
+        "requested_queries_per_sample": 2.0,
+        "recomputed_cascade_queries_per_sample": 2.0,
+        "depth_matched_random_queries_per_sample": [
+          2.0,
+          2.0,
+          2.0
+        ],
+        "stored_historical_cascade_queries_per_sample": [
+          2.0,
+          2.0,
+          2.0
+        ],
+        "random_matches_recomputed_cascade_exactly": true,
+        "stored_cascade_matches_recomputed_exactly": true,
+        "all_rates_within_requested_tolerance": true
+      },
+      "cascade": {
+        "accuracy": {
+          "mean": 0.8842543859649122,
+          "std": 0.003229273707754387,
+          "values": [
+            0.8844736842105263,
+            0.8809210526315789,
+            0.8873684210526316
+          ]
+        },
+        "macro_f1": {
+          "mean": 0.8840019995401563,
+          "std": 0.003398997184862112,
+          "values": [
+            0.8843396921693027,
+            0.880446760656954,
+            0.887219545794212
+          ]
+        }
+      },
+      "depth_matched_random": {
+        "accuracy": {
+          "mean": 0.8846929824561404,
+          "std": 0.0011866446717954948,
+          "values": [
+            0.8859210526315789,
+            0.8835526315789474,
+            0.8846052631578948
+          ]
+        },
+        "macro_f1": {
+          "mean": 0.884469251274819,
+          "std": 0.0013054610782225866,
+          "values": [
+            0.8857670001828745,
+            0.8831562123415508,
+            0.8844845413000321
+          ]
+        }
+      },
+      "paired_cascade_minus_random_accuracy": {
+        "mean": -0.00043859649122809,
+        "std": 0.002835315150683137,
+        "values": [
+          -0.0014473684210526416,
+          -0.0026315789473684292,
+          0.0027631578947368007
+        ]
+      },
+      "seed_directions": [
+        "depth_matched_random",
+        "depth_matched_random",
+        "cascade"
+      ],
+      "maximum_holm_p": 0.329137126166139,
+      "robust_winner": "none",
+      "seeds": [
+        {
+          "seed": 42,
+          "cascade_accuracy": 0.8844736842105263,
+          "depth_matched_random_accuracy": 0.8859210526315789,
+          "cascade_minus_random_accuracy": -0.0014473684210526416,
+          "direction": "depth_matched_random",
+          "mcnemar": {
+            "only_cascade_correct": 47,
+            "only_depth_matched_random_correct": 58,
+            "n_discordant": 105,
+            "p_value": 0.329137126166139,
+            "p_value_holm": 0.329137126166139
+          }
+        },
+        {
+          "seed": 123,
+          "cascade_accuracy": 0.8809210526315789,
+          "depth_matched_random_accuracy": 0.8835526315789474,
+          "cascade_minus_random_accuracy": -0.0026315789473684292,
+          "direction": "depth_matched_random",
+          "mcnemar": {
+            "only_cascade_correct": 69,
+            "only_depth_matched_random_correct": 89,
+            "n_discordant": 158,
+            "p_value": 0.13038570384790601,
+            "p_value_holm": 0.26077140769581203
+          }
+        },
+        {
+          "seed": 456,
+          "cascade_accuracy": 0.8873684210526316,
+          "depth_matched_random_accuracy": 0.8846052631578948,
+          "cascade_minus_random_accuracy": 0.0027631578947368007,
+          "direction": "cascade",
+          "mcnemar": {
+            "only_cascade_correct": 53,
+            "only_depth_matched_random_correct": 32,
+            "n_discordant": 85,
+            "p_value": 0.029456361785778883,
+            "p_value_holm": 0.08836908535733665
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "yahoo",
+      "labels_per_class": 10,
+      "target_queries_per_sample": 2.0,
+      "source_depth_policy": {
+        "n_samples": 5000,
+        "depth_1_count": 775,
+        "depth_2_count": 3450,
+        "depth_3_count": 775,
+        "realised_queries_per_sample": 2.0
+      },
+      "query_rate_audit": {
+        "requested_queries_per_sample": 2.0,
+        "recomputed_cascade_queries_per_sample": 2.0,
+        "depth_matched_random_queries_per_sample": [
+          2.0,
+          2.0,
+          2.0
+        ],
+        "stored_historical_cascade_queries_per_sample": [
+          2.0,
+          2.0,
+          2.0
+        ],
+        "random_matches_recomputed_cascade_exactly": true,
+        "stored_cascade_matches_recomputed_exactly": true,
+        "all_rates_within_requested_tolerance": true
+      },
+      "cascade": {
+        "accuracy": {
+          "mean": 0.6135666666666667,
+          "std": 0.006115826463637875,
+          "values": [
+            0.6206,
+            0.6095,
+            0.6106
+          ]
+        },
+        "macro_f1": {
+          "mean": 0.6115485909347093,
+          "std": 0.006409331170174656,
+          "values": [
+            0.6185571568352708,
+            0.6101033196556166,
+            0.6059852963132407
+          ]
+        }
+      },
+      "depth_matched_random": {
+        "accuracy": {
+          "mean": 0.6128666666666667,
+          "std": 0.0023180451534284595,
+          "values": [
+            0.6132,
+            0.6104,
+            0.615
+          ]
+        },
+        "macro_f1": {
+          "mean": 0.6116038469679593,
+          "std": 0.0014272914104907543,
+          "values": [
+            0.6118374033264373,
+            0.6100741819068287,
+            0.6128999556706121
+          ]
+        }
+      },
+      "paired_cascade_minus_random_accuracy": {
+        "mean": 0.0007000000000000339,
+        "std": 0.006060528029800729,
+        "values": [
+          0.007400000000000073,
+          -0.0009000000000000119,
+          -0.0043999999999999595
+        ]
+      },
+      "seed_directions": [
+        "cascade",
+        "depth_matched_random",
+        "depth_matched_random"
+      ],
+      "maximum_holm_p": 0.6986950239488907,
+      "robust_winner": "none",
+      "seeds": [
+        {
+          "seed": 42,
+          "cascade_accuracy": 0.6206,
+          "depth_matched_random_accuracy": 0.6132,
+          "cascade_minus_random_accuracy": 0.007400000000000073,
+          "direction": "cascade",
+          "mcnemar": {
+            "only_cascade_correct": 249,
+            "only_depth_matched_random_correct": 175,
+            "n_discordant": 424,
+            "p_value": 0.0003803708689135479,
+            "p_value_holm": 0.0011411126067406435
+          }
+        },
+        {
+          "seed": 123,
+          "cascade_accuracy": 0.6095,
+          "depth_matched_random_accuracy": 0.6104,
+          "cascade_minus_random_accuracy": -0.0009000000000000119,
+          "direction": "depth_matched_random",
+          "mcnemar": {
+            "only_cascade_correct": 209,
+            "only_depth_matched_random_correct": 218,
+            "n_discordant": 427,
+            "p_value": 0.6986950239488907,
+            "p_value_holm": 0.6986950239488907
+          }
+        },
+        {
+          "seed": 456,
+          "cascade_accuracy": 0.6106,
+          "depth_matched_random_accuracy": 0.615,
+          "cascade_minus_random_accuracy": -0.0043999999999999595,
+          "direction": "depth_matched_random",
+          "mcnemar": {
+            "only_cascade_correct": 249,
+            "only_depth_matched_random_correct": 293,
+            "n_discordant": 542,
+            "p_value": 0.06464662592099403,
+            "p_value_holm": 0.12929325184198806
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "yahoo",
+      "labels_per_class": 50,
+      "target_queries_per_sample": 2.0,
+      "source_depth_policy": {
+        "n_samples": 5000,
+        "depth_1_count": 775,
+        "depth_2_count": 3450,
+        "depth_3_count": 775,
+        "realised_queries_per_sample": 2.0
+      },
+      "query_rate_audit": {
+        "requested_queries_per_sample": 2.0,
+        "recomputed_cascade_queries_per_sample": 2.0,
+        "depth_matched_random_queries_per_sample": [
+          2.0,
+          2.0,
+          2.0
+        ],
+        "stored_historical_cascade_queries_per_sample": [
+          2.0,
+          2.0,
+          2.0
+        ],
+        "random_matches_recomputed_cascade_exactly": true,
+        "stored_cascade_matches_recomputed_exactly": true,
+        "all_rates_within_requested_tolerance": true
+      },
+      "cascade": {
+        "accuracy": {
+          "mean": 0.6015333333333334,
+          "std": 0.0038798625405203823,
+          "values": [
+            0.606,
+            0.599,
+            0.5996
+          ]
+        },
+        "macro_f1": {
+          "mean": 0.6021436463877775,
+          "std": 0.002756548566154392,
+          "values": [
+            0.6039408021139203,
+            0.6035202022503501,
+            0.5989699347990624
+          ]
+        }
+      },
+      "depth_matched_random": {
+        "accuracy": {
+          "mean": 0.6038333333333333,
+          "std": 0.0038004385711827428,
+          "values": [
+            0.6039,
+            0.6,
+            0.6076
+          ]
+        },
+        "macro_f1": {
+          "mean": 0.6029309220266957,
+          "std": 0.0008936149762336341,
+          "values": [
+            0.6020930779653779,
+            0.6028282496532099,
+            0.6038714384614992
+          ]
+        }
+      },
+      "paired_cascade_minus_random_accuracy": {
+        "mean": -0.0023000000000000056,
+        "std": 0.005173973328110612,
+        "values": [
+          0.0020999999999999908,
+          -0.0010000000000000009,
+          -0.008000000000000007
+        ]
+      },
+      "seed_directions": [
+        "cascade",
+        "depth_matched_random",
+        "depth_matched_random"
+      ],
+      "maximum_holm_p": 0.7450804166906262,
+      "robust_winner": "none",
+      "seeds": [
+        {
+          "seed": 42,
+          "cascade_accuracy": 0.606,
+          "depth_matched_random_accuracy": 0.6039,
+          "cascade_minus_random_accuracy": 0.0020999999999999908,
+          "direction": "cascade",
+          "mcnemar": {
+            "only_cascade_correct": 262,
+            "only_depth_matched_random_correct": 241,
+            "n_discordant": 503,
+            "p_value": 0.3725402083453131,
+            "p_value_holm": 0.7450804166906262
+          }
+        },
+        {
+          "seed": 123,
+          "cascade_accuracy": 0.599,
+          "depth_matched_random_accuracy": 0.6,
+          "cascade_minus_random_accuracy": -0.0010000000000000009,
+          "direction": "depth_matched_random",
+          "mcnemar": {
+            "only_cascade_correct": 371,
+            "only_depth_matched_random_correct": 381,
+            "n_discordant": 752,
+            "p_value": 0.7427878856773458,
+            "p_value_holm": 0.7450804166906262
+          }
+        },
+        {
+          "seed": 456,
+          "cascade_accuracy": 0.5996,
+          "depth_matched_random_accuracy": 0.6076,
+          "cascade_minus_random_accuracy": -0.008000000000000007,
+          "direction": "depth_matched_random",
+          "mcnemar": {
+            "only_cascade_correct": 375,
+            "only_depth_matched_random_correct": 455,
+            "n_discordant": 830,
+            "p_value": 0.00607083760631822,
+            "p_value_holm": 0.01821251281895466
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "amazon",
+      "labels_per_class": 10,
+      "target_queries_per_sample": 2.0,
+      "source_depth_policy": {
+        "n_samples": 2500,
+        "depth_1_count": 360,
+        "depth_2_count": 1780,
+        "depth_3_count": 360,
+        "realised_queries_per_sample": 1.9999999999999998
+      },
+      "query_rate_audit": {
+        "requested_queries_per_sample": 2.0,
+        "recomputed_cascade_queries_per_sample": 1.9999999999999998,
+        "depth_matched_random_queries_per_sample": [
+          1.9999999999999998,
+          1.9999999999999998,
+          1.9999999999999998
+        ],
+        "stored_historical_cascade_queries_per_sample": [
+          1.9999999999999998,
+          1.9999999999999998,
+          1.9999999999999998
+        ],
+        "random_matches_recomputed_cascade_exactly": true,
+        "stored_cascade_matches_recomputed_exactly": true,
+        "all_rates_within_requested_tolerance": true
+      },
+      "cascade": {
+        "accuracy": {
+          "mean": 0.582,
+          "std": 0.0038431757701151243,
+          "values": [
+            0.5776,
+            0.5837,
+            0.5847
+          ]
+        },
+        "macro_f1": {
+          "mean": 0.5834369952535877,
+          "std": 0.004912164131464709,
+          "values": [
+            0.5778126847558258,
+            0.5856129861974166,
+            0.5868853148075207
+          ]
+        }
+      },
+      "depth_matched_random": {
+        "accuracy": {
+          "mean": 0.5848333333333333,
+          "std": 0.0020404247923737247,
+          "values": [
+            0.5826,
+            0.5853,
+            0.5866
+          ]
+        },
+        "macro_f1": {
+          "mean": 0.5856683319158309,
+          "std": 0.003235357539567492,
+          "values": [
+            0.5823165625689042,
+            0.5859153113815957,
+            0.5887731217969928
+          ]
+        }
+      },
+      "paired_cascade_minus_random_accuracy": {
+        "mean": -0.0028333333333333544,
+        "std": 0.0018823743871327176,
+        "values": [
+          -0.0050000000000000044,
+          -0.0016000000000000458,
+          -0.0019000000000000128
+        ]
+      },
+      "seed_directions": [
+        "depth_matched_random",
+        "depth_matched_random",
+        "depth_matched_random"
+      ],
+      "maximum_holm_p": 1.0,
+      "robust_winner": "none",
+      "seeds": [
+        {
+          "seed": 42,
+          "cascade_accuracy": 0.5776,
+          "depth_matched_random_accuracy": 0.5826,
+          "cascade_minus_random_accuracy": -0.0050000000000000044,
+          "direction": "depth_matched_random",
+          "mcnemar": {
+            "only_cascade_correct": 382,
+            "only_depth_matched_random_correct": 432,
+            "n_discordant": 814,
+            "p_value": 0.08583453932726064,
+            "p_value_holm": 0.2575036179817819
+          }
+        },
+        {
+          "seed": 123,
+          "cascade_accuracy": 0.5837,
+          "depth_matched_random_accuracy": 0.5853,
+          "cascade_minus_random_accuracy": -0.0016000000000000458,
+          "direction": "depth_matched_random",
+          "mcnemar": {
+            "only_cascade_correct": 615,
+            "only_depth_matched_random_correct": 631,
+            "n_discordant": 1246,
+            "p_value": 0.6708941173548414,
+            "p_value_holm": 1.0
+          }
+        },
+        {
+          "seed": 456,
+          "cascade_accuracy": 0.5847,
+          "depth_matched_random_accuracy": 0.5866,
+          "cascade_minus_random_accuracy": -0.0019000000000000128,
+          "direction": "depth_matched_random",
+          "mcnemar": {
+            "only_cascade_correct": 352,
+            "only_depth_matched_random_correct": 371,
+            "n_discordant": 723,
+            "p_value": 0.503250258075739,
+            "p_value_holm": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "amazon",
+      "labels_per_class": 50,
+      "target_queries_per_sample": 2.0,
+      "source_depth_policy": {
+        "n_samples": 2500,
+        "depth_1_count": 360,
+        "depth_2_count": 1780,
+        "depth_3_count": 360,
+        "realised_queries_per_sample": 1.9999999999999998
+      },
+      "query_rate_audit": {
+        "requested_queries_per_sample": 2.0,
+        "recomputed_cascade_queries_per_sample": 1.9999999999999998,
+        "depth_matched_random_queries_per_sample": [
+          1.9999999999999998,
+          1.9999999999999998,
+          1.9999999999999998
+        ],
+        "stored_historical_cascade_queries_per_sample": [
+          1.9999999999999998,
+          1.9999999999999998,
+          1.9999999999999998
+        ],
+        "random_matches_recomputed_cascade_exactly": true,
+        "stored_cascade_matches_recomputed_exactly": true,
+        "all_rates_within_requested_tolerance": true
+      },
+      "cascade": {
+        "accuracy": {
+          "mean": 0.5376666666666667,
+          "std": 0.021314392633460924,
+          "values": [
+            0.5237,
+            0.5271,
+            0.5622
+          ]
+        },
+        "macro_f1": {
+          "mean": 0.5321925197837762,
+          "std": 0.01794960644205767,
+          "values": [
+            0.5215063363777298,
+            0.522155673756626,
+            0.5529155492169728
+          ]
+        }
+      },
+      "depth_matched_random": {
+        "accuracy": {
+          "mean": 0.5392333333333333,
+          "std": 0.01626663251362533,
+          "values": [
+            0.5437,
+            0.5212,
+            0.5528
+          ]
+        },
+        "macro_f1": {
+          "mean": 0.5322984142613204,
+          "std": 0.01440418497338402,
+          "values": [
+            0.5417662821943222,
+            0.5157217545802769,
+            0.5394072060093622
+          ]
+        }
+      },
+      "paired_cascade_minus_random_accuracy": {
+        "mean": -0.0015666666666666051,
+        "std": 0.016059369020398423,
+        "values": [
+          -0.019999999999999907,
+          0.005900000000000016,
+          0.009400000000000075
+        ]
+      },
+      "seed_directions": [
+        "depth_matched_random",
+        "cascade",
+        "cascade"
+      ],
+      "maximum_holm_p": 0.07410230096456606,
+      "robust_winner": "none",
+      "seeds": [
+        {
+          "seed": 42,
+          "cascade_accuracy": 0.5237,
+          "depth_matched_random_accuracy": 0.5437,
+          "cascade_minus_random_accuracy": -0.019999999999999907,
+          "direction": "depth_matched_random",
+          "mcnemar": {
+            "only_cascade_correct": 524,
+            "only_depth_matched_random_correct": 724,
+            "n_discordant": 1248,
+            "p_value": 1.6542613882393748e-08,
+            "p_value_holm": 4.9627841647181246e-08
+          }
+        },
+        {
+          "seed": 123,
+          "cascade_accuracy": 0.5271,
+          "depth_matched_random_accuracy": 0.5212,
+          "cascade_minus_random_accuracy": 0.005900000000000016,
+          "direction": "cascade",
+          "mcnemar": {
+            "only_cascade_correct": 557,
+            "only_depth_matched_random_correct": 498,
+            "n_discordant": 1055,
+            "p_value": 0.07410230096456606,
+            "p_value_holm": 0.07410230096456606
+          }
+        },
+        {
+          "seed": 456,
+          "cascade_accuracy": 0.5622,
+          "depth_matched_random_accuracy": 0.5528,
+          "cascade_minus_random_accuracy": 0.009400000000000075,
+          "direction": "cascade",
+          "mcnemar": {
+            "only_cascade_correct": 595,
+            "only_depth_matched_random_correct": 501,
+            "n_discordant": 1096,
+            "p_value": 0.004944254848389181,
+            "p_value_holm": 0.009888509696778363
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "amazon3",
+      "labels_per_class": 10,
+      "target_queries_per_sample": 2.0,
+      "source_depth_policy": {
+        "n_samples": 1500,
+        "depth_1_count": 126,
+        "depth_2_count": 1248,
+        "depth_3_count": 126,
+        "realised_queries_per_sample": 2.0
+      },
+      "query_rate_audit": {
+        "requested_queries_per_sample": 2.0,
+        "recomputed_cascade_queries_per_sample": 2.0,
+        "depth_matched_random_queries_per_sample": [
+          2.0,
+          2.0,
+          2.0
+        ],
+        "stored_historical_cascade_queries_per_sample": [
+          2.0,
+          2.0,
+          2.0
+        ],
+        "random_matches_recomputed_cascade_exactly": true,
+        "stored_cascade_matches_recomputed_exactly": true,
+        "all_rates_within_requested_tolerance": true
+      },
+      "cascade": {
+        "accuracy": {
+          "mean": 0.7346111111111111,
+          "std": 0.003686813338452722,
+          "values": [
+            0.7385,
+            0.7311666666666666,
+            0.7341666666666666
+          ]
+        },
+        "macro_f1": {
+          "mean": 0.7323867838077129,
+          "std": 0.007968549112489341,
+          "values": [
+            0.7386800271849546,
+            0.7234268936060904,
+            0.7350534306320938
+          ]
+        }
+      },
+      "depth_matched_random": {
+        "accuracy": {
+          "mean": 0.7332222222222221,
+          "std": 0.004945068624771939,
+          "values": [
+            0.7338333333333333,
+            0.728,
+            0.7378333333333333
+          ]
+        },
+        "macro_f1": {
+          "mean": 0.7296805954687322,
+          "std": 0.008706776366028162,
+          "values": [
+            0.7297798140436839,
+            0.7209246338196863,
+            0.7383373385428262
+          ]
+        }
+      },
+      "paired_cascade_minus_random_accuracy": {
+        "mean": 0.001388888888888884,
+        "std": 0.004442013223920184,
+        "values": [
+          0.004666666666666708,
+          0.003166666666666651,
+          -0.003666666666666707
+        ]
+      },
+      "seed_directions": [
+        "cascade",
+        "cascade",
+        "depth_matched_random"
+      ],
+      "maximum_holm_p": 0.5339915456374263,
+      "robust_winner": "none",
+      "seeds": [
+        {
+          "seed": 42,
+          "cascade_accuracy": 0.7385,
+          "depth_matched_random_accuracy": 0.7338333333333333,
+          "cascade_minus_random_accuracy": 0.004666666666666708,
+          "direction": "cascade",
+          "mcnemar": {
+            "only_cascade_correct": 210,
+            "only_depth_matched_random_correct": 182,
+            "n_discordant": 392,
+            "p_value": 0.1725818226720512,
+            "p_value_holm": 0.5177454680161535
+          }
+        },
+        {
+          "seed": 123,
+          "cascade_accuracy": 0.7311666666666666,
+          "depth_matched_random_accuracy": 0.728,
+          "cascade_minus_random_accuracy": 0.003166666666666651,
+          "direction": "cascade",
+          "mcnemar": {
+            "only_cascade_correct": 141,
+            "only_depth_matched_random_correct": 122,
+            "n_discordant": 263,
+            "p_value": 0.2669957728187132,
+            "p_value_holm": 0.5339915456374263
+          }
+        },
+        {
+          "seed": 456,
+          "cascade_accuracy": 0.7341666666666666,
+          "depth_matched_random_accuracy": 0.7378333333333333,
+          "cascade_minus_random_accuracy": -0.003666666666666707,
+          "direction": "depth_matched_random",
+          "mcnemar": {
+            "only_cascade_correct": 172,
+            "only_depth_matched_random_correct": 194,
+            "n_discordant": 366,
+            "p_value": 0.2723189169567467,
+            "p_value_holm": 0.5339915456374263
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "amazon3",
+      "labels_per_class": 50,
+      "target_queries_per_sample": 2.0,
+      "source_depth_policy": {
+        "n_samples": 1500,
+        "depth_1_count": 126,
+        "depth_2_count": 1248,
+        "depth_3_count": 126,
+        "realised_queries_per_sample": 2.0
+      },
+      "query_rate_audit": {
+        "requested_queries_per_sample": 2.0,
+        "recomputed_cascade_queries_per_sample": 2.0,
+        "depth_matched_random_queries_per_sample": [
+          2.0,
+          2.0,
+          2.0
+        ],
+        "stored_historical_cascade_queries_per_sample": [
+          2.0,
+          2.0,
+          2.0
+        ],
+        "random_matches_recomputed_cascade_exactly": true,
+        "stored_cascade_matches_recomputed_exactly": true,
+        "all_rates_within_requested_tolerance": true
+      },
+      "cascade": {
+        "accuracy": {
+          "mean": 0.7170555555555556,
+          "std": 0.033166806253195916,
+          "values": [
+            0.7408333333333333,
+            0.7311666666666666,
+            0.6791666666666667
+          ]
+        },
+        "macro_f1": {
+          "mean": 0.7168952090457433,
+          "std": 0.03572002642138,
+          "values": [
+            0.7401984326194394,
+            0.7347162984559326,
+            0.6757708960618581
+          ]
+        }
+      },
+      "depth_matched_random": {
+        "accuracy": {
+          "mean": 0.7242222222222222,
+          "std": 0.021414126524675576,
+          "values": [
+            0.737,
+            0.7361666666666666,
+            0.6995
+          ]
+        },
+        "macro_f1": {
+          "mean": 0.7258539347929815,
+          "std": 0.02239934006198948,
+          "values": [
+            0.7385130157478246,
+            0.7390574736234083,
+            0.6999913150077116
+          ]
+        }
+      },
+      "paired_cascade_minus_random_accuracy": {
+        "mean": -0.0071666666666666545,
+        "std": 0.012228155125683423,
+        "values": [
+          0.0038333333333333552,
+          -0.0050000000000000044,
+          -0.020333333333333314
+        ]
+      },
+      "seed_directions": [
+        "cascade",
+        "depth_matched_random",
+        "depth_matched_random"
+      ],
+      "maximum_holm_p": 0.289874515121968,
+      "robust_winner": "none",
+      "seeds": [
+        {
+          "seed": 42,
+          "cascade_accuracy": 0.7408333333333333,
+          "depth_matched_random_accuracy": 0.737,
+          "cascade_minus_random_accuracy": 0.0038333333333333552,
+          "direction": "cascade",
+          "mcnemar": {
+            "only_cascade_correct": 194,
+            "only_depth_matched_random_correct": 171,
+            "n_discordant": 365,
+            "p_value": 0.24947826774522147,
+            "p_value_holm": 0.289874515121968
+          }
+        },
+        {
+          "seed": 123,
+          "cascade_accuracy": 0.7311666666666666,
+          "depth_matched_random_accuracy": 0.7361666666666666,
+          "cascade_minus_random_accuracy": -0.0050000000000000044,
+          "direction": "depth_matched_random",
+          "mcnemar": {
+            "only_cascade_correct": 183,
+            "only_depth_matched_random_correct": 213,
+            "n_discordant": 396,
+            "p_value": 0.144937257560984,
+            "p_value_holm": 0.289874515121968
+          }
+        },
+        {
+          "seed": 456,
+          "cascade_accuracy": 0.6791666666666667,
+          "depth_matched_random_accuracy": 0.6995,
+          "cascade_minus_random_accuracy": -0.020333333333333314,
+          "direction": "depth_matched_random",
+          "mcnemar": {
+            "only_cascade_correct": 192,
+            "only_depth_matched_random_correct": 314,
+            "n_discordant": 506,
+            "p_value": 6.503307878513794e-08,
+            "p_value_holm": 1.950992363554138e-07
+          }
+        }
+      ]
+    }
+  ]
+}

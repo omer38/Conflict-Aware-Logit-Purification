@@ -1,0 +1,21 @@
+{
+  "dataset": "ag_news",
+  "mode": "kd",
+  "teacher": "gemma4-26b-vllm-guided",
+  "labels_per_class": 10,
+  "seed": 42,
+  "cal_ratio": 0.3,
+  "config": {
+    "model_name": "answerdotai/ModernBERT-base",
+    "max_length": 256,
+    "lr": 2e-05,
+    "batch_size": 16,
+    "epochs": 3,
+    "temperature": 2.0,
+    "alpha": 0.5
+  },
+  "metrics": {
+    "accuracy": 0.8475,
+    "macro_f1": 0.8433220130381214
+  }
+}

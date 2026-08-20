@@ -1,0 +1,9 @@
+{
+  "teacher": "gemma4-26b-vllm",
+  "dataset": "yahoo",
+  "n_samples_reported": 5000,
+  "accuracy": 0.643,
+  "floor_fraction": 0.01632,
+  "report_csv": "outputs/reports/gemma4-26b-vllm_yahoo.csv",
+  "generated_at": "2026-06-18T14:40:30.291232+00:00"
+}

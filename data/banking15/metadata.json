@@ -1,0 +1,40 @@
+{
+  "source": "PolyAI/banking77",
+  "num_classes": 15,
+  "kept_original_ids": [
+    15,
+    28,
+    6,
+    75,
+    19,
+    63,
+    26,
+    64,
+    5,
+    66,
+    52,
+    16,
+    17,
+    34,
+    76
+  ],
+  "label_names": [
+    "card_payment_fee_charged",
+    "direct_debit_payment_not_recognised",
+    "balance_not_updated_after_cheque_or_cash_deposit",
+    "wrong_amount_of_cash_received",
+    "cash_withdrawal_charge",
+    "transaction_charged_twice",
+    "declined_cash_withdrawal",
+    "transfer_fee_charged",
+    "balance_not_updated_after_bank_transfer",
+    "transfer_not_received_by_recipient",
+    "request_refund",
+    "card_payment_not_recognised",
+    "card_payment_wrong_exchange_rate",
+    "extra_charge_on_statement",
+    "wrong_exchange_rate_for_cash_withdrawal"
+  ],
+  "train_size": 2602,
+  "test_size": 600
+}

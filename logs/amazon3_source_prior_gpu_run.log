@@ -1,0 +1,694 @@
+[2026-08-19T01:01:31Z] === preflight begin ===
+[2026-08-19T01:01:31Z] Preflight 1/4: running relevant tests
+.............................................................. [ 61%]
+.......................................                                  [100%]
+101 passed, 10 subtests passed in 84.49s (0:01:24)
+[2026-08-19T01:02:57Z] Preflight 2/4: no-teacher-query static check
+[2026-08-19T01:02:57Z]   no teacher-query code paths found in the new experiment modules
+[2026-08-19T01:02:57Z] Preflight 3/4: confirming output directory is new/isolated
+[2026-08-19T01:02:57Z]   pre-existing result files under outputs/student/amazon3_source_prior_transfer_v1: 0
+[2026-08-19T01:02:57Z] Preflight 4/4: running all 24 cells in --dry-run mode
+method                 L      seed   estimated_prior                  l1_error   cond     residual  
+scale_only             10     42     [0.4393176997950612, 0.13492840773557083, 0.42575389246936807] 0.1301     2.373    0.000000  
+uniform_prior          10     42     [0.4393176997950612, 0.13492840773557083, 0.42575389246936807] 0.1301     2.373    0.000000  
+estimated_prior_bbse   10     42     [0.4393176997950612, 0.13492840773557083, 0.42575389246936807] 0.1301     2.373    0.000000  
+oracle_prior           10     42     [0.4393176997950612, 0.13492840773557083, 0.42575389246936807] 0.1301     2.373    0.000000  
+scale_only             10     123    [0.5087705834569971, 1.0000000000361039e-06, 0.49122841654300287] 0.4000     5.629    0.025016  
+uniform_prior          10     123    [0.5087705834569971, 1.0000000000361039e-06, 0.49122841654300287] 0.4000     5.629    0.025016  
+estimated_prior_bbse   10     123    [0.5087705834569971, 1.0000000000361039e-06, 0.49122841654300287] 0.4000     5.629    0.025016  
+oracle_prior           10     123    [0.5087705834569971, 1.0000000000361039e-06, 0.49122841654300287] 0.4000     5.629    0.025016  
+scale_only             10     456    [0.40972303252298026, 0.13366359559342775, 0.456613371883592] 0.1327     2.861    0.000000  
+uniform_prior          10     456    [0.40972303252298026, 0.13366359559342775, 0.456613371883592] 0.1327     2.861    0.000000  
+estimated_prior_bbse   10     456    [0.40972303252298026, 0.13366359559342775, 0.456613371883592] 0.1327     2.861    0.000000  
+oracle_prior           10     456    [0.40972303252298026, 0.13366359559342775, 0.456613371883592] 0.1327     2.861    0.000000  
+scale_only             50     42     [0.4382673782804803, 0.06803998707226264, 0.49369263464725704] 0.2639     2.752    0.000000  
+uniform_prior          50     42     [0.4382673782804803, 0.06803998707226264, 0.49369263464725704] 0.2639     2.752    0.000000  
+estimated_prior_bbse   50     42     [0.4382673782804803, 0.06803998707226264, 0.49369263464725704] 0.2639     2.752    0.000000  
+oracle_prior           50     42     [0.4382673782804803, 0.06803998707226264, 0.49369263464725704] 0.2639     2.752    0.000000  
+scale_only             50     123    [0.40661921422428954, 0.18565708737511472, 0.4077236984005958] 0.0287     3.350    0.000000  
+uniform_prior          50     123    [0.40661921422428954, 0.18565708737511472, 0.4077236984005958] 0.0287     3.350    0.000000  
+estimated_prior_bbse   50     123    [0.40661921422428954, 0.18565708737511472, 0.4077236984005958] 0.0287     3.350    0.000000  
+oracle_prior           50     123    [0.40661921422428954, 0.18565708737511472, 0.4077236984005958] 0.0287     3.350    0.000000  
+scale_only             50     456    [0.3505415149349356, 0.24738246776563202, 0.4020760172994323] 0.0989     3.555    0.000000  
+uniform_prior          50     456    [0.3505415149349356, 0.24738246776563202, 0.4020760172994323] 0.0989     3.555    0.000000  
+estimated_prior_bbse   50     456    [0.3505415149349356, 0.24738246776563202, 0.4020760172994323] 0.0989     3.555    0.000000  
+oracle_prior           50     456    [0.3505415149349356, 0.24738246776563202, 0.4020760172994323] 0.0989     3.555    0.000000  
+[2026-08-19T01:05:30Z] === preflight OK: tests passed, no teacher-query paths, 24/24 dry-runs OK ===
+[2026-08-19T01:05:30Z] === amazon3_source_prior_transfer_v1 runner begin ===
+[2026-08-19T01:05:30Z] OUT_DIR=outputs/student/amazon3_source_prior_transfer_v1 expected_cells=24 (4 methods x 2 budgets x 3 seeds)
+[2026-08-19T01:05:30Z] START method=scale_only L=10 seed=42 start=2026-08-19T01:05:30Z
+=== amazon3_source_prior_transfer_v1: method=scale_only L=10 seed=42 ===
+True prior: [0.4, 0.2, 0.4] | assumed prior: None
+BBSE estimate: [0.4393176997950612, 0.13492840773557083, 0.42575389246936807] (l1_error=0.1301, tv_error=0.0651, rank=3, cond=2.373, residual=0.000000, solver_success=True)
+Reference batch: n=500 hash=b6caf05c632faadc... | Working pool: n=2000 hash=37b972d19f6a4855...
+Working-pool teacher-marginal L1 error vs true prior: 0.0666
+Device: cuda
+Training on 2000 working-pool examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 7055.35it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.3620
+  epoch 2/3  loss 0.0986
+  epoch 3/3  loss 0.0477
+
+Test accuracy: 0.7878 | macro-F1: 0.7033
+Saved: outputs/student/amazon3_source_prior_transfer_v1/amazon3_source-prior-transfer_scale_only_L10_s42.json
+[2026-08-19T01:07:18Z] OK method=scale_only L=10 seed=42 status=0 start=2026-08-19T01:05:30Z end=2026-08-19T01:07:11Z
+[2026-08-19T01:07:18Z] START method=uniform_prior L=10 seed=42 start=2026-08-19T01:07:18Z
+=== amazon3_source_prior_transfer_v1: method=uniform_prior L=10 seed=42 ===
+True prior: [0.4, 0.2, 0.4] | assumed prior: [0.3333333333333333, 0.3333333333333333, 0.3333333333333333]
+BBSE estimate: [0.4393176997950612, 0.13492840773557083, 0.42575389246936807] (l1_error=0.1301, tv_error=0.0651, rank=3, cond=2.373, residual=0.000000, solver_success=True)
+Reference batch: n=500 hash=b6caf05c632faadc... | Working pool: n=2000 hash=37b972d19f6a4855...
+Working-pool teacher-marginal L1 error vs true prior: 0.2881
+Device: cuda
+Training on 2000 working-pool examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 7676.19it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.3931
+  epoch 2/3  loss 0.0963
+  epoch 3/3  loss 0.0476
+
+Test accuracy: 0.7613 | macro-F1: 0.7344
+Saved: outputs/student/amazon3_source_prior_transfer_v1/amazon3_source-prior-transfer_uniform_prior_L10_s42.json
+[2026-08-19T01:09:08Z] OK method=uniform_prior L=10 seed=42 status=0 start=2026-08-19T01:07:18Z end=2026-08-19T01:09:02Z
+[2026-08-19T01:09:08Z] START method=estimated_prior_bbse L=10 seed=42 start=2026-08-19T01:09:08Z
+=== amazon3_source_prior_transfer_v1: method=estimated_prior_bbse L=10 seed=42 ===
+True prior: [0.4, 0.2, 0.4] | assumed prior: [0.4393176997950612, 0.13492840773557083, 0.42575389246936807]
+BBSE estimate: [0.4393176997950612, 0.13492840773557083, 0.42575389246936807] (l1_error=0.1301, tv_error=0.0651, rank=3, cond=2.373, residual=0.000000, solver_success=True)
+Reference batch: n=500 hash=b6caf05c632faadc... | Working pool: n=2000 hash=37b972d19f6a4855...
+Working-pool teacher-marginal L1 error vs true prior: 0.1023
+Device: cuda
+Training on 2000 working-pool examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 8050.83it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.3714
+  epoch 2/3  loss 0.1003
+  epoch 3/3  loss 0.0512
+
+Test accuracy: 0.7886 | macro-F1: 0.6959
+Saved: outputs/student/amazon3_source_prior_transfer_v1/amazon3_source-prior-transfer_estimated_prior_bbse_L10_s42.json
+[2026-08-19T01:10:58Z] OK method=estimated_prior_bbse L=10 seed=42 status=0 start=2026-08-19T01:09:08Z end=2026-08-19T01:10:51Z
+[2026-08-19T01:10:58Z] START method=oracle_prior L=10 seed=42 start=2026-08-19T01:10:58Z
+=== amazon3_source_prior_transfer_v1: method=oracle_prior L=10 seed=42 ===
+True prior: [0.4, 0.2, 0.4] | assumed prior: [0.4, 0.2, 0.4]
+BBSE estimate: [0.4393176997950612, 0.13492840773557083, 0.42575389246936807] (l1_error=0.1301, tv_error=0.0651, rank=3, cond=2.373, residual=0.000000, solver_success=True)
+Reference batch: n=500 hash=b6caf05c632faadc... | Working pool: n=2000 hash=37b972d19f6a4855...
+Working-pool teacher-marginal L1 error vs true prior: 0.0376
+Device: cuda
+Training on 2000 working-pool examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 8889.84it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.3674
+  epoch 2/3  loss 0.0960
+  epoch 3/3  loss 0.0492
+
+Test accuracy: 0.7935 | macro-F1: 0.7335
+Saved: outputs/student/amazon3_source_prior_transfer_v1/amazon3_source-prior-transfer_oracle_prior_L10_s42.json
+[2026-08-19T01:12:47Z] OK method=oracle_prior L=10 seed=42 status=0 start=2026-08-19T01:10:58Z end=2026-08-19T01:12:41Z
+[2026-08-19T01:12:47Z] START method=scale_only L=10 seed=123 start=2026-08-19T01:12:47Z
+=== amazon3_source_prior_transfer_v1: method=scale_only L=10 seed=123 ===
+True prior: [0.4, 0.2, 0.4] | assumed prior: None
+BBSE estimate: [0.5087705834569971, 1.0000000000361039e-06, 0.49122841654300287] (l1_error=0.4000, tv_error=0.2000, rank=3, cond=5.629, residual=0.025016, solver_success=True)
+Reference batch: n=500 hash=b6caf05c632faadc... | Working pool: n=2000 hash=37b972d19f6a4855...
+Working-pool teacher-marginal L1 error vs true prior: 0.0666
+Device: cuda
+Training on 2000 working-pool examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 7135.49it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.5264
+  epoch 2/3  loss 0.1867
+  epoch 3/3  loss 0.0778
+
+Test accuracy: 0.7816 | macro-F1: 0.7091
+Saved: outputs/student/amazon3_source_prior_transfer_v1/amazon3_source-prior-transfer_scale_only_L10_s123.json
+[2026-08-19T01:14:36Z] OK method=scale_only L=10 seed=123 status=0 start=2026-08-19T01:12:47Z end=2026-08-19T01:14:30Z
+[2026-08-19T01:14:36Z] START method=uniform_prior L=10 seed=123 start=2026-08-19T01:14:36Z
+=== amazon3_source_prior_transfer_v1: method=uniform_prior L=10 seed=123 ===
+True prior: [0.4, 0.2, 0.4] | assumed prior: [0.3333333333333333, 0.3333333333333333, 0.3333333333333333]
+BBSE estimate: [0.5087705834569971, 1.0000000000361039e-06, 0.49122841654300287] (l1_error=0.4000, tv_error=0.2000, rank=3, cond=5.629, residual=0.025016, solver_success=True)
+Reference batch: n=500 hash=b6caf05c632faadc... | Working pool: n=2000 hash=37b972d19f6a4855...
+Working-pool teacher-marginal L1 error vs true prior: 0.2881
+Device: cuda
+Training on 2000 working-pool examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 8015.31it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.4971
+  epoch 2/3  loss 0.1429
+  epoch 3/3  loss 0.0660
+
+Test accuracy: 0.7294 | macro-F1: 0.7147
+Saved: outputs/student/amazon3_source_prior_transfer_v1/amazon3_source-prior-transfer_uniform_prior_L10_s123.json
+[2026-08-19T01:16:25Z] OK method=uniform_prior L=10 seed=123 status=0 start=2026-08-19T01:14:36Z end=2026-08-19T01:16:19Z
+[2026-08-19T01:16:25Z] START method=estimated_prior_bbse L=10 seed=123 start=2026-08-19T01:16:25Z
+=== amazon3_source_prior_transfer_v1: method=estimated_prior_bbse L=10 seed=123 ===
+True prior: [0.4, 0.2, 0.4] | assumed prior: [0.5087705834569971, 1.0000000000361039e-06, 0.49122841654300287]
+BBSE estimate: [0.5087705834569971, 1.0000000000361039e-06, 0.49122841654300287] (l1_error=0.4000, tv_error=0.2000, rank=3, cond=5.629, residual=0.025016, solver_success=True)
+Reference batch: n=500 hash=b6caf05c632faadc... | Working pool: n=2000 hash=37b972d19f6a4855...
+Working-pool teacher-marginal L1 error vs true prior: 0.3978
+Device: cuda
+Training on 2000 working-pool examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 7731.12it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.6310
+  epoch 2/3  loss 0.3116
+  epoch 3/3  loss 0.1686
+
+Test accuracy: 0.7519 | macro-F1: 0.5573
+Saved: outputs/student/amazon3_source_prior_transfer_v1/amazon3_source-prior-transfer_estimated_prior_bbse_L10_s123.json
+[2026-08-19T01:18:14Z] OK method=estimated_prior_bbse L=10 seed=123 status=0 start=2026-08-19T01:16:25Z end=2026-08-19T01:18:08Z
+[2026-08-19T01:18:14Z] START method=oracle_prior L=10 seed=123 start=2026-08-19T01:18:14Z
+=== amazon3_source_prior_transfer_v1: method=oracle_prior L=10 seed=123 ===
+True prior: [0.4, 0.2, 0.4] | assumed prior: [0.4, 0.2, 0.4]
+BBSE estimate: [0.5087705834569971, 1.0000000000361039e-06, 0.49122841654300287] (l1_error=0.4000, tv_error=0.2000, rank=3, cond=5.629, residual=0.025016, solver_success=True)
+Reference batch: n=500 hash=b6caf05c632faadc... | Working pool: n=2000 hash=37b972d19f6a4855...
+Working-pool teacher-marginal L1 error vs true prior: 0.0376
+Device: cuda
+Training on 2000 working-pool examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 8427.90it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.4799
+  epoch 2/3  loss 0.1557
+  epoch 3/3  loss 0.0700
+
+Test accuracy: 0.7876 | macro-F1: 0.7357
+Saved: outputs/student/amazon3_source_prior_transfer_v1/amazon3_source-prior-transfer_oracle_prior_L10_s123.json
+[2026-08-19T01:20:04Z] OK method=oracle_prior L=10 seed=123 status=0 start=2026-08-19T01:18:14Z end=2026-08-19T01:19:57Z
+[2026-08-19T01:20:04Z] START method=scale_only L=10 seed=456 start=2026-08-19T01:20:04Z
+=== amazon3_source_prior_transfer_v1: method=scale_only L=10 seed=456 ===
+True prior: [0.4, 0.2, 0.4] | assumed prior: None
+BBSE estimate: [0.40972303252298026, 0.13366359559342775, 0.456613371883592] (l1_error=0.1327, tv_error=0.0663, rank=3, cond=2.861, residual=0.000000, solver_success=True)
+Reference batch: n=500 hash=b6caf05c632faadc... | Working pool: n=2000 hash=37b972d19f6a4855...
+Working-pool teacher-marginal L1 error vs true prior: 0.0666
+Device: cuda
+Training on 2000 working-pool examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 7674.85it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.4650
+  epoch 2/3  loss 0.1710
+  epoch 3/3  loss 0.0587
+
+Test accuracy: 0.7873 | macro-F1: 0.7174
+Saved: outputs/student/amazon3_source_prior_transfer_v1/amazon3_source-prior-transfer_scale_only_L10_s456.json
+[2026-08-19T01:21:52Z] OK method=scale_only L=10 seed=456 status=0 start=2026-08-19T01:20:04Z end=2026-08-19T01:21:47Z
+[2026-08-19T01:21:52Z] START method=uniform_prior L=10 seed=456 start=2026-08-19T01:21:52Z
+=== amazon3_source_prior_transfer_v1: method=uniform_prior L=10 seed=456 ===
+True prior: [0.4, 0.2, 0.4] | assumed prior: [0.3333333333333333, 0.3333333333333333, 0.3333333333333333]
+BBSE estimate: [0.40972303252298026, 0.13366359559342775, 0.456613371883592] (l1_error=0.1327, tv_error=0.0663, rank=3, cond=2.861, residual=0.000000, solver_success=True)
+Reference batch: n=500 hash=b6caf05c632faadc... | Working pool: n=2000 hash=37b972d19f6a4855...
+Working-pool teacher-marginal L1 error vs true prior: 0.2881
+Device: cuda
+Training on 2000 working-pool examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 8238.14it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.5261
+  epoch 2/3  loss 0.1874
+  epoch 3/3  loss 0.0686
+
+Test accuracy: 0.7453 | macro-F1: 0.7257
+Saved: outputs/student/amazon3_source_prior_transfer_v1/amazon3_source-prior-transfer_uniform_prior_L10_s456.json
+[2026-08-19T01:23:42Z] OK method=uniform_prior L=10 seed=456 status=0 start=2026-08-19T01:21:52Z end=2026-08-19T01:23:36Z
+[2026-08-19T01:23:42Z] START method=estimated_prior_bbse L=10 seed=456 start=2026-08-19T01:23:42Z
+=== amazon3_source_prior_transfer_v1: method=estimated_prior_bbse L=10 seed=456 ===
+True prior: [0.4, 0.2, 0.4] | assumed prior: [0.40972303252298026, 0.13366359559342775, 0.456613371883592]
+BBSE estimate: [0.40972303252298026, 0.13366359559342775, 0.456613371883592] (l1_error=0.1327, tv_error=0.0663, rank=3, cond=2.861, residual=0.000000, solver_success=True)
+Reference batch: n=500 hash=b6caf05c632faadc... | Working pool: n=2000 hash=37b972d19f6a4855...
+Working-pool teacher-marginal L1 error vs true prior: 0.1172
+Device: cuda
+Training on 2000 working-pool examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 7909.94it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.5012
+  epoch 2/3  loss 0.1811
+  epoch 3/3  loss 0.0673
+
+Test accuracy: 0.7867 | macro-F1: 0.7040
+Saved: outputs/student/amazon3_source_prior_transfer_v1/amazon3_source-prior-transfer_estimated_prior_bbse_L10_s456.json
+[2026-08-19T01:25:31Z] OK method=estimated_prior_bbse L=10 seed=456 status=0 start=2026-08-19T01:23:42Z end=2026-08-19T01:25:25Z
+[2026-08-19T01:25:31Z] START method=oracle_prior L=10 seed=456 start=2026-08-19T01:25:31Z
+=== amazon3_source_prior_transfer_v1: method=oracle_prior L=10 seed=456 ===
+True prior: [0.4, 0.2, 0.4] | assumed prior: [0.4, 0.2, 0.4]
+BBSE estimate: [0.40972303252298026, 0.13366359559342775, 0.456613371883592] (l1_error=0.1327, tv_error=0.0663, rank=3, cond=2.861, residual=0.000000, solver_success=True)
+Reference batch: n=500 hash=b6caf05c632faadc... | Working pool: n=2000 hash=37b972d19f6a4855...
+Working-pool teacher-marginal L1 error vs true prior: 0.0376
+Device: cuda
+Training on 2000 working-pool examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 8298.91it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.4689
+  epoch 2/3  loss 0.1563
+  epoch 3/3  loss 0.0590
+
+Test accuracy: 0.7889 | macro-F1: 0.7405
+Saved: outputs/student/amazon3_source_prior_transfer_v1/amazon3_source-prior-transfer_oracle_prior_L10_s456.json
+[2026-08-19T01:27:20Z] OK method=oracle_prior L=10 seed=456 status=0 start=2026-08-19T01:25:31Z end=2026-08-19T01:27:14Z
+[2026-08-19T01:27:20Z] START method=scale_only L=50 seed=42 start=2026-08-19T01:27:20Z
+=== amazon3_source_prior_transfer_v1: method=scale_only L=50 seed=42 ===
+True prior: [0.4, 0.2, 0.4] | assumed prior: None
+BBSE estimate: [0.4382673782804803, 0.06803998707226264, 0.49369263464725704] (l1_error=0.2639, tv_error=0.1320, rank=3, cond=2.752, residual=0.000000, solver_success=True)
+Reference batch: n=500 hash=b6caf05c632faadc... | Working pool: n=2000 hash=37b972d19f6a4855...
+Working-pool teacher-marginal L1 error vs true prior: 0.0666
+Device: cuda
+Training on 2000 working-pool examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6999.60it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.6260
+  epoch 2/3  loss 0.2577
+  epoch 3/3  loss 0.1325
+
+Test accuracy: 0.7837 | macro-F1: 0.7011
+Saved: outputs/student/amazon3_source_prior_transfer_v1/amazon3_source-prior-transfer_scale_only_L50_s42.json
+[2026-08-19T01:29:09Z] OK method=scale_only L=50 seed=42 status=0 start=2026-08-19T01:27:20Z end=2026-08-19T01:29:03Z
+[2026-08-19T01:29:09Z] START method=uniform_prior L=50 seed=42 start=2026-08-19T01:29:09Z
+=== amazon3_source_prior_transfer_v1: method=uniform_prior L=50 seed=42 ===
+True prior: [0.4, 0.2, 0.4] | assumed prior: [0.3333333333333333, 0.3333333333333333, 0.3333333333333333]
+BBSE estimate: [0.4382673782804803, 0.06803998707226264, 0.49369263464725704] (l1_error=0.2639, tv_error=0.1320, rank=3, cond=2.752, residual=0.000000, solver_success=True)
+Reference batch: n=500 hash=b6caf05c632faadc... | Working pool: n=2000 hash=37b972d19f6a4855...
+Working-pool teacher-marginal L1 error vs true prior: 0.2881
+Device: cuda
+Training on 2000 working-pool examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 8210.04it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.6439
+  epoch 2/3  loss 0.2531
+  epoch 3/3  loss 0.1395
+
+Test accuracy: 0.7745 | macro-F1: 0.7381
+Saved: outputs/student/amazon3_source_prior_transfer_v1/amazon3_source-prior-transfer_uniform_prior_L50_s42.json
+[2026-08-19T01:30:58Z] OK method=uniform_prior L=50 seed=42 status=0 start=2026-08-19T01:29:09Z end=2026-08-19T01:30:52Z
+[2026-08-19T01:30:58Z] START method=estimated_prior_bbse L=50 seed=42 start=2026-08-19T01:30:58Z
+=== amazon3_source_prior_transfer_v1: method=estimated_prior_bbse L=50 seed=42 ===
+True prior: [0.4, 0.2, 0.4] | assumed prior: [0.4382673782804803, 0.06803998707226264, 0.49369263464725704]
+BBSE estimate: [0.4382673782804803, 0.06803998707226264, 0.49369263464725704] (l1_error=0.2639, tv_error=0.1320, rank=3, cond=2.752, residual=0.000000, solver_success=True)
+Reference batch: n=500 hash=b6caf05c632faadc... | Working pool: n=2000 hash=37b972d19f6a4855...
+Working-pool teacher-marginal L1 error vs true prior: 0.2466
+Device: cuda
+Training on 2000 working-pool examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 9181.31it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.6787
+  epoch 2/3  loss 0.2905
+  epoch 3/3  loss 0.1465
+
+Test accuracy: 0.7766 | macro-F1: 0.6567
+Saved: outputs/student/amazon3_source_prior_transfer_v1/amazon3_source-prior-transfer_estimated_prior_bbse_L50_s42.json
+[2026-08-19T01:32:47Z] OK method=estimated_prior_bbse L=50 seed=42 status=0 start=2026-08-19T01:30:58Z end=2026-08-19T01:32:41Z
+[2026-08-19T01:32:47Z] START method=oracle_prior L=50 seed=42 start=2026-08-19T01:32:47Z
+=== amazon3_source_prior_transfer_v1: method=oracle_prior L=50 seed=42 ===
+True prior: [0.4, 0.2, 0.4] | assumed prior: [0.4, 0.2, 0.4]
+BBSE estimate: [0.4382673782804803, 0.06803998707226264, 0.49369263464725704] (l1_error=0.2639, tv_error=0.1320, rank=3, cond=2.752, residual=0.000000, solver_success=True)
+Reference batch: n=500 hash=b6caf05c632faadc... | Working pool: n=2000 hash=37b972d19f6a4855...
+Working-pool teacher-marginal L1 error vs true prior: 0.0376
+Device: cuda
+Training on 2000 working-pool examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 7561.81it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.6078
+  epoch 2/3  loss 0.2405
+  epoch 3/3  loss 0.1277
+
+Test accuracy: 0.7880 | macro-F1: 0.7250
+Saved: outputs/student/amazon3_source_prior_transfer_v1/amazon3_source-prior-transfer_oracle_prior_L50_s42.json
+[2026-08-19T01:34:36Z] OK method=oracle_prior L=50 seed=42 status=0 start=2026-08-19T01:32:47Z end=2026-08-19T01:34:30Z
+[2026-08-19T01:34:36Z] START method=scale_only L=50 seed=123 start=2026-08-19T01:34:36Z
+=== amazon3_source_prior_transfer_v1: method=scale_only L=50 seed=123 ===
+True prior: [0.4, 0.2, 0.4] | assumed prior: None
+BBSE estimate: [0.40661921422428954, 0.18565708737511472, 0.4077236984005958] (l1_error=0.0287, tv_error=0.0143, rank=3, cond=3.350, residual=0.000000, solver_success=True)
+Reference batch: n=500 hash=b6caf05c632faadc... | Working pool: n=2000 hash=37b972d19f6a4855...
+Working-pool teacher-marginal L1 error vs true prior: 0.0666
+Device: cuda
+Training on 2000 working-pool examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 8228.75it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.7481
+  epoch 2/3  loss 0.2964
+  epoch 3/3  loss 0.1395
+
+Test accuracy: 0.7800 | macro-F1: 0.7423
+Saved: outputs/student/amazon3_source_prior_transfer_v1/amazon3_source-prior-transfer_scale_only_L50_s123.json
+[2026-08-19T01:36:25Z] OK method=scale_only L=50 seed=123 status=0 start=2026-08-19T01:34:36Z end=2026-08-19T01:36:20Z
+[2026-08-19T01:36:25Z] START method=uniform_prior L=50 seed=123 start=2026-08-19T01:36:25Z
+=== amazon3_source_prior_transfer_v1: method=uniform_prior L=50 seed=123 ===
+True prior: [0.4, 0.2, 0.4] | assumed prior: [0.3333333333333333, 0.3333333333333333, 0.3333333333333333]
+BBSE estimate: [0.40661921422428954, 0.18565708737511472, 0.4077236984005958] (l1_error=0.0287, tv_error=0.0143, rank=3, cond=3.350, residual=0.000000, solver_success=True)
+Reference batch: n=500 hash=b6caf05c632faadc... | Working pool: n=2000 hash=37b972d19f6a4855...
+Working-pool teacher-marginal L1 error vs true prior: 0.2881
+Device: cuda
+Training on 2000 working-pool examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 7859.59it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.7558
+  epoch 2/3  loss 0.2886
+  epoch 3/3  loss 0.1299
+
+Test accuracy: 0.7275 | macro-F1: 0.7131
+Saved: outputs/student/amazon3_source_prior_transfer_v1/amazon3_source-prior-transfer_uniform_prior_L50_s123.json
+[2026-08-19T01:38:15Z] OK method=uniform_prior L=50 seed=123 status=0 start=2026-08-19T01:36:25Z end=2026-08-19T01:38:10Z
+[2026-08-19T01:38:15Z] START method=estimated_prior_bbse L=50 seed=123 start=2026-08-19T01:38:15Z
+=== amazon3_source_prior_transfer_v1: method=estimated_prior_bbse L=50 seed=123 ===
+True prior: [0.4, 0.2, 0.4] | assumed prior: [0.40661921422428954, 0.18565708737511472, 0.4077236984005958]
+BBSE estimate: [0.40661921422428954, 0.18565708737511472, 0.4077236984005958] (l1_error=0.0287, tv_error=0.0143, rank=3, cond=3.350, residual=0.000000, solver_success=True)
+Reference batch: n=500 hash=b6caf05c632faadc... | Working pool: n=2000 hash=37b972d19f6a4855...
+Working-pool teacher-marginal L1 error vs true prior: 0.0214
+Device: cuda
+Training on 2000 working-pool examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 7746.66it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.7336
+  epoch 2/3  loss 0.2925
+  epoch 3/3  loss 0.1359
+
+Test accuracy: 0.7739 | macro-F1: 0.7412
+Saved: outputs/student/amazon3_source_prior_transfer_v1/amazon3_source-prior-transfer_estimated_prior_bbse_L50_s123.json
+[2026-08-19T01:40:05Z] OK method=estimated_prior_bbse L=50 seed=123 status=0 start=2026-08-19T01:38:15Z end=2026-08-19T01:39:59Z
+[2026-08-19T01:40:05Z] START method=oracle_prior L=50 seed=123 start=2026-08-19T01:40:05Z
+=== amazon3_source_prior_transfer_v1: method=oracle_prior L=50 seed=123 ===
+True prior: [0.4, 0.2, 0.4] | assumed prior: [0.4, 0.2, 0.4]
+BBSE estimate: [0.40661921422428954, 0.18565708737511472, 0.4077236984005958] (l1_error=0.0287, tv_error=0.0143, rank=3, cond=3.350, residual=0.000000, solver_success=True)
+Reference batch: n=500 hash=b6caf05c632faadc... | Working pool: n=2000 hash=37b972d19f6a4855...
+Working-pool teacher-marginal L1 error vs true prior: 0.0376
+Device: cuda
+Training on 2000 working-pool examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 7759.83it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.7351
+  epoch 2/3  loss 0.2927
+  epoch 3/3  loss 0.1320
+
+Test accuracy: 0.7706 | macro-F1: 0.7410
+Saved: outputs/student/amazon3_source_prior_transfer_v1/amazon3_source-prior-transfer_oracle_prior_L50_s123.json
+[2026-08-19T01:41:54Z] OK method=oracle_prior L=50 seed=123 status=0 start=2026-08-19T01:40:05Z end=2026-08-19T01:41:48Z
+[2026-08-19T01:41:54Z] START method=scale_only L=50 seed=456 start=2026-08-19T01:41:54Z
+=== amazon3_source_prior_transfer_v1: method=scale_only L=50 seed=456 ===
+True prior: [0.4, 0.2, 0.4] | assumed prior: None
+BBSE estimate: [0.3505415149349356, 0.24738246776563202, 0.4020760172994323] (l1_error=0.0989, tv_error=0.0495, rank=3, cond=3.555, residual=0.000000, solver_success=True)
+Reference batch: n=500 hash=b6caf05c632faadc... | Working pool: n=2000 hash=37b972d19f6a4855...
+Working-pool teacher-marginal L1 error vs true prior: 0.0666
+Device: cuda
+Training on 2000 working-pool examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 8941.68it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.7576
+  epoch 2/3  loss 0.3426
+  epoch 3/3  loss 0.1599
+
+Test accuracy: 0.7858 | macro-F1: 0.7308
+Saved: outputs/student/amazon3_source_prior_transfer_v1/amazon3_source-prior-transfer_scale_only_L50_s456.json
+[2026-08-19T01:43:43Z] OK method=scale_only L=50 seed=456 status=0 start=2026-08-19T01:41:54Z end=2026-08-19T01:43:37Z
+[2026-08-19T01:43:43Z] START method=uniform_prior L=50 seed=456 start=2026-08-19T01:43:43Z
+=== amazon3_source_prior_transfer_v1: method=uniform_prior L=50 seed=456 ===
+True prior: [0.4, 0.2, 0.4] | assumed prior: [0.3333333333333333, 0.3333333333333333, 0.3333333333333333]
+BBSE estimate: [0.3505415149349356, 0.24738246776563202, 0.4020760172994323] (l1_error=0.0989, tv_error=0.0495, rank=3, cond=3.555, residual=0.000000, solver_success=True)
+Reference batch: n=500 hash=b6caf05c632faadc... | Working pool: n=2000 hash=37b972d19f6a4855...
+Working-pool teacher-marginal L1 error vs true prior: 0.2881
+Device: cuda
+Training on 2000 working-pool examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 9319.46it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.7620
+  epoch 2/3  loss 0.2850
+  epoch 3/3  loss 0.1316
+
+Test accuracy: 0.7553 | macro-F1: 0.7312
+Saved: outputs/student/amazon3_source_prior_transfer_v1/amazon3_source-prior-transfer_uniform_prior_L50_s456.json
+[2026-08-19T01:45:32Z] OK method=uniform_prior L=50 seed=456 status=0 start=2026-08-19T01:43:43Z end=2026-08-19T01:45:26Z
+[2026-08-19T01:45:33Z] START method=estimated_prior_bbse L=50 seed=456 start=2026-08-19T01:45:32Z
+=== amazon3_source_prior_transfer_v1: method=estimated_prior_bbse L=50 seed=456 ===
+True prior: [0.4, 0.2, 0.4] | assumed prior: [0.3505415149349356, 0.24738246776563202, 0.4020760172994323]
+BBSE estimate: [0.3505415149349356, 0.24738246776563202, 0.4020760172994323] (l1_error=0.0989, tv_error=0.0495, rank=3, cond=3.555, residual=0.000000, solver_success=True)
+Reference batch: n=500 hash=b6caf05c632faadc... | Working pool: n=2000 hash=37b972d19f6a4855...
+Working-pool teacher-marginal L1 error vs true prior: 0.1293
+Device: cuda
+Training on 2000 working-pool examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 8817.83it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.7700
+  epoch 2/3  loss 0.3301
+  epoch 3/3  loss 0.1448
+
+Test accuracy: 0.7765 | macro-F1: 0.7406
+Saved: outputs/student/amazon3_source_prior_transfer_v1/amazon3_source-prior-transfer_estimated_prior_bbse_L50_s456.json
+[2026-08-19T01:47:21Z] OK method=estimated_prior_bbse L=50 seed=456 status=0 start=2026-08-19T01:45:32Z end=2026-08-19T01:47:15Z
+[2026-08-19T01:47:21Z] START method=oracle_prior L=50 seed=456 start=2026-08-19T01:47:21Z
+=== amazon3_source_prior_transfer_v1: method=oracle_prior L=50 seed=456 ===
+True prior: [0.4, 0.2, 0.4] | assumed prior: [0.4, 0.2, 0.4]
+BBSE estimate: [0.3505415149349356, 0.24738246776563202, 0.4020760172994323] (l1_error=0.0989, tv_error=0.0495, rank=3, cond=3.555, residual=0.000000, solver_success=True)
+Reference batch: n=500 hash=b6caf05c632faadc... | Working pool: n=2000 hash=37b972d19f6a4855...
+Working-pool teacher-marginal L1 error vs true prior: 0.0376
+Device: cuda
+Training on 2000 working-pool examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 8561.99it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.7390
+  epoch 2/3  loss 0.2977
+  epoch 3/3  loss 0.1434
+
+Test accuracy: 0.7860 | macro-F1: 0.7388
+Saved: outputs/student/amazon3_source_prior_transfer_v1/amazon3_source-prior-transfer_oracle_prior_L50_s456.json
+[2026-08-19T01:49:10Z] OK method=oracle_prior L=50 seed=456 status=0 start=2026-08-19T01:47:21Z end=2026-08-19T01:49:04Z
+[2026-08-19T01:49:10Z] === runner end started=24 skipped=0 completed=24 failures=0 ===
+[2026-08-19T01:49:10Z] overall_start=2026-08-19T01:05:30Z overall_end=2026-08-19T01:49:10Z
+started=24 skipped=0 completed=24 failures=0 (valid cells: 24/24)
+[2026-08-19T01:49:10Z] All 24 cells complete and valid under outputs/student/amazon3_source_prior_transfer_v1. Running the aggregate analyser.
+Wrote outputs/reports/amazon3_source_prior_transfer_v1.json
+Wrote outputs/reports/amazon3_source_prior_transfer_v1.md
+All 24 cells are complete under outputs/student/amazon3_source_prior_transfer_v1; reports written to outputs/reports/amazon3_source_prior_transfer_v1.{json,md}.
+EXIT_CODE=0

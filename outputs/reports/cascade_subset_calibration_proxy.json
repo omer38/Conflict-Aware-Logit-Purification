@@ -1,0 +1,94 @@
+[
+  {
+    "dataset": "ag_news",
+    "full_pool_alignment": {
+      "accuracy": 0.8991666666666667,
+      "nll": 0.4078934728964583,
+      "queries_per_sample": 1.4,
+      "ask2_rate": 0.3551666666666667,
+      "ask3_rate": 0.044833333333333336,
+      "ask2_class_balance_dev": 0.13573439699671513,
+      "ask3_class_balance_dev": 0.17936802973977695,
+      "pool_class_balance_dev": 0.0
+    },
+    "subset_only_alignment": {
+      "accuracy": 0.892,
+      "nll": 0.43250620201884377,
+      "queries_per_sample": 1.4,
+      "ask2_rate": 0.3551666666666667,
+      "ask3_rate": 0.044833333333333336,
+      "ask2_class_balance_dev": 0.13573439699671513,
+      "ask3_class_balance_dev": 0.17936802973977695,
+      "pool_class_balance_dev": 0.0
+    }
+  },
+  {
+    "dataset": "yahoo",
+    "full_pool_alignment": {
+      "accuracy": 0.6612,
+      "nll": 1.3300981825875886,
+      "queries_per_sample": 1.4002,
+      "ask2_rate": 0.2844,
+      "ask3_rate": 0.1158,
+      "ask2_class_balance_dev": 0.10956399437412095,
+      "ask3_class_balance_dev": 0.05716753022452503,
+      "pool_class_balance_dev": 0.0
+    },
+    "subset_only_alignment": {
+      "accuracy": 0.6608,
+      "nll": 1.3914183984923778,
+      "queries_per_sample": 1.4002,
+      "ask2_rate": 0.2844,
+      "ask3_rate": 0.1158,
+      "ask2_class_balance_dev": 0.10956399437412095,
+      "ask3_class_balance_dev": 0.05716753022452503,
+      "pool_class_balance_dev": 0.0
+    }
+  },
+  {
+    "dataset": "amazon",
+    "full_pool_alignment": {
+      "accuracy": 0.6596,
+      "nll": 1.1117466060589138,
+      "queries_per_sample": 1.3996000000000002,
+      "ask2_rate": 0.2972,
+      "ask3_rate": 0.1024,
+      "ask2_class_balance_dev": 0.06944818304172276,
+      "ask3_class_balance_dev": 0.08281250000000001,
+      "pool_class_balance_dev": 0.0
+    },
+    "subset_only_alignment": {
+      "accuracy": 0.6548,
+      "nll": 1.1028545204136941,
+      "queries_per_sample": 1.3996000000000002,
+      "ask2_rate": 0.2972,
+      "ask3_rate": 0.1024,
+      "ask2_class_balance_dev": 0.06944818304172276,
+      "ask3_class_balance_dev": 0.08281250000000001,
+      "pool_class_balance_dev": 0.0
+    }
+  },
+  {
+    "dataset": "amazon3",
+    "full_pool_alignment": {
+      "accuracy": 0.7993333333333333,
+      "nll": 0.5869504786629806,
+      "queries_per_sample": 1.4006666666666665,
+      "ask2_rate": 0.3233333333333333,
+      "ask3_rate": 0.07733333333333334,
+      "ask2_class_balance_dev": 0.18419243986254302,
+      "ask3_class_balance_dev": 0.15804597701149425,
+      "pool_class_balance_dev": 0.0
+    },
+    "subset_only_alignment": {
+      "accuracy": 0.7906666666666666,
+      "nll": 0.6152441644786046,
+      "queries_per_sample": 1.4006666666666665,
+      "ask2_rate": 0.3233333333333333,
+      "ask3_rate": 0.07733333333333334,
+      "ask2_class_balance_dev": 0.18419243986254302,
+      "ask3_class_balance_dev": 0.15804597701149425,
+      "pool_class_balance_dev": 0.0
+    }
+  }
+]

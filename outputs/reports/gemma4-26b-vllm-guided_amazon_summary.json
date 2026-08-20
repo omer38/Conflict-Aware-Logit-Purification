@@ -1,0 +1,9 @@
+{
+  "teacher": "gemma4-26b-vllm-guided",
+  "dataset": "amazon",
+  "n_samples_reported": 2500,
+  "accuracy": 0.628,
+  "floor_fraction": 0.0,
+  "report_csv": "outputs/reports/gemma4-26b-vllm-guided_amazon.csv",
+  "generated_at": "2026-06-28T22:26:53.498752+00:00"
+}

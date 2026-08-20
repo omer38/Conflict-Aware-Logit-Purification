@@ -1,0 +1,70 @@
+{
+  "dataset": "ag_news",
+  "mode": "kd",
+  "teacher": "multi-router-mlp-guided",
+  "labels_per_class": 10,
+  "seed": 42,
+  "cal_ratio": 0.3,
+  "config": {
+    "model_name": "answerdotai/ModernBERT-base",
+    "max_length": 128,
+    "lr": 2e-05,
+    "batch_size": 8,
+    "epochs": 3,
+    "temperature": 2.0,
+    "alpha": 0.5
+  },
+  "metrics": {
+    "accuracy": 0.8675,
+    "macro_f1": 0.8650913220195408
+  },
+  "aggregation": "entropy_weighted_fallback",
+  "teachers": [
+    "qwen3.5-27b-vllm-guided",
+    "gemma4-26b-vllm-guided",
+    "mistral-small-24b-vllm-guided"
+  ],
+  "router_type": "mlp",
+  "loocv_accuracy": 0.9166666666666666,
+  "router_version": "v2",
+  "router_used": false,
+  "fallback_to": "entropy",
+  "heuristic_cal_accuracies": {
+    "mean": 0.9166666666666666,
+    "entropy": 0.9166666666666666
+  },
+  "feature_groups_used": [
+    "aggregate",
+    "class_aware",
+    "teacher_specific"
+  ],
+  "phi_standardization": {
+    "mean": [
+      0.12567007541656494,
+      0.3202705979347229,
+      0.6386627554893494,
+      0.9343963265419006,
+      0.5789313912391663,
+      0.014200021512806416,
+      0.013751531951129436,
+      0.00026976101798936725,
+      0.028249526396393776,
+      0.05874675512313843,
+      0.05115159600973129
+    ],
+    "std": [
+      0.21712052822113037,
+      0.8073103427886963,
+      1.5917139053344727,
+      0.20011654496192932,
+      0.23064672946929932,
+      0.04153794050216675,
+      0.04109468311071396,
+      0.0042083412408828735,
+      0.08291536569595337,
+      0.15997104346752167,
+      0.14763830602169037
+    ]
+  },
+  "selected_weight_decay": 0.0
+}

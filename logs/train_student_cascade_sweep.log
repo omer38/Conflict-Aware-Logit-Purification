@@ -1,0 +1,144 @@
+=== START ag_news / multi-cascade-guided / L=10 Thu Jul 16 16:26:48 UTC 2026 ===
+Mode: kd | teacher: multi-cascade-guided | device: cuda
+Dataset: ag_news (4 classes) | labeled=40 unlabeled=5960 test=1200
+Cascade realised queries/sample: 1.400
+Training on 6000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6426.46it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.2302
+  epoch 2/3  loss 0.0612
+  epoch 3/3  loss 0.0339
+
+Test accuracy: 0.8800 | macro-F1: 0.8797
+Saved: outputs/student/ag_news_kd_multi-cascade-guided_L10_s42.json
+=== END ag_news / multi-cascade-guided / L=10 Thu Jul 16 16:28:25 UTC 2026 (exit=0) ===
+=== START ag_news / multi-cascade-guided / L=50 Thu Jul 16 16:28:25 UTC 2026 ===
+Mode: kd | teacher: multi-cascade-guided | device: cuda
+Dataset: ag_news (4 classes) | labeled=200 unlabeled=5800 test=1200
+Cascade realised queries/sample: 1.400
+Training on 6000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6454.60it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.2847
+  epoch 2/3  loss 0.0806
+  epoch 3/3  loss 0.0434
+
+Test accuracy: 0.8783 | macro-F1: 0.8782
+Saved: outputs/student/ag_news_kd_multi-cascade-guided_L50_s42.json
+=== END ag_news / multi-cascade-guided / L=50 Thu Jul 16 16:30:01 UTC 2026 (exit=0) ===
+=== START yahoo / multi-cascade-guided / L=10 Thu Jul 16 16:30:01 UTC 2026 ===
+Mode: kd | teacher: multi-cascade-guided | device: cuda
+Dataset: yahoo (10 classes) | labeled=100 unlabeled=4900 test=1000
+Cascade realised queries/sample: 1.400
+Training on 5000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6716.81it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.6562
+  epoch 2/3  loss 0.2460
+  epoch 3/3  loss 0.1513
+
+Test accuracy: 0.6170 | macro-F1: 0.6186
+Saved: outputs/student/yahoo_kd_multi-cascade-guided_L10_s42.json
+=== END yahoo / multi-cascade-guided / L=10 Thu Jul 16 16:32:18 UTC 2026 (exit=0) ===
+=== START yahoo / multi-cascade-guided / L=50 Thu Jul 16 16:32:18 UTC 2026 ===
+Mode: kd | teacher: multi-cascade-guided | device: cuda
+Dataset: yahoo (10 classes) | labeled=500 unlabeled=4500 test=1000
+Cascade realised queries/sample: 1.400
+Training on 5000 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6923.23it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 1.1584
+  epoch 2/3  loss 0.5709
+  epoch 3/3  loss 0.3602
+
+Test accuracy: 0.6040 | macro-F1: 0.6050
+Saved: outputs/student/yahoo_kd_multi-cascade-guided_L50_s42.json
+=== END yahoo / multi-cascade-guided / L=50 Thu Jul 16 16:34:35 UTC 2026 (exit=0) ===
+=== START amazon / multi-cascade-guided / L=10 Thu Jul 16 16:34:35 UTC 2026 ===
+Mode: kd | teacher: multi-cascade-guided | device: cuda
+Dataset: amazon (5 classes) | labeled=50 unlabeled=2450 test=500
+Cascade realised queries/sample: 1.400
+Training on 2500 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6276.27it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.bias   | MISSING    | 
+classifier.weight | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.5324
+  epoch 2/3  loss 0.2231
+  epoch 3/3  loss 0.1098
+
+Test accuracy: 0.5540 | macro-F1: 0.5577
+Saved: outputs/student/amazon_kd_multi-cascade-guided_L10_s42.json
+=== END amazon / multi-cascade-guided / L=10 Thu Jul 16 16:35:45 UTC 2026 (exit=0) ===
+=== START amazon / multi-cascade-guided / L=50 Thu Jul 16 16:35:45 UTC 2026 ===
+Mode: kd | teacher: multi-cascade-guided | device: cuda
+Dataset: amazon (5 classes) | labeled=250 unlabeled=2250 test=500
+Cascade realised queries/sample: 1.400
+Training on 2500 examples (alpha=0.5, tau=2.0)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/136 [00:00<?, ?it/s]Loading weights: 100%|██████████| 136/136 [00:00<00:00, 6719.11it/s]
+[transformers] [1mModernBertForSequenceClassification LOAD REPORT[0m from: answerdotai/ModernBERT-base
+Key               | Status     | 
+------------------+------------+-
+decoder.bias      | UNEXPECTED | 
+classifier.weight | MISSING    | 
+classifier.bias   | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+  epoch 1/3  loss 0.9342
+  epoch 2/3  loss 0.3840
+  epoch 3/3  loss 0.2176
+
+Test accuracy: 0.5580 | macro-F1: 0.5568
+Saved: outputs/student/amazon_kd_multi-cascade-guided_L50_s42.json
+=== END amazon / multi-cascade-guided / L=50 Thu Jul 16 16:36:56 UTC 2026 (exit=0) ===

@@ -1,0 +1,21 @@
+{
+  "dataset": "amazon3",
+  "mode": "supervised",
+  "teacher": "none",
+  "labels_per_class": 50,
+  "seed": 42,
+  "cal_ratio": 0.3,
+  "config": {
+    "model_name": "answerdotai/ModernBERT-base",
+    "max_length": 256,
+    "lr": 2e-05,
+    "batch_size": 16,
+    "epochs": 3,
+    "temperature": 2.0,
+    "alpha": 0.0
+  },
+  "metrics": {
+    "accuracy": 0.49333333333333335,
+    "macro_f1": 0.48682707469258757
+  }
+}

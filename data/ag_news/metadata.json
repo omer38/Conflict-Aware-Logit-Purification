@@ -1,0 +1,36 @@
+{
+  "source": "fancyzhx/ag_news",
+  "artifact_version": "large-test-v1",
+  "num_classes": 4,
+  "label_names": [
+    "World",
+    "Sports",
+    "Business",
+    "Sci/Tech"
+  ],
+  "train_per_class": 1500,
+  "test_per_class": 1900,
+  "seed": 42,
+  "train_size": 6000,
+  "test_size": 7600,
+  "train_identity": {
+    "size": 6000,
+    "class_counts": [
+      1500,
+      1500,
+      1500,
+      1500
+    ],
+    "sha256": "ba23365a62d83847514c0f961dcdf73f432c1fb20cc427cc2932697b78dd2d2c"
+  },
+  "test_identity": {
+    "size": 7600,
+    "class_counts": [
+      1900,
+      1900,
+      1900,
+      1900
+    ],
+    "sha256": "56047b21c93b93d0f01f28c21bf63d30cf3a480d96ea3b89b19b72e5884a9ee5"
+  }
+}

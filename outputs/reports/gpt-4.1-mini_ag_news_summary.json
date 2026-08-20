@@ -1,0 +1,9 @@
+{
+  "teacher": "gpt-4.1-mini",
+  "dataset": "ag_news",
+  "n_samples_reported": 6000,
+  "accuracy": 0.8843333333333333,
+  "floor_fraction": 0.261625,
+  "report_csv": "outputs/reports/gpt-4.1-mini_ag_news.csv",
+  "generated_at": "2026-06-11T20:05:24.973279+00:00"
+}

@@ -1,0 +1,98 @@
+[2026-07-26T23:22:39Z] === rq2_matched_q2_3seed_v1 runner begin ===
+[2026-07-26T23:22:39Z] START dataset=ag_news teacher=multi-cascade-guided L=10 seed=42
+[2026-07-26T23:24:24Z] OK dataset=ag_news teacher=multi-cascade-guided L=10 seed=42 status=0 start=2026-07-26T23:22:39Z end=2026-07-26T23:24:24Z
+[2026-07-26T23:24:24Z] START dataset=ag_news teacher=multi-uniform-budget-guided L=10 seed=42
+[2026-07-26T23:26:10Z] OK dataset=ag_news teacher=multi-uniform-budget-guided L=10 seed=42 status=0 start=2026-07-26T23:24:24Z end=2026-07-26T23:26:10Z
+[2026-07-26T23:26:10Z] START dataset=ag_news teacher=multi-cascade-guided L=10 seed=123
+[2026-07-26T23:27:57Z] OK dataset=ag_news teacher=multi-cascade-guided L=10 seed=123 status=0 start=2026-07-26T23:26:10Z end=2026-07-26T23:27:57Z
+[2026-07-26T23:27:57Z] START dataset=ag_news teacher=multi-uniform-budget-guided L=10 seed=123
+[2026-07-26T23:29:43Z] OK dataset=ag_news teacher=multi-uniform-budget-guided L=10 seed=123 status=0 start=2026-07-26T23:27:57Z end=2026-07-26T23:29:43Z
+[2026-07-26T23:29:43Z] START dataset=ag_news teacher=multi-cascade-guided L=10 seed=456
+[2026-07-26T23:31:29Z] OK dataset=ag_news teacher=multi-cascade-guided L=10 seed=456 status=0 start=2026-07-26T23:29:43Z end=2026-07-26T23:31:29Z
+[2026-07-26T23:31:29Z] START dataset=ag_news teacher=multi-uniform-budget-guided L=10 seed=456
+[2026-07-26T23:33:15Z] OK dataset=ag_news teacher=multi-uniform-budget-guided L=10 seed=456 status=0 start=2026-07-26T23:31:29Z end=2026-07-26T23:33:15Z
+[2026-07-26T23:33:15Z] START dataset=yahoo teacher=multi-cascade-guided L=10 seed=42
+[2026-07-26T23:35:57Z] OK dataset=yahoo teacher=multi-cascade-guided L=10 seed=42 status=0 start=2026-07-26T23:33:15Z end=2026-07-26T23:35:57Z
+[2026-07-26T23:35:57Z] START dataset=yahoo teacher=multi-uniform-budget-guided L=10 seed=42
+[2026-07-26T23:38:41Z] OK dataset=yahoo teacher=multi-uniform-budget-guided L=10 seed=42 status=0 start=2026-07-26T23:35:57Z end=2026-07-26T23:38:41Z
+[2026-07-26T23:38:41Z] START dataset=yahoo teacher=multi-cascade-guided L=10 seed=123
+[2026-07-26T23:41:24Z] OK dataset=yahoo teacher=multi-cascade-guided L=10 seed=123 status=0 start=2026-07-26T23:38:41Z end=2026-07-26T23:41:24Z
+[2026-07-26T23:41:24Z] START dataset=yahoo teacher=multi-uniform-budget-guided L=10 seed=123
+[2026-07-26T23:44:09Z] OK dataset=yahoo teacher=multi-uniform-budget-guided L=10 seed=123 status=0 start=2026-07-26T23:41:24Z end=2026-07-26T23:44:09Z
+[2026-07-26T23:44:09Z] START dataset=yahoo teacher=multi-cascade-guided L=10 seed=456
+[2026-07-26T23:46:52Z] OK dataset=yahoo teacher=multi-cascade-guided L=10 seed=456 status=0 start=2026-07-26T23:44:09Z end=2026-07-26T23:46:52Z
+[2026-07-26T23:46:52Z] START dataset=yahoo teacher=multi-uniform-budget-guided L=10 seed=456
+[2026-07-26T23:49:34Z] OK dataset=yahoo teacher=multi-uniform-budget-guided L=10 seed=456 status=0 start=2026-07-26T23:46:52Z end=2026-07-26T23:49:34Z
+[2026-07-26T23:49:34Z] START dataset=amazon teacher=multi-cascade-guided L=10 seed=42
+[2026-07-26T23:51:10Z] OK dataset=amazon teacher=multi-cascade-guided L=10 seed=42 status=0 start=2026-07-26T23:49:34Z end=2026-07-26T23:51:10Z
+[2026-07-26T23:51:11Z] START dataset=amazon teacher=multi-uniform-budget-guided L=10 seed=42
+[2026-07-26T23:52:47Z] OK dataset=amazon teacher=multi-uniform-budget-guided L=10 seed=42 status=0 start=2026-07-26T23:51:11Z end=2026-07-26T23:52:47Z
+[2026-07-26T23:52:48Z] START dataset=amazon teacher=multi-cascade-guided L=10 seed=123
+[2026-07-26T23:54:24Z] OK dataset=amazon teacher=multi-cascade-guided L=10 seed=123 status=0 start=2026-07-26T23:52:48Z end=2026-07-26T23:54:24Z
+[2026-07-26T23:54:24Z] START dataset=amazon teacher=multi-uniform-budget-guided L=10 seed=123
+[2026-07-26T23:56:01Z] OK dataset=amazon teacher=multi-uniform-budget-guided L=10 seed=123 status=0 start=2026-07-26T23:54:24Z end=2026-07-26T23:56:01Z
+[2026-07-26T23:56:01Z] START dataset=amazon teacher=multi-cascade-guided L=10 seed=456
+[2026-07-26T23:57:38Z] OK dataset=amazon teacher=multi-cascade-guided L=10 seed=456 status=0 start=2026-07-26T23:56:01Z end=2026-07-26T23:57:38Z
+[2026-07-26T23:57:38Z] START dataset=amazon teacher=multi-uniform-budget-guided L=10 seed=456
+[2026-07-26T23:59:15Z] OK dataset=amazon teacher=multi-uniform-budget-guided L=10 seed=456 status=0 start=2026-07-26T23:57:38Z end=2026-07-26T23:59:15Z
+[2026-07-26T23:59:15Z] START dataset=amazon3 teacher=multi-cascade-guided L=10 seed=42
+[2026-07-27T00:00:16Z] OK dataset=amazon3 teacher=multi-cascade-guided L=10 seed=42 status=0 start=2026-07-26T23:59:15Z end=2026-07-27T00:00:16Z
+[2026-07-27T00:00:16Z] START dataset=amazon3 teacher=multi-uniform-budget-guided L=10 seed=42
+[2026-07-27T00:01:18Z] OK dataset=amazon3 teacher=multi-uniform-budget-guided L=10 seed=42 status=0 start=2026-07-27T00:00:16Z end=2026-07-27T00:01:18Z
+[2026-07-27T00:01:18Z] START dataset=amazon3 teacher=multi-cascade-guided L=10 seed=123
+[2026-07-27T00:02:20Z] OK dataset=amazon3 teacher=multi-cascade-guided L=10 seed=123 status=0 start=2026-07-27T00:01:18Z end=2026-07-27T00:02:20Z
+[2026-07-27T00:02:20Z] START dataset=amazon3 teacher=multi-uniform-budget-guided L=10 seed=123
+[2026-07-27T00:03:21Z] OK dataset=amazon3 teacher=multi-uniform-budget-guided L=10 seed=123 status=0 start=2026-07-27T00:02:20Z end=2026-07-27T00:03:20Z
+[2026-07-27T00:03:21Z] START dataset=amazon3 teacher=multi-cascade-guided L=10 seed=456
+[2026-07-27T00:04:22Z] OK dataset=amazon3 teacher=multi-cascade-guided L=10 seed=456 status=0 start=2026-07-27T00:03:21Z end=2026-07-27T00:04:22Z
+[2026-07-27T00:04:22Z] START dataset=amazon3 teacher=multi-uniform-budget-guided L=10 seed=456
+[2026-07-27T00:05:24Z] OK dataset=amazon3 teacher=multi-uniform-budget-guided L=10 seed=456 status=0 start=2026-07-27T00:04:22Z end=2026-07-27T00:05:24Z
+[2026-07-27T00:05:24Z] START dataset=ag_news teacher=multi-cascade-guided L=50 seed=42
+[2026-07-27T00:07:11Z] OK dataset=ag_news teacher=multi-cascade-guided L=50 seed=42 status=0 start=2026-07-27T00:05:24Z end=2026-07-27T00:07:11Z
+[2026-07-27T00:07:11Z] START dataset=ag_news teacher=multi-uniform-budget-guided L=50 seed=42
+[2026-07-27T00:08:57Z] OK dataset=ag_news teacher=multi-uniform-budget-guided L=50 seed=42 status=0 start=2026-07-27T00:07:11Z end=2026-07-27T00:08:57Z
+[2026-07-27T00:08:57Z] START dataset=ag_news teacher=multi-cascade-guided L=50 seed=123
+[2026-07-27T00:10:45Z] OK dataset=ag_news teacher=multi-cascade-guided L=50 seed=123 status=0 start=2026-07-27T00:08:57Z end=2026-07-27T00:10:45Z
+[2026-07-27T00:10:45Z] START dataset=ag_news teacher=multi-uniform-budget-guided L=50 seed=123
+[2026-07-27T00:12:32Z] OK dataset=ag_news teacher=multi-uniform-budget-guided L=50 seed=123 status=0 start=2026-07-27T00:10:45Z end=2026-07-27T00:12:32Z
+[2026-07-27T00:12:33Z] START dataset=ag_news teacher=multi-cascade-guided L=50 seed=456
+[2026-07-27T00:14:18Z] OK dataset=ag_news teacher=multi-cascade-guided L=50 seed=456 status=0 start=2026-07-27T00:12:33Z end=2026-07-27T00:14:18Z
+[2026-07-27T00:14:18Z] START dataset=ag_news teacher=multi-uniform-budget-guided L=50 seed=456
+[2026-07-27T00:16:04Z] OK dataset=ag_news teacher=multi-uniform-budget-guided L=50 seed=456 status=0 start=2026-07-27T00:14:18Z end=2026-07-27T00:16:04Z
+[2026-07-27T00:16:04Z] START dataset=yahoo teacher=multi-cascade-guided L=50 seed=42
+[2026-07-27T00:18:47Z] OK dataset=yahoo teacher=multi-cascade-guided L=50 seed=42 status=0 start=2026-07-27T00:16:04Z end=2026-07-27T00:18:47Z
+[2026-07-27T00:18:47Z] START dataset=yahoo teacher=multi-uniform-budget-guided L=50 seed=42
+[2026-07-27T00:21:30Z] OK dataset=yahoo teacher=multi-uniform-budget-guided L=50 seed=42 status=0 start=2026-07-27T00:18:47Z end=2026-07-27T00:21:30Z
+[2026-07-27T00:21:30Z] START dataset=yahoo teacher=multi-cascade-guided L=50 seed=123
+[2026-07-27T00:24:14Z] OK dataset=yahoo teacher=multi-cascade-guided L=50 seed=123 status=0 start=2026-07-27T00:21:30Z end=2026-07-27T00:24:14Z
+[2026-07-27T00:24:14Z] START dataset=yahoo teacher=multi-uniform-budget-guided L=50 seed=123
+[2026-07-27T00:26:58Z] OK dataset=yahoo teacher=multi-uniform-budget-guided L=50 seed=123 status=0 start=2026-07-27T00:24:14Z end=2026-07-27T00:26:57Z
+[2026-07-27T00:26:58Z] START dataset=yahoo teacher=multi-cascade-guided L=50 seed=456
+[2026-07-27T00:29:40Z] OK dataset=yahoo teacher=multi-cascade-guided L=50 seed=456 status=0 start=2026-07-27T00:26:58Z end=2026-07-27T00:29:40Z
+[2026-07-27T00:29:40Z] START dataset=yahoo teacher=multi-uniform-budget-guided L=50 seed=456
+[2026-07-27T00:32:24Z] OK dataset=yahoo teacher=multi-uniform-budget-guided L=50 seed=456 status=0 start=2026-07-27T00:29:40Z end=2026-07-27T00:32:24Z
+[2026-07-27T00:32:24Z] START dataset=amazon teacher=multi-cascade-guided L=50 seed=42
+[2026-07-27T00:34:00Z] OK dataset=amazon teacher=multi-cascade-guided L=50 seed=42 status=0 start=2026-07-27T00:32:24Z end=2026-07-27T00:34:00Z
+[2026-07-27T00:34:00Z] START dataset=amazon teacher=multi-uniform-budget-guided L=50 seed=42
+[2026-07-27T00:35:36Z] OK dataset=amazon teacher=multi-uniform-budget-guided L=50 seed=42 status=0 start=2026-07-27T00:34:00Z end=2026-07-27T00:35:36Z
+[2026-07-27T00:35:36Z] START dataset=amazon teacher=multi-cascade-guided L=50 seed=123
+[2026-07-27T00:37:13Z] OK dataset=amazon teacher=multi-cascade-guided L=50 seed=123 status=0 start=2026-07-27T00:35:36Z end=2026-07-27T00:37:13Z
+[2026-07-27T00:37:13Z] START dataset=amazon teacher=multi-uniform-budget-guided L=50 seed=123
+[2026-07-27T00:38:49Z] OK dataset=amazon teacher=multi-uniform-budget-guided L=50 seed=123 status=0 start=2026-07-27T00:37:13Z end=2026-07-27T00:38:49Z
+[2026-07-27T00:38:49Z] START dataset=amazon teacher=multi-cascade-guided L=50 seed=456
+[2026-07-27T00:40:25Z] OK dataset=amazon teacher=multi-cascade-guided L=50 seed=456 status=0 start=2026-07-27T00:38:49Z end=2026-07-27T00:40:25Z
+[2026-07-27T00:40:25Z] START dataset=amazon teacher=multi-uniform-budget-guided L=50 seed=456
+[2026-07-27T00:42:02Z] OK dataset=amazon teacher=multi-uniform-budget-guided L=50 seed=456 status=0 start=2026-07-27T00:40:25Z end=2026-07-27T00:42:01Z
+[2026-07-27T00:42:02Z] START dataset=amazon3 teacher=multi-cascade-guided L=50 seed=42
+[2026-07-27T00:43:03Z] OK dataset=amazon3 teacher=multi-cascade-guided L=50 seed=42 status=0 start=2026-07-27T00:42:02Z end=2026-07-27T00:43:03Z
+[2026-07-27T00:43:03Z] START dataset=amazon3 teacher=multi-uniform-budget-guided L=50 seed=42
+[2026-07-27T00:44:05Z] OK dataset=amazon3 teacher=multi-uniform-budget-guided L=50 seed=42 status=0 start=2026-07-27T00:43:03Z end=2026-07-27T00:44:04Z
+[2026-07-27T00:44:05Z] START dataset=amazon3 teacher=multi-cascade-guided L=50 seed=123
+[2026-07-27T00:45:07Z] OK dataset=amazon3 teacher=multi-cascade-guided L=50 seed=123 status=0 start=2026-07-27T00:44:05Z end=2026-07-27T00:45:06Z
+[2026-07-27T00:45:07Z] START dataset=amazon3 teacher=multi-uniform-budget-guided L=50 seed=123
+[2026-07-27T00:46:08Z] OK dataset=amazon3 teacher=multi-uniform-budget-guided L=50 seed=123 status=0 start=2026-07-27T00:45:07Z end=2026-07-27T00:46:08Z
+[2026-07-27T00:46:08Z] START dataset=amazon3 teacher=multi-cascade-guided L=50 seed=456
+[2026-07-27T00:47:09Z] OK dataset=amazon3 teacher=multi-cascade-guided L=50 seed=456 status=0 start=2026-07-27T00:46:08Z end=2026-07-27T00:47:09Z
+[2026-07-27T00:47:09Z] START dataset=amazon3 teacher=multi-uniform-budget-guided L=50 seed=456
+[2026-07-27T00:48:11Z] OK dataset=amazon3 teacher=multi-uniform-budget-guided L=50 seed=456 status=0 start=2026-07-27T00:47:09Z end=2026-07-27T00:48:11Z
+[2026-07-27T00:48:11Z] === runner end failures=0 started=48 skipped=0 ===

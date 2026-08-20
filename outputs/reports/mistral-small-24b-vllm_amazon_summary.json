@@ -1,0 +1,9 @@
+{
+  "teacher": "mistral-small-24b-vllm",
+  "dataset": "amazon",
+  "n_samples_reported": 2500,
+  "accuracy": 0.574,
+  "floor_fraction": 0.0,
+  "report_csv": "outputs/reports/mistral-small-24b-vllm_amazon.csv",
+  "generated_at": "2026-06-28T23:45:19.208052+00:00"
+}

@@ -1,0 +1,54 @@
+{
+  "source": "mteb/yahoo_answers_topics",
+  "artifact_version": "large-test-v1",
+  "num_classes": 10,
+  "label_names": [
+    "Society & Culture",
+    "Science & Mathematics",
+    "Health",
+    "Education & Reference",
+    "Computers & Internet",
+    "Sports",
+    "Business & Finance",
+    "Entertainment & Music",
+    "Family & Relationships",
+    "Politics & Government"
+  ],
+  "train_per_class": 500,
+  "test_per_class": 1000,
+  "seed": 42,
+  "train_size": 5000,
+  "test_size": 10000,
+  "train_identity": {
+    "size": 5000,
+    "class_counts": [
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500
+    ],
+    "sha256": "00ff756962f7a21d95fee7628a92c682fec844a8deac6273cd8f0e2855491f63"
+  },
+  "test_identity": {
+    "size": 10000,
+    "class_counts": [
+      1000,
+      1000,
+      1000,
+      1000,
+      1000,
+      1000,
+      1000,
+      1000,
+      1000,
+      1000
+    ],
+    "sha256": "7c40dd08c64e87bcbd928d3f7472c62c012571df44ceefc8ae361f064db8e326"
+  }
+}

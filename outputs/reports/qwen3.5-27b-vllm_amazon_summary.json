@@ -1,0 +1,9 @@
+{
+  "teacher": "qwen3.5-27b-vllm",
+  "dataset": "amazon",
+  "n_samples_reported": 2500,
+  "accuracy": 0.6276,
+  "floor_fraction": 0.0,
+  "report_csv": "outputs/reports/qwen3.5-27b-vllm_amazon.csv",
+  "generated_at": "2026-06-28T22:46:38.873624+00:00"
+}

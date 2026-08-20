@@ -1,0 +1,743 @@
+Dataset: AG News  |  classes: ['World', 'Sports', 'Business', 'Sci/Tech']
+Teacher: gemma-4-31b (model=google/gemma-4-31b-it)
+
+======================================================================
+SAMPLE 0
+  Text       : "Wall St. Bears Claw Back Into the Black (Reuters) Reuters - Short-sellers, Wall Street's d..."
+  True label : 2 = Business
+  LLM said   : "2"
+
+  RAW top-20 tokens the LLM returned (its view of the whole vocab):
+         token   logprob     prob   kept?
+           '2'    -0.000  100.00%   KEEP -> class 2 (Business)
+           '{'   -16.812    0.00%   skip (not a class index)
+    '<channel|>'   -17.719    0.00%   skip (not a class index)
+     '<turn|>'   -18.281    0.00%   skip (not a class index)
+          '//'   -18.438    0.00%   skip (not a class index)
+           '}'   -18.438    0.00%   skip (not a class index)
+           ' '   -18.500    0.00%   skip (not a class index)
+        ' own'   -19.000    0.00%   skip (not a class index)
+    ' kitchens'   -19.250    0.00%   skip (not a class index)
+          '\n'   -19.594    0.00%   skip (not a class index)
+           ')'   -19.656    0.00%   skip (not a class index)
+           '#'   -19.688    0.00%   skip (not a class index)
+       '<eos>'   -19.859    0.00%   skip (not a class index)
+           '='   -19.859    0.00%   skip (not a class index)
+          '\\'   -19.875    0.00%   skip (not a class index)
+          ' {'   -20.234    0.00%   skip (not a class index)
+    '<tool_call|>'   -20.281    0.00%   skip (not a class index)
+      ' Lucie'   -20.422    0.00%   skip (not a class index)
+           '|'   -20.422    0.00%   skip (not a class index)
+     ' beleza'   -20.438    0.00%   skip (not a class index)
+
+  CLEAN 4-class output (after the hard constraint / parser):
+    class 0 World      logit= -30.000  prob=  0.00% (floor: never appeared in top-k)
+    class 1 Sports     logit= -30.000  prob=  0.00% (floor: never appeared in top-k)
+    class 2 Business   logit=  -0.000  prob=100.00%
+    class 3 Sci/Tech   logit= -30.000  prob=  0.00% (floor: never appeared in top-k)
+
+  Prediction : class 2 = Business  (correct)
+----------------------------------------------------------------------
+
+SAMPLE 1
+  Text       : "Carlyle Looks Toward Commercial Aerospace (Reuters) Reuters - Private investment firm Carl..."
+  True label : 2 = Business
+  LLM said   : "2"
+
+  RAW top-20 tokens the LLM returned (its view of the whole vocab):
+         token   logprob     prob   kept?
+           '2'    -0.000  100.00%   KEEP -> class 2 (Business)
+           '0'   -17.250    0.00%   KEEP -> class 0 (World)
+           ' '   -18.031    0.00%   skip (not a class index)
+          '//'   -18.500    0.00%   skip (not a class index)
+           '{'   -18.781    0.00%   skip (not a class index)
+    '<channel|>'   -18.969    0.00%   skip (not a class index)
+     '<turn|>'   -19.000    0.00%   skip (not a class index)
+           '3'   -19.531    0.00%   KEEP -> class 3 (Sci/Tech)
+           '1'   -19.875    0.00%   KEEP -> class 1 (Sports)
+           '('   -20.094    0.00%   skip (not a class index)
+        ' uma'   -20.312    0.00%   skip (not a class index)
+          ' {'   -20.438    0.00%   skip (not a class index)
+           '_'   -20.438    0.00%   skip (not a class index)
+        ' own'   -20.469    0.00%   skip (not a class index)
+          '\n'   -20.562    0.00%   skip (not a class index)
+           '='   -20.562    0.00%   skip (not a class index)
+           '#'   -20.906    0.00%   skip (not a class index)
+           ')'   -21.000    0.00%   skip (not a class index)
+           '|'   -21.266    0.00%   skip (not a class index)
+     ' import'   -21.594    0.00%   skip (not a class index)
+
+  CLEAN 4-class output (after the hard constraint / parser):
+    class 0 World      logit= -17.250  prob=  0.00%
+    class 1 Sports     logit= -19.875  prob=  0.00%
+    class 2 Business   logit=  -0.000  prob=100.00%
+    class 3 Sci/Tech   logit= -19.531  prob=  0.00%
+
+  Prediction : class 2 = Business  (correct)
+----------------------------------------------------------------------
+
+SAMPLE 2
+  Text       : "Oil and Economy Cloud Stocks' Outlook (Reuters) Reuters - Soaring crude prices plus worrie..."
+  True label : 2 = Business
+  LLM said   : "2"
+
+  RAW top-20 tokens the LLM returned (its view of the whole vocab):
+         token   logprob     prob   kept?
+           '2'    -0.000  100.00%   KEEP -> class 2 (Business)
+           '{'   -17.219    0.00%   skip (not a class index)
+          '//'   -17.812    0.00%   skip (not a class index)
+    '<channel|>'   -17.812    0.00%   skip (not a class index)
+           ' '   -18.219    0.00%   skip (not a class index)
+     '<turn|>'   -18.469    0.00%   skip (not a class index)
+        ' own'   -18.562    0.00%   skip (not a class index)
+           '}'   -18.656    0.00%   skip (not a class index)
+    ' kitchens'   -19.391    0.00%   skip (not a class index)
+          '\n'   -19.656    0.00%   skip (not a class index)
+           ')'   -19.828    0.00%   skip (not a class index)
+          '\\'   -19.891    0.00%   skip (not a class index)
+          ' {'   -19.891    0.00%   skip (not a class index)
+       '<eos>'   -19.969    0.00%   skip (not a class index)
+           '#'   -20.109    0.00%   skip (not a class index)
+           '='   -20.188    0.00%   skip (not a class index)
+          '{"'   -20.469    0.00%   skip (not a class index)
+      ' those'   -20.500    0.00%   skip (not a class index)
+     ' beleza'   -20.500    0.00%   skip (not a class index)
+      ' Lucie'   -20.531    0.00%   skip (not a class index)
+
+  CLEAN 4-class output (after the hard constraint / parser):
+    class 0 World      logit= -30.000  prob=  0.00% (floor: never appeared in top-k)
+    class 1 Sports     logit= -30.000  prob=  0.00% (floor: never appeared in top-k)
+    class 2 Business   logit=  -0.000  prob=100.00%
+    class 3 Sci/Tech   logit= -30.000  prob=  0.00% (floor: never appeared in top-k)
+
+  Prediction : class 2 = Business  (correct)
+----------------------------------------------------------------------
+
+SAMPLE 3
+  Text       : "Iraq Halts Oil Exports from Main Southern Pipeline (Reuters) Reuters - Authorities have ha..."
+  True label : 2 = Business
+  LLM said   : "2"
+
+  RAW top-20 tokens the LLM returned (its view of the whole vocab):
+         token   logprob     prob   kept?
+           '2'    -0.000   99.99%   KEEP -> class 2 (Business)
+           '0'    -9.750    0.01%   KEEP -> class 0 (World)
+          '//'   -16.688    0.00%   skip (not a class index)
+           '1'   -17.313    0.00%   KEEP -> class 1 (Sports)
+           ' '   -17.438    0.00%   skip (not a class index)
+           '3'   -18.125    0.00%   KEEP -> class 3 (Sci/Tech)
+           '('   -19.063    0.00%   skip (not a class index)
+    '<channel|>'   -19.219    0.00%   skip (not a class index)
+           '{'   -19.281    0.00%   skip (not a class index)
+           '_'   -19.438    0.00%   skip (not a class index)
+     '<turn|>'   -19.625    0.00%   skip (not a class index)
+           '#'   -20.219    0.00%   skip (not a class index)
+        ' uma'   -20.281    0.00%   skip (not a class index)
+          '()'   -20.969    0.00%   skip (not a class index)
+          '**'   -20.969    0.00%   skip (not a class index)
+           '|'   -21.125    0.00%   skip (not a class index)
+          ']]'   -21.156    0.00%   skip (not a class index)
+           '`'   -21.250    0.00%   skip (not a class index)
+           'B'   -21.313    0.00%   skip (not a class index)
+           '4'   -21.375    0.00%   skip (not a class index)
+
+  CLEAN 4-class output (after the hard constraint / parser):
+    class 0 World      logit=  -9.750  prob=  0.01%
+    class 1 Sports     logit= -17.313  prob=  0.00%
+    class 2 Business   logit=  -0.000  prob= 99.99%
+    class 3 Sci/Tech   logit= -18.125  prob=  0.00%
+
+  Prediction : class 2 = Business  (correct)
+----------------------------------------------------------------------
+
+SAMPLE 4
+  Text       : "Oil prices soar to all-time record, posing new menace to US economy (AFP) AFP - Tearaway w..."
+  True label : 2 = Business
+  LLM said   : "2"
+
+  RAW top-20 tokens the LLM returned (its view of the whole vocab):
+         token   logprob     prob   kept?
+           '2'    -0.000  100.00%   KEEP -> class 2 (Business)
+           '{'   -17.969    0.00%   skip (not a class index)
+    '<channel|>'   -17.969    0.00%   skip (not a class index)
+     '<turn|>'   -18.188    0.00%   skip (not a class index)
+          '//'   -18.500    0.00%   skip (not a class index)
+           ' '   -18.875    0.00%   skip (not a class index)
+           '0'   -18.906    0.00%   KEEP -> class 0 (World)
+          '\n'   -19.562    0.00%   skip (not a class index)
+           '}'   -19.906    0.00%   skip (not a class index)
+           ')'   -20.000    0.00%   skip (not a class index)
+           '='   -20.219    0.00%   skip (not a class index)
+          ' {'   -20.219    0.00%   skip (not a class index)
+        ' own'   -20.453    0.00%   skip (not a class index)
+           '#'   -20.453    0.00%   skip (not a class index)
+           '('   -20.484    0.00%   skip (not a class index)
+    ' kitchens'   -20.641    0.00%   skip (not a class index)
+       '<eos>'   -20.781    0.00%   skip (not a class index)
+        ' uma'   -20.906    0.00%   skip (not a class index)
+          '\\'   -21.016    0.00%   skip (not a class index)
+    '<tool_call|>'   -21.016    0.00%   skip (not a class index)
+
+  CLEAN 4-class output (after the hard constraint / parser):
+    class 0 World      logit= -18.906  prob=  0.00%
+    class 1 Sports     logit= -30.000  prob=  0.00% (floor: never appeared in top-k)
+    class 2 Business   logit=  -0.000  prob=100.00%
+    class 3 Sci/Tech   logit= -30.000  prob=  0.00% (floor: never appeared in top-k)
+
+  Prediction : class 2 = Business  (correct)
+----------------------------------------------------------------------
+
+SAMPLE 5
+  Text       : "Stocks End Up, But Near Year Lows (Reuters) Reuters - Stocks ended slightly higher on Frid..."
+  True label : 2 = Business
+  LLM said   : "2"
+
+  RAW top-20 tokens the LLM returned (its view of the whole vocab):
+         token   logprob     prob   kept?
+           '2'    -0.000  100.00%   KEEP -> class 2 (Business)
+           '{'   -17.250    0.00%   skip (not a class index)
+           ' '   -17.906    0.00%   skip (not a class index)
+          '//'   -17.969    0.00%   skip (not a class index)
+    '<channel|>'   -18.219    0.00%   skip (not a class index)
+     '<turn|>'   -18.625    0.00%   skip (not a class index)
+           '}'   -18.812    0.00%   skip (not a class index)
+        ' own'   -18.844    0.00%   skip (not a class index)
+    ' kitchens'   -19.375    0.00%   skip (not a class index)
+          '\n'   -19.688    0.00%   skip (not a class index)
+          '\\'   -19.891    0.00%   skip (not a class index)
+           ')'   -19.891    0.00%   skip (not a class index)
+          ' {'   -20.062    0.00%   skip (not a class index)
+           '='   -20.219    0.00%   skip (not a class index)
+     ' beleza'   -20.219    0.00%   skip (not a class index)
+           '#'   -20.359    0.00%   skip (not a class index)
+      ' Lucie'   -20.359    0.00%   skip (not a class index)
+       '<eos>'   -20.406    0.00%   skip (not a class index)
+          '{"'   -20.453    0.00%   skip (not a class index)
+          '建设'   -20.531    0.00%   skip (not a class index)
+
+  CLEAN 4-class output (after the hard constraint / parser):
+    class 0 World      logit= -30.000  prob=  0.00% (floor: never appeared in top-k)
+    class 1 Sports     logit= -30.000  prob=  0.00% (floor: never appeared in top-k)
+    class 2 Business   logit=  -0.000  prob=100.00%
+    class 3 Sci/Tech   logit= -30.000  prob=  0.00% (floor: never appeared in top-k)
+
+  Prediction : class 2 = Business  (correct)
+----------------------------------------------------------------------
+
+SAMPLE 6
+  Text       : "Money Funds Fell in Latest Week (AP) AP - Assets of the nation's retail money market mutua..."
+  True label : 2 = Business
+  LLM said   : "2"
+
+  RAW top-20 tokens the LLM returned (its view of the whole vocab):
+         token   logprob     prob   kept?
+           '2'    -0.000  100.00%   KEEP -> class 2 (Business)
+           '{'   -17.219    0.00%   skip (not a class index)
+           ' '   -17.500    0.00%   skip (not a class index)
+          '//'   -17.719    0.00%   skip (not a class index)
+        ' own'   -17.875    0.00%   skip (not a class index)
+    '<channel|>'   -17.938    0.00%   skip (not a class index)
+     '<turn|>'   -18.500    0.00%   skip (not a class index)
+           '}'   -18.531    0.00%   skip (not a class index)
+    ' kitchens'   -19.172    0.00%   skip (not a class index)
+          ' {'   -19.563    0.00%   skip (not a class index)
+          '\\'   -19.688    0.00%   skip (not a class index)
+           ')'   -19.688    0.00%   skip (not a class index)
+          '\n'   -19.938    0.00%   skip (not a class index)
+           '#'   -19.969    0.00%   skip (not a class index)
+      ' Lucie'   -20.000    0.00%   skip (not a class index)
+           '='   -20.078    0.00%   skip (not a class index)
+     ' beleza'   -20.078    0.00%   skip (not a class index)
+       '<eos>'   -20.125    0.00%   skip (not a class index)
+          '{"'   -20.203    0.00%   skip (not a class index)
+          '建设'   -20.266    0.00%   skip (not a class index)
+
+  CLEAN 4-class output (after the hard constraint / parser):
+    class 0 World      logit= -30.000  prob=  0.00% (floor: never appeared in top-k)
+    class 1 Sports     logit= -30.000  prob=  0.00% (floor: never appeared in top-k)
+    class 2 Business   logit=  -0.000  prob=100.00%
+    class 3 Sci/Tech   logit= -30.000  prob=  0.00% (floor: never appeared in top-k)
+
+  Prediction : class 2 = Business  (correct)
+----------------------------------------------------------------------
+
+SAMPLE 7
+  Text       : "Fed minutes show dissent over inflation (USATODAY.com) USATODAY.com - Retail sales bounced..."
+  True label : 2 = Business
+  LLM said   : "2"
+
+  RAW top-20 tokens the LLM returned (its view of the whole vocab):
+         token   logprob     prob   kept?
+           '2'    -0.000  100.00%   KEEP -> class 2 (Business)
+           '{'   -17.562    0.00%   skip (not a class index)
+    '<channel|>'   -18.219    0.00%   skip (not a class index)
+          '//'   -18.312    0.00%   skip (not a class index)
+           ' '   -18.531    0.00%   skip (not a class index)
+     '<turn|>'   -18.562    0.00%   skip (not a class index)
+        ' own'   -18.562    0.00%   skip (not a class index)
+           '}'   -18.750    0.00%   skip (not a class index)
+    ' kitchens'   -19.516    0.00%   skip (not a class index)
+          '\n'   -19.922    0.00%   skip (not a class index)
+           ')'   -20.203    0.00%   skip (not a class index)
+          ' {'   -20.219    0.00%   skip (not a class index)
+       '<eos>'   -20.266    0.00%   skip (not a class index)
+          '\\'   -20.297    0.00%   skip (not a class index)
+           '='   -20.453    0.00%   skip (not a class index)
+      ' Lucie'   -20.531    0.00%   skip (not a class index)
+    '<tool_call|>'   -20.562    0.00%   skip (not a class index)
+           '#'   -20.594    0.00%   skip (not a class index)
+     ' beleza'   -20.688    0.00%   skip (not a class index)
+      ' those'   -20.812    0.00%   skip (not a class index)
+
+  CLEAN 4-class output (after the hard constraint / parser):
+    class 0 World      logit= -30.000  prob=  0.00% (floor: never appeared in top-k)
+    class 1 Sports     logit= -30.000  prob=  0.00% (floor: never appeared in top-k)
+    class 2 Business   logit=  -0.000  prob=100.00%
+    class 3 Sci/Tech   logit= -30.000  prob=  0.00% (floor: never appeared in top-k)
+
+  Prediction : class 2 = Business  (correct)
+----------------------------------------------------------------------
+
+SAMPLE 8
+  Text       : "Safety Net (Forbes.com) Forbes.com - After earning a PH.D. in Sociology, Danny Bazil Riley..."
+  True label : 2 = Business
+  LLM said   : "2"
+
+  RAW top-20 tokens the LLM returned (its view of the whole vocab):
+         token   logprob     prob   kept?
+           '2'    -0.000  100.00%   KEEP -> class 2 (Business)
+           '{'   -17.750    0.00%   skip (not a class index)
+           '0'   -17.750    0.00%   KEEP -> class 0 (World)
+     '<turn|>'   -18.125    0.00%   skip (not a class index)
+          '//'   -18.156    0.00%   skip (not a class index)
+    '<channel|>'   -18.406    0.00%   skip (not a class index)
+           ' '   -18.781    0.00%   skip (not a class index)
+        ' own'   -18.844    0.00%   skip (not a class index)
+          ' {'   -19.312    0.00%   skip (not a class index)
+           '}'   -19.781    0.00%   skip (not a class index)
+           '='   -19.844    0.00%   skip (not a class index)
+          '\n'   -19.844    0.00%   skip (not a class index)
+           '#'   -19.953    0.00%   skip (not a class index)
+           '('   -20.000    0.00%   skip (not a class index)
+           ')'   -20.109    0.00%   skip (not a class index)
+           '|'   -20.375    0.00%   skip (not a class index)
+        ' uma'   -20.438    0.00%   skip (not a class index)
+           '_'   -20.453    0.00%   skip (not a class index)
+     ' import'   -20.531    0.00%   skip (not a class index)
+     ' enriqu'   -20.844    0.00%   skip (not a class index)
+
+  CLEAN 4-class output (after the hard constraint / parser):
+    class 0 World      logit= -17.750  prob=  0.00%
+    class 1 Sports     logit= -30.000  prob=  0.00% (floor: never appeared in top-k)
+    class 2 Business   logit=  -0.000  prob=100.00%
+    class 3 Sci/Tech   logit= -30.000  prob=  0.00% (floor: never appeared in top-k)
+
+  Prediction : class 2 = Business  (correct)
+----------------------------------------------------------------------
+
+SAMPLE 9
+  Text       : "Wall St. Bears Claw Back Into the Black  NEW YORK (Reuters) - Short-sellers, Wall Street's..."
+  True label : 2 = Business
+  LLM said   : "2"
+
+  RAW top-20 tokens the LLM returned (its view of the whole vocab):
+         token   logprob     prob   kept?
+           '2'    -0.000  100.00%   KEEP -> class 2 (Business)
+           '{'   -16.688    0.00%   skip (not a class index)
+    '<channel|>'   -17.625    0.00%   skip (not a class index)
+          '//'   -18.250    0.00%   skip (not a class index)
+           ' '   -18.312    0.00%   skip (not a class index)
+           '}'   -18.375    0.00%   skip (not a class index)
+     '<turn|>'   -18.406    0.00%   skip (not a class index)
+        ' own'   -18.594    0.00%   skip (not a class index)
+    ' kitchens'   -19.125    0.00%   skip (not a class index)
+          '\n'   -19.422    0.00%   skip (not a class index)
+           '#'   -19.578    0.00%   skip (not a class index)
+           ')'   -19.609    0.00%   skip (not a class index)
+          '\\'   -19.719    0.00%   skip (not a class index)
+           '='   -19.828    0.00%   skip (not a class index)
+       '<eos>'   -19.891    0.00%   skip (not a class index)
+          ' {'   -19.984    0.00%   skip (not a class index)
+    '<tool_call|>'   -20.094    0.00%   skip (not a class index)
+      ' those'   -20.250    0.00%   skip (not a class index)
+     ' beleza'   -20.266    0.00%   skip (not a class index)
+       ' some'   -20.297    0.00%   skip (not a class index)
+
+  CLEAN 4-class output (after the hard constraint / parser):
+    class 0 World      logit= -30.000  prob=  0.00% (floor: never appeared in top-k)
+    class 1 Sports     logit= -30.000  prob=  0.00% (floor: never appeared in top-k)
+    class 2 Business   logit=  -0.000  prob=100.00%
+    class 3 Sci/Tech   logit= -30.000  prob=  0.00% (floor: never appeared in top-k)
+
+  Prediction : class 2 = Business  (correct)
+----------------------------------------------------------------------
+
+SAMPLE 10
+  Text       : "Oil and Economy Cloud Stocks' Outlook  NEW YORK (Reuters) - Soaring crude prices plus worr..."
+  True label : 2 = Business
+  LLM said   : "2"
+
+  RAW top-20 tokens the LLM returned (its view of the whole vocab):
+         token   logprob     prob   kept?
+           '2'    -0.000  100.00%   KEEP -> class 2 (Business)
+           '{'   -17.625    0.00%   skip (not a class index)
+          '//'   -18.125    0.00%   skip (not a class index)
+           ' '   -18.188    0.00%   skip (not a class index)
+    '<channel|>'   -18.188    0.00%   skip (not a class index)
+     '<turn|>'   -18.344    0.00%   skip (not a class index)
+        ' own'   -18.750    0.00%   skip (not a class index)
+           '}'   -19.000    0.00%   skip (not a class index)
+    ' kitchens'   -19.406    0.00%   skip (not a class index)
+          '\n'   -19.562    0.00%   skip (not a class index)
+           ')'   -19.922    0.00%   skip (not a class index)
+          ' {'   -20.016    0.00%   skip (not a class index)
+          '\\'   -20.031    0.00%   skip (not a class index)
+       '<eos>'   -20.188    0.00%   skip (not a class index)
+           '='   -20.250    0.00%   skip (not a class index)
+           '#'   -20.344    0.00%   skip (not a class index)
+      ' Lucie'   -20.609    0.00%   skip (not a class index)
+      ' those'   -20.656    0.00%   skip (not a class index)
+           '|'   -20.672    0.00%   skip (not a class index)
+     ' beleza'   -20.672    0.00%   skip (not a class index)
+
+  CLEAN 4-class output (after the hard constraint / parser):
+    class 0 World      logit= -30.000  prob=  0.00% (floor: never appeared in top-k)
+    class 1 Sports     logit= -30.000  prob=  0.00% (floor: never appeared in top-k)
+    class 2 Business   logit=  -0.000  prob=100.00%
+    class 3 Sci/Tech   logit= -30.000  prob=  0.00% (floor: never appeared in top-k)
+
+  Prediction : class 2 = Business  (correct)
+----------------------------------------------------------------------
+
+SAMPLE 11
+  Text       : "No Need for OPEC to Pump More-Iran Gov  TEHRAN (Reuters) - OPEC can do nothing to douse sc..."
+  True label : 2 = Business
+  LLM said   : "2"
+
+  RAW top-20 tokens the LLM returned (its view of the whole vocab):
+         token   logprob     prob   kept?
+           '2'    -0.000  100.00%   KEEP -> class 2 (Business)
+           '0'   -18.094    0.00%   KEEP -> class 0 (World)
+           '{'   -18.188    0.00%   skip (not a class index)
+           ' '   -18.250    0.00%   skip (not a class index)
+    '<channel|>'   -18.281    0.00%   skip (not a class index)
+     '<turn|>'   -18.312    0.00%   skip (not a class index)
+          '//'   -18.375    0.00%   skip (not a class index)
+          '\n'   -19.625    0.00%   skip (not a class index)
+           '('   -19.906    0.00%   skip (not a class index)
+          ' {'   -20.234    0.00%   skip (not a class index)
+           ')'   -20.250    0.00%   skip (not a class index)
+           '1'   -20.375    0.00%   KEEP -> class 1 (Sports)
+        ' own'   -20.391    0.00%   skip (not a class index)
+           '='   -20.422    0.00%   skip (not a class index)
+           '#'   -20.422    0.00%   skip (not a class index)
+           '_'   -20.438    0.00%   skip (not a class index)
+           '}'   -20.516    0.00%   skip (not a class index)
+        ' uma'   -20.688    0.00%   skip (not a class index)
+           '|'   -20.812    0.00%   skip (not a class index)
+     ' import'   -21.109    0.00%   skip (not a class index)
+
+  CLEAN 4-class output (after the hard constraint / parser):
+    class 0 World      logit= -18.094  prob=  0.00%
+    class 1 Sports     logit= -20.375  prob=  0.00%
+    class 2 Business   logit=  -0.000  prob=100.00%
+    class 3 Sci/Tech   logit= -30.000  prob=  0.00% (floor: never appeared in top-k)
+
+  Prediction : class 2 = Business  (correct)
+----------------------------------------------------------------------
+
+SAMPLE 12
+  Text       : "Non-OPEC Nations Should Up Output-Purnomo  JAKARTA (Reuters) - Non-OPEC oil exporters shou..."
+  True label : 2 = Business
+  LLM said   : "2"
+
+  RAW top-20 tokens the LLM returned (its view of the whole vocab):
+         token   logprob     prob   kept?
+           '2'    -0.000  100.00%   KEEP -> class 2 (Business)
+    '<channel|>'   -17.562    0.00%   skip (not a class index)
+           '{'   -18.125    0.00%   skip (not a class index)
+          '//'   -18.125    0.00%   skip (not a class index)
+           '0'   -18.344    0.00%   KEEP -> class 0 (World)
+     '<turn|>'   -18.531    0.00%   skip (not a class index)
+           ' '   -19.062    0.00%   skip (not a class index)
+        ' own'   -19.812    0.00%   skip (not a class index)
+          '\n'   -19.969    0.00%   skip (not a class index)
+        ' uma'   -20.000    0.00%   skip (not a class index)
+           '}'   -20.078    0.00%   skip (not a class index)
+           '='   -20.250    0.00%   skip (not a class index)
+           ')'   -20.438    0.00%   skip (not a class index)
+           '#'   -20.469    0.00%   skip (not a class index)
+           '('   -20.516    0.00%   skip (not a class index)
+          ' {'   -20.594    0.00%   skip (not a class index)
+    ' kitchens'   -20.750    0.00%   skip (not a class index)
+           '1'   -20.766    0.00%   KEEP -> class 1 (Sports)
+           '|'   -20.891    0.00%   skip (not a class index)
+    '<tool_call|>'   -20.922    0.00%   skip (not a class index)
+
+  CLEAN 4-class output (after the hard constraint / parser):
+    class 0 World      logit= -18.344  prob=  0.00%
+    class 1 Sports     logit= -20.766  prob=  0.00%
+    class 2 Business   logit=  -0.000  prob=100.00%
+    class 3 Sci/Tech   logit= -30.000  prob=  0.00% (floor: never appeared in top-k)
+
+  Prediction : class 2 = Business  (correct)
+----------------------------------------------------------------------
+
+SAMPLE 13
+  Text       : "Google IPO Auction Off to Rocky Start  WASHINGTON/NEW YORK (Reuters) - The auction for Goo..."
+  True label : 2 = Business
+  LLM said   : "2"
+
+  RAW top-20 tokens the LLM returned (its view of the whole vocab):
+         token   logprob     prob   kept?
+           '2'    -0.000  100.00%   KEEP -> class 2 (Business)
+           ' '   -17.969    0.00%   skip (not a class index)
+           '3'   -18.188    0.00%   KEEP -> class 3 (Sci/Tech)
+          '//'   -18.406    0.00%   skip (not a class index)
+    '<channel|>'   -18.562    0.00%   skip (not a class index)
+           '0'   -18.656    0.00%   KEEP -> class 0 (World)
+           '{'   -18.719    0.00%   skip (not a class index)
+     '<turn|>'   -19.062    0.00%   skip (not a class index)
+           '('   -19.688    0.00%   skip (not a class index)
+        ' uma'   -19.688    0.00%   skip (not a class index)
+           '1'   -19.875    0.00%   KEEP -> class 1 (Sports)
+           '_'   -20.156    0.00%   skip (not a class index)
+          '\n'   -20.594    0.00%   skip (not a class index)
+          ' {'   -20.781    0.00%   skip (not a class index)
+           '#'   -20.938    0.00%   skip (not a class index)
+           '='   -21.000    0.00%   skip (not a class index)
+           '|'   -21.031    0.00%   skip (not a class index)
+          ']]'   -21.062    0.00%   skip (not a class index)
+           ')'   -21.125    0.00%   skip (not a class index)
+    '<tool_call|>'   -21.594    0.00%   skip (not a class index)
+
+  CLEAN 4-class output (after the hard constraint / parser):
+    class 0 World      logit= -18.656  prob=  0.00%
+    class 1 Sports     logit= -19.875  prob=  0.00%
+    class 2 Business   logit=  -0.000  prob=100.00%
+    class 3 Sci/Tech   logit= -18.188  prob=  0.00%
+
+  Prediction : class 2 = Business  (correct)
+----------------------------------------------------------------------
+
+SAMPLE 14
+  Text       : "Dollar Falls Broadly on Record Trade Gap  NEW YORK (Reuters) - The dollar tumbled broadly ..."
+  True label : 2 = Business
+  LLM said   : "2"
+
+  RAW top-20 tokens the LLM returned (its view of the whole vocab):
+         token   logprob     prob   kept?
+           '2'    -0.000  100.00%   KEEP -> class 2 (Business)
+           '{'   -17.281    0.00%   skip (not a class index)
+          '//'   -17.719    0.00%   skip (not a class index)
+    '<channel|>'   -17.969    0.00%   skip (not a class index)
+           ' '   -18.250    0.00%   skip (not a class index)
+     '<turn|>'   -18.688    0.00%   skip (not a class index)
+           '}'   -18.812    0.00%   skip (not a class index)
+        ' own'   -19.000    0.00%   skip (not a class index)
+    ' kitchens'   -19.234    0.00%   skip (not a class index)
+          ' {'   -19.781    0.00%   skip (not a class index)
+          '\n'   -19.844    0.00%   skip (not a class index)
+           ')'   -20.000    0.00%   skip (not a class index)
+           '#'   -20.031    0.00%   skip (not a class index)
+          '\\'   -20.109    0.00%   skip (not a class index)
+       '<eos>'   -20.109    0.00%   skip (not a class index)
+      ' Lucie'   -20.234    0.00%   skip (not a class index)
+           '='   -20.266    0.00%   skip (not a class index)
+     ' beleza'   -20.328    0.00%   skip (not a class index)
+       ' some'   -20.578    0.00%   skip (not a class index)
+      ' those'   -20.594    0.00%   skip (not a class index)
+
+  CLEAN 4-class output (after the hard constraint / parser):
+    class 0 World      logit= -30.000  prob=  0.00% (floor: never appeared in top-k)
+    class 1 Sports     logit= -30.000  prob=  0.00% (floor: never appeared in top-k)
+    class 2 Business   logit=  -0.000  prob=100.00%
+    class 3 Sci/Tech   logit= -30.000  prob=  0.00% (floor: never appeared in top-k)
+
+  Prediction : class 2 = Business  (correct)
+----------------------------------------------------------------------
+
+SAMPLE 15
+  Text       : "Rescuing an Old Saver If you think you may need to help your elderly relatives with their ..."
+  True label : 2 = Business
+  LLM said   : "2"
+
+  RAW top-20 tokens the LLM returned (its view of the whole vocab):
+         token   logprob     prob   kept?
+           '2'    -0.000  100.00%   KEEP -> class 2 (Business)
+           '{'   -17.844    0.00%   skip (not a class index)
+     '<turn|>'   -18.219    0.00%   skip (not a class index)
+    '<channel|>'   -18.625    0.00%   skip (not a class index)
+           '0'   -18.938    0.00%   KEEP -> class 0 (World)
+           ' '   -18.969    0.00%   skip (not a class index)
+          '//'   -19.188    0.00%   skip (not a class index)
+          ' {'   -19.781    0.00%   skip (not a class index)
+          '\n'   -19.938    0.00%   skip (not a class index)
+           '}'   -20.094    0.00%   skip (not a class index)
+           '='   -20.281    0.00%   skip (not a class index)
+           ')'   -20.312    0.00%   skip (not a class index)
+           '('   -20.453    0.00%   skip (not a class index)
+           '#'   -20.578    0.00%   skip (not a class index)
+        ' own'   -20.766    0.00%   skip (not a class index)
+           '_'   -20.984    0.00%   skip (not a class index)
+    ' kitchens'   -21.000    0.00%   skip (not a class index)
+       '<eos>'   -21.047    0.00%   skip (not a class index)
+           '|'   -21.062    0.00%   skip (not a class index)
+     ' import'   -21.078    0.00%   skip (not a class index)
+
+  CLEAN 4-class output (after the hard constraint / parser):
+    class 0 World      logit= -18.938  prob=  0.00%
+    class 1 Sports     logit= -30.000  prob=  0.00% (floor: never appeared in top-k)
+    class 2 Business   logit=  -0.000  prob=100.00%
+    class 3 Sci/Tech   logit= -30.000  prob=  0.00% (floor: never appeared in top-k)
+
+  Prediction : class 2 = Business  (correct)
+----------------------------------------------------------------------
+
+SAMPLE 16
+  Text       : "Kids Rule for Back-to-School The purchasing power of kids is a big part of why the back-to..."
+  True label : 2 = Business
+  LLM said   : "2"
+
+  RAW top-20 tokens the LLM returned (its view of the whole vocab):
+         token   logprob     prob   kept?
+           '2'    -0.000  100.00%   KEEP -> class 2 (Business)
+           '{'   -17.156    0.00%   skip (not a class index)
+    '<channel|>'   -18.031    0.00%   skip (not a class index)
+     '<turn|>'   -18.156    0.00%   skip (not a class index)
+          '//'   -18.656    0.00%   skip (not a class index)
+           ' '   -18.781    0.00%   skip (not a class index)
+        ' own'   -19.156    0.00%   skip (not a class index)
+           '}'   -19.359    0.00%   skip (not a class index)
+           '0'   -19.406    0.00%   KEEP -> class 0 (World)
+          ' {'   -19.781    0.00%   skip (not a class index)
+           '='   -19.906    0.00%   skip (not a class index)
+          '\n'   -19.906    0.00%   skip (not a class index)
+    ' kitchens'   -19.953    0.00%   skip (not a class index)
+           ')'   -19.969    0.00%   skip (not a class index)
+           '#'   -20.141    0.00%   skip (not a class index)
+       '<eos>'   -20.312    0.00%   skip (not a class index)
+           '|'   -20.359    0.00%   skip (not a class index)
+          '\\'   -20.453    0.00%   skip (not a class index)
+           '('   -20.562    0.00%   skip (not a class index)
+     ' enriqu'   -20.781    0.00%   skip (not a class index)
+
+  CLEAN 4-class output (after the hard constraint / parser):
+    class 0 World      logit= -19.406  prob=  0.00%
+    class 1 Sports     logit= -30.000  prob=  0.00% (floor: never appeared in top-k)
+    class 2 Business   logit=  -0.000  prob=100.00%
+    class 3 Sci/Tech   logit= -30.000  prob=  0.00% (floor: never appeared in top-k)
+
+  Prediction : class 2 = Business  (correct)
+----------------------------------------------------------------------
+
+SAMPLE 17
+  Text       : "In a Down Market, Head Toward Value Funds There is little cause for celebration in the sto..."
+  True label : 2 = Business
+  LLM said   : "2"
+
+  RAW top-20 tokens the LLM returned (its view of the whole vocab):
+         token   logprob     prob   kept?
+           '2'    -0.000  100.00%   KEEP -> class 2 (Business)
+           '{'   -17.438    0.00%   skip (not a class index)
+    '<channel|>'   -18.000    0.00%   skip (not a class index)
+     '<turn|>'   -18.594    0.00%   skip (not a class index)
+           ' '   -18.688    0.00%   skip (not a class index)
+          '//'   -18.750    0.00%   skip (not a class index)
+           '}'   -19.281    0.00%   skip (not a class index)
+    ' kitchens'   -19.875    0.00%   skip (not a class index)
+        ' own'   -19.891    0.00%   skip (not a class index)
+          '\n'   -19.922    0.00%   skip (not a class index)
+          ' {'   -19.969    0.00%   skip (not a class index)
+           ')'   -20.328    0.00%   skip (not a class index)
+           '='   -20.406    0.00%   skip (not a class index)
+       '<eos>'   -20.562    0.00%   skip (not a class index)
+           '#'   -20.594    0.00%   skip (not a class index)
+           '0'   -20.641    0.00%   KEEP -> class 0 (World)
+          '\\'   -20.844    0.00%   skip (not a class index)
+    '<tool_call|>'   -20.906    0.00%   skip (not a class index)
+      ' Lucie'   -20.938    0.00%   skip (not a class index)
+           '|'   -20.953    0.00%   skip (not a class index)
+
+  CLEAN 4-class output (after the hard constraint / parser):
+    class 0 World      logit= -20.641  prob=  0.00%
+    class 1 Sports     logit= -30.000  prob=  0.00% (floor: never appeared in top-k)
+    class 2 Business   logit=  -0.000  prob=100.00%
+    class 3 Sci/Tech   logit= -30.000  prob=  0.00% (floor: never appeared in top-k)
+
+  Prediction : class 2 = Business  (correct)
+----------------------------------------------------------------------
+
+SAMPLE 18
+  Text       : "US trade deficit swells in June The US trade deficit has exploded 19 to a record \$55.8bn ..."
+  True label : 2 = Business
+  LLM said   : "2"
+
+  RAW top-20 tokens the LLM returned (its view of the whole vocab):
+         token   logprob     prob   kept?
+           '2'    -0.000  100.00%   KEEP -> class 2 (Business)
+           '{'   -16.875    0.00%   skip (not a class index)
+    '<channel|>'   -17.375    0.00%   skip (not a class index)
+          '//'   -17.750    0.00%   skip (not a class index)
+           ' '   -18.062    0.00%   skip (not a class index)
+     '<turn|>'   -18.219    0.00%   skip (not a class index)
+           '}'   -18.219    0.00%   skip (not a class index)
+    ' kitchens'   -18.859    0.00%   skip (not a class index)
+          '\n'   -19.406    0.00%   skip (not a class index)
+           ')'   -19.469    0.00%   skip (not a class index)
+        ' own'   -19.500    0.00%   skip (not a class index)
+       '<eos>'   -19.562    0.00%   skip (not a class index)
+          '\\'   -19.781    0.00%   skip (not a class index)
+          ' {'   -19.844    0.00%   skip (not a class index)
+           '#'   -19.875    0.00%   skip (not a class index)
+           '='   -19.922    0.00%   skip (not a class index)
+      ' Lucie'   -20.094    0.00%   skip (not a class index)
+      ' those'   -20.141    0.00%   skip (not a class index)
+    '<tool_call|>'   -20.250    0.00%   skip (not a class index)
+     ' beleza'   -20.281    0.00%   skip (not a class index)
+
+  CLEAN 4-class output (after the hard constraint / parser):
+    class 0 World      logit= -30.000  prob=  0.00% (floor: never appeared in top-k)
+    class 1 Sports     logit= -30.000  prob=  0.00% (floor: never appeared in top-k)
+    class 2 Business   logit=  -0.000  prob=100.00%
+    class 3 Sci/Tech   logit= -30.000  prob=  0.00% (floor: never appeared in top-k)
+
+  Prediction : class 2 = Business  (correct)
+----------------------------------------------------------------------
+
+SAMPLE 19
+  Text       : "Shell 'could be target for Total' Oil giant Shell could be bracing itself for a takeover a..."
+  True label : 2 = Business
+  LLM said   : "2"
+
+  RAW top-20 tokens the LLM returned (its view of the whole vocab):
+         token   logprob     prob   kept?
+           '2'    -0.000  100.00%   KEEP -> class 2 (Business)
+           '{'   -17.625    0.00%   skip (not a class index)
+    '<channel|>'   -18.250    0.00%   skip (not a class index)
+     '<turn|>'   -18.344    0.00%   skip (not a class index)
+          '//'   -18.781    0.00%   skip (not a class index)
+           ' '   -19.125    0.00%   skip (not a class index)
+        ' own'   -19.281    0.00%   skip (not a class index)
+           '}'   -19.438    0.00%   skip (not a class index)
+          '\n'   -19.750    0.00%   skip (not a class index)
+    ' kitchens'   -19.875    0.00%   skip (not a class index)
+           '0'   -19.953    0.00%   KEEP -> class 0 (World)
+          ' {'   -20.141    0.00%   skip (not a class index)
+           ')'   -20.141    0.00%   skip (not a class index)
+           '='   -20.312    0.00%   skip (not a class index)
+           '#'   -20.391    0.00%   skip (not a class index)
+          '\\'   -20.688    0.00%   skip (not a class index)
+       '<eos>'   -20.719    0.00%   skip (not a class index)
+           '|'   -20.734    0.00%   skip (not a class index)
+     ' enriqu'   -20.781    0.00%   skip (not a class index)
+    '<tool_call|>'   -20.797    0.00%   skip (not a class index)
+
+  CLEAN 4-class output (after the hard constraint / parser):
+    class 0 World      logit= -19.953  prob=  0.00%
+    class 1 Sports     logit= -30.000  prob=  0.00% (floor: never appeared in top-k)
+    class 2 Business   logit=  -0.000  prob=100.00%
+    class 3 Sci/Tech   logit= -30.000  prob=  0.00% (floor: never appeared in top-k)
+
+  Prediction : class 2 = Business  (correct)
+----------------------------------------------------------------------

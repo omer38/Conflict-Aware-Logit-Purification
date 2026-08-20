@@ -1,0 +1,21 @@
+{
+  "dataset": "yahoo",
+  "mode": "supervised",
+  "teacher": "none",
+  "labels_per_class": 10,
+  "seed": 42,
+  "cal_ratio": 0.3,
+  "config": {
+    "model_name": "answerdotai/ModernBERT-base",
+    "max_length": 128,
+    "lr": 2e-05,
+    "batch_size": 8,
+    "epochs": 3,
+    "temperature": 2.0,
+    "alpha": 0.0
+  },
+  "metrics": {
+    "accuracy": 0.256,
+    "macro_f1": 0.24242953102869524
+  }
+}

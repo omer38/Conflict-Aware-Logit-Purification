@@ -1,0 +1,154 @@
+[2026-08-18T22:16:55Z] === prior_misspecification_a12_v1 runner begin ===
+[2026-08-18T22:16:55Z] OUT_DIR=outputs/student/prior_misspecification_a12_v1 expected_new_cells=36 expected_correct_baselines=18 expected_total_comparison_cells=54
+[2026-08-18T22:16:57Z] BASELINE OK dataset=ag_news L=10 seed=42 path=outputs/student/prompt_inclusive_core_3seed_v1/ag_news_kd_multi-prior-scale-aligned-guided_L10_s42_prompt-inclusive-v1.json
+[2026-08-18T22:16:58Z] BASELINE OK dataset=ag_news L=10 seed=123 path=outputs/student/prompt_inclusive_core_3seed_v1/ag_news_kd_multi-prior-scale-aligned-guided_L10_s123_prompt-inclusive-v1.json
+[2026-08-18T22:17:00Z] BASELINE OK dataset=ag_news L=10 seed=456 path=outputs/student/prompt_inclusive_core_3seed_v1/ag_news_kd_multi-prior-scale-aligned-guided_L10_s456_prompt-inclusive-v1.json
+[2026-08-18T22:17:01Z] BASELINE OK dataset=amazon L=10 seed=42 path=outputs/student/prompt_inclusive_core_3seed_v1/amazon_kd_multi-prior-scale-aligned-guided_L10_s42_prompt-inclusive-v1.json
+[2026-08-18T22:17:03Z] BASELINE OK dataset=amazon L=10 seed=123 path=outputs/student/prompt_inclusive_core_3seed_v1/amazon_kd_multi-prior-scale-aligned-guided_L10_s123_prompt-inclusive-v1.json
+[2026-08-18T22:17:04Z] BASELINE OK dataset=amazon L=10 seed=456 path=outputs/student/prompt_inclusive_core_3seed_v1/amazon_kd_multi-prior-scale-aligned-guided_L10_s456_prompt-inclusive-v1.json
+[2026-08-18T22:17:06Z] BASELINE OK dataset=yahoo L=10 seed=42 path=outputs/student/prompt_inclusive_core_3seed_v1/yahoo_kd_multi-prior-scale-aligned-guided_L10_s42_prompt-inclusive-v1.json
+[2026-08-18T22:17:07Z] BASELINE OK dataset=yahoo L=10 seed=123 path=outputs/student/prompt_inclusive_core_3seed_v1/yahoo_kd_multi-prior-scale-aligned-guided_L10_s123_prompt-inclusive-v1.json
+[2026-08-18T22:17:09Z] BASELINE OK dataset=yahoo L=10 seed=456 path=outputs/student/prompt_inclusive_core_3seed_v1/yahoo_kd_multi-prior-scale-aligned-guided_L10_s456_prompt-inclusive-v1.json
+[2026-08-18T22:17:10Z] BASELINE OK dataset=ag_news L=50 seed=42 path=outputs/student/prompt_inclusive_core_3seed_v1/ag_news_kd_multi-prior-scale-aligned-guided_L50_s42_prompt-inclusive-v1.json
+[2026-08-18T22:17:12Z] BASELINE OK dataset=ag_news L=50 seed=123 path=outputs/student/prompt_inclusive_core_3seed_v1/ag_news_kd_multi-prior-scale-aligned-guided_L50_s123_prompt-inclusive-v1.json
+[2026-08-18T22:17:13Z] BASELINE OK dataset=ag_news L=50 seed=456 path=outputs/student/prompt_inclusive_core_3seed_v1/ag_news_kd_multi-prior-scale-aligned-guided_L50_s456_prompt-inclusive-v1.json
+[2026-08-18T22:17:15Z] BASELINE OK dataset=amazon L=50 seed=42 path=outputs/student/prompt_inclusive_core_3seed_v1/amazon_kd_multi-prior-scale-aligned-guided_L50_s42_prompt-inclusive-v1.json
+[2026-08-18T22:17:16Z] BASELINE OK dataset=amazon L=50 seed=123 path=outputs/student/prompt_inclusive_core_3seed_v1/amazon_kd_multi-prior-scale-aligned-guided_L50_s123_prompt-inclusive-v1.json
+[2026-08-18T22:17:18Z] BASELINE OK dataset=amazon L=50 seed=456 path=outputs/student/prompt_inclusive_core_3seed_v1/amazon_kd_multi-prior-scale-aligned-guided_L50_s456_prompt-inclusive-v1.json
+[2026-08-18T22:17:19Z] BASELINE OK dataset=yahoo L=50 seed=42 path=outputs/student/prompt_inclusive_core_3seed_v1/yahoo_kd_multi-prior-scale-aligned-guided_L50_s42_prompt-inclusive-v1.json
+[2026-08-18T22:17:21Z] BASELINE OK dataset=yahoo L=50 seed=123 path=outputs/student/prompt_inclusive_core_3seed_v1/yahoo_kd_multi-prior-scale-aligned-guided_L50_s123_prompt-inclusive-v1.json
+[2026-08-18T22:17:22Z] BASELINE OK dataset=yahoo L=50 seed=456 path=outputs/student/prompt_inclusive_core_3seed_v1/yahoo_kd_multi-prior-scale-aligned-guided_L50_s456_prompt-inclusive-v1.json
+[2026-08-18T22:17:22Z] All 18 correct-prior baseline cells validated.
+[2026-08-18T22:17:22Z] START dataset=ag_news condition=mild L=10 seed=42 start=2026-08-18T22:17:22Z
+[2026-08-18T22:19:16Z] OK dataset=ag_news condition=mild L=10 seed=42 status=0 start=2026-08-18T22:17:22Z end=2026-08-18T22:19:15Z
+[2026-08-18T22:19:16Z] START dataset=ag_news condition=strong L=10 seed=42 start=2026-08-18T22:19:16Z
+[2026-08-18T22:21:12Z] OK dataset=ag_news condition=strong L=10 seed=42 status=0 start=2026-08-18T22:19:16Z end=2026-08-18T22:21:11Z
+[2026-08-18T22:21:12Z] START dataset=ag_news condition=mild L=10 seed=123 start=2026-08-18T22:21:12Z
+[2026-08-18T22:23:09Z] OK dataset=ag_news condition=mild L=10 seed=123 status=0 start=2026-08-18T22:21:12Z end=2026-08-18T22:23:08Z
+[2026-08-18T22:23:09Z] START dataset=ag_news condition=strong L=10 seed=123 start=2026-08-18T22:23:09Z
+[2026-08-18T22:25:05Z] OK dataset=ag_news condition=strong L=10 seed=123 status=0 start=2026-08-18T22:23:09Z end=2026-08-18T22:25:03Z
+[2026-08-18T22:25:05Z] START dataset=ag_news condition=mild L=10 seed=456 start=2026-08-18T22:25:05Z
+[2026-08-18T22:27:02Z] OK dataset=ag_news condition=mild L=10 seed=456 status=0 start=2026-08-18T22:25:05Z end=2026-08-18T22:27:00Z
+[2026-08-18T22:27:02Z] START dataset=ag_news condition=strong L=10 seed=456 start=2026-08-18T22:27:02Z
+[2026-08-18T22:28:59Z] OK dataset=ag_news condition=strong L=10 seed=456 status=0 start=2026-08-18T22:27:02Z end=2026-08-18T22:28:57Z
+[2026-08-18T22:28:59Z] START dataset=amazon condition=mild L=10 seed=42 start=2026-08-18T22:28:59Z
+[2026-08-18T22:30:59Z] OK dataset=amazon condition=mild L=10 seed=42 status=0 start=2026-08-18T22:28:59Z end=2026-08-18T22:30:58Z
+[2026-08-18T22:30:59Z] START dataset=amazon condition=strong L=10 seed=42 start=2026-08-18T22:30:59Z
+[2026-08-18T22:32:58Z] OK dataset=amazon condition=strong L=10 seed=42 status=0 start=2026-08-18T22:30:59Z end=2026-08-18T22:32:57Z
+[2026-08-18T22:32:58Z] START dataset=amazon condition=mild L=10 seed=123 start=2026-08-18T22:32:58Z
+[2026-08-18T22:34:58Z] OK dataset=amazon condition=mild L=10 seed=123 status=0 start=2026-08-18T22:32:58Z end=2026-08-18T22:34:57Z
+[2026-08-18T22:34:58Z] START dataset=amazon condition=strong L=10 seed=123 start=2026-08-18T22:34:58Z
+[2026-08-18T22:36:56Z] OK dataset=amazon condition=strong L=10 seed=123 status=0 start=2026-08-18T22:34:58Z end=2026-08-18T22:36:55Z
+[2026-08-18T22:36:56Z] START dataset=amazon condition=mild L=10 seed=456 start=2026-08-18T22:36:56Z
+[2026-08-18T22:38:55Z] OK dataset=amazon condition=mild L=10 seed=456 status=0 start=2026-08-18T22:36:56Z end=2026-08-18T22:38:54Z
+[2026-08-18T22:38:55Z] START dataset=amazon condition=strong L=10 seed=456 start=2026-08-18T22:38:55Z
+[2026-08-18T22:40:54Z] OK dataset=amazon condition=strong L=10 seed=456 status=0 start=2026-08-18T22:38:55Z end=2026-08-18T22:40:53Z
+[2026-08-18T22:40:54Z] START dataset=yahoo condition=mild L=10 seed=42 start=2026-08-18T22:40:54Z
+[2026-08-18T22:44:14Z] OK dataset=yahoo condition=mild L=10 seed=42 status=0 start=2026-08-18T22:40:54Z end=2026-08-18T22:44:13Z
+[2026-08-18T22:44:14Z] START dataset=yahoo condition=strong L=10 seed=42 start=2026-08-18T22:44:14Z
+[2026-08-18T22:47:34Z] OK dataset=yahoo condition=strong L=10 seed=42 status=0 start=2026-08-18T22:44:14Z end=2026-08-18T22:47:33Z
+[2026-08-18T22:47:34Z] START dataset=yahoo condition=mild L=10 seed=123 start=2026-08-18T22:47:34Z
+[2026-08-18T22:50:53Z] OK dataset=yahoo condition=mild L=10 seed=123 status=0 start=2026-08-18T22:47:34Z end=2026-08-18T22:50:51Z
+[2026-08-18T22:50:53Z] START dataset=yahoo condition=strong L=10 seed=123 start=2026-08-18T22:50:53Z
+[2026-08-18T22:54:13Z] OK dataset=yahoo condition=strong L=10 seed=123 status=0 start=2026-08-18T22:50:53Z end=2026-08-18T22:54:12Z
+[2026-08-18T22:54:13Z] START dataset=yahoo condition=mild L=10 seed=456 start=2026-08-18T22:54:13Z
+[2026-08-18T22:57:32Z] OK dataset=yahoo condition=mild L=10 seed=456 status=0 start=2026-08-18T22:54:13Z end=2026-08-18T22:57:30Z
+[2026-08-18T22:57:32Z] START dataset=yahoo condition=strong L=10 seed=456 start=2026-08-18T22:57:32Z
+[2026-08-18T23:00:50Z] OK dataset=yahoo condition=strong L=10 seed=456 status=0 start=2026-08-18T22:57:32Z end=2026-08-18T23:00:49Z
+[2026-08-18T23:00:50Z] START dataset=ag_news condition=mild L=50 seed=42 start=2026-08-18T23:00:50Z
+[2026-08-18T23:02:46Z] OK dataset=ag_news condition=mild L=50 seed=42 status=0 start=2026-08-18T23:00:50Z end=2026-08-18T23:02:44Z
+[2026-08-18T23:02:46Z] START dataset=ag_news condition=strong L=50 seed=42 start=2026-08-18T23:02:46Z
+[2026-08-18T23:04:41Z] OK dataset=ag_news condition=strong L=50 seed=42 status=0 start=2026-08-18T23:02:46Z end=2026-08-18T23:04:40Z
+[2026-08-18T23:04:41Z] START dataset=ag_news condition=mild L=50 seed=123 start=2026-08-18T23:04:41Z
+[2026-08-18T23:06:37Z] OK dataset=ag_news condition=mild L=50 seed=123 status=0 start=2026-08-18T23:04:41Z end=2026-08-18T23:06:36Z
+[2026-08-18T23:06:37Z] START dataset=ag_news condition=strong L=50 seed=123 start=2026-08-18T23:06:37Z
+[2026-08-18T23:08:35Z] OK dataset=ag_news condition=strong L=50 seed=123 status=0 start=2026-08-18T23:06:37Z end=2026-08-18T23:08:34Z
+[2026-08-18T23:08:35Z] START dataset=ag_news condition=mild L=50 seed=456 start=2026-08-18T23:08:35Z
+[2026-08-18T23:10:31Z] OK dataset=ag_news condition=mild L=50 seed=456 status=0 start=2026-08-18T23:08:35Z end=2026-08-18T23:10:30Z
+[2026-08-18T23:10:31Z] START dataset=ag_news condition=strong L=50 seed=456 start=2026-08-18T23:10:31Z
+[2026-08-18T23:12:26Z] OK dataset=ag_news condition=strong L=50 seed=456 status=0 start=2026-08-18T23:10:31Z end=2026-08-18T23:12:25Z
+[2026-08-18T23:12:26Z] START dataset=amazon condition=mild L=50 seed=42 start=2026-08-18T23:12:26Z
+[2026-08-18T23:14:23Z] OK dataset=amazon condition=mild L=50 seed=42 status=0 start=2026-08-18T23:12:26Z end=2026-08-18T23:14:22Z
+[2026-08-18T23:14:23Z] START dataset=amazon condition=strong L=50 seed=42 start=2026-08-18T23:14:23Z
+[2026-08-18T23:16:21Z] OK dataset=amazon condition=strong L=50 seed=42 status=0 start=2026-08-18T23:14:23Z end=2026-08-18T23:16:20Z
+[2026-08-18T23:16:21Z] START dataset=amazon condition=mild L=50 seed=123 start=2026-08-18T23:16:21Z
+[2026-08-18T23:18:19Z] OK dataset=amazon condition=mild L=50 seed=123 status=0 start=2026-08-18T23:16:21Z end=2026-08-18T23:18:18Z
+[2026-08-18T23:18:19Z] START dataset=amazon condition=strong L=50 seed=123 start=2026-08-18T23:18:19Z
+[2026-08-18T23:20:17Z] OK dataset=amazon condition=strong L=50 seed=123 status=0 start=2026-08-18T23:18:19Z end=2026-08-18T23:20:16Z
+[2026-08-18T23:20:17Z] START dataset=amazon condition=mild L=50 seed=456 start=2026-08-18T23:20:17Z
+[2026-08-18T23:22:15Z] OK dataset=amazon condition=mild L=50 seed=456 status=0 start=2026-08-18T23:20:17Z end=2026-08-18T23:22:14Z
+[2026-08-18T23:22:15Z] START dataset=amazon condition=strong L=50 seed=456 start=2026-08-18T23:22:15Z
+[2026-08-18T23:24:13Z] OK dataset=amazon condition=strong L=50 seed=456 status=0 start=2026-08-18T23:22:15Z end=2026-08-18T23:24:12Z
+[2026-08-18T23:24:13Z] START dataset=yahoo condition=mild L=50 seed=42 start=2026-08-18T23:24:13Z
+[2026-08-18T23:27:32Z] OK dataset=yahoo condition=mild L=50 seed=42 status=0 start=2026-08-18T23:24:13Z end=2026-08-18T23:27:31Z
+[2026-08-18T23:27:32Z] START dataset=yahoo condition=strong L=50 seed=42 start=2026-08-18T23:27:32Z
+[2026-08-18T23:30:51Z] OK dataset=yahoo condition=strong L=50 seed=42 status=0 start=2026-08-18T23:27:32Z end=2026-08-18T23:30:50Z
+[2026-08-18T23:30:51Z] START dataset=yahoo condition=mild L=50 seed=123 start=2026-08-18T23:30:51Z
+[2026-08-18T23:34:12Z] OK dataset=yahoo condition=mild L=50 seed=123 status=0 start=2026-08-18T23:30:51Z end=2026-08-18T23:34:10Z
+[2026-08-18T23:34:12Z] START dataset=yahoo condition=strong L=50 seed=123 start=2026-08-18T23:34:12Z
+[2026-08-18T23:37:31Z] OK dataset=yahoo condition=strong L=50 seed=123 status=0 start=2026-08-18T23:34:12Z end=2026-08-18T23:37:30Z
+[2026-08-18T23:37:31Z] START dataset=yahoo condition=mild L=50 seed=456 start=2026-08-18T23:37:31Z
+[2026-08-18T23:40:50Z] OK dataset=yahoo condition=mild L=50 seed=456 status=0 start=2026-08-18T23:37:31Z end=2026-08-18T23:40:49Z
+[2026-08-18T23:40:50Z] START dataset=yahoo condition=strong L=50 seed=456 start=2026-08-18T23:40:50Z
+[2026-08-18T23:44:10Z] OK dataset=yahoo condition=strong L=50 seed=456 status=0 start=2026-08-18T23:40:50Z end=2026-08-18T23:44:09Z
+[2026-08-18T23:44:10Z] === runner end started=36 skipped=0 completed=36 failures=0 ===
+[2026-08-18T23:44:10Z] overall_start=2026-08-18T22:16:55Z overall_end=2026-08-18T23:44:10Z
+[2026-08-18T23:46:30Z] === prior_misspecification_a12_v1 runner begin ===
+[2026-08-18T23:46:30Z] OUT_DIR=outputs/student/prior_misspecification_a12_v1 expected_new_cells=36 expected_correct_baselines=18 expected_total_comparison_cells=54
+[2026-08-18T23:46:32Z] BASELINE OK dataset=ag_news L=10 seed=42 path=outputs/student/prompt_inclusive_core_3seed_v1/ag_news_kd_multi-prior-scale-aligned-guided_L10_s42_prompt-inclusive-v1.json
+[2026-08-18T23:46:33Z] BASELINE OK dataset=ag_news L=10 seed=123 path=outputs/student/prompt_inclusive_core_3seed_v1/ag_news_kd_multi-prior-scale-aligned-guided_L10_s123_prompt-inclusive-v1.json
+[2026-08-18T23:46:34Z] BASELINE OK dataset=ag_news L=10 seed=456 path=outputs/student/prompt_inclusive_core_3seed_v1/ag_news_kd_multi-prior-scale-aligned-guided_L10_s456_prompt-inclusive-v1.json
+[2026-08-18T23:46:36Z] BASELINE OK dataset=amazon L=10 seed=42 path=outputs/student/prompt_inclusive_core_3seed_v1/amazon_kd_multi-prior-scale-aligned-guided_L10_s42_prompt-inclusive-v1.json
+[2026-08-18T23:46:37Z] BASELINE OK dataset=amazon L=10 seed=123 path=outputs/student/prompt_inclusive_core_3seed_v1/amazon_kd_multi-prior-scale-aligned-guided_L10_s123_prompt-inclusive-v1.json
+[2026-08-18T23:46:39Z] BASELINE OK dataset=amazon L=10 seed=456 path=outputs/student/prompt_inclusive_core_3seed_v1/amazon_kd_multi-prior-scale-aligned-guided_L10_s456_prompt-inclusive-v1.json
+[2026-08-18T23:46:40Z] BASELINE OK dataset=yahoo L=10 seed=42 path=outputs/student/prompt_inclusive_core_3seed_v1/yahoo_kd_multi-prior-scale-aligned-guided_L10_s42_prompt-inclusive-v1.json
+[2026-08-18T23:46:42Z] BASELINE OK dataset=yahoo L=10 seed=123 path=outputs/student/prompt_inclusive_core_3seed_v1/yahoo_kd_multi-prior-scale-aligned-guided_L10_s123_prompt-inclusive-v1.json
+[2026-08-18T23:46:43Z] BASELINE OK dataset=yahoo L=10 seed=456 path=outputs/student/prompt_inclusive_core_3seed_v1/yahoo_kd_multi-prior-scale-aligned-guided_L10_s456_prompt-inclusive-v1.json
+[2026-08-18T23:46:44Z] BASELINE OK dataset=ag_news L=50 seed=42 path=outputs/student/prompt_inclusive_core_3seed_v1/ag_news_kd_multi-prior-scale-aligned-guided_L50_s42_prompt-inclusive-v1.json
+[2026-08-18T23:46:46Z] BASELINE OK dataset=ag_news L=50 seed=123 path=outputs/student/prompt_inclusive_core_3seed_v1/ag_news_kd_multi-prior-scale-aligned-guided_L50_s123_prompt-inclusive-v1.json
+[2026-08-18T23:46:47Z] BASELINE OK dataset=ag_news L=50 seed=456 path=outputs/student/prompt_inclusive_core_3seed_v1/ag_news_kd_multi-prior-scale-aligned-guided_L50_s456_prompt-inclusive-v1.json
+[2026-08-18T23:46:49Z] BASELINE OK dataset=amazon L=50 seed=42 path=outputs/student/prompt_inclusive_core_3seed_v1/amazon_kd_multi-prior-scale-aligned-guided_L50_s42_prompt-inclusive-v1.json
+[2026-08-18T23:46:50Z] BASELINE OK dataset=amazon L=50 seed=123 path=outputs/student/prompt_inclusive_core_3seed_v1/amazon_kd_multi-prior-scale-aligned-guided_L50_s123_prompt-inclusive-v1.json
+[2026-08-18T23:46:51Z] BASELINE OK dataset=amazon L=50 seed=456 path=outputs/student/prompt_inclusive_core_3seed_v1/amazon_kd_multi-prior-scale-aligned-guided_L50_s456_prompt-inclusive-v1.json
+[2026-08-18T23:46:53Z] BASELINE OK dataset=yahoo L=50 seed=42 path=outputs/student/prompt_inclusive_core_3seed_v1/yahoo_kd_multi-prior-scale-aligned-guided_L50_s42_prompt-inclusive-v1.json
+[2026-08-18T23:46:54Z] BASELINE OK dataset=yahoo L=50 seed=123 path=outputs/student/prompt_inclusive_core_3seed_v1/yahoo_kd_multi-prior-scale-aligned-guided_L50_s123_prompt-inclusive-v1.json
+[2026-08-18T23:46:56Z] BASELINE OK dataset=yahoo L=50 seed=456 path=outputs/student/prompt_inclusive_core_3seed_v1/yahoo_kd_multi-prior-scale-aligned-guided_L50_s456_prompt-inclusive-v1.json
+[2026-08-18T23:46:56Z] All 18 correct-prior baseline cells validated.
+[2026-08-18T23:46:57Z] SKIP valid dataset=ag_news condition=mild L=10 seed=42
+[2026-08-18T23:46:58Z] SKIP valid dataset=ag_news condition=strong L=10 seed=42
+[2026-08-18T23:47:00Z] SKIP valid dataset=ag_news condition=mild L=10 seed=123
+[2026-08-18T23:47:01Z] SKIP valid dataset=ag_news condition=strong L=10 seed=123
+[2026-08-18T23:47:03Z] SKIP valid dataset=ag_news condition=mild L=10 seed=456
+[2026-08-18T23:47:04Z] SKIP valid dataset=ag_news condition=strong L=10 seed=456
+[2026-08-18T23:47:05Z] SKIP valid dataset=amazon condition=mild L=10 seed=42
+[2026-08-18T23:47:07Z] SKIP valid dataset=amazon condition=strong L=10 seed=42
+[2026-08-18T23:47:08Z] SKIP valid dataset=amazon condition=mild L=10 seed=123
+[2026-08-18T23:47:10Z] SKIP valid dataset=amazon condition=strong L=10 seed=123
+[2026-08-18T23:47:11Z] SKIP valid dataset=amazon condition=mild L=10 seed=456
+[2026-08-18T23:47:13Z] SKIP valid dataset=amazon condition=strong L=10 seed=456
+[2026-08-18T23:47:14Z] SKIP valid dataset=yahoo condition=mild L=10 seed=42
+[2026-08-18T23:47:16Z] SKIP valid dataset=yahoo condition=strong L=10 seed=42
+[2026-08-18T23:47:17Z] SKIP valid dataset=yahoo condition=mild L=10 seed=123
+[2026-08-18T23:47:19Z] SKIP valid dataset=yahoo condition=strong L=10 seed=123
+[2026-08-18T23:47:20Z] SKIP valid dataset=yahoo condition=mild L=10 seed=456
+[2026-08-18T23:47:22Z] SKIP valid dataset=yahoo condition=strong L=10 seed=456
+[2026-08-18T23:47:23Z] SKIP valid dataset=ag_news condition=mild L=50 seed=42
+[2026-08-18T23:47:24Z] SKIP valid dataset=ag_news condition=strong L=50 seed=42
+[2026-08-18T23:47:26Z] SKIP valid dataset=ag_news condition=mild L=50 seed=123
+[2026-08-18T23:47:27Z] SKIP valid dataset=ag_news condition=strong L=50 seed=123
+[2026-08-18T23:47:29Z] SKIP valid dataset=ag_news condition=mild L=50 seed=456
+[2026-08-18T23:47:30Z] SKIP valid dataset=ag_news condition=strong L=50 seed=456
+[2026-08-18T23:47:31Z] SKIP valid dataset=amazon condition=mild L=50 seed=42
+[2026-08-18T23:47:33Z] SKIP valid dataset=amazon condition=strong L=50 seed=42
+[2026-08-18T23:47:34Z] SKIP valid dataset=amazon condition=mild L=50 seed=123
+[2026-08-18T23:47:36Z] SKIP valid dataset=amazon condition=strong L=50 seed=123
+[2026-08-18T23:47:37Z] SKIP valid dataset=amazon condition=mild L=50 seed=456
+[2026-08-18T23:47:39Z] SKIP valid dataset=amazon condition=strong L=50 seed=456
+[2026-08-18T23:47:40Z] SKIP valid dataset=yahoo condition=mild L=50 seed=42
+[2026-08-18T23:47:42Z] SKIP valid dataset=yahoo condition=strong L=50 seed=42
+[2026-08-18T23:47:43Z] SKIP valid dataset=yahoo condition=mild L=50 seed=123
+[2026-08-18T23:47:44Z] SKIP valid dataset=yahoo condition=strong L=50 seed=123
+[2026-08-18T23:47:46Z] SKIP valid dataset=yahoo condition=mild L=50 seed=456
+[2026-08-18T23:47:47Z] SKIP valid dataset=yahoo condition=strong L=50 seed=456
+[2026-08-18T23:47:47Z] === runner end started=0 skipped=36 completed=0 failures=0 ===
+[2026-08-18T23:47:47Z] overall_start=2026-08-18T23:46:30Z overall_end=2026-08-18T23:47:47Z
